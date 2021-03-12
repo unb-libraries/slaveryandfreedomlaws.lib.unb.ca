@@ -1,0 +1,38 @@
+uuid: 58203238-3e8f-4839-9795-3d279562f9b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.legal_article.body
+    - field.field.node.legal_article.field_citation
+    - field.field.node.legal_article.field_date
+    - field.field.node.legal_article.field_full_title
+    - node.type.legal_article
+  module:
+    - text
+    - user
+id: node.legal_article.teaser
+targetEntityType: node
+bundle: legal_article
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_citation: true
+  field_date: true
+  field_full_title: true
+  langcode: true
+  search_api_excerpt: true

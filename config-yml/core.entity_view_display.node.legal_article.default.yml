@@ -1,0 +1,59 @@
+uuid: a1b9ca81-f2cb-4ae5-8761-7d822c2ec472
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.legal_article.body
+    - field.field.node.legal_article.field_citation
+    - field.field.node.legal_article.field_date
+    - field.field.node.legal_article.field_full_title
+    - node.type.legal_article
+  module:
+    - text
+    - user
+id: node.legal_article.default
+targetEntityType: node
+bundle: legal_article
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_citation:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_date:
+    weight: 104
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    type: timestamp
+    region: content
+  field_full_title:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

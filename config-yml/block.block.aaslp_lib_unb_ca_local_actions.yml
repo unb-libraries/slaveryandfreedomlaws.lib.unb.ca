@@ -1,0 +1,20 @@
+uuid: a7083c55-8697-421f-a109-4d89beabcc88
+langcode: en
+status: true
+dependencies:
+  theme:
+    - aaslp_lib_unb_ca
+_core:
+  default_config_hash: rKurRLaH08AjwE5wsNzeL2fa77rF5pXKSR9WopsFYyI
+id: aaslp_lib_unb_ca_local_actions
+theme: aaslp_lib_unb_ca
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

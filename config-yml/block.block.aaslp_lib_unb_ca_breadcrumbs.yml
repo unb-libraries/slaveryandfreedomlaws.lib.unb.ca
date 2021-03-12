@@ -1,0 +1,22 @@
+uuid: 82c1e591-c7c8-404c-b58e-599e6aed4ad1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aaslp_lib_unb_ca
+_core:
+  default_config_hash: B4RbOEFqUHi5Wx38pRiZzYXo1hhKzCpF50HCAvpOYf4
+id: aaslp_lib_unb_ca_breadcrumbs
+theme: aaslp_lib_unb_ca
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

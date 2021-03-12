@@ -1,0 +1,11 @@
+uuid: ac963839-df10-4bba-be9b-131fb456c6e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.legal_article
+id: node.legal_article
+target_entity_type_id: node
+target_bundle: legal_article
+default_langcode: site_default
+language_alterable: false

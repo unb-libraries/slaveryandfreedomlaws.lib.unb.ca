@@ -1,0 +1,25 @@
+uuid: bae0d969-c671-4ef1-8762-e8ac2d8fcb1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aaslp_lib_unb_ca
+_core:
+  default_config_hash: 0XmTH5dbJRl-fsDBgX10MzeFMarkhKpzU7ZGdGPfAMU
+id: aaslp_lib_unb_ca_branding
+theme: aaslp_lib_unb_ca
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

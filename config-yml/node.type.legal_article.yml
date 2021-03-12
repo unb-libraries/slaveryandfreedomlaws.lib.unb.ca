@@ -1,0 +1,17 @@
+uuid: f9248d1d-7787-4253-bc44-56ac1671a93c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Legal Article'
+type: legal_article
+description: 'A document that describes a specific slave law.'
+help: ''
+new_revision: false
+preview_mode: 2
+display_submitted: false

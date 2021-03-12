@@ -1,0 +1,22 @@
+uuid: 06b32058-f79b-48dc-a746-17898c14fd58
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aaslp_lib_unb_ca
+_core:
+  default_config_hash: pCYcyBIVbwKUmraga_6Ycz5P-bhQJLJS_8HtOFpMq-o
+id: aaslp_lib_unb_ca_powered_by_drupal
+theme: aaslp_lib_unb_ca
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }
