@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.legal_article.body
     - field.field.node.legal_article.field_citation
-    - field.field.node.legal_article.field_date
     - field.field.node.legal_article.field_full_title
     - node.type.legal_article
   module:
@@ -32,7 +31,6 @@ content:
     region: content
 hidden:
   field_citation: true
-  field_date: true
   field_full_title: true
   langcode: true
   search_api_excerpt: true
