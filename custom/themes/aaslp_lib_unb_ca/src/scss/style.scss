@@ -1,0 +1,40 @@
+// Import Sass files.
+@import 'import';
+
+// Global (careful here).
+// Global font.
+body,
+.font-regular {
+    font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
+    color: $unb-darkgray;
+    // Global header sizing.
+    h1,
+    h1.display-4,
+    h1 > span,
+    .navbar-brand .site-title {
+      font-size: 1.8rem;
+    }
+    h2,
+    h2 > a {
+      font-size: 1.4rem;
+    }
+    h3,
+    h3 > a {
+      font-size: 1.3rem;
+    }
+    h4,
+    h4 > a {
+      font-size: 1.2rem;
+    }
+    h5 {
+      font-size: 1.1rem;
+    }
+    h6 {
+      font-size: 1rem;
+    }
+    // Global header weight.
+    h1, h2, h3, h4, h5,
+    h1.display-4, h1 > span, .navbar-brand .site-title {
+      font-weight: bold;
+    }
+}
