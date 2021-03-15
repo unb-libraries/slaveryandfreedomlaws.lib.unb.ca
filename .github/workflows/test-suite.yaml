@@ -286,7 +286,8 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest
       -
         name: Decrypt database
-        run: gpg --quiet --batch --yes --decrypt --passphrase="$CONTENT_DECRYPTION_KEY" --output /tmp/db.sql.gz ./data/content/db.sql.gz.gpg        env:
+        run: gpg --quiet --batch --yes --decrypt --passphrase="$CONTENT_DECRYPTION_KEY" --output /tmp/db.sql.gz ./data/content/db.sql.gz.gpg        
+        env:
           CONTENT_DECRYPTION_KEY: ${{ secrets.CONTENT_DECRYPTION_KEY }}
       -
         name: Decrypt files
