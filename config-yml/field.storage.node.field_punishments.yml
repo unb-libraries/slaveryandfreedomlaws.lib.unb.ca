@@ -1,0 +1,20 @@
+uuid: b564729f-5ec6-4c3f-b0ef-8e719416ff41
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_punishments
+field_name: field_punishments
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: 81cadcd3-3b55-4376-b9bb-db9af3107d78
+langcode: en
+status: true
+dependencies: {  }
+name: Regions
+vid: regions
+description: 'Locations are grouped into regions.'
+weight: 0

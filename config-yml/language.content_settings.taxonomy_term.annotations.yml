@@ -1,0 +1,11 @@
+uuid: e19e8644-f156-4c62-a284-d11859584cf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.annotations
+id: taxonomy_term.annotations
+target_entity_type_id: taxonomy_term
+target_bundle: annotations
+default_langcode: site_default
+language_alterable: false

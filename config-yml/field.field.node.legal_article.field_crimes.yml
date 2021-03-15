@@ -1,0 +1,29 @@
+uuid: 571ac667-fb5d-4cdc-9219-0126218b6094
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_crimes
+    - node.type.legal_article
+    - taxonomy.vocabulary.crimes
+id: node.legal_article.field_crimes
+field_name: field_crimes
+entity_type: node
+bundle: legal_article
+label: Crimes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      crimes: crimes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: eb981990-8607-4991-8146-5790647e9800
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.law_categories
+id: taxonomy_term.law_categories
+target_entity_type_id: taxonomy_term
+target_bundle: law_categories
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,8 @@
+uuid: bd689cfa-7694-4a63-8203-363700ae1913
+langcode: en
+status: true
+dependencies: {  }
+name: Locations
+vid: locations
+description: 'Locations where slave laws were in effect.'
+weight: 0

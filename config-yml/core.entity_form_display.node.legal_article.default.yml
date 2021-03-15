@@ -4,8 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.legal_article.body
+    - field.field.node.legal_article.field_annotations
+    - field.field.node.legal_article.field_category
     - field.field.node.legal_article.field_citation
+    - field.field.node.legal_article.field_crimes
+    - field.field.node.legal_article.field_date
     - field.field.node.legal_article.field_full_title
+    - field.field.node.legal_article.field_location
+    - field.field.node.legal_article.field_notes
+    - field.field.node.legal_article.field_punishments
+    - field.field.node.legal_article.field_source
     - node.type.legal_article
   module:
     - path
@@ -31,6 +39,26 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_annotations:
+    weight: 131
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_category:
+    weight: 128
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_citation:
     weight: 123
     settings:
@@ -39,6 +67,22 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_crimes:
+    weight: 126
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_date:
+    weight: 124
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
   field_full_title:
     weight: 122
     settings:
@@ -46,6 +90,44 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_location:
+    weight: 125
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_notes:
+    weight: 130
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_punishments:
+    weight: 127
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_source:
+    weight: 129
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select

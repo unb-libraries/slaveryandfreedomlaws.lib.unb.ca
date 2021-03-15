@@ -1,0 +1,29 @@
+uuid: b814aa7b-5953-4a6d-a109-ceab3125b6db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_punishments
+    - node.type.legal_article
+    - taxonomy.vocabulary.punishments
+id: node.legal_article.field_punishments
+field_name: field_punishments
+entity_type: node
+bundle: legal_article
+label: Punishments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      punishments: punishments
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

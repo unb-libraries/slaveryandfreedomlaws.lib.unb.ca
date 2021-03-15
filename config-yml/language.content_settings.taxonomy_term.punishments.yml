@@ -1,0 +1,11 @@
+uuid: 6bbd13b0-dd3f-42e3-82ce-911002c84323
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.punishments
+id: taxonomy_term.punishments
+target_entity_type_id: taxonomy_term
+target_bundle: punishments
+default_langcode: site_default
+language_alterable: false
