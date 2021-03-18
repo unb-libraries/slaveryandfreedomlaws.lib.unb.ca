@@ -9,7 +9,7 @@
 
 use Drupal\taxonomy\Entity\Term;
 
-// Set-up locations.
+// Set up locations.
 // Parent locations.
 $parent_locs = [
   'Caribbean, Mid-Atlantic, South America',
@@ -42,27 +42,142 @@ $children = [
   'Trinidad',
 ];
 
-// Caribbean.
+add_terms('locations', $children, $parent);
+
+// Jamaica.
 // Create parent.
-$parent = add_terms('locations', [$parent_locs[0]])[0];
+$parent = add_terms('locations', [$parent_locs[1]])[0];
 // Create children.
 $children = [
-  'Bahamas',
-  'Berbice',
-  'Bermuda',
-  'Cape of Good Hope',
-  'Demerara',
-  'Dominica',
-  'Honduras/Belize',
+  'Bay Islands',
+  'Belize (British Honduras)',
+  'Cayman Islands',
   'Jamaica',
-  'Mauritius',
-  'St. Lucia',
-  'St. Vincent and the Grenadines',
-  'Tobago',
-  'Trinidad',
+  'Mosquito Coast',
 ];
 
 add_terms('locations', $children, $parent);
+
+// Leeward.
+// Create parent.
+$parent = add_terms('locations', [$parent_locs[2]])[0];
+// Create children.
+$children = [
+  'Anguilla',
+  'Antigua',
+  'Barbuda',
+  'British Virgin Islands',
+  'Montserrat',
+  'Nevis',
+  'St. Christopher',
+];
+
+add_terms('locations', $children, $parent);
+
+// Middle Colonies.
+// Create parent.
+$parent = add_terms('locations', [$parent_locs[3]])[0];
+// Create children.
+$children = [
+  'Delaware',
+  'New York',
+  'New Jersey',
+  'Pennsylvania',
+];
+
+add_terms('locations', $children, $parent);
+
+// New England Colonies.
+// Create parent.
+$parent = add_terms('locations', [$parent_locs[4]])[0];
+// Create children.
+$children = [
+  'Connecticut',
+  'Massachusetts',
+  'New Hampshire',
+  'Rhode Island & Providence',
+];
+
+add_terms('locations', $children, $parent);
+
+// Pre-confederation Canada.
+// Create parent.
+$parent = add_terms('locations', [$parent_locs[5]])[0];
+// Create children.
+$children = [
+  'British Arctic Territories',
+  'Island of St. John',
+  'Newfoundland',
+  'North-Western Territory',
+  'Nova Scotia',
+  'Quebec',
+  'Rupert’s Land',
+];
+
+add_terms('locations', $children, $parent);
+
+// Windward Islands.
+// Create parent.
+$parent = add_terms('locations', [$parent_locs[6]])[0];
+// Create children.
+$children = [
+  'Barbados',
+  'Dominica (detached from Grenada in 1770)',
+  'Grenada',
+  'St. Vincent',
+  'Tobago (detached from Grenada in 1768)',
+];
+
+add_terms('locations', $children, $parent);
+
+// Other.
+// Create parent.
+$parent = add_terms('locations', [$parent_locs[7]])[0];
+// Create children.
+$children = [
+  'East and West Florida (Spain 1783-1823, U.S. after 1823)',
+  'Indian Reserve (U.S. after 1783)',
+  'Quebec southwest of the Great Lakes (U.S. after 1783)',
+];
+
+add_terms('locations', $children, $parent);
+
+// Set up categories.
+$categories = [
+  'Amelioration',
+  'Comprehensive Law',
+  'Manumission',
+];
+
+add_terms('law_categories', $categories);
+
+// Set up crimes.
+$crimes = [
+  'Arson',
+  'Gathering in groups',
+  'Hiding a runaway',
+  'Rape',
+  'Running away',
+  'Theft',
+  'Use of instruments/weapons',
+  'Violence against any white person',
+];
+
+add_terms('crimes', $crimes);
+
+// Set up punishments.
+$punishments = [
+  'Arson',
+  'Gathering in groups',
+  'Hiding a runaway',
+  'Rape',
+  'Running away',
+  'Theft',
+  'Use of instruments/weapons',
+  'Violence against any white person',
+];
+
+add_terms('punishments', $punishments);
 
 /**
  * Add multiple terms to a given vocabulary.

@@ -10,6 +10,9 @@
 use Drupal\taxonomy\Entity\Term;
 
 clr_terms('locations');
+clr_terms('categories');
+clr_terms('crimes');
+clr_terms('punishments');
 
 /**
  * Clear all terms from a given vocabulary.
@@ -26,9 +29,12 @@ function clr_terms(string $vid) {
   if (!empty($tids)) {
     foreach ($tids as $tid) {
       $term = Term::load($tid);
-      $tname = $term->getName();
-      $term->delete();
-      echo "[-] [$tname]->[DELETED]\n";
+
+      if ($term) {
+        $tname = $term->getName();
+        $term->delete();
+        echo "[-] [$tname]->[DELETED]\n";
+      }
     }
   }
 }

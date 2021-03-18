@@ -1,0 +1,24 @@
+<?php
+
+/**
+* @file
+* Contains aaslp_core.install.
+*/
+
+use Symfony\Component\Process\Process;
+use Symfony\Component\Process\Exception\ProcessFailedException;
+
+/**
+* Implements hook_install().
+*/
+function aaslp_core_install($is_syncing) {
+  // Run script to set up taxonomy terms.
+  $process =
+    new Process('drush scr modules/custom/aaslp_core/scripts/setup_terms.php');
+  $process->run();
+
+  // Executes after the command finishes.
+  if (!$process->isSuccessful()) {
+      throw new ProcessFailedException($process);
+  }
+}
