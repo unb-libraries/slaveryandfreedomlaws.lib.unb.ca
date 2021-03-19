@@ -10,7 +10,7 @@
 use Drupal\taxonomy\Entity\Term;
 
 clr_terms('locations');
-clr_terms('categories');
+clr_terms('law_categories');
 clr_terms('crimes');
 clr_terms('punishments');
 

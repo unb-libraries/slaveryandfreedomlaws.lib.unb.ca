@@ -57,6 +57,8 @@
         "drupal/admin_toolbar": "3.0.0",
         "drupal/anchor_link": "2.5",
         "drupal/bootstrap4": "2.1.5",
+        "drupal/choices": "2.0.3",
+        "drupal/chosen": "3.0.1",
         "drupal/core": "8.9.13",
         "drupal/google_analytics": "2.5",
         "drupal/health_check": "1.3",
