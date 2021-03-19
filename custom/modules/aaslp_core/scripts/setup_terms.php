@@ -192,26 +192,16 @@ add_terms('punishments', $punishments);
 function add_terms(string $vid, array $terms, int $parent_id = NULL) {
 
   foreach ($terms as $term) {
-    $found = \Drupal::entityQuery('taxonomy_term')
-      ->condition('vid', $vid)
-      ->condition('name', $term)
-      ->execute();
+    $new_term = Term::create([
+      'vid' => $vid,
+      'name' => $term,
+    ]);
 
-    if (!$found) {
-      $new_term = Term::create([
-        'vid' => $vid,
-        'name' => $term,
-      ]);
+    $new_term->set('parent', $parent_id);
+    $new_term->save();
 
-      $new_term->set('parent', $parent_id);
-      $new_term->save();
-
-      echo "[+] [$term]->[$vid]\n";
-      $new_terms[] = $new_term->id();
-    }
-    else {
-      echo "[-] [$term] exists in [$vid]\n";
-    }
+    echo "[+] [$term]->[$vid]\n";
+    $new_terms[] = $new_term->id();
   }
 
   return $new_terms;
