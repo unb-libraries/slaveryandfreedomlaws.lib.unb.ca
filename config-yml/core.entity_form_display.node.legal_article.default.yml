@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.legal_article.field_source
     - node.type.legal_article
   module:
+    - chosen_field
     - inline_entity_form
     - text
 id: node.legal_article.default
@@ -68,7 +69,7 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: chosen_select
     region: content
   field_date:
     weight: 4
@@ -102,7 +103,7 @@ content:
     weight: 7
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: chosen_select
     region: content
   field_source:
     weight: 0
