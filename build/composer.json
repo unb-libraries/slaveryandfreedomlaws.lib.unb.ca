@@ -29,7 +29,8 @@
                 "type:drupal-drush"
             ],
             "libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "harvesthq/chosen"
             ],
             "modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -41,6 +42,9 @@
                 "type:drupal-theme"
             ]
         },
+        "installer-types": [
+          "library"
+        ],
         "patches": {}
     },
     "license": "MIT",
@@ -71,6 +75,7 @@
         "drupal/simple_sitemap": "3.8",
         "drupal/token": "1.9",
         "drupal/twig_tweak": "2.9",
+        "oomphinc/composer-installers-extender": "1.1.2",
         "unb-libraries/drupal-builder": "^8.0.0"
     },
     "require-dev": {
