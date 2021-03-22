@@ -167,14 +167,18 @@ add_terms('crimes', $crimes);
 
 // Set up punishments.
 $punishments = [
-  'Arson',
-  'Gathering in groups',
-  'Hiding a runaway',
-  'Rape',
-  'Running away',
-  'Theft',
-  'Use of instruments/weapons',
-  'Violence against any white person',
+  'Whip/flog',
+  'Branding',
+  'Transportation',
+  'Stocks',
+  'Pillory',
+  'Workhouse',
+  'Dismemberment',
+  'Slitting of nose',
+  'Slitting of ears',
+  'However he/she shall think fit to inflict',
+  'Death',
+  'Castration',
 ];
 
 add_terms('punishments', $punishments);
