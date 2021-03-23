@@ -1,0 +1,14 @@
+uuid: 21422b85-88ce-46e7-a7bc-7f94fb912151
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.aaslp_editor
+  module:
+    - user
+id: user_add_role_action.aaslp_editor
+label: 'Add the AASLP Editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: aaslp_editor

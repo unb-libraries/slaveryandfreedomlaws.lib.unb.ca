@@ -1,0 +1,20 @@
+uuid: 870d490d-1208-493d-bdfb-f6e7ceab1258
+langcode: en
+status: true
+dependencies: {  }
+id: aaslp_editor
+label: 'AASLP Editor'
+weight: 2
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create legal_article content'
+  - 'create terms in annotations'
+  - 'create terms in sources'
+  - 'delete any legal_article content'
+  - 'delete legal_article revisions'
+  - 'delete terms in annotations'
+  - 'edit any legal_article content'
+  - 'revert legal_article revisions'
+  - 'view legal_article revisions'

@@ -1,0 +1,14 @@
+uuid: a90aca17-b64e-44c0-a4b0-fbb17804afdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.aaslp_editor
+  module:
+    - user
+id: user_remove_role_action.aaslp_editor
+label: 'Remove the AASLP Editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: aaslp_editor
