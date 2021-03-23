@@ -1,4 +1,5 @@
 module:
+  aaslp_admin: 0
   aaslp_core: 0
   admin_toolbar: 0
   admin_toolbar_search: 0
