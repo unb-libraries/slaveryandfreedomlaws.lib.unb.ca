@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.legal_article.field_source
     - node.type.legal_article
   module:
+    - datetime
     - text
     - user
 id: node.legal_article.default
@@ -63,14 +64,13 @@ content:
     type: entity_reference_label
     region: content
   field_date:
-    weight: 104
+    weight: 112
     label: above
     settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
+      format_type: medium
+      timezone_override: ''
     third_party_settings: {  }
-    type: timestamp
+    type: datetime_default
     region: content
   field_full_title:
     weight: 102

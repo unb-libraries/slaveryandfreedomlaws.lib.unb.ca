@@ -17,6 +17,7 @@ dependencies:
     - node.type.legal_article
   module:
     - chosen_field
+    - datetime
     - inline_entity_form
     - text
 id: node.legal_article.default
@@ -75,7 +76,7 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
-    type: datetime_timestamp
+    type: datetime_default
     region: content
   field_full_title:
     weight: 2
