@@ -1,0 +1,5 @@
+services:
+  aaslp_admin.aaslp_route_subscriber:
+    class: Drupal\aaslp_admin\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
