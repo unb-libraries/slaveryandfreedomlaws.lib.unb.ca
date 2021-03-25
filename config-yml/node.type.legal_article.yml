@@ -13,5 +13,5 @@ type: legal_article
 description: 'A document that describes a specific slave law.'
 help: ''
 new_revision: false
-preview_mode: 2
+preview_mode: 1
 display_submitted: false
