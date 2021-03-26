@@ -35,6 +35,7 @@ module:
   path: 0
   path_alias: 0
   redis: 0
+  saml_features: 0
   samlauth: 0
   search: 0
   search_api: 0
