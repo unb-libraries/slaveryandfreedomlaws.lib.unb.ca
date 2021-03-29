@@ -1,0 +1,20 @@
+uuid: 6de0edaf-fb1c-4382-8f61-332b9f8a5dd2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_editorial_annotations
+field_name: field_editorial_annotations
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
