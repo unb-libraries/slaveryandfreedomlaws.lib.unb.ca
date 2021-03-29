@@ -5,9 +5,42 @@
 * Contains legal_article.module.
 */
 
+use Drupal\taxonomy\Entity\Term;
+
 /**
  * Implements hook_preprocess_hook().
  */
 function legal_article_preprocess_node__legal_article(&$variables) {
-  
+  // Process annotations.
+  // Recover full article text.
+  $article_node = $variables['node'];
+  $full_text = !empty($article_node->get('body')->getValue()[0]) ?
+    $article_node->get('body')->getValue()[0]['value'] : NULL;
+  // Retrieve annotations.
+  $annos = !empty($article_node->get('field_annotations')->getValue()) ?
+    $article_node->get('field_annotations')->getValue() : NULL;
+  // Retrieve editorial annotations.
+  $ed_annos = !empty($article_node->get('field_editorial_annotations')->getValue()) ?
+    $article_node->get('field_editorial_annotations')->getValue() : NULL;
+
+  // Cycle through annotations.
+  foreach ($annos as $index => $anno) {
+    $anno_val = Term::load($anno['target_id'])->getName();
+    // Mark annotation in full text.
+    // Strip punctuation from annotation term.
+    $anno_val = preg_replace('/(^[[:punct:]]|[[:punct:]]$)/', '', $anno_val);
+    // Search regular expression for annotation.
+    $pattern = '/(\b\Q' . $anno_val . '\E\b)/mi';
+    // Annotation index should be aray index + 1.
+    $anno_no = $index + 1;
+    $anno_id = "anno-target-$anno_no";
+    // Replace annotation term adding a link to corresponding annotation.
+    $replacement = $anno_val . ' <span class="annotation" id="' . $anno_id .
+      '"><a href="#annotation-' . $anno_no . '">[' . $anno_no . ']</a></span> ';
+    // Make replacement in full text variable.
+    $full_text = preg_replace($pattern, $replacement, $full_text);
+  }
+
+  // Update full text field.
+  $variables['content']['body'][0]['#text'] = $full_text;
 }
