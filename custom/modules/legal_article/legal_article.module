@@ -11,7 +11,7 @@ use Drupal\taxonomy\Entity\Term;
  * Implements hook_preprocess_hook().
  */
 function legal_article_preprocess_node__legal_article(&$variables) {
-  // Process annotations.
+  // Process and render annotations.
   // Recover full article text.
   $article_node = $variables['node'];
   $full_text = !empty($article_node->get('body')->getValue()[0]) ?
