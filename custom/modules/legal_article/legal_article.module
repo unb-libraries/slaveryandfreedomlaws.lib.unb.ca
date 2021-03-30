@@ -44,3 +44,20 @@ function legal_article_preprocess_node__legal_article(&$variables) {
   // Update full text field.
   $variables['content']['body'][0]['#text'] = $full_text;
 }
+
+/**
+ * Implements hook_theme().
+ */
+function legal_article_theme($existing, $type, $theme, $path) {
+  // Use custom template to display annotations field.
+  $theme = [];
+
+  $theme['field__field_annotations'] = [
+    'render element' => 'content',
+    'base hook' => 'field',
+    'template' => 'field--node--field-annotations--legal-article',
+    'path' => drupal_get_path('module', 'legal_article') . '/templates',
+  ];
+
+  return $theme;
+}
