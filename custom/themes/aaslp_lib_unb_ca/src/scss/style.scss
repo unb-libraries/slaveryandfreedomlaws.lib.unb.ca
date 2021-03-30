@@ -39,6 +39,14 @@ body,
   }
 }
 
+// Broad (also careful).
+// Article (node).
+article.node {
+  p {
+    text-align: justify;
+  }
+}
+
 // Footer.
 footer > .container {
   // Footer notice.

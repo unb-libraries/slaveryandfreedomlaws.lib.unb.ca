@@ -12,6 +12,6 @@ name: 'Legal Article'
 type: legal_article
 description: 'A document that describes a specific slave law.'
 help: ''
-new_revision: false
+new_revision: true
 preview_mode: 1
 display_submitted: false
