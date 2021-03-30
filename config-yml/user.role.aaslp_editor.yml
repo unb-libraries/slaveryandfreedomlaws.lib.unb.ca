@@ -16,6 +16,7 @@ permissions:
   - 'delete legal_article revisions'
   - 'delete terms in annotations'
   - 'edit any legal_article content'
+  - 'edit terms in annotations'
   - 'revert legal_article revisions'
   - 'use text format unb_libraries'
   - 'view legal_article revisions'
