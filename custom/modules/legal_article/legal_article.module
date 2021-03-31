@@ -29,37 +29,43 @@ function legal_article_preprocess_node__legal_article(&$variables) {
 
   // Cycle through annotations.
   foreach ($annos as $index => $anno) {
-    $anno_val = Term::load($anno['target_id'])->getName();
-    // Mark annotation in full text.
-    // Strip punctuation from annotation term.
-    $anno_val = preg_replace('/(^[[:punct:]]|[[:punct:]]$)/', '', $anno_val);
-    // Search regular expression for annotation.
-    // This matches $anno_val, case-insensitive:
-    // $pattern = '/(\b\Q' . $anno_val . '\E\b)/mi';
-    // This matches the position right after $anno_val, case-insensitive:
-    $pattern = '/(?<=' . $anno_val . ')/mi';
-    // Annotation index should be aray index + 1.
-    $anno_no = $index + 1;
+    // Only proceed if a valid term can be loaded.
+    $anno_term = Term::load($anno['target_id']);
 
-    // If it's a source annotation...
-    if ($index < $src_anno_count) {
-      $anno_id = "anno-target-$anno_no";
-      // Add link to corresponding annotation after matched text.
-      $replacement = ' <span class="annotation" id="' . $anno_id .
-        '">[<a href="#annotation-' . $anno_no . '">' . $anno_no .
-        '</a>]</span>';
+    if ($anno_term) {
+      $anno_val = $anno_term->getName();
+      // Mark annotation in full text.
+      // Strip punctuation from annotation term.
+      $anno_val = preg_replace('/(^[[:punct:]]|[[:punct:]]$)/', '', $anno_val);
+      // Search regular expression for annotation.
+      // This matches $anno_val, case-insensitive:
+      // $pattern = '/(\b\Q' . $anno_val . '\E\b)/mi';
+      // This matches the position right after $anno_val, case-insensitive:
+      $pattern = '/(?<=' . $anno_val . ')/mi';
+      // Annotation index should be aray index + 1.
+      $anno_no = $index + 1;
+
+      // If it's a source annotation...
+      if ($index < $src_anno_count) {
+        $anno_id = "anno-target-$anno_no";
+        // Add link to corresponding annotation after matched text.
+        $replacement = ' <span class="annotation" id="' . $anno_id .
+          '">[<a href="#annotation-' . $anno_no . '">' . $anno_no .
+          '</a>]</span>';
+      }
+      else {
+        // Continue annotation count display but id ed annotations separate.
+        $ed_anno_no = $anno_no - $src_anno_count;
+        $anno_id = 'ed-anno-target-' . $ed_anno_no;
+        // Add link to corresponding annotation after matched text.
+        $replacement = ' <span class="annotation" id="' . $anno_id .
+          '">[<a href="#ed-annotation-' . $ed_anno_no . '">' . $anno_no .
+          '</a>]</span>';
+      }
+
+      // Make replacement in full text variable. One match (first) only.
+      $full_text = preg_replace($pattern, $replacement, $full_text, 1);
     }
-    else {
-      // Continue annotation count display but id ed annotations separate.
-      $ed_anno_no = $anno_no - $src_anno_count;
-      $anno_id = 'ed-anno-target-' . $ed_anno_no;
-      // Add link to corresponding annotation after matched text.
-      $replacement = ' <span class="annotation" id="' . $anno_id .
-        '">[<a href="#ed-annotation-' . $ed_anno_no . '">' . $anno_no .
-        '</a>]</span>';
-    }
-    // Make replacement in full text variable. One match (first) only.
-    $full_text = preg_replace($pattern, $replacement, $full_text, 1);
   }
 
   // Update full text field.
