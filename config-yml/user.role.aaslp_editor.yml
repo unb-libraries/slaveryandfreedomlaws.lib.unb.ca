@@ -8,6 +8,7 @@ weight: 2
 is_admin: null
 permissions:
   - 'access content overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'create legal_article content'
   - 'create terms in annotations'
@@ -15,8 +16,10 @@ permissions:
   - 'delete any legal_article content'
   - 'delete legal_article revisions'
   - 'delete terms in annotations'
+  - 'delete terms in sources'
   - 'edit any legal_article content'
   - 'edit terms in annotations'
+  - 'edit terms in sources'
   - 'revert legal_article revisions'
   - 'use text format unb_libraries'
   - 'view legal_article revisions'
