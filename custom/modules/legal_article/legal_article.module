@@ -16,12 +16,16 @@ function legal_article_preprocess_node__legal_article(&$variables) {
   $article_node = $variables['node'];
   $full_text = !empty($article_node->get('body')->getValue()[0]) ?
     $article_node->get('body')->getValue()[0]['value'] : NULL;
-  // Retrieve annotations.
-  $annos = !empty($article_node->get('field_annotations')->getValue()) ?
+  // Retrieve source annotations.
+  $src_annos = !empty($article_node->get('field_annotations')->getValue()) ?
     $article_node->get('field_annotations')->getValue() : NULL;
+  // Count source annotations.
+  $src_anno_count = count($src_annos);
   // Retrieve editorial annotations.
   $ed_annos = !empty($article_node->get('field_editorial_annotations')->getValue()) ?
     $article_node->get('field_editorial_annotations')->getValue() : NULL;
+  // Merge all annotations.
+  $annos = array_merge($src_annos, $ed_annos);
 
   // Cycle through annotations.
   foreach ($annos as $index => $anno) {
@@ -36,10 +40,24 @@ function legal_article_preprocess_node__legal_article(&$variables) {
     $pattern = '/(?<=' . $anno_val . ')/mi';
     // Annotation index should be aray index + 1.
     $anno_no = $index + 1;
-    $anno_id = "anno-target-$anno_no";
-    // Add link to corresponding annotation after matched text.
-    $replacement = ' <span class="annotation" id="' . $anno_id .
-      '">[<a href="#annotation-' . $anno_no . '">' . $anno_no . '</a>]</span>';
+
+    // If it's a source annotation...
+    if ($index < $src_anno_count) {
+      $anno_id = "anno-target-$anno_no";
+      // Add link to corresponding annotation after matched text.
+      $replacement = ' <span class="annotation" id="' . $anno_id .
+        '">[<a href="#annotation-' . $anno_no . '">' . $anno_no .
+        '</a>]</span>';
+    }
+    else {
+      // Continue annotation count display but id ed annotations separate.
+      $ed_anno_no = $anno_no - $src_anno_count;
+      $anno_id = 'ed-anno-target-' . $ed_anno_no;
+      // Add link to corresponding annotation after matched text.
+      $replacement = ' <span class="annotation" id="' . $anno_id .
+        '">[<a href="#ed-annotation-' . $ed_anno_no . '">' . $anno_no .
+        '</a>]</span>';
+    }
     // Make replacement in full text variable. One match (first) only.
     $full_text = preg_replace($pattern, $replacement, $full_text, 1);
   }
@@ -59,6 +77,13 @@ function legal_article_theme($existing, $type, $theme, $path) {
     'render element' => 'content',
     'base hook' => 'field',
     'template' => 'field--node--field-annotations--legal-article',
+    'path' => drupal_get_path('module', 'legal_article') . '/templates',
+  ];
+
+  $theme['field__field_editorial_annotations'] = [
+    'render element' => 'content',
+    'base hook' => 'field',
+    'template' => 'field--node--field-editorial-annotations--legal-article',
     'path' => drupal_get_path('module', 'legal_article') . '/templates',
   ];
 
