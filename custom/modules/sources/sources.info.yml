@@ -1,0 +1,5 @@
+name: Sources Module
+type: module
+description: Custom/extended functionality for sources vocabulary
+core: 8.x
+package: AASLP

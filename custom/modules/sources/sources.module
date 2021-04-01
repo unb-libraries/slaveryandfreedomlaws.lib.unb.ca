@@ -1,0 +1,64 @@
+<?php
+
+/**
+* @file
+* Contains legal_article.module.
+*/
+
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Implements hook_menu_local_actions_alter().
+ */
+function sources_menu_local_actions_alter(&$local_actions) {
+   // 'Add source' instead of 'Add term' for sources voc overview.
+   $current_path = \Drupal::service('path.current')->getPath();
+
+   if (str_starts_with($current_path, '/admin/structure/taxonomy/manage/')) {
+
+     if ($current_path == '/admin/structure/taxonomy/manage/sources/overview') {
+       $local_actions['entity.taxonomy_term.add_form']['title'] = 'Add source';
+     }
+     drupal_flush_all_caches();
+   }
+ }
+
+/**
+ * Implements hook_preprocess_page_title().
+ */
+function sources_preprocess_page_title(&$variables) {
+  $route = \Drupal::routeMatch();
+  $route_name = $route->getRouteName();
+
+  switch ($route_name) {
+    case 'entity.taxonomy_term.add_form':
+      $term = $route->getParameter('taxonomy_term');
+      $voc = $term->getVocabularyId();
+
+      if ($voc == 'sources') {
+        $variables['title'] = 'Add source';
+      }
+      break;
+
+    case 'entity.taxonomy_term.edit_form':
+      $term = $route->getParameter('taxonomy_term');
+      $name = $term->getName();
+      $voc = $term->getVocabularyId();
+
+      if ($voc == 'sources') {
+        $variables['title'] = t("Edit source $name");
+      }
+      break;
+
+    case 'entity.taxonomy_term.delete_form':
+      $term = $route->getParameter('taxonomy_term');
+      $name = $term->getName();
+      $voc = $term->getVocabularyId();
+
+      if ($voc == 'sources') {
+        $variables['title'] =
+          t("Are you sure you want to delete the source $name?");
+      }
+      break;
+  }
+}
