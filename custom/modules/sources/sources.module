@@ -2,10 +2,8 @@
 
 /**
 * @file
-* Contains legal_article.module.
+* Contains sources.module.
 */
-
-use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_menu_local_actions_alter().
