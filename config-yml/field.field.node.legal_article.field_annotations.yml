@@ -11,7 +11,7 @@ field_name: field_annotations
 entity_type: node
 bundle: legal_article
 label: Annotations
-description: ''
+description: "<p><b>Notice:</b> Removed/edited annotations cannot be recovered by reverting to a previous revision of the Legal Article. Changes to annotations are only saved after the Legal Article itself is saved.</p>\r\n"
 required: false
 translatable: false
 default_value: {  }
