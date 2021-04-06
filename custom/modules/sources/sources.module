@@ -30,8 +30,7 @@ function sources_preprocess_page_title(&$variables) {
 
   switch ($route_name) {
     case 'entity.taxonomy_term.add_form':
-      $term = $route->getParameter('taxonomy_term');
-      $voc = $term->getVocabularyId();
+      $voc = $route->getParameters()->get('taxonomy_vocabulary')->get('vid');
 
       if ($voc == 'sources') {
         $variables['title'] = 'Add source';
