@@ -8,12 +8,6 @@ aaslp_admin.admin:
     attributes:
       class:
         - custom-editor-menu
-aaslp_admin.admin.sources:
-  title: 'Sources'
-  description: 'Manage site content.'
-  url: internal:/admin/structure/taxonomy/manage/sources/overview
-  parent: aaslp_admin.admin
-  weight: 10
 aaslp_admin.admin.content:
   title: 'Content'
   description: 'Manage site content.'
