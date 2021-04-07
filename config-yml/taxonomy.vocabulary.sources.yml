@@ -1,8 +1,0 @@
-uuid: a869b98c-e29a-4ee0-98a7-24d71f8ad4f5
-langcode: en
-status: true
-dependencies: {  }
-name: Sources
-vid: sources
-description: 'Collections containing legal articles.'
-weight: 0
