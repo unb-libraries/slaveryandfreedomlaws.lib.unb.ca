@@ -7,6 +7,7 @@ dependencies:
     - search_api
     - node
   config:
+    - field.storage.node.body
     - search_api.server.drupal_solr_lib_unb_ca
 third_party_settings:
   search_api_solr:
@@ -53,7 +54,38 @@ id: aaslp_lib_unb_ca
 name: aaslp.lib.unb.ca
 description: ''
 read_only: false
-field_settings: {  }
+field_settings:
+  search_body:
+    label: 'Full Text'
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  search_metadata:
+    label: 'Aggregated field'
+    property_path: aggregated_field
+    type: text
+    boost: !!float 2
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/field_date'
+        - 'entity:node/field_full_title'
+        - 'entity:node/field_source'
+        - 'entity:node/title'
+  search_themes:
+    label: 'Aggregated field'
+    property_path: aggregated_field
+    type: text
+    boost: !!float 3
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/field_category'
+        - 'entity:node/field_crimes'
+        - 'entity:node/field_punishments'
 datasource_settings:
   'entity:node':
     languages:
