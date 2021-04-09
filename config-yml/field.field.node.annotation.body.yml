@@ -1,0 +1,23 @@
+uuid: 202d076f-1d8f-40dd-976a-57a4e1539ede
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.annotation
+  module:
+    - text
+id: node.annotation.body
+field_name: body
+entity_type: node
+bundle: annotation
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.legal_article.field_crimes
     - field.field.node.legal_article.field_date
     - field.field.node.legal_article.field_editorial_annotations
+    - field.field.node.legal_article.field_entity_annotations
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_notes
@@ -18,6 +19,7 @@ dependencies:
     - node.type.legal_article
   module:
     - datetime
+    - entity_reference_revisions
     - text
     - user
 id: node.legal_article.default
@@ -80,6 +82,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_entity_annotations:
+    weight: 13
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_full_title:
     weight: 2

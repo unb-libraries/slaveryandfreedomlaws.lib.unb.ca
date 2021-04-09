@@ -1,0 +1,22 @@
+uuid: 619a6189-97f0-4802-80b1-b20f21c4b45e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.annotation
+id: node.annotation.promote
+field_name: promote
+entity_type: node
+bundle: annotation
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
