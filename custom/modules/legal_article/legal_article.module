@@ -6,6 +6,9 @@
 */
 
 use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Entity;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Implements hook_preprocess_hook().
@@ -94,4 +97,17 @@ function legal_article_theme($existing, $type, $theme, $path) {
   ];
 
   return $theme;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function legal_article_form_node_legal_article_edit_form_alter(&$form, $form_state, $form_id) {
+  array_unshift($form['actions']['submit']['#submit'], 'article_postprocess');;
+}
+
+function article_postprocess(&$form, $form_state) {
+  // Flip field_revision_switch to force new revision.
+  $switch = $form_state->getValue('field_revision_switch')['value'];
+  $form_state->setValue('field_revision_switch', ['value' => (int)!$switch]);
 }

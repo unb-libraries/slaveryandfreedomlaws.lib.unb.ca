@@ -1,0 +1,23 @@
+uuid: 68bddb23-486e-4bad-abd3-af78d61db814
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_revision_switch
+    - node.type.legal_article
+id: node.legal_article.field_revision_switch
+field_name: field_revision_switch
+entity_type: node
+bundle: legal_article
+label: 'Revision Switch'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

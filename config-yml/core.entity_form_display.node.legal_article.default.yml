@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_notes
     - field.field.node.legal_article.field_punishments
+    - field.field.node.legal_article.field_revision_switch
     - field.field.node.legal_article.field_source
     - node.type.legal_article
   module:
@@ -141,6 +142,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: chosen_select
+    region: content
+  field_revision_switch:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_source:
     weight: 0
