@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.legal_article.field_crimes
     - field.field.node.legal_article.field_date
     - field.field.node.legal_article.field_editorial_annotations
-    - field.field.node.legal_article.field_entity_annotations
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_notes
@@ -47,7 +46,6 @@ hidden:
   field_crimes: true
   field_date: true
   field_editorial_annotations: true
-  field_entity_annotations: true
   field_full_title: true
   field_location: true
   field_notes: true

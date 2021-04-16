@@ -1,4 +1,4 @@
-uuid: a415cd33-35e7-464f-99ec-2dcdf5062ca3
+uuid: fe00784e-ddef-41dc-a636-ef2817ee5672
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,14 @@ dependencies:
     - field.storage.node.field_annotations
     - node.type.legal_article
     - taxonomy.vocabulary.annotations
+  module:
+    - entity_reference_revisions
 id: node.legal_article.field_annotations
 field_name: field_annotations
 entity_type: node
 bundle: legal_article
-label: Annotations
-description: "<p><b>Notice:</b> Removed/edited annotations cannot be recovered by reverting to a previous revision of the Legal Article. Changes to annotations are only saved after the Legal Article itself is saved.</p>\r\n"
+label: 'Transcription Annotations'
+description: '<strong>Caution: </strong>Removed annotations cannot be recovered by reverting to a previous revision.'
 required: false
 translatable: false
 default_value: {  }
@@ -26,4 +28,4 @@ settings:
       direction: asc
     auto_create: true
     auto_create_bundle: ''
-field_type: entity_reference
+field_type: entity_reference_revisions

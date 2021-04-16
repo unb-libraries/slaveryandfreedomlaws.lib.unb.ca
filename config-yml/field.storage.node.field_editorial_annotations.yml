@@ -1,17 +1,18 @@
-uuid: 6de0edaf-fb1c-4382-8f61-332b9f8a5dd2
+uuid: 644ad723-af74-4e11-9688-3cff9091e220
 langcode: en
 status: true
 dependencies:
   module:
+    - entity_reference_revisions
     - node
     - taxonomy
 id: node.field_editorial_annotations
 field_name: field_editorial_annotations
 entity_type: node
-type: entity_reference
+type: entity_reference_revisions
 settings:
   target_type: taxonomy_term
-module: core
+module: entity_reference_revisions
 locked: false
 cardinality: -1
 translatable: true

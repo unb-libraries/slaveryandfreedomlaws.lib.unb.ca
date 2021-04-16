@@ -59,9 +59,9 @@
         {# Replace default taxonomy render with custom link and description. #}
         <div{{ item.attributes.addClass('field__item') }}>
           <a id="annotation-{{ loop.index }}" href="#anno-target-{{ loop.index }}">
-            {{ item.content['#options'].entity.getName() }}
+            {{ item.content['#taxonomy_term'].getName() }}
           </a>
-          <p>{{ item.content['#options'].entity.getDescription()|striptags }}</p>
+          <p>{{ item.content['#taxonomy_term'].getDescription()|striptags }}</p>
         </div>
       {% endfor %}
     </div>
@@ -70,9 +70,9 @@
       {# Replace default taxonomy render with custom link and description. #}
       <div{{ item.attributes.addClass('field__item') }}>
         <a id="annotation-{{ loop.index }}" href="#anno-target-{{ loop.index }}">
-          {{ item.content['#options'].entity.getName() }}
+          {{ item.content['#taxonomy_term'].getName() }}
         </a>
-        <p>{{ item.content['#options'].entity.getDescription()|striptags }}</p>
+        <p>{{ item.content['#taxonomy_term'].getDescription()|striptags }}</p>
       </div>
     {% endfor %}
   {% endif %}
@@ -86,9 +86,9 @@
       {# Replace default taxonomy render with custom link and description. #}
       <div{{ item.attributes.addClass('field__item') }}>
         <a id="annotation-{{ loop.index }}" href="#anno-target-{{ loop.index }}">
-          {{ item.content['#options'].entity.getName() }}
+          {{ item.content['#taxonomy_term'].getName() }}
         </a>
-        <p>{{ item.content['#options'].entity.getDescription()|striptags }}</p>
+        <p>{{ item.content['#taxonomy_term'].getDescription()|striptags }}</p>
       </div>
     {% endfor %}
     {% if multiple %}

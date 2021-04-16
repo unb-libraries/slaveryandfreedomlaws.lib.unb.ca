@@ -21,12 +21,12 @@ function legal_article_preprocess_node__legal_article(&$variables) {
     $article_node->get('body')->getValue()[0]['value'] : NULL;
   // Retrieve source annotations.
   $src_annos = !empty($article_node->get('field_annotations')->getValue()) ?
-    $article_node->get('field_annotations')->getValue() : NULL;
+    $article_node->get('field_annotations')->getValue() : [];
   // Count source annotations.
   $src_anno_count = count($src_annos);
   // Retrieve editorial annotations.
   $ed_annos = !empty($article_node->get('field_editorial_annotations')->getValue()) ?
-    $article_node->get('field_editorial_annotations')->getValue() : NULL;
+    $article_node->get('field_editorial_annotations')->getValue() : [];
   // Merge all annotations.
   $annos = array_merge($src_annos, $ed_annos);
 
@@ -100,14 +100,29 @@ function legal_article_theme($existing, $type, $theme, $path) {
 }
 
 /**
+ * Implements hook_form_alter().
+ */
+function legal_article_form_alter(&$form, $form_state, $form_id) {
+  // Hide revision switch field for legal article create/edit forms.
+  if ($form_id == 'node_legal_article_form' or
+    $form_id == 'node_legal_article_edit_form') {
+      // For theme Seven (from Stable).
+      $form['field_revision_switch']['#attributes']['class'][] = 'hidden';
+      // For Bootstrap themes.
+      $form['field_revision_switch']['#attributes']['class'][] = 'd-none';
+    }
+}
+
+/**
  * Implements hook_form_FORM_ID_alter().
  */
 function legal_article_form_node_legal_article_edit_form_alter(&$form, $form_state, $form_id) {
-  array_unshift($form['actions']['submit']['#submit'], 'article_postprocess');;
+  // Add submit handler to the top of the stack.
+  array_unshift($form['actions']['submit']['#submit'], 'article_preprocess');;
 }
 
-function article_postprocess(&$form, $form_state) {
-  // Flip field_revision_switch to force new revision.
+function article_preprocess(&$form, $form_state) {
+  // Flip field_revision_switch to force new revision on submit.
   $switch = $form_state->getValue('field_revision_switch')['value'];
   $form_state->setValue('field_revision_switch', ['value' => (int)!$switch]);
 }

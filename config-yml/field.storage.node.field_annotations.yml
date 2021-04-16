@@ -1,17 +1,18 @@
-uuid: 131baac2-e209-4e45-aa3c-ff5582c3201e
+uuid: 27927208-cabb-4b48-8270-9962e63b2b13
 langcode: en
 status: true
 dependencies:
   module:
+    - entity_reference_revisions
     - node
     - taxonomy
 id: node.field_annotations
 field_name: field_annotations
 entity_type: node
-type: entity_reference
+type: entity_reference_revisions
 settings:
   target_type: taxonomy_term
-module: core
+module: entity_reference_revisions
 locked: false
 cardinality: -1
 translatable: true
