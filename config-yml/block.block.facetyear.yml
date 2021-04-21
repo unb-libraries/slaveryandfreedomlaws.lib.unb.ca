@@ -1,0 +1,29 @@
+uuid: 4ece43d4-f687-46b0-aa21-eb3002640f15
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.facet_year
+  module:
+    - facets
+    - system
+  theme:
+    - aaslp_lib_unb_ca
+id: facetyear
+theme: aaslp_lib_unb_ca
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:facet_year'
+settings:
+  id: 'facet_block:facet_year'
+  label: 'Facet Year'
+  provider: facets
+  label_display: visible
+  block_id: facetyear
+visibility:
+  request_path:
+    id: request_path
+    pages: /aaslp-search
+    negate: false
+    context_mapping: {  }

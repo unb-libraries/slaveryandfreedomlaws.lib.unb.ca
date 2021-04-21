@@ -217,7 +217,7 @@ display:
               anonymous: '0'
               aaslp_editor: '0'
             placeholder: ''
-            expose_fields: true
+            expose_fields: false
             searched_fields_id: search_api_fulltext_searched_fields
           is_grouped: false
           group_info:
@@ -261,6 +261,10 @@ display:
     display_options:
       display_extenders: {  }
       path: aaslp-search
+      cache:
+        type: none
+      defaults:
+        cache: false
     cache_metadata:
       max-age: -1
       contexts:
