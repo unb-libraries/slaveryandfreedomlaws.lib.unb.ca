@@ -2,8 +2,6 @@
 
 namespace Drupal\aaslp_admin\Routing;
 
-use Drupal\Core\Session\AccountProxy;
-use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Symfony\Component\Routing\RouteCollection;
 
