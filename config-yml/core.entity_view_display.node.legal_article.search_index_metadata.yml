@@ -1,0 +1,79 @@
+uuid: 87b7d1bc-6ed2-4959-8bc1-780d2b40d3b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index_metadata
+    - field.field.node.legal_article.body
+    - field.field.node.legal_article.field_annotations
+    - field.field.node.legal_article.field_category
+    - field.field.node.legal_article.field_citation
+    - field.field.node.legal_article.field_crimes
+    - field.field.node.legal_article.field_date
+    - field.field.node.legal_article.field_editorial_annotations
+    - field.field.node.legal_article.field_full_title
+    - field.field.node.legal_article.field_location
+    - field.field.node.legal_article.field_notes
+    - field.field.node.legal_article.field_punishments
+    - field.field.node.legal_article.field_revision_switch
+    - field.field.node.legal_article.field_source
+    - node.type.legal_article
+  module:
+    - datetime
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.legal_article.search_index_metadata
+targetEntityType: node
+bundle: legal_article
+mode: search_index_metadata
+content:
+  field_citation:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_date:
+    weight: 2
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_full_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_source:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  body: true
+  field_annotations: true
+  field_category: true
+  field_crimes: true
+  field_editorial_annotations: true
+  field_location: true
+  field_notes: true
+  field_punishments: true
+  field_revision_switch: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

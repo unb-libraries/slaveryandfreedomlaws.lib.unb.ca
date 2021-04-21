@@ -1,0 +1,10 @@
+uuid: 6a88d7cd-f5ba-4b59-a9b5-b845edf028c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.search_index_metadata
+label: 'Search index metadata'
+targetEntityType: node
+cache: true
