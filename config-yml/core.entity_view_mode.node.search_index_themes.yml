@@ -1,0 +1,10 @@
+uuid: 967670b0-91dd-417e-a836-6650b12518da
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.search_index_themes
+label: 'Search index themes'
+targetEntityType: node
+cache: true

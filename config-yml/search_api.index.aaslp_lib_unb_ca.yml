@@ -9,6 +9,8 @@ dependencies:
   config:
     - field.storage.node.body
     - search_api.server.drupal_solr_lib_unb_ca
+    - core.entity_view_mode.node.search_index_metadata
+    - core.entity_view_mode.node.search_index_themes
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -63,6 +65,28 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
+  search_metadata:
+    label: Metadata
+    property_path: rendered_item
+    type: text
+    boost: !!float 3
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          legal_article: search_index_metadata
+  search_themes:
+    label: Themes
+    property_path: rendered_item
+    type: text
+    boost: !!float 2
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          legal_article: search_index_themes
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -88,7 +112,9 @@ processor_settings:
     highlight_partial: true
     excerpt: true
     excerpt_length: 1024
-    exclude_fields: {  }
+    exclude_fields:
+      - search_metadata
+      - search_themes
     prefix: '<strong>'
     suffix: '</strong>'
     weights:
@@ -97,17 +123,14 @@ processor_settings:
     all_fields: false
     fields:
       - search_body
-      - title
-    title: true
-    alt: true
+    title: false
+    alt: false
     tags:
       b: 2
-      em: 1
       h1: 5
       h2: 3
       h3: 2
       strong: 2
-      u: 1
     weights:
       preprocess_index: -15
       preprocess_query: -15
