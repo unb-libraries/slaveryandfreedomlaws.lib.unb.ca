@@ -1,4 +1,4 @@
-uuid: a2bf89c2-1e3e-49c3-88bb-9f1fab88b27f
+uuid: daf848b3-2b9a-428d-a7a6-b78d436ded66
 langcode: en
 status: true
 dependencies:
@@ -8,24 +8,24 @@ dependencies:
   module:
     - search_api
 id: facet_year
-name: Date
+name: 'Facet Year'
 url_alias: facet_year
 weight: 0
 min_count: 1
-show_only_one_result: false
-field_identifier: search_date
+show_only_one_result: true
+field_identifier: search_year
 facet_source_id: 'search_api:views_page__aaslp_search__page_1'
 widget:
-  type: links
+  type: range_slider
   config:
     show_numbers: false
-    soft_limit: 0
-    soft_limit_settings:
-      show_less_label: 'Show less'
-      show_more_label: 'Show more'
-    show_reset_link: false
-    reset_text: 'Show all'
-    hide_reset_when_no_selection: false
+    prefix: ''
+    suffix: ''
+    min_type: search_result
+    min_value: !!float 0
+    max_type: search_result
+    max_value: !!float 10
+    step: !!float 1
 query_operator: or
 use_hierarchy: false
 expand_hierarchy: false
@@ -46,20 +46,19 @@ processor_configs:
       sort: 30
     settings:
       sort: DESC
-  date_item:
-    processor_id: date_item
-    weights:
-      build: 35
-    settings:
-      date_display: actual_date
-      granularity: 6
-      date_format: ''
   display_value_widget_order:
     processor_id: display_value_widget_order
     weights:
       sort: 40
     settings:
       sort: ASC
+  range_slider:
+    processor_id: range_slider
+    weights:
+      pre_query: 60
+      post_query: 60
+      build: 20
+    settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
     weights:
