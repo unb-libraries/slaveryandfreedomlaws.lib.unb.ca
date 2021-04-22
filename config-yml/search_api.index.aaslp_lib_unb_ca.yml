@@ -8,6 +8,7 @@ dependencies:
     - search_api
     - legal_article
   config:
+    - field.storage.node.field_date
     - field.storage.node.body
     - search_api.server.drupal_solr_lib_unb_ca
     - core.entity_view_mode.node.search_index_metadata
@@ -58,6 +59,14 @@ name: aaslp.lib.unb.ca
 description: ''
 read_only: false
 field_settings:
+  field_date:
+    label: Date
+    datasource_id: 'entity:node'
+    property_path: field_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date
   search_body:
     label: 'Full Text'
     datasource_id: 'entity:node'
