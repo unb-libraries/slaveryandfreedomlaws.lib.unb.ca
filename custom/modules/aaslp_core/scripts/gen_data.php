@@ -7,9 +7,6 @@
  * Generates test data for aaslp.lib.unb.ca.
  */
 
-use Drupal\taxonomy\Entity\Term;
-use Drupal\node\Entity\Node;
-
 // Main.
 for ($i = 1; $i <= 10; $i++) {
   echo rnd_nid('source') . "\n";
