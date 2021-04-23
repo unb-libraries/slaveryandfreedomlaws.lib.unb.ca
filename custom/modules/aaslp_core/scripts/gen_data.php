@@ -7,9 +7,65 @@
  * Generates test data for aaslp.lib.unb.ca.
  */
 
+use Drupal\taxonomy\Entity\Term;
+use Drupal\node\Entity\Node;
+
 // Main.
-for ($i = 1; $i <= 10; $i++) {
-  echo rnd_nid('source') . "\n";
+// Generate test sources.
+/*
+for ($i = 1; $i <= 5; $i++) {
+gen_source($i);
+}
+ */
+
+// Generate test articles.
+gen_article(1, 5);
+
+/**
+ * Generates a numbered Legal Article node.
+ *
+ * @param int $number
+ *   An identifying, non-zero, integer number. Defaults to NULL.
+ * @param int $multimax
+ *   Maximum number of entries for multi-value fields. Defaults to 1.
+ */
+function gen_article($number = NULL, $multimax = 1) {
+  $article = Node::create(['type' => 'legal_article']);
+  $article->field_source->target_id = rnd_nid('source');
+  $title = gen_title('Legal Article', $number, TRUE);
+  $article->title = $title;
+  $article->field_full_title = gen_title('Full Title', $number, TRUE);
+  $article->field_citation = gen_title('Citation', $number, TRUE);
+  $article->field_date = gen_date("1500-01-01", "1900-01-01");
+  $article->field_location->target_id = rnd_tid('locations');
+  $crimes = rand(1, $multimax);
+
+  for ($i = 1; $i <= $crimes; $i++) {
+    $article->field_crimes[] = rnd_tid('crimes');
+  }
+
+  $article->body->value = gen_lipsum(4, 'medium', TRUE, FALSE);
+  $article->body->format = 'unb_libraries';
+  $article->save();
+  $aid = $article->id();
+  echo "Generated Legal Article: $title ($aid)\n";
+}
+
+/**
+ * Generates a numbered Source node.
+ *
+ * @param int $number
+ *   An identifying, non-zero, integer number. Defaults to NULL.
+ */
+function gen_source($number = NULL) {
+  $source = Node::create(['type' => 'source']);
+  $title = gen_title('Source', $number, TRUE);
+  $source->title = $title;
+  $source->body->value = gen_lipsum(1, 'medium', FALSE, TRUE);
+  $source->body->format = 'unb_libraries';
+  $source->save();
+  $sid = $source->id();
+  echo "Generated Source: $title ($sid)\n";
 }
 
 /**
@@ -50,6 +106,20 @@ function gen_lipsum($paragraphs = 3, $length = 'medium', $headers = FALSE, $plai
 }
 
 /**
+ * Generates a random date.
+ *
+ * @param string $from
+ *   The minimum date value.
+ * @param string $to
+ *   The maximum date value.
+ */
+function gen_date($from = "1001-01-01", $to = "2100-01-01") {
+  $t_from = strtotime($from);
+  $t_to = strtotime($to);
+  return date("Y-m-d", rand($t_from, $t_to));
+}
+
+/**
  * Returns a random taxonomy term id from the specified vocabulary.
  *
  * @param string $vid
@@ -80,5 +150,32 @@ function rnd_nid($bundle) {
   // Return random value from $nids.
   if (!empty($nids)) {
     return array_values($nids)[rand(0, (count($nids) - 1))];
+  }
+}
+
+/**
+ * Returns a an array with random words from the provided text.
+ *
+ * @param string $text
+ *   The text to retrieve words from.
+ * @param int $amount
+ *   The amount of words to return. Defaults to 1.
+ */
+function rnd_words($text, $amount = 1) {
+  $source = !empty($text) ? explode(' ', $text) : NULL;
+
+  if ($source) {
+    $words = [];
+
+    for ($i = 0; $i < $amount; $i++) {
+      $word = $source[rand(0, (count($source) - 1))];
+      $word = preg_replace('/[^a-z]+/i', '', $word);
+      $words[] = $word;
+    }
+
+    return $words;
+  }
+  else {
+    return FALSE;
   }
 }
