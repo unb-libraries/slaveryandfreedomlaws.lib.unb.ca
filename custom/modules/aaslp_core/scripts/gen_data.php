@@ -12,14 +12,13 @@ use Drupal\node\Entity\Node;
 
 // Main.
 // Generate test sources.
-/*
 for ($i = 1; $i <= 5; $i++) {
-gen_source($i);
+  gen_source($i);
 }
- */
-
 // Generate test articles.
-gen_article(1, 5);
+for ($i = 1; $i <= 10; $i++) {
+  gen_article($i, 5);
+}
 
 /**
  * Generates a numbered Legal Article node.
@@ -30,7 +29,11 @@ gen_article(1, 5);
  *   Maximum number of entries for multi-value fields. Defaults to 1.
  */
 function gen_article($number = NULL, $multimax = 1) {
+  // Create article body.
+  $body = gen_lipsum(4, 'medium', TRUE, FALSE);
+  // Create node.
   $article = Node::create(['type' => 'legal_article']);
+  // Populate fields.
   $article->field_source->target_id = rnd_nid('source');
   $title = gen_title('Legal Article', $number, TRUE);
   $article->title = $title;
@@ -38,17 +41,52 @@ function gen_article($number = NULL, $multimax = 1) {
   $article->field_citation = gen_title('Citation', $number, TRUE);
   $article->field_date = gen_date("1500-01-01", "1900-01-01");
   $article->field_location->target_id = rnd_tid('locations');
-  $crimes = rand(1, $multimax);
+  // Crimes.
+  $items = rand(1, $multimax);
 
-  for ($i = 1; $i <= $crimes; $i++) {
+  for ($i = 1; $i <= $items; $i++) {
     $article->field_crimes[] = rnd_tid('crimes');
   }
+  // Punishments.
+  $items = rand(1, $multimax);
 
-  $article->body->value = gen_lipsum(4, 'medium', TRUE, FALSE);
+  for ($i = 1; $i <= $items; $i++) {
+    $article->field_punishments[] = rnd_tid('punishments');
+  }
+
+  $article->field_category = rnd_tid('law_categories');
+
+  $article->body->value = $body;
   $article->body->format = 'unb_libraries';
+  // Transcription annotations.
+  $items = rand(1, $multimax);
+
+  for ($i = 1; $i <= $items; $i++) {
+    // Number of words.
+    $words = rnd_words(strip_tags($body), rand(1, $multimax));
+    // Description.
+    $desc = gen_lipsum(1, 'small', FALSE, TRUE);
+    // Create and save annotation term.
+    $anno = Term::create([
+      'name' => $words,
+      'description' => $desc,
+      'vid' => 'annotations',
+    ]);
+
+    $anno->save();
+    $tid = $anno->id();
+
+    // Add ID to multi field.
+    $article->field_annotations[] = [
+      'target_id' => $tid,
+      'target_revision_id' => (string) ($tid + 1),
+    ];
+  }
+
   $article->save();
   $aid = $article->id();
   echo "Generated Legal Article: $title ($aid)\n";
+
 }
 
 /**
@@ -166,14 +204,16 @@ function rnd_words($text, $amount = 1) {
 
   if ($source) {
     $words = [];
+    $start = rand(0, (count($source) - 1));
 
     for ($i = 0; $i < $amount; $i++) {
-      $word = $source[rand(0, (count($source) - 1))];
-      $word = preg_replace('/[^a-z]+/i', '', $word);
-      $words[] = $word;
+
+      if (!empty($source[$start + $i])) {
+        $words[] = $source[$start + $i];
+      }
     }
 
-    return $words;
+    return implode(' ', $words);
   }
   else {
     return FALSE;

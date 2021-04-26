@@ -9,10 +9,7 @@
 
 use Drupal\taxonomy\Entity\Term;
 
-clr_terms('locations');
-clr_terms('law_categories');
-clr_terms('crimes');
-clr_terms('punishments');
+clr_terms('annotations');
 
 /**
  * Clear all terms from a given vocabulary.
