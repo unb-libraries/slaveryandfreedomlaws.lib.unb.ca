@@ -12,11 +12,11 @@ use Drupal\node\Entity\Node;
 
 // Main.
 // Generate test sources.
-for ($i = 1; $i <= 5; $i++) {
+for ($i = 1; $i <= 2; $i++) {
   gen_source($i);
 }
 // Generate test articles.
-for ($i = 1; $i <= 10; $i++) {
+for ($i = 1; $i <= 2; $i++) {
   gen_article($i, 5);
 }
 
@@ -30,7 +30,7 @@ for ($i = 1; $i <= 10; $i++) {
  */
 function gen_article($number = NULL, $multimax = 1) {
   // Create article body.
-  $body = gen_lipsum(4, 'medium', TRUE, FALSE);
+  $full_text = gen_lipsum(4, 'medium', TRUE, FALSE);
   // Create node.
   $article = Node::create(['type' => 'legal_article']);
   // Populate fields.
@@ -56,19 +56,17 @@ function gen_article($number = NULL, $multimax = 1) {
 
   $article->field_category = rnd_tid('law_categories');
 
-  $article->body->value = $body;
+  $article->body->value = $full_text;
   $article->body->format = 'unb_libraries';
   // Transcription annotations.
-  $items = rand(1, $multimax);
+  $words = rnd_words(strip_tags($full_text), rand(1, $multimax));
 
-  for ($i = 1; $i <= $items; $i++) {
-    // Number of words.
-    $words = rnd_words(strip_tags($body), rand(1, $multimax));
+  foreach ($words as $word) {
     // Description.
     $desc = gen_lipsum(1, 'small', FALSE, TRUE);
     // Create and save annotation term.
     $anno = Term::create([
-      'name' => $words,
+      'name' => $word,
       'description' => $desc,
       'vid' => 'annotations',
     ]);
@@ -82,6 +80,30 @@ function gen_article($number = NULL, $multimax = 1) {
       'target_revision_id' => (string) ($tid + 1),
     ];
   }
+  // Editorial annotations.
+  $words = rnd_words(strip_tags($full_text), rand(1, $multimax));
+
+  foreach ($words as $word) {
+    // Description.
+    $desc = gen_lipsum(1, 'small', FALSE, TRUE);
+    // Create and save annotation term.
+    $anno = Term::create([
+      'name' => $word,
+      'description' => $desc,
+      'vid' => 'annotations',
+    ]);
+
+    $anno->save();
+    $tid = $anno->id();
+
+    // Add ID to multi field.
+    $article->field_editorial_annotations[] = [
+      'target_id' => $tid,
+      'target_revision_id' => (string) ($tid + 1),
+    ];
+  }
+
+  $article->field_notes->value = gen_lipsum(1, 'medium', FALSE, TRUE);
 
   $article->save();
   $aid = $article->id();
@@ -204,16 +226,14 @@ function rnd_words($text, $amount = 1) {
 
   if ($source) {
     $words = [];
-    $start = rand(0, (count($source) - 1));
 
     for ($i = 0; $i < $amount; $i++) {
-
-      if (!empty($source[$start + $i])) {
-        $words[] = $source[$start + $i];
-      }
+      $word = $source[rand(0, (count($source) - 1))];
+      $word = preg_replace('/[^a-z]+/i', '', $word);
+      $words[] = $word;
     }
 
-    return implode(' ', $words);
+    return $words;
   }
   else {
     return FALSE;
