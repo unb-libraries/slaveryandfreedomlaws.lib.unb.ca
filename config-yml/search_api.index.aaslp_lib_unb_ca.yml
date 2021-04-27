@@ -4,12 +4,17 @@ status: true
 dependencies:
   module:
     - search_api_solr
+    - taxonomy
     - node
     - search_api
     - legal_article
   config:
+    - field.storage.node.field_category
+    - field.storage.node.field_crimes
     - field.storage.node.field_date
     - field.storage.node.body
+    - field.storage.node.field_location
+    - field.storage.node.field_punishments
     - search_api.server.drupal_solr_lib_unb_ca
     - core.entity_view_mode.node.search_index_metadata
     - core.entity_view_mode.node.search_index_themes
@@ -75,6 +80,36 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
+  search_category:
+    label: 'Category » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_category:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_category
+      module:
+        - taxonomy
+  search_crimes:
+    label: 'Crimes » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_crimes:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_crimes
+      module:
+        - taxonomy
+  search_location:
+    label: 'Location » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_location:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location
+      module:
+        - taxonomy
   search_metadata:
     label: Metadata
     property_path: rendered_item
@@ -86,6 +121,16 @@ field_settings:
       view_mode:
         'entity:node':
           legal_article: search_index_metadata
+  search_punishments:
+    label: 'Punishments » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_punishments:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_punishments
+      module:
+        - taxonomy
   search_themes:
     label: Themes
     property_path: rendered_item

@@ -1,26 +1,26 @@
-uuid: 2cf45812-27b6-47cc-9beb-33370ce9405e
+uuid: 4be464a2-dc9a-4ff5-8147-19705f3f60f0
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.facet_year
+    - facets.facet.facet_punishments
   module:
     - facets
     - system
   theme:
     - aaslp_lib_unb_ca
-id: facetyear
+id: facetpunishments
 theme: aaslp_lib_unb_ca
 region: sidebar_second
-weight: -5
+weight: 0
 provider: null
-plugin: 'facet_block:facet_year'
+plugin: 'facet_block:facet_punishments'
 settings:
-  id: 'facet_block:facet_year'
-  label: Year
+  id: 'facet_block:facet_punishments'
+  label: 'Facet Punishments'
   provider: facets
   label_display: '0'
-  block_id: facetyear
+  block_id: facetpunishments
 visibility:
   request_path:
     id: request_path

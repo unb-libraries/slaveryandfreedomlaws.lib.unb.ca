@@ -1,4 +1,4 @@
-uuid: daf848b3-2b9a-428d-a7a6-b78d436ded66
+uuid: 515381b1-98be-4c7b-8c45-7ca4ed5eaefc
 langcode: en
 status: true
 dependencies:
@@ -7,26 +7,26 @@ dependencies:
     - views.view.aaslp_search
   module:
     - search_api
-id: facet_year
-name: 'Facet Year'
-url_alias: facet_year
+id: facet_punishments
+name: 'Facet Punishments'
+url_alias: facet_punishments
 weight: 0
 min_count: 1
-show_only_one_result: true
-field_identifier: search_year
+show_only_one_result: false
+field_identifier: search_punishments
 facet_source_id: 'search_api:views_page__aaslp_search__page_1'
 widget:
-  type: range_slider
+  type: links
   config:
-    show_numbers: false
-    prefix: ''
-    suffix: ''
-    min_type: search_result
-    min_value: !!float 0
-    max_type: search_result
-    max_value: !!float 10
-    step: !!float 1
-query_operator: or
+    show_numbers: true
+    soft_limit: 0
+    soft_limit_settings:
+      show_less_label: 'Show less'
+      show_more_label: 'Show more'
+    show_reset_link: false
+    reset_text: 'Show all'
+    hide_reset_when_no_selection: false
+query_operator: and
 use_hierarchy: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
@@ -52,12 +52,10 @@ processor_configs:
       sort: 40
     settings:
       sort: ASC
-  range_slider:
-    processor_id: range_slider
+  hide_non_narrowing_result_processor:
+    processor_id: hide_non_narrowing_result_processor
     weights:
-      pre_query: 60
-      post_query: 60
-      build: 20
+      build: 40
     settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler

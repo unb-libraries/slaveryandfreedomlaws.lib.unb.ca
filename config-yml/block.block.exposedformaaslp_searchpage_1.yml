@@ -1,0 +1,29 @@
+uuid: 5855bc25-2dc9-4519-bf95-c301d2bc7d0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.aaslp_search
+  module:
+    - system
+    - views
+  theme:
+    - aaslp_lib_unb_ca
+id: exposedformaaslp_searchpage_1
+theme: aaslp_lib_unb_ca
+region: content
+weight: -2
+provider: null
+plugin: 'views_exposed_filter_block:aaslp_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:aaslp_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: '/aaslp-search*'
+    negate: false
+    context_mapping: {  }

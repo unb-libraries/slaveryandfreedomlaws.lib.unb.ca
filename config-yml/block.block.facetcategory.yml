@@ -1,26 +1,26 @@
-uuid: 2cf45812-27b6-47cc-9beb-33370ce9405e
+uuid: aa6fa526-56fd-43b9-a791-551b7d8882b9
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.facet_year
+    - facets.facet.facet_category
   module:
     - facets
     - system
   theme:
     - aaslp_lib_unb_ca
-id: facetyear
+id: facetcategory
 theme: aaslp_lib_unb_ca
 region: sidebar_second
-weight: -5
+weight: 0
 provider: null
-plugin: 'facet_block:facet_year'
+plugin: 'facet_block:facet_category'
 settings:
-  id: 'facet_block:facet_year'
-  label: Year
+  id: 'facet_block:facet_category'
+  label: 'Facet Category'
   provider: facets
   label_display: '0'
-  block_id: facetyear
+  block_id: facetcategory
 visibility:
   request_path:
     id: request_path

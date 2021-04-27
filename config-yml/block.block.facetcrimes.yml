@@ -1,26 +1,26 @@
-uuid: 2cf45812-27b6-47cc-9beb-33370ce9405e
+uuid: 25388f27-1985-48c6-9145-7ed178a4bad1
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.facet_year
+    - facets.facet.facet_crimes
   module:
     - facets
     - system
   theme:
     - aaslp_lib_unb_ca
-id: facetyear
+id: facetcrimes
 theme: aaslp_lib_unb_ca
 region: sidebar_second
-weight: -5
+weight: 0
 provider: null
-plugin: 'facet_block:facet_year'
+plugin: 'facet_block:facet_crimes'
 settings:
-  id: 'facet_block:facet_year'
-  label: Year
+  id: 'facet_block:facet_crimes'
+  label: 'Facet Crimes'
   provider: facets
   label_display: '0'
-  block_id: facetyear
+  block_id: facetcrimes
 visibility:
   request_path:
     id: request_path
