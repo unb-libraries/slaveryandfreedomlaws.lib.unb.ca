@@ -16,7 +16,7 @@ for ($i = 1; $i <= 2; $i++) {
   gen_source($i);
 }
 // Generate test articles.
-for ($i = 1; $i <= 2; $i++) {
+for ($i = 1; $i <= 10; $i++) {
   gen_article($i, 5);
 }
 
