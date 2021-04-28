@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: facet_punishments
-name: 'Facet Punishments'
+name: Punishments
 url_alias: facet_punishments
 weight: 0
 min_count: 1
@@ -38,12 +38,6 @@ processor_configs:
     processor_id: active_widget_order
     weights:
       sort: 20
-    settings:
-      sort: DESC
-  count_widget_order:
-    processor_id: count_widget_order
-    weights:
-      sort: 30
     settings:
       sort: DESC
   display_value_widget_order:

@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: facet_category
-name: 'Facet Category'
+name: Category
 url_alias: facet_category
 weight: 0
 min_count: 1

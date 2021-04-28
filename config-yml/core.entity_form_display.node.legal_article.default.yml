@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_notes
+    - field.field.node.legal_article.field_parent_location
     - field.field.node.legal_article.field_punishments
     - field.field.node.legal_article.field_revision_switch
     - field.field.node.legal_article.field_source
@@ -119,6 +120,16 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_parent_location:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_punishments:
     weight: 7
     settings: {  }

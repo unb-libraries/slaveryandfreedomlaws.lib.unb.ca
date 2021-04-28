@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_notes
+    - field.field.node.legal_article.field_parent_location
     - field.field.node.legal_article.field_punishments
     - field.field.node.legal_article.field_revision_switch
     - field.field.node.legal_article.field_source
@@ -63,6 +64,7 @@ hidden:
   field_full_title: true
   field_location: true
   field_notes: true
+  field_parent_location: true
   field_revision_switch: true
   field_source: true
   langcode: true

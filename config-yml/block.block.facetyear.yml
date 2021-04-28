@@ -12,12 +12,12 @@ dependencies:
 id: facetyear
 theme: aaslp_lib_unb_ca
 region: sidebar_second
-weight: -5
+weight: -7
 provider: null
 plugin: 'facet_block:facet_year'
 settings:
   id: 'facet_block:facet_year'
-  label: Year
+  label: 'Facet Year'
   provider: facets
   label_display: '0'
   block_id: facetyear

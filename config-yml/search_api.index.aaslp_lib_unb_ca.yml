@@ -100,6 +100,15 @@ field_settings:
         - field.storage.node.field_crimes
       module:
         - taxonomy
+  search_full_location:
+    label: 'Full Location'
+    property_path: aggregated_field
+    type: string
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/field_location'
+        - 'entity:node/field_parent_location'
   search_location:
     label: 'Location » Taxonomy term » Name'
     datasource_id: 'entity:node'
