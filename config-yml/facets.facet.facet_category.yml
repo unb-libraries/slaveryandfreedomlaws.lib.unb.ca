@@ -12,14 +12,20 @@ name: Category
 url_alias: facet_category
 weight: 0
 min_count: 1
-show_only_one_result: true
+show_only_one_result: false
 field_identifier: search_category
 facet_source_id: 'search_api:views_page__aaslp_search__page_1'
 widget:
-  type: dropdown
+  type: checkbox
   config:
     show_numbers: true
-    default_option_label: Choose
+    soft_limit: 0
+    soft_limit_settings:
+      show_less_label: 'Show less'
+      show_more_label: 'Show more'
+    show_reset_link: false
+    reset_text: 'Show all'
+    hide_reset_when_no_selection: false
 query_operator: and
 use_hierarchy: false
 expand_hierarchy: false

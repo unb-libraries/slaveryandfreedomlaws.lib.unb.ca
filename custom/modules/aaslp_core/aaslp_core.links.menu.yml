@@ -1,0 +1,14 @@
+aaslp.front:
+  title: 'Home'
+  description: 'Home'
+  parent: main
+  menu_name: main
+  route_name: <front>
+  weight: 10
+aaslp.search:
+  title: 'Search'
+  description: 'Search'
+  parent: main
+  menu_name: main
+  url: internal:/aaslp-search
+  weight: 20
