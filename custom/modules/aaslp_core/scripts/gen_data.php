@@ -14,7 +14,7 @@ use Drupal\node\Entity\Node;
 // Generate test sources.
 /*
 for ($i = 1; $i <= 2; $i++) {
-  gen_source($i);
+gen_source($i);
 }
  */
 // Generate test articles.
