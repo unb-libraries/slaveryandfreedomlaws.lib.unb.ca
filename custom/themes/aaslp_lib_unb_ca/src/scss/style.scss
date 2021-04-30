@@ -52,7 +52,6 @@ main > .container {
   .row.no-gutters {
     // Left column.
       .order-2 {
-        width: 25%;
       // Sidebar first.
       .region-sidebar-first {
         // Facets.
@@ -62,8 +61,12 @@ main > .container {
           }
           ul {
             padding-left: 0;
+            padding-right: 1rem;
 
-            li.facet-item {
+            &.item-list__range_slider {
+              margin-bottom: 3rem;
+            }
+            li {
               font-size: .8rem;
               list-style: none;
             }
