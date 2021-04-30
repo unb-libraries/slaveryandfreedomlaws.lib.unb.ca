@@ -47,6 +47,38 @@ article.node {
   }
 }
 
+// Main conainer.
+main > .container {
+  .row.no-gutters {
+    // Left column.
+      .order-2 {
+        width: 25%;
+      // Sidebar first.
+      .region-sidebar-first {
+        // Facets.
+        .block-facets {
+          h3 {
+            font-size: 1rem;
+          }
+          ul {
+            padding-left: 0;
+
+            li.facet-item {
+              font-size: .8rem;
+              list-style: none;
+            }
+            li > input {
+              height: .6rem;
+              margin-right: .2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 // Footer.
 footer > .container {
   // Footer notice.
