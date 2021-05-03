@@ -67,6 +67,14 @@ display:
         type: default
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline:
+            search_year: search_year
+            search_location: search_location
+            search_category: search_category
+          separator: /
+          hide_empty: false
       fields:
         title_1:
           id: title_1
