@@ -49,38 +49,60 @@ article.node {
 
 // Main conainer.
 main > .container {
-  .row.no-gutters {
-    // Left column.
-      .order-2 {
-      // Sidebar first.
-      .region-sidebar-first {
-        // Facets.
-        .block-facets {
-          h3 {
-            font-size: 1rem;
-          }
-          ul {
-            padding-left: 0;
-            padding-right: 1rem;
+  // Sidebar first.
+  .region-sidebar-first {
+    // Facets.
+    .block-facets {
+      h3 {
+        font-size: 1rem;
+      }
+      ul {
+        padding-left: 0;
+        padding-right: 1rem;
 
-            &.item-list__range_slider {
-              margin-bottom: 3rem;
-            }
-            li {
-              font-size: .8rem;
-              list-style: none;
-            }
-            li > input {
-              height: .6rem;
-              margin-right: .2rem;
-            }
-          }
+        &.item-list__range_slider {
+          margin-bottom: 3rem;
+        }
+        li {
+          font-size: .8rem;
+          list-style: none;
+        }
+        li > input {
+          height: .6rem;
+          margin-right: .2rem;
         }
       }
     }
   }
-}
+  // Exposed form.
+  .views-exposed-form {
+    // Actions (submit) button.
+    .form-actions {
+      display: inline-block;
+      margin-top: 1.25rem;
+    }
+  }
+  // Views content.
+  .views-element-container .view-content {
+    // Views row.
+    .views-row {
+      margin-top: 1rem;
+    }
+  }
+  // Views footer.
+  .view-footer {
+    margin-top: 1rem;
 
+    // Views pager.
+    & + .pager {
+      margin-top: 1rem;
+    }
+  }
+  // Search page title.
+  #block-aaslp-lib-unb-ca-page-title .page-title {
+    text-align: left !important;
+  }
+}
 
 // Footer.
 footer > .container {
