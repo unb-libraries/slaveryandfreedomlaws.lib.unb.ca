@@ -83,6 +83,11 @@ main > .container {
     .collapse-facet:not([aria-expanded="true"]) .fa-caret-down {
       display: none !important;
     }
+    // Year facet.
+    #collapseYearFacet > .item-list__range_slider {
+      width: 86%;
+      margin-left: 7%;
+    }
   }
   // Exposed form.
   .views-exposed-form {
