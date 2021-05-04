@@ -51,27 +51,37 @@ article.node {
 main > .container {
   // Sidebar first.
   .region-sidebar-first {
-    // Facets.
-    .block-facets {
-      h3 {
-        font-size: 1rem;
-      }
-      ul {
-        padding-left: 0;
-        padding-right: 1rem;
+    h3 {
+      font-size: 1rem;
+    }
+    ul {
+      padding-left: 0;
+      padding-right: 1rem;
 
-        &.item-list__range_slider {
-          margin-bottom: 3rem;
-        }
-        li {
-          font-size: .8rem;
-          list-style: none;
-        }
-        li > input {
-          height: .6rem;
-          margin-right: .2rem;
-        }
+      &.item-list__range_slider {
+        margin-bottom: 3rem;
       }
+      li {
+        font-size: .8rem;
+        list-style: none;
+      }
+      li > input {
+        height: .6rem;
+        margin-right: .2rem;
+      }
+    }
+    // Collapse icons.
+    .collapse-facet[aria-expanded="true"] .fa-caret-right {
+      display: none !important;
+    }
+    .collapse-facet:not([aria-expanded="true"]) .fa-caret-right {
+      display: initial !important;
+    }
+    .collapse-facet[aria-expanded="true"] .fa-caret-down {
+      display: initial !important;
+    }
+    .collapse-facet:not([aria-expanded="true"]) .fa-caret-down {
+      display: none !important;
     }
   }
   // Exposed form.
