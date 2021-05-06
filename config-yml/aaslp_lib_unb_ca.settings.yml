@@ -8,7 +8,7 @@ logo:
   path: ''
 favicon:
   use_default: 1
-b4_top_container: container
+b4_top_container: 'container-fluid m-0 p-0'
 b4_body_schema: none
 b4_body_bg_schema: none
 b4_navbar_schema: none
@@ -18,3 +18,4 @@ b4_footer_bg_schema: none
 subtheme_folder: ''
 subtheme_name: ''
 subtheme_machine_name: ''
+b4_top_container_config: ''
