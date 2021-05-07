@@ -45,7 +45,11 @@
         "installer-types": [
             "library"
         ],
-        "patches": {}
+        "patches": {
+            "drupal/samlauth": {
+                "Ignore Role Restrictions": "/build/patches/samlauth_rolematch.patch"
+            }
+        }
     },
     "license": "MIT",
     "minimum-stability": "dev",
