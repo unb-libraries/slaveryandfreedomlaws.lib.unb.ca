@@ -64,7 +64,58 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: default
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: true
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            title_1: title_1
+            search_api_excerpt: search_api_excerpt
+            search_year: search_year
+            search_location: search_location
+            search_category: search_category
+          info:
+            title_1:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            search_api_excerpt:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            search_year:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            search_location:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            search_category:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
       row:
         type: fields
         options:
@@ -83,7 +134,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -206,7 +257,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Year
           exclude: false
           alter:
             alter_text: false
@@ -252,7 +303,7 @@ display:
           decimal: .
           separator: ''
           format_plural: false
-          format_plural_string: !!binary MQNAY291bnQ=
+          format_plural_string: !!binary Aw==
           prefix: ''
           suffix: ''
           link_to_item: false
@@ -268,7 +319,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Location
           exclude: false
           alter:
             alter_text: false
@@ -338,7 +389,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Category
           exclude: false
           alter:
             alter_text: false
@@ -473,7 +524,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: Search
+      title: 'Slave Law Database'
       header:
         result:
           id: result

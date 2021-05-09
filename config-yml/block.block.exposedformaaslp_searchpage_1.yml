@@ -11,7 +11,7 @@ dependencies:
     - aaslp_lib_unb_ca
 id: exposedformaaslp_searchpage_1
 theme: aaslp_lib_unb_ca
-region: sidebar_first
+region: nav_main
 weight: -6
 provider: null
 plugin: 'views_exposed_filter_block:aaslp_search-page_1'
