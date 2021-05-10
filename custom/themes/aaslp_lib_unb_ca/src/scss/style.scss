@@ -63,12 +63,24 @@ header {
       color: $offwhite !important;
     }
   }
-  .navbar-nav {
-    a {
-      color: $doffwhite;
+  // Main navigation region.
+  .region-nav-main {
+    // Exposed search.
+    .views-exposed-form {
+      // Submit button.
+      .form-actions {
+        display: inline-block;
+        margin-top: 1.1rem;
+      }
+    }
+    // Main menu.
+    .navbar-nav {
+      a {
+        color: $doffwhite;
 
-      &:hover {
-        color: $offwhite;
+        &:hover {
+          color: $offwhite;
+        }
       }
     }
   }
@@ -177,7 +189,8 @@ main > .container-fluid {
 }
 
 // Footer.
-footer > .container {
+footer > .container-fluid {
+  padding: 1rem !important;
   // Footer notice.
   #footer-copy {
 
