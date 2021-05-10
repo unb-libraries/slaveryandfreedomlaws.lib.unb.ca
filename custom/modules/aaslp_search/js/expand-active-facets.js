@@ -5,6 +5,10 @@
     attach: function (context, settings) {
       // On documeny ready.
       $(document).ready( function() {
+        var path = window.location.href;
+        if (path.includes('facet_year')) {
+          $("#collapseYearFacet").collapse("show");
+        }
         if ($("#collapseCategoryFacet .facets-checkbox[checked='checked']").is(':empty')) {
           $("#collapseCategoryFacet").collapse("show");
         }
