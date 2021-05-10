@@ -67,16 +67,26 @@ header {
   .region-nav-main {
     // Exposed search.
     .views-exposed-form {
-      // Submit button.
+      // Text input.
+      .form-text {
+        font-size: .8rem;
+      }
+      // Submit buttons.
       .form-actions {
         display: inline-block;
-        margin-top: 1.1rem;
+        margin-top: .9rem;
+        font-size: .9rem;
+
+        .btn[value="Reset"] {
+          margin-left: .4rem;
+        }
       }
     }
     // Main menu.
     .navbar-nav {
       a {
         color: $doffwhite;
+        font-size: 1rem;
 
         &:hover {
           color: $offwhite;
@@ -149,14 +159,6 @@ main > .container-fluid {
     #collapseYearFacet > .item-list__range_slider {
       width: 86%;
       margin-left: 7%;
-    }
-  }
-  // Exposed form.
-  .views-exposed-form {
-    // Actions (submit) button.
-    .form-actions {
-      display: inline-block;
-      margin-top: 1.25rem;
     }
   }
   // Views content.
