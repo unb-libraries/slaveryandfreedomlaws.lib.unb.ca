@@ -6,3 +6,9 @@
  *
  * Place your custom PHP code in this file.
  */
+
+function aaslp_lib_unb_ca_form_views_exposed_form_alter(&$form, &$form_state) {
+  $form['keys']['#attributes']['placeholder'][] = t('Search');
+  $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+  $form['actions']['reset']['#value'] = html_entity_decode('&#xf00d;');
+}
