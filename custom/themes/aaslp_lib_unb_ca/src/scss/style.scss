@@ -74,6 +74,7 @@ header {
       // Text input.
       .form-text {
         font-size: .8rem;
+        border: none;
       }
       // Submit buttons.
       .form-actions {
@@ -120,7 +121,7 @@ main > .container-fluid {
     padding: 0 !important;
     // Page title.
     .block-page-title-block {
-      padding: 1rem;
+      padding: .5rem 1rem;
       background-color: $unb-turquoise;
       color: $offwhite;
 
@@ -132,7 +133,7 @@ main > .container-fluid {
     }
     // Facets.
     #block-facetpunishments h3 {
-      padding-bottom: 1rem;
+      padding-bottom: .5rem;
     }
 
     .block-facets {
@@ -145,7 +146,7 @@ main > .container-fluid {
         font-size: .8rem;
         font-weight: normal !important;
         margin: 0;
-        padding: .3rem;
+        padding: .2rem;
         padding-left: 1rem;
       }
       ul {
@@ -194,6 +195,7 @@ main > .container-fluid {
     // Views content.
     .views-element-container .view-content {
       margin-left: 1rem;
+      margin-right: 1rem;
       // Views row.
       .views-row {
         margin-top: 1rem;
