@@ -47,12 +47,16 @@ article.node {
     text-align: justify;
   }
 }
+// Input.
+input {
+  border-radius: 2px !important;
+  box-shadow: none !important;
+}
 
 // Header.
 header {
   background-color: $unb-dturquoise;
   .navbar-brand {
-    padding: 1.4rem;
     // Site title.
     .site-title {
       margin-top: 2rem !important;
@@ -77,15 +81,18 @@ header {
         margin-top: .9rem;
         font-size: .9rem;
 
-        #edit-submit-aaslp-search--2 {
+        [id^="edit-submit-aaslp-search"],
+        [id^="edit-submit-aaslp-search"]:active {
+          padding-left: .2rem;
+          background-color: transparent;
+          color: $lgray;
+          border: none;
+          box-shadow: none;
           font-family: 'Font Awesome\ 5 Free';
           font-weight: 900;
         }
-
-        #edit-reset--2 {
-          font-family: 'Font Awesome\ 5 Free';
-          font-weight: 900;
-          margin-left: .4rem;
+        [id^="edit-submit-aaslp-search"]:hover {
+          color: $offwhite;
         }
       }
     }
@@ -107,93 +114,112 @@ header {
 main > .container-fluid {
   padding-left: 0;
   padding-right: 0;
-  // Page title.
-  .block-page-title-block {
-    margin-top: .4rem;
-  }
-  // Facets.
-  .block-facets {
-    a.collapse-facet {
-      color: $offwhite !important;
-      text-decoration: none !important;
-    }
-    h3 {
+
+  // Content region.
+  .region-content {
+    padding: 0 !important;
+    // Page title.
+    .block-page-title-block {
+      padding: 1rem;
       background-color: $unb-turquoise;
-      font-size: .8rem;
-      font-weight: normal !important;
+      color: $offwhite;
 
-      padding: .3rem;
-      margin: 0;
-    }
-    ul {
-      padding-left: 0;
-      padding-right: 1rem;
-      margin: .5rem;
-      display: grid;
-      grid-template-rows: repeat(6, min-content);
-      grid-auto-flow: column;
-
-      &.item-list__range_slider {
-        margin-bottom: 2rem;
+      h1 {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 500;
       }
-      li {
-        white-space: nowrap;
+    }
+    // Facets.
+    #block-facetpunishments h3 {
+      padding-bottom: 1rem;
+    }
+
+    .block-facets {
+      a.collapse-facet {
+        color: $offwhite !important;
+        text-decoration: none !important;
+      }
+      h3 {
+        background-color: $unb-turquoise;
         font-size: .8rem;
-        list-style: none;
-        label {
-          margin-bottom: .1rem;
+        font-weight: normal !important;
+        margin: 0;
+        padding: .3rem;
+        padding-left: 1rem;
+      }
+      ul {
+        padding-left: 0;
+        padding-right: 1rem;
+        margin: .5rem;
+        display: grid;
+        grid-template-rows: repeat(6, min-content);
+        grid-auto-flow: column;
+
+        &.item-list__range_slider {
+          margin-bottom: 2rem;
         }
-        input {
-          height: .6rem;
-          margin-right: .2rem;
+        li {
+          white-space: nowrap;
+          font-size: .8rem;
+          list-style: none;
+          label {
+            margin-bottom: .1rem;
+          }
+          input {
+            height: .6rem;
+            margin-right: .2rem;
+          }
         }
       }
+      // Collapse icons.
+      .collapse-facet[aria-expanded="true"] .fa-caret-right {
+        display: none !important;
+      }
+      .collapse-facet:not([aria-expanded="true"]) .fa-caret-right {
+        display: initial !important;
+      }
+      .collapse-facet[aria-expanded="true"] .fa-caret-down {
+        display: initial !important;
+      }
+      .collapse-facet:not([aria-expanded="true"]) .fa-caret-down {
+        display: none !important;
+      }
+      // Year facet.
+      #collapseYearFacet > .item-list__range_slider {
+        width: 86%;
+        margin-left: 7%;
+      }
     }
-    // Collapse icons.
-    .collapse-facet[aria-expanded="true"] .fa-caret-right {
-      display: none !important;
+    // Views content.
+    .views-element-container .view-content {
+      margin-left: 1rem;
+      // Views row.
+      .views-row {
+        margin-top: 1rem;
+      }
     }
-    .collapse-facet:not([aria-expanded="true"]) .fa-caret-right {
-      display: initial !important;
-    }
-    .collapse-facet[aria-expanded="true"] .fa-caret-down {
-      display: initial !important;
-    }
-    .collapse-facet:not([aria-expanded="true"]) .fa-caret-down {
-      display: none !important;
-    }
-    // Year facet.
-    #collapseYearFacet > .item-list__range_slider {
-      width: 86%;
-      margin-left: 7%;
-    }
-  }
-  // Views content.
-  .views-element-container .view-content {
-    // Views row.
-    .views-row {
-      margin-top: 1rem;
-    }
-  }
-  // Views footer.
-  .view-footer {
-    margin-top: 1rem;
+    // Views header/footer.
+    .view-header,
+    .view-footer {
+      margin: 1rem;
 
-    // Views pager.
-    & + .pager {
-      margin-top: 1rem;
+      // Views pager.
+      & + .pager {
+        margin-top: 1rem;
+      }
     }
-  }
-  // Node content.
-  .node__content {
-    // Field containers.
-    .field {
-      margin-top: 1rem;
+    // Node content.
+    .node__content {
+      // Field containers.
+      .field {
+        margin-top: 1rem;
+      }
     }
-  }
-  // Search page title.
-  #block-aaslp-lib-unb-ca-page-title .page-title {
-    text-align: left !important;
+    // Search page title.
+    #block-aaslp-lib-unb-ca-page-title .page-title {
+      text-align: left !important;
+    }
   }
 }
 

@@ -9,7 +9,7 @@ _core:
 id: aaslp_lib_unb_ca_page_title
 theme: aaslp_lib_unb_ca
 region: content
-weight: -6
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

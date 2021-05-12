@@ -6,8 +6,8 @@ aaslp.front:
   route_name: <front>
   weight: 10
 aaslp.search:
-  title: 'Search'
-  description: 'Search'
+  title: 'Database'
+  description: 'Database'
   parent: main
   menu_name: main
   url: internal:/aaslp-search
