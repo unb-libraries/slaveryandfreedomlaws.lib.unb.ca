@@ -197,8 +197,18 @@ main > .container-fluid {
       margin-left: 1rem;
       margin-right: 1rem;
       // Views row.
-      .views-row {
-        margin-top: 1rem;
+      table {
+        tr {
+          &:nth-of-type(even) {
+            background-color: $lgray;
+          }
+          &:nth-of-type(odd) {
+            background-color: white;
+          }
+          td {
+            border: none;
+          }
+        }
       }
     }
     // Views header/footer.
@@ -209,6 +219,20 @@ main > .container-fluid {
       // Views pager.
       & + .pager {
         margin-top: 1rem;
+
+        ul {
+          li.btn:first-of-type {
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+          }
+          li.btn:last-of-type {
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+          }
+          a {
+            font-size: .8rem;
+          }
+        }
       }
     }
     // Node content.
