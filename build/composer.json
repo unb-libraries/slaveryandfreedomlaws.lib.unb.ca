@@ -83,7 +83,7 @@
         "drupal/chosen": "3.0.1",
         "drupal/core": "8.9.15",
         "drupal/entity_reference_revisions": "1.9",
-        "drupal/facets": "1.7",
+        "drupal/facets": "1.8",
         "drupal/fontawesome": "2.18",
         "drupal/google_analytics": "2.5",
         "drupal/health_check": "1.3",
