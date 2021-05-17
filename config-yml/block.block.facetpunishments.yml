@@ -11,8 +11,8 @@ dependencies:
     - aaslp_lib_unb_ca
 id: facetpunishments
 theme: aaslp_lib_unb_ca
-region: content
-weight: 0
+region: sidebar_first
+weight: -2
 provider: null
 plugin: 'facet_block:facet_punishments'
 settings:

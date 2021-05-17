@@ -55,56 +55,63 @@ input {
 
 // Header.
 header {
-  background-color: $unb-dturquoise;
-  .navbar-brand {
-    // Site title.
-    .site-title {
-      margin-top: 2rem !important;
-      margin-bottom: 2rem !important;
-      font-family: "Cinzel Decorative", Times, Serif;
-      font-size: 1.4rem !important;
-      text-transform: capitalize !important;
-      color: $offwhite !important;
-    }
-  }
-  // Main navigation region.
-  .region-nav-main {
-    // Exposed search.
-    .views-exposed-form {
-      // Text input.
-      .form-text {
-        font-size: .8rem;
-        border: none;
-      }
-      // Submit buttons.
-      .form-actions {
-        display: inline-block;
-        margin-top: .9rem;
-        font-size: .9rem;
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
 
-        [id^="edit-submit-aaslp-search"],
-        [id^="edit-submit-aaslp-search"]:active {
-          padding-left: .2rem;
-          background-color: transparent;
-          color: $lgray;
-          border: none;
-          box-shadow: none;
-          font-family: 'Font Awesome\ 5 Free';
-          font-weight: 900;
-        }
-        [id^="edit-submit-aaslp-search"]:hover {
-          color: $offwhite;
+    .container {
+    background-color: $unb-dturquoise;
+      .navbar-brand {
+        // Site title.
+        .site-title {
+          margin-top: 2rem !important;
+          margin-bottom: 2rem !important;
+          font-family: "Cinzel Decorative", Times, Serif;
+          font-size: 1.4rem !important;
+          text-transform: capitalize !important;
+          color: $offwhite !important;
         }
       }
-    }
-    // Main menu.
-    .navbar-nav {
-      a {
-        color: $doffwhite;
-        font-size: 1rem;
+      // Main navigation region.
+      .region-nav-main {
+        // Exposed search.
+        .views-exposed-form {
+          // Text input.
+          .form-text {
+            font-size: .8rem;
+            border: none;
+          }
+          // Submit buttons.
+          .form-actions {
+            display: inline-block;
+            margin-top: .9rem;
+            font-size: .9rem;
 
-        &:hover {
-          color: $offwhite;
+            [id^="edit-submit-aaslp-search"],
+            [id^="edit-submit-aaslp-search"]:active {
+              padding-left: .2rem;
+              background-color: transparent;
+              color: $lgray;
+              border: none;
+              box-shadow: none;
+              font-family: 'Font Awesome\ 5 Free';
+              font-weight: 900;
+            }
+            [id^="edit-submit-aaslp-search"]:hover {
+              color: $offwhite;
+            }
+          }
+        }
+        // Main menu.
+        .navbar-nav {
+          a {
+            color: $doffwhite;
+            font-size: 1rem;
+
+            &:hover {
+              color: $offwhite;
+            }
+          }
         }
       }
     }
@@ -112,10 +119,79 @@ header {
 }
 
 // Main conainer.
-main > .container-fluid {
+main > .container {
   padding-left: 0;
   padding-right: 0;
 
+  // Sidebar.
+  .order-2 {
+    padding-top: 3rem;
+    background-color: $unb-turquoise;
+    color: $offwhite !important;
+
+    .region-sidebar-first {
+      padding-right: 0;
+      padding-left: 0;
+
+      // Facets.
+      #block-facetpunishments h3 {
+        padding-bottom: .5rem;
+      }
+
+      .block-facets {
+        a.collapse-facet {
+          color: $offwhite !important;
+          text-decoration: none !important;
+        }
+        h3 {
+          background-color: $unb-turquoise;
+          font-size: .8rem;
+          font-weight: normal !important;
+          margin: 0;
+          padding: .2rem;
+          padding-left: 1rem;
+        }
+        ul {
+          padding-left: 0;
+          padding-right: 1rem;
+          margin: .5rem;
+
+          &.item-list__range_slider {
+            margin-bottom: 2rem;
+          }
+          li {
+            font-size: .8rem;
+            list-style: none;
+            label {
+              margin-bottom: .1rem;
+            }
+            input {
+              height: .6rem;
+              margin-right: .2rem;
+            }
+          }
+        }
+        // Collapse icons.
+        .collapse-facet[aria-expanded="true"] .fa-caret-right {
+          display: none !important;
+        }
+        .collapse-facet:not([aria-expanded="true"]) .fa-caret-right {
+          display: initial !important;
+        }
+        .collapse-facet[aria-expanded="true"] .fa-caret-down {
+          display: initial !important;
+        }
+        .collapse-facet:not([aria-expanded="true"]) .fa-caret-down {
+          display: none !important;
+        }
+        // Year facet.
+        #collapseYearFacet > .item-list__range_slider {
+          width: 86%;
+          margin-left: 7%;
+        }
+      }
+    }
+  }
   // Content region.
   .region-content {
     padding: 0 !important;
@@ -129,67 +205,6 @@ main > .container-fluid {
         margin: 0;
         font-size: 1.4rem;
         font-weight: 500;
-      }
-    }
-    // Facets.
-    #block-facetpunishments h3 {
-      padding-bottom: .5rem;
-    }
-
-    .block-facets {
-      a.collapse-facet {
-        color: $offwhite !important;
-        text-decoration: none !important;
-      }
-      h3 {
-        background-color: $unb-turquoise;
-        font-size: .8rem;
-        font-weight: normal !important;
-        margin: 0;
-        padding: .2rem;
-        padding-left: 1rem;
-      }
-      ul {
-        padding-left: 0;
-        padding-right: 1rem;
-        margin: .5rem;
-        display: grid;
-        grid-template-rows: repeat(6, min-content);
-        grid-auto-flow: column;
-
-        &.item-list__range_slider {
-          margin-bottom: 2rem;
-        }
-        li {
-          white-space: nowrap;
-          font-size: .8rem;
-          list-style: none;
-          label {
-            margin-bottom: .1rem;
-          }
-          input {
-            height: .6rem;
-            margin-right: .2rem;
-          }
-        }
-      }
-      // Collapse icons.
-      .collapse-facet[aria-expanded="true"] .fa-caret-right {
-        display: none !important;
-      }
-      .collapse-facet:not([aria-expanded="true"]) .fa-caret-right {
-        display: initial !important;
-      }
-      .collapse-facet[aria-expanded="true"] .fa-caret-down {
-        display: initial !important;
-      }
-      .collapse-facet:not([aria-expanded="true"]) .fa-caret-down {
-        display: none !important;
-      }
-      // Year facet.
-      #collapseYearFacet > .item-list__range_slider {
-        width: 86%;
-        margin-left: 7%;
       }
     }
     // Views content.
@@ -250,7 +265,7 @@ main > .container-fluid {
 }
 
 // Footer.
-footer > .container-fluid {
+footer > .container {
   padding: 1rem !important;
   // Footer notice.
   #footer-copy {
