@@ -9,10 +9,10 @@ dependencies:
     - search_api
     - legal_article
   config:
-    - field.storage.node.field_category
-    - field.storage.node.field_crimes
     - field.storage.node.field_date
     - field.storage.node.body
+    - field.storage.node.field_category
+    - field.storage.node.field_crimes
     - field.storage.node.field_location
     - field.storage.node.field_punishments
     - search_api.server.drupal_solr_lib_unb_ca
@@ -179,7 +179,7 @@ processor_settings:
     highlight: always
     highlight_partial: true
     excerpt: true
-    excerpt_length: 1024
+    excerpt_length: 100
     exclude_fields:
       - search_metadata
       - search_themes

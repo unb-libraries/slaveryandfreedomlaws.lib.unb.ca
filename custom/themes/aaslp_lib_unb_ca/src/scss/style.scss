@@ -6,32 +6,32 @@
 body,
 .font-regular {
   font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
-  font-size: .8rem;
+  font-size: 1rem;
   color: $unb-darkgray;
   // Global header sizing.
   h1,
   h1.display-4,
   h1 > span,
   .navbar-brand .site-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   h2,
   h2 > a {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   h3,
   h3 > a {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   h4,
   h4 > a {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   h5 {
-    font-size: .9rem;
+    font-size: 1.1rem;
   }
   h6 {
-    font-size: .8rem;
+    font-size: 1rem;
   }
   // Global header weight.
   h1, h2, h3, h4, h5,
@@ -66,8 +66,9 @@ header {
         .site-title {
           margin-top: 2rem !important;
           margin-bottom: 2rem !important;
+          padding-left: 1rem;
           font-family: "Cinzel Decorative", Times, Serif;
-          font-size: 1.4rem !important;
+          font-size: 1.6rem !important;
           text-transform: capitalize !important;
           color: $offwhite !important;
         }
@@ -78,14 +79,14 @@ header {
         .views-exposed-form {
           // Text input.
           .form-text {
-            font-size: .8rem;
+            font-size: 1rem;
             border: none;
           }
           // Submit buttons.
           .form-actions {
             display: inline-block;
-            margin-top: .9rem;
-            font-size: .9rem;
+            margin-top: 1.1rem;
+            font-size: 1.1rem;
 
             [id^="edit-submit-aaslp-search"],
             [id^="edit-submit-aaslp-search"]:active {
@@ -106,7 +107,7 @@ header {
         .navbar-nav {
           a {
             color: $doffwhite;
-            font-size: 1rem;
+            font-size: 1.2rem;
 
             &:hover {
               color: $offwhite;
@@ -123,11 +124,23 @@ main > .container {
   padding-left: 0;
   padding-right: 0;
 
+  // Page title.
+  .block-page-title-block {
+    padding: .5rem 1rem;
+    background-color: $unb-turquoise;
+    color: $offwhite;
+
+    h1, h1 > span {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+
   // Sidebar.
   .order-2 {
-    padding-top: 3rem;
-    background-color: $unb-turquoise;
-    color: $offwhite !important;
+    padding-top: 1rem;
+    background-color: $lgray;
 
     .region-sidebar-first {
       padding-right: 0;
@@ -140,31 +153,34 @@ main > .container {
 
       .block-facets {
         a.collapse-facet {
-          color: $offwhite !important;
           text-decoration: none !important;
         }
         h3 {
-          background-color: $unb-turquoise;
-          font-size: .8rem;
+          font-size: 1rem;
           font-weight: normal !important;
           margin: 0;
           padding: .2rem;
           padding-left: 1rem;
+          color: $unb-darkgray !important;
         }
         ul {
-          padding-left: 0;
-          padding-right: 1rem;
+          padding-left: 1rem;
+          padding-right: 1.2rem;
           margin: .5rem;
 
           &.item-list__range_slider {
             margin-bottom: 2rem;
           }
+
           li {
-            font-size: .8rem;
+            line-height: 1.2rem;
             list-style: none;
+
             label {
-              margin-bottom: .1rem;
+              margin-bottom: 0;
+              font-size: .9rem;
             }
+
             input {
               height: .6rem;
               margin-right: .2rem;
@@ -195,24 +211,21 @@ main > .container {
   // Content region.
   .region-content {
     padding: 0 !important;
-    // Page title.
-    .block-page-title-block {
-      padding: .5rem 1rem;
-      background-color: $unb-turquoise;
-      color: $offwhite;
 
-      h1 {
-        margin: 0;
-        font-size: 1.4rem;
-        font-weight: 500;
-      }
+    // Links.
+    a:hover {
+      color: $unb-dmango;
     }
+
     // Views content.
     .views-element-container .view-content {
-      margin-left: 1rem;
-      margin-right: 1rem;
+      margin-left: 1.2rem;
+      margin-right: 1.2rem;
       // Views row.
       table {
+        th a {
+          white-space: nowrap;
+        }
         tr {
           &:nth-of-type(even) {
             background-color: $lgray;
@@ -222,6 +235,10 @@ main > .container {
           }
           td {
             border: none;
+
+            &.is-active {
+              background-color: initial;
+            }
           }
         }
       }
@@ -229,11 +246,11 @@ main > .container {
     // Views header/footer.
     .view-header,
     .view-footer {
-      margin: 1rem;
+      margin: 1.2rem;
 
       // Views pager.
       & + .pager {
-        margin-top: 1rem;
+        margin-top: 1.2rem;
 
         ul {
           li.btn:first-of-type {
@@ -245,16 +262,18 @@ main > .container {
             border-bottom-right-radius: 2px;
           }
           a {
-            font-size: .8rem;
+            font-size: 1rem;
           }
         }
       }
     }
     // Node content.
     .node__content {
+      margin: 1rem 2rem;
+
       // Field containers.
       .field {
-        margin-top: 1rem;
+        margin-top: 1.2rem;
       }
     }
     // Search page title.
@@ -265,13 +284,31 @@ main > .container {
 }
 
 // Footer.
-footer > .container {
-  padding: 1rem !important;
-  // Footer notice.
-  #footer-copy {
+footer {
+  padding-top: 0 !important;
 
-    > p {
-      text-align: right;
+  & > .container {
+    padding: .8rem 1.2rem !important;
+    background-color: $unb-turquoise;
+    color: $offwhite !important;
+
+    // Footer logo.
+    #footer-logo-img {
+      max-width: 400px;
+    }
+    // Footer notice.
+    #footer-copy {
+
+      > p {
+        margin-bottom: 0;
+        padding-right: 15px;
+        padding-top: 2.4rem;
+        text-align: right;
+      }
+
+      a {
+        color: $offwhite !important;
+      }
     }
   }
 }
