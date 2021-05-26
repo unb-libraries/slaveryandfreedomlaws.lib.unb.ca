@@ -1,5 +1,6 @@
 /* Custom colours.
 $offwhite: #f8f9fa;
+$doffwhite: #e8e9ea;
 $unb-turquoise: #007fa3;
 */
 
@@ -17,16 +18,17 @@ h1 {
   padding: 6px;
   color: #f8f9fa;
   margin: 30px auto;
-  border: 1px solid #009aab;
   border-radius: 10px;
+  font-family: "Cinzel Decorative", Times, Serif;
 }
 h1 a {
-  color: #f8f9fa;
+  color: #d8d9da;
   padding: 4px;
   margin: 0;
 }
 h1 a:hover, h1 a:focus {
-  color: #111;
+  color: #f8f9fa;
+  text-decoration: none;
 }
 #main {
   text-align: center
