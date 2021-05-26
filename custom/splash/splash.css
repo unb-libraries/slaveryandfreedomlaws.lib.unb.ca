@@ -1,13 +1,13 @@
 /* Custom colours.
 $offwhite: #f8f9fa;
 $doffwhite: #e8e9ea;
-$unb-turquoise: #007fa3;
+$unb-dturquoise: #005770;
 */
 
 body {
   text-align: center;
   padding: 20px;
-  background: #007fa3;
+  background: #005770;
   font-family: 'ProximaNovaA-Regular', 'Century Gothic', AppleGothic, Arial, sans-serif;
   font-weight: 100;
 }
