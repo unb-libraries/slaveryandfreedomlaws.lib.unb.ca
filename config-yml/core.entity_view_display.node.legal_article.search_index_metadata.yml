@@ -33,7 +33,7 @@ bundle: legal_article
 mode: search_index_metadata
 content:
   field_citation:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -41,7 +41,7 @@ content:
     type: string
     region: content
   field_date:
-    weight: 2
+    weight: 0
     label: hidden
     settings:
       timezone_override: ''
@@ -50,15 +50,23 @@ content:
     type: datetime_default
     region: content
   field_full_title:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_location:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
   field_source:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link: false
@@ -71,7 +79,6 @@ hidden:
   field_category: true
   field_crimes: true
   field_editorial_annotations: true
-  field_location: true
   field_notes: true
   field_parent_location: true
   field_punishments: true
