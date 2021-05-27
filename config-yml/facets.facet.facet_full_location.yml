@@ -28,6 +28,7 @@ widget:
     hide_reset_when_no_selection: false
 query_operator: and
 use_hierarchy: false
+keep_hierarchy_parents_active: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0
@@ -39,18 +40,18 @@ processor_configs:
     weights:
       sort: 20
     settings:
-      sort: DESC
-  display_value_widget_order:
-    processor_id: display_value_widget_order
-    weights:
-      sort: 40
-    settings:
       sort: ASC
   hide_non_narrowing_result_processor:
     processor_id: hide_non_narrowing_result_processor
     weights:
       build: 40
     settings: {  }
+  raw_value_widget_order:
+    processor_id: raw_value_widget_order
+    weights:
+      sort: 50
+    settings:
+      sort: ASC
   translate_entity_aggregated_fields:
     processor_id: translate_entity_aggregated_fields
     weights:

@@ -4,3 +4,27 @@
 * @file
 * Contains aaslp_search.module.
 */
+
+use Drupal\taxonomy\Entity\Term;
+
+function aaslp_search_preprocess_facets_item_list(&$variables) {
+  // Only apply to facet facet_full_location.
+  if ($variables['facet']->id() == 'facet_full_location') {
+    // Get facet items and cycle through them.
+    $items = $variables['items'];
+
+    foreach ($items as $key => $item) {
+      // Get taxonomy term ID for facet.
+      $tid = $item['#title']['#raw_value'];
+      $term = Term::load($tid);
+      // Get ID for parent term.
+      $parent = $term->parent->target_id;
+
+      // If the term has a parent, add class child-location to wrapper.
+      if ($parent != '0') {
+        $variables['items'][$key]['#wrapper_attributes']['class'][]
+          = 'child-location';
+      }
+    }
+  }
+}

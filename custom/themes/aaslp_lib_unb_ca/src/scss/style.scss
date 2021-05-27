@@ -172,6 +172,10 @@ main > .container {
             line-height: 1.2rem;
             list-style: none;
 
+            &.child-location {
+              margin-left: 1rem;
+            }
+
             label {
               margin-bottom: 0;
               font-size: .9rem;
