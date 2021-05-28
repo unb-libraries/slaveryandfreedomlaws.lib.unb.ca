@@ -172,18 +172,26 @@ main > .container {
             line-height: 1.2rem;
             list-style: none;
 
+            &.parent-location {
+              margin-top: .4rem;
+            }
+
             &.child-location {
               margin-left: 1rem;
             }
 
             label {
+              display: block;
               margin-bottom: 0;
               font-size: .9rem;
             }
 
             input {
+              display: block;
+              float: left;
               height: .6rem;
               margin-right: .2rem;
+              margin-top: .2rem;
             }
           }
         }

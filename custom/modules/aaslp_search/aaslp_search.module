@@ -21,7 +21,11 @@ function aaslp_search_preprocess_facets_item_list(&$variables) {
       $parent = $term->parent->target_id;
 
       // If the term has a parent, add class child-location to wrapper.
-      if ($parent != '0') {
+      if ($parent == '0') {
+        $variables['items'][$key]['#wrapper_attributes']['class'][]
+          = 'parent-location';
+      }
+      else {
         $variables['items'][$key]['#wrapper_attributes']['class'][]
           = 'child-location';
       }
