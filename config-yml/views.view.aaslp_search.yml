@@ -525,17 +525,7 @@ display:
             label: ''
           plugin_id: search_api
       title: 'Slave Law Database'
-      header:
-        result:
-          id: result
-          table: views
-          field: result
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          content: 'Displaying @start - @end of @total'
-          plugin_id: result
+      header: {  }
       footer:
         result:
           id: result

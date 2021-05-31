@@ -62,10 +62,10 @@ header {
     .container {
     background-color: $unb-dturquoise;
       .navbar-brand {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
         // Site title.
         .site-title {
-          margin-top: 2rem !important;
-          margin-bottom: 2rem !important;
           padding-left: 1rem;
           font-family: "Cinzel Decorative", Times, Serif;
           font-size: 1.6rem !important;
@@ -75,34 +75,6 @@ header {
       }
       // Main navigation region.
       .region-nav-main {
-        // Exposed search.
-        .views-exposed-form {
-          // Text input.
-          .form-text {
-            font-size: 1rem;
-            border: none;
-          }
-          // Submit buttons.
-          .form-actions {
-            display: inline-block;
-            margin-top: 1.1rem;
-            font-size: 1.1rem;
-
-            [id^="edit-submit-aaslp-search"],
-            [id^="edit-submit-aaslp-search"]:active {
-              padding-left: .2rem;
-              background-color: transparent;
-              color: $lgray;
-              border: none;
-              box-shadow: none;
-              font-family: 'Font Awesome\ 5 Free';
-              font-weight: 900;
-            }
-            [id^="edit-submit-aaslp-search"]:hover {
-              color: $offwhite;
-            }
-          }
-        }
         // Main menu.
         .navbar-nav {
           a {
@@ -199,6 +171,38 @@ main > .container {
   // Content region.
   .region-content {
     padding: 0 !important;
+    // Exposed search.
+    .views-exposed-form {
+      float: right;
+      // Form.
+      form {
+        padding-right: 1rem;
+        // Text input.
+        .form-text {
+          font-size: 1rem;
+        }
+        // Submit buttons.
+        .form-actions {
+          display: inline-block;
+          margin-top: 1.1rem;
+          font-size: 1.1rem;
+
+          [id^="edit-submit-aaslp-search"],
+          [id^="edit-submit-aaslp-search"]:active {
+            padding-left: .2rem;
+            background-color: transparent;
+            color: $unb-darkgray;
+            border: none;
+            box-shadow: none;
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+          }
+          [id^="edit-submit-aaslp-search"]:hover {
+            color: $unb-turquoise;
+          }
+        }
+      }
+    }
 
     // Links.
     a:hover {
@@ -231,8 +235,7 @@ main > .container {
         }
       }
     }
-    // Views header/footer.
-    .view-header,
+    // Views footer.
     .view-footer {
       margin: 1.2rem;
 

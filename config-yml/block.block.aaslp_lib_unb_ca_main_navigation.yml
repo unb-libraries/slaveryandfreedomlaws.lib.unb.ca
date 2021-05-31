@@ -13,7 +13,7 @@ _core:
 id: aaslp_lib_unb_ca_main_navigation
 theme: aaslp_lib_unb_ca
 region: nav_main
-weight: -5
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:
