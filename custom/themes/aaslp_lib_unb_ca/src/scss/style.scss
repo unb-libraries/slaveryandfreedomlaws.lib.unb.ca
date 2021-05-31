@@ -143,17 +143,15 @@ main > .container {
     background-color: $lgray;
 
     .region-sidebar-first {
+      padding-bottom: 1.2rem;
       padding-right: 0;
       padding-left: 0;
 
       // Facets.
       .block-facets {
-        a.collapse-facet {
-          text-decoration: none !important;
-        }
         h3 {
           font-size: 1rem;
-          font-weight: normal !important;
+          font-weight: bold;
           margin: 0;
           padding: .2rem;
           padding-left: 1rem;
@@ -194,24 +192,6 @@ main > .container {
               margin-top: .2rem;
             }
           }
-        }
-        // Collapse icons.
-        .collapse-facet[aria-expanded="true"] .fa-caret-right {
-          display: none !important;
-        }
-        .collapse-facet:not([aria-expanded="true"]) .fa-caret-right {
-          display: initial !important;
-        }
-        .collapse-facet[aria-expanded="true"] .fa-caret-down {
-          display: initial !important;
-        }
-        .collapse-facet:not([aria-expanded="true"]) .fa-caret-down {
-          display: none !important;
-        }
-        // Year facet.
-        #collapseYearFacet > .item-list__range_slider {
-          width: 86%;
-          margin-left: 7%;
         }
       }
     }
@@ -258,19 +238,34 @@ main > .container {
 
       // Views pager.
       & + .pager {
-        margin-top: 1.2rem;
+        margin: 1.2rem;
 
         ul {
-          li.btn:first-of-type {
+          li.active a {
+            background-color: $lgray;
+            border-color: $lgray;
+          }
+          li:first-of-type {
             border-top-left-radius: 2px;
             border-bottom-left-radius: 2px;
+
+            a {
+              border-top-left-radius: inherit;
+              border-bottom-left-radius: inherit;
+            }
           }
-          li.btn:last-of-type {
+          li:last-of-type {
             border-top-right-radius: 2px;
             border-bottom-right-radius: 2px;
+
+            a {
+              border-top-right-radius: inherit;
+              border-bottom-right-radius: inherit;
+            }
           }
           a {
             font-size: 1rem;
+            color: $unb-darkgray !important;
           }
         }
       }
