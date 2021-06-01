@@ -1,6 +1,0 @@
-expand-active-facets:
-  version: VERSION
-  js:
-    js/expand-active-facets.js: {}
-  dependencies:
-    - core/jquery
