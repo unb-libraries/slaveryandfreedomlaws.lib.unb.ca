@@ -189,6 +189,7 @@ main > .container {
 
           [id^="edit-submit-aaslp-search"],
           [id^="edit-submit-aaslp-search"]:active {
+            margin: 0;
             padding-left: .2rem;
             background-color: transparent;
             color: $unb-darkgray;
