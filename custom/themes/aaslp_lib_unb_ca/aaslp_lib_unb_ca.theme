@@ -8,6 +8,19 @@
  */
 
 function aaslp_lib_unb_ca_form_views_exposed_form_alter(&$form, &$form_state) {
+  // Add Search placeholder and override value using FontAwesome character code.
   $form['keys']['#attributes']['placeholder'][] = t('Search');
   $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+}
+
+function aaslp_lib_unb_ca_preprocess_input(&$variables) {
+  $sr_labels = [
+    'edit-submit-aaslp-search--2' => 'Search',
+    'edit-search-api-fulltext--2' => 'Search Text',
+  ];
+
+  $input_id = $variables['attributes']['id'];
+
+  $variables['label'] = empty($sr_labels[$input_id]) ? $input_id
+    : $sr_labels[$input_id];
 }

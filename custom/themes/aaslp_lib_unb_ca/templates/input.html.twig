@@ -4,6 +4,7 @@
  * Theme override for an 'input' #type form element.
  *
  * Available variables:
+ * - label: A label passed by template_preprocess_input().
  * - attributes: A list of HTML attributes for the input element.
  * - children: Optional additional rendered elements.
  *
@@ -14,13 +15,7 @@
 {% set input_id = attributes.toArray.id %}
 
 <label for="{{ input_id }}" class="sr-only">
-  {% if input_id == 'edit-submit-aaslp-search--2' %}
-    Search
-  {% elseif input_id == 'edit-search-api-fulltext--2' %}
-    Search Text
-  {% else %}
-    {{ input_id }}
-  {% endif %}
+  {{ label }}
 </label>
 
 {% if attributes.hasClass('button') and not attributes.hasClass('field-add-more-submit') %}
