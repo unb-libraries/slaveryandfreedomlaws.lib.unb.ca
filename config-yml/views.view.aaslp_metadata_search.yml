@@ -1,4 +1,4 @@
-uuid: 1ef58c4a-ac61-4bd1-b1c5-3826f4305b39
+uuid: 8730b377-43b3-4d88-8b6c-ecec0b47968c
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - search_api.index.aaslp_lib_unb_ca
   module:
     - search_api
-id: aaslp_search
-label: 'AASLP Search'
+id: aaslp_metadata_search
+label: 'AASLP Metadata Search'
 module: views
 description: ''
 tag: ''
@@ -558,7 +558,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: search
+      path: metasearch
       cache:
         type: none
       defaults:
