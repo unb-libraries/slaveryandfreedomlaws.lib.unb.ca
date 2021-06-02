@@ -16,8 +16,10 @@
 <label for="{{ input_id }}" class="sr-only">
   {% if input_id == 'edit-submit-aaslp-search--2' %}
     Search
+  {% elseif input_id == 'edit-search-api-fulltext--2' %}
+    Search Text
   {% else %}
-    Input
+    {{ input_id }}
   {% endif %}
 </label>
 
