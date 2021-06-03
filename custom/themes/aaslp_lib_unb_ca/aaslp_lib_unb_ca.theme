@@ -46,6 +46,7 @@ function aaslp_lib_unb_ca_preprocess_input(&$variables) {
 
 function custom_reset_callback() {
   // Custom reset callback. Simply hard redirect to /search.
-  $response = new RedirectResponse('/search');
+  $response = new RedirectResponse('/search', 301);
+  $response->setContent('');
   $response->send();
 }
