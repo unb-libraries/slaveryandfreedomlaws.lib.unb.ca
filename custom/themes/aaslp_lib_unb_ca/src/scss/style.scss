@@ -188,7 +188,9 @@ main > .container {
           font-size: 1.1rem;
 
           [id^="edit-submit-aaslp-search"],
-          [id^="edit-submit-aaslp-search"]:active {
+          [id^="edit-submit-aaslp-search"]:active,
+          [id^="edit-custom-reset"],
+          [id^="edit-custom-reset"]:active {
             margin: 0;
             padding-left: .2rem;
             background-color: transparent;
@@ -198,7 +200,8 @@ main > .container {
             font-family: 'Font Awesome\ 5 Free';
             font-weight: 900;
           }
-          [id^="edit-submit-aaslp-search"]:hover {
+          [id^="edit-submit-aaslp-search"]:hover,
+          [id^="edit-custom-reset"]:hover {
             color: $unb-turquoise;
           }
         }

@@ -7,20 +7,45 @@
  * Place your custom PHP code in this file.
  */
 
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
 function aaslp_lib_unb_ca_form_views_exposed_form_alter(&$form, &$form_state) {
   // Add Search placeholder and override value using FontAwesome character code.
   $form['keys']['#attributes']['placeholder'][] = t('Search');
   $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+  // Get current URI and divide string on '?'.
+  $current_uri = \Drupal::request()->getRequestUri();
+  $params = explode('?', $current_uri);
+
+  // If there's anything after '?' (there is a search parameter)...
+  if (count($params) > 1) {
+    // Add custom reset button with FontAwesome character code and callback.
+    $form['actions']['custom_reset'] = [
+      '#type' => 'submit',
+      '#value' => html_entity_decode('&#xf0e2;'),
+      '#submit' => ['custom_reset_callback'],
+    ];
+  }
 }
 
 function aaslp_lib_unb_ca_preprocess_input(&$variables) {
+  // Add input IDs => Override labels here.
   $sr_labels = [
     'edit-submit-aaslp-search--2' => 'Search',
     'edit-search-api-fulltext--2' => 'Search Text',
+    'edit-custom-reset--2' => 'Clear Search',
   ];
 
+  // Get current input ID.
   $input_id = $variables['attributes']['id'];
 
+  // Pass label as variable to template.
   $variables['label'] = empty($sr_labels[$input_id]) ? $input_id
     : $sr_labels[$input_id];
+}
+
+function custom_reset_callback() {
+  // Custom reset callback. Simply hard redirect to /search.
+  $response = new RedirectResponse('/search');
+  $response->send();
 }
