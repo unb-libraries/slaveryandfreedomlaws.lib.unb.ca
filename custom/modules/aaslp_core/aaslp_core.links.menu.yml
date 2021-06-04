@@ -10,5 +10,5 @@ aaslp.search:
   description: 'Database'
   parent: main
   menu_name: main
-  url: internal:/aaslp-search
+  url: internal:/search
   weight: 20
