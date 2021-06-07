@@ -10,7 +10,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 
 /**
- * HomePageForm object.
+ * HomePageForm object. A form that can submit search for fulltext or metadata.
  */
 class HomePageForm extends FormBase {
 
