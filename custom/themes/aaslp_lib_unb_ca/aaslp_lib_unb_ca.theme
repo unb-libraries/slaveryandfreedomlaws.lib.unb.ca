@@ -37,11 +37,16 @@ function aaslp_lib_unb_ca_preprocess_input(&$variables) {
   ];
 
   // Get current input ID.
-  $input_id = $variables['attributes']['id'];
+  if (!empty($variables['attributes']['id'])) {
+    $input_id = $variables['attributes']['id'];
 
-  // Pass label as variable to template.
-  $variables['label'] = empty($sr_labels[$input_id]) ? $input_id
-    : $sr_labels[$input_id];
+    // Pass label as variable to template.
+    $variables['label'] = empty($sr_labels[$input_id]) ? $input_id
+      : $sr_labels[$input_id];
+  }
+  else {
+    $variables['label'] = 'Input';
+  }
 }
 
 function custom_reset_callback() {

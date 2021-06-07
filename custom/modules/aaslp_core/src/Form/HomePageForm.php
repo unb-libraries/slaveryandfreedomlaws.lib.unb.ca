@@ -168,7 +168,7 @@ class HomePageForm extends FormBase {
     $form['tab-content']['title']['input_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Search for Legal Article Titles'),
-      '#description' => $this->t('Search by title, location, year, crime, punishment or combination, i.e. Jamaica 1800'),
+      '#description' => $this->t('Search by title, location, year, crime, punishment or combination, i.e. Jamaica 1800.'),
     ];
 
     $form['tab-content']['title']['submit_title'] = [
@@ -282,13 +282,13 @@ class HomePageForm extends FormBase {
     if ($op === 'Search FullText') {
       $query = $this->getQueryFromValue($input_fulltext);
       $form_state->setRedirectUrl(
-        Url::fromUri("internal:/page-search?fulltext=$query")
+        Url::fromUri("internal:/search?search_api_fulltext=$query")
       );
     }
     elseif ($op === 'Search/Browse Titles') {
       $query = $this->getQueryFromValue($input_title);
       $form_state->setRedirectUrl(
-        Url::fromUri("internal:/search?query=$query")
+        Url::fromUri("internal:/search?search_api_fulltext=$query")
       );
     }
 

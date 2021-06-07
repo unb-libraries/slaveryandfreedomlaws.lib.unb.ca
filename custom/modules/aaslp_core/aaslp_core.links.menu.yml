@@ -3,7 +3,7 @@ aaslp.front:
   description: 'Home'
   parent: main
   menu_name: main
-  route_name: <front>
+  route_name: 'aaslp_core.home'
   weight: 10
 aaslp.search:
   title: 'Database'
