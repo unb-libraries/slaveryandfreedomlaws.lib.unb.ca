@@ -1,22 +1,22 @@
-uuid: 5855bc25-2dc9-4519-bf95-c301d2bc7d0b
+uuid: 76129e1a-90c5-4b43-be2c-ea9dbfc1b0ef
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.aaslp_search
+    - views.view.aaslp_metadata_search
   module:
     - system
     - views
   theme:
     - aaslp_lib_unb_ca
-id: exposedformaaslp_searchpage_1
+id: exposedformaaslp_metadata_searchpage_1
 theme: aaslp_lib_unb_ca
 region: content
-weight: -7
+weight: -6
 provider: null
-plugin: 'views_exposed_filter_block:aaslp_search-page_1'
+plugin: 'views_exposed_filter_block:aaslp_metadata_search-page_1'
 settings:
-  id: 'views_exposed_filter_block:aaslp_search-page_1'
+  id: 'views_exposed_filter_block:aaslp_metadata_search-page_1'
   label: ''
   provider: views
   label_display: '0'
@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/search*\r\n"
+    pages: '/metasearch*'
     negate: false
     context_mapping: {  }

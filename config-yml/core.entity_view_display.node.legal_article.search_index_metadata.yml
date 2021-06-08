@@ -34,7 +34,7 @@ mode: search_index_metadata
 content:
   field_citation:
     weight: 4
-    label: hidden
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -42,7 +42,7 @@ content:
     region: content
   field_date:
     weight: 0
-    label: hidden
+    label: visually_hidden
     settings:
       timezone_override: ''
       format_type: html_date
@@ -51,7 +51,7 @@ content:
     region: content
   field_full_title:
     weight: 2
-    label: hidden
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -61,13 +61,13 @@ content:
     type: entity_reference_label
     weight: 3
     region: content
-    label: above
+    label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
   field_source:
     weight: 1
-    label: hidden
+    label: visually_hidden
     settings:
       link: false
     third_party_settings: {  }

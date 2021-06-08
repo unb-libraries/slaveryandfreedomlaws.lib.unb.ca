@@ -9,10 +9,10 @@ dependencies:
     - search_api
     - legal_article
   config:
-    - field.storage.node.field_category
-    - field.storage.node.field_crimes
     - field.storage.node.field_date
     - field.storage.node.body
+    - field.storage.node.field_category
+    - field.storage.node.field_crimes
     - field.storage.node.field_location
     - field.storage.node.field_punishments
     - search_api.server.drupal_solr_lib_unb_ca
@@ -64,6 +64,10 @@ name: aaslp.lib.unb.ca
 description: ''
 read_only: false
 field_settings:
+  article_year:
+    label: 'Fulltext Year'
+    property_path: article_year
+    type: text
   field_date:
     label: Date
     datasource_id: 'entity:node'
@@ -123,7 +127,7 @@ field_settings:
     label: Metadata
     property_path: rendered_item
     type: text
-    boost: !!float 3
+    boost: !!float 2
     configuration:
       roles:
         anonymous: anonymous
@@ -159,7 +163,8 @@ field_settings:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
-    type: string
+    type: text
+    boost: !!float 3
     dependencies:
       module:
         - node
@@ -181,6 +186,7 @@ processor_settings:
     excerpt: true
     excerpt_length: 100
     exclude_fields:
+      - article_year
       - search_metadata
       - search_themes
     prefix: '<strong>'

@@ -33,7 +33,7 @@ mode: search_index_themes
 content:
   field_category:
     weight: 2
-    label: hidden
+    label: visually_hidden
     settings:
       link: false
     third_party_settings: {  }
@@ -41,7 +41,7 @@ content:
     region: content
   field_crimes:
     weight: 0
-    label: hidden
+    label: visually_hidden
     settings:
       link: false
     third_party_settings: {  }
@@ -49,7 +49,7 @@ content:
     region: content
   field_punishments:
     weight: 1
-    label: hidden
+    label: visually_hidden
     settings:
       link: false
     third_party_settings: {  }

@@ -459,14 +459,14 @@ display:
           field: search_api_fulltext
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: metadata-filter
           operator: and
           value: ''
           group: 1
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: ''
+            label: 'Fulltext search'
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -497,7 +497,11 @@ display:
             group_items: {  }
           parse_mode: terms
           min_length: null
-          fields: {  }
+          fields:
+            - article_year
+            - search_metadata
+            - search_themes
+            - title
           plugin_id: search_api_fulltext
       sorts:
         search_api_relevance:
@@ -541,6 +545,9 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups: {  }
     cache_metadata:
       max-age: -1
       contexts:

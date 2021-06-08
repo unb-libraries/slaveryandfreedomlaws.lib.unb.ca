@@ -307,7 +307,7 @@ class HomePageForm extends FormBase {
     elseif ($op === 'Search/Browse Titles') {
       $query = $this->getQueryFromValue($input_title);
       $form_state->setRedirectUrl(
-        Url::fromUri("internal:/search?search_api_fulltext=$query")
+        Url::fromUri("internal:/metasearch?search_api_fulltext=$query")
       );
     }
 
