@@ -31,6 +31,7 @@ class HomePageForm extends FormBase {
     $user_input = $form_state->getUserInput();
     $op = isset($user_input['op']) ? $user_input['op'] : NULL;
     $about_tab_class = " visible-xs";
+
     if ($op == 'Search FullText') {
       $title_tab_class = $title_pane_class = $about_pane_class = NULL;
 
@@ -56,6 +57,9 @@ class HomePageForm extends FormBase {
         'data-toggle' => [
           'tab',
         ],
+        'data-target' => [
+          '#title',
+        ],
         'aria-selected' => [
           'true',
         ],
@@ -79,6 +83,9 @@ class HomePageForm extends FormBase {
         'data-toggle' => [
           'tab',
         ],
+        'data-target' => [
+          '#fulltext',
+        ],
         'aria-selected' => [
           'false',
         ],
@@ -99,6 +106,9 @@ class HomePageForm extends FormBase {
         'data-toggle' => [
           'tab',
         ],
+        'data-target' => [
+          '#about',
+        ],
         'aria-selected' => [
           'false',
         ],
@@ -108,7 +118,16 @@ class HomePageForm extends FormBase {
     ];
     $about_url->setOptions($about_link_options);
 
-    $blurb = "";
+    $blurb =
+      "<p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>";
 
     $form['blurb'] = [
       '#type' => 'markup',
