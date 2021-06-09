@@ -171,6 +171,34 @@ main > .container {
   // Content region.
   .region-content {
     padding: 0 !important;
+
+    // Homepage form.
+    form#aaslp-core-homepage {
+      padding: 1.2rem;
+      // Navigation tabs.
+      .nav.nav-tabs {
+        margin-top: 2rem;
+        border-bottom: 1px solid $unb-25gray;
+        height: 25px;
+
+        li {
+          margin-bottom: -4px;
+        }
+
+        a {
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 10px;
+          padding-bottom: 4px;
+
+          &.active {
+            border: 1px solid $unb-25gray;
+            border-bottom: 1px solid white;
+          }
+        }
+      }
+    }
+
     // Exposed search.
     .views-exposed-form {
       float: right;

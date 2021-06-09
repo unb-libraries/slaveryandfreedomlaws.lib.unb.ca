@@ -30,16 +30,15 @@ class HomePageForm extends FormBase {
     // Configure appropriate active tab/pane classes.
     $user_input = $form_state->getUserInput();
     $op = isset($user_input['op']) ? $user_input['op'] : NULL;
-    $about_tab_class = " visible-xs";
 
     if ($op == 'Search FullText') {
-      $title_tab_class = $title_pane_class = $about_pane_class = NULL;
+      $title_tab_class = $title_pane_class = NULL;
 
       $fulltext_tab_class = " active";
       $fulltext_pane_class = "active in";
     }
     else {
-      $fulltext_tab_class = $fulltext_pane_class = $about_pane_class = NULL;
+      $fulltext_tab_class = $fulltext_pane_class = NULL;
       $title_tab_class = " active";
       $title_pane_class = "active in";
     }
@@ -94,30 +93,6 @@ class HomePageForm extends FormBase {
     ];
     $fulltext_url->setOptions($fulltext_link_options);
 
-    $about_url = Url::fromUri("internal:/");
-    $about_link_options = [
-      'attributes' => [
-        'id' => [
-          'tab-about',
-        ],
-        'role' => [
-          'tab',
-        ],
-        'data-toggle' => [
-          'tab',
-        ],
-        'data-target' => [
-          '#about',
-        ],
-        'aria-selected' => [
-          'false',
-        ],
-
-      ],
-      'fragment' => 'about',
-    ];
-    $about_url->setOptions($about_link_options);
-
     $blurb =
       "<p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -155,10 +130,6 @@ class HomePageForm extends FormBase {
       '#markup' => '<li class="tab' . $fulltext_tab_class . '">' . Link::fromTextAndUrl($this->t('Fulltext Search'), $fulltext_url)
         ->toString() . '</li>',
     ];
-    $form['nav-tabs']['about'] = [
-      '#markup' => '<li class="tab' . $about_tab_class . '">' . Link::fromTextAndUrl($this->t('About'), $about_url)
-        ->toString() . '</li>',
-    ];
 
     $form['tab-content'] = [
       '#type' => 'container',
@@ -186,7 +157,7 @@ class HomePageForm extends FormBase {
     ];
     $form['tab-content']['title']['input_title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Search for Legal Article Titles'),
+      '#title' => $this->t('Search for legal article titles'),
       '#description' => $this->t('Search by title, location, year, crime, punishment or combination, i.e. Jamaica 1800.'),
     ];
 
@@ -240,30 +211,6 @@ class HomePageForm extends FormBase {
       '#markup' => '',
     ];
 
-    $form['tab-content']['about'] = [
-      '#type' => 'container',
-      '#attributes' => [
-        'class' => [
-          'clearfix',
-          'tab-pane',
-          $about_pane_class,
-        ],
-        'id' => [
-          'about',
-        ],
-        'aria-labelledby' => [
-          'tab-about',
-        ],
-      ],
-    ];
-    $form['tab-content']['about']['wrapper'] = [
-      '#type' => 'container',
-    ];
-    $form['tab-content']['about']['wrapper']['blurb'] = [
-      '#type' => 'markup',
-      '#markup' => $blurb,
-    ];
-
     $form['#cache'] = [
       'keys' => ['aaslp_frontpage'],
       'contexts' => ['url'],
@@ -284,7 +231,7 @@ class HomePageForm extends FormBase {
     $op = (string) $form_state->getValue('op');
 
     if ($op === 'Search FullText' && empty($value)) {
-      $form_state->setErrorByName('input_fulltext', $this->t('Please provide a fulltext search term'));
+      $form_state->setErrorByName('input_fulltext', $this->t('Please provide a fulltext search value'));
     }
   }
 
