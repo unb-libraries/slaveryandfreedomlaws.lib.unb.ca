@@ -189,6 +189,7 @@ processor_settings:
       - article_year
       - search_metadata
       - search_themes
+      - title
     prefix: '<strong>'
     suffix: '</strong>'
     weights:

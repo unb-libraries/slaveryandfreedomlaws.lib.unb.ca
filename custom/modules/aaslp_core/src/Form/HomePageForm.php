@@ -50,6 +50,9 @@ class HomePageForm extends FormBase {
         'id' => [
           'tab-title',
         ],
+        'class' => [
+          'active',
+        ],
         'role' => [
           'tab',
         ],
@@ -157,7 +160,7 @@ class HomePageForm extends FormBase {
     ];
     $form['tab-content']['title']['input_title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Search for legal article titles'),
+      '#title' => $this->t('Search legal article titles'),
       '#description' => $this->t('Search by title, location, year, crime, punishment or combination, i.e. Jamaica 1800.'),
     ];
 
@@ -247,15 +250,31 @@ class HomePageForm extends FormBase {
 
     if ($op === 'Search FullText') {
       $query = $this->getQueryFromValue($input_fulltext);
-      $form_state->setRedirectUrl(
-        Url::fromUri("internal:/search?search_api_fulltext=$query")
-      );
+
+      if ($query) {
+        $form_state->setRedirectUrl(
+          Url::fromUri("internal:/search?search_api_fulltext=$query")
+        );
+      }
+      else {
+        $form_state->setRedirectUrl(
+          Url::fromUri("internal:/search")
+        );
+      }
     }
     elseif ($op === 'Search/Browse Titles') {
       $query = $this->getQueryFromValue($input_title);
-      $form_state->setRedirectUrl(
-        Url::fromUri("internal:/metasearch?search_api_fulltext=$query")
-      );
+
+      if ($query) {
+        $form_state->setRedirectUrl(
+          Url::fromUri("internal:/metasearch?search_api_fulltext=$query")
+        );
+      }
+      else {
+        $form_state->setRedirectUrl(
+          Url::fromUri("internal:/metasearch")
+        );
+      }
     }
 
   }

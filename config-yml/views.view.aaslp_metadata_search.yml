@@ -466,7 +466,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Fulltext search'
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -528,7 +528,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: 'Slave Law Database'
+      title: 'Slave Law Database | Metadata Search'
       header: {  }
       footer:
         result:
