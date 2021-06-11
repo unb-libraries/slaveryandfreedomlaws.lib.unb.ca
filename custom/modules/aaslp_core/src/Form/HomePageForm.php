@@ -45,13 +45,11 @@ class HomePageForm extends FormBase {
 
     $form = [];
     $title_url = Url::fromUri("internal:/");
+
     $title_link_options = [
       'attributes' => [
         'id' => [
           'tab-title',
-        ],
-        'class' => [
-          'active',
         ],
         'role' => [
           'tab',
@@ -220,6 +218,8 @@ class HomePageForm extends FormBase {
       'max-age' => Cache::PERMANENT,
     ];
 
+    // Attach JS.
+    $form['#attached']['library'][] = 'aaslp_core/homepage-active-tabs';
     return $form;
   }
 

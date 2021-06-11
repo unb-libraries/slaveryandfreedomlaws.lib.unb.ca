@@ -1,0 +1,6 @@
+homepage-active-tabs:
+  version: VERSION
+  js:
+    js/homepage-active-tabs.js: {}
+  dependencies:
+    - core/jquery
