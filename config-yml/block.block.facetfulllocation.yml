@@ -12,7 +12,7 @@ dependencies:
 id: facetfulllocation
 theme: aaslp_lib_unb_ca
 region: sidebar_first
-weight: -4
+weight: -6
 provider: null
 plugin: 'facet_block:facet_full_location'
 settings:
@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/search*\r\n/metasearch*"
+    pages: "/search*\r\n"
     negate: false
     context_mapping: {  }

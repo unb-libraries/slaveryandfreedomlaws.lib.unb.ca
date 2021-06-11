@@ -1,29 +1,29 @@
-uuid: 4be464a2-dc9a-4ff5-8147-19705f3f60f0
+uuid: e6b4a368-3a17-42d0-93f8-42a4446f1755
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.facet_punishments
+    - facets.facet.metadata_punishments
   module:
     - facets
     - system
   theme:
     - aaslp_lib_unb_ca
-id: facetpunishments
+id: metadatapunishments
 theme: aaslp_lib_unb_ca
 region: sidebar_first
-weight: -4
+weight: 0
 provider: null
-plugin: 'facet_block:facet_punishments'
+plugin: 'facet_block:metadata_punishments'
 settings:
-  id: 'facet_block:facet_punishments'
-  label: 'Facet Punishments'
+  id: 'facet_block:metadata_punishments'
+  label: 'Metadata Punishments'
   provider: facets
   label_display: '0'
-  block_id: facetpunishments
+  block_id: metadatapunishments
 visibility:
   request_path:
     id: request_path
-    pages: "/search*\r\n"
+    pages: '/metasearch*'
     negate: false
     context_mapping: {  }
