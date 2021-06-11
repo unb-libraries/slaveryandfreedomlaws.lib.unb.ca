@@ -3,4 +3,5 @@ homepage-active-tabs:
   js:
     js/homepage-active-tabs.js: {}
   dependencies:
+    - core/drupal
     - core/jquery
