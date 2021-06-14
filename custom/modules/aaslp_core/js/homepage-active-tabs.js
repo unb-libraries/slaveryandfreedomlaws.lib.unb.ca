@@ -2,7 +2,7 @@
   'use strict';
 
   // Ensure that tab titles are active when their content is.
-  Drupal.behaviors.absentOnClick = {
+  Drupal.behaviors.homepageActiveTabs = {
     attach: function (context, settings) {
       // On documeny ready.
       $(document).ready( function() {

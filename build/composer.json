@@ -95,6 +95,7 @@
         "drupal/samlauth": "3.2",
         "drupal/search_api": "1.19",
         "drupal/search_api_solr": "4.1.11",
+        "drupal/search_api_synonym": "1.2",
         "drupal/simple_sitemap": "3.8",
         "drupal/token": "1.9",
         "drupal/twig_tweak": "2.9",

@@ -23,9 +23,16 @@ function aaslp_lib_unb_ca_form_views_exposed_form_alter(&$form, &$form_state) {
     $form['actions']['custom_reset'] = [
       '#type' => 'submit',
       '#value' => html_entity_decode('&#xf0e2;'),
-      '#submit' => ['custom_reset_callback'],
+      '#submit' => ['search_reset'],
     ];
   }
+}
+
+function search_reset($form) {
+  // Custom reset callback. Simply hard redirect to search root.
+  $response = new RedirectResponse($form['#action'], 301);
+  $response->setContent('');
+  $response->send();
 }
 
 function aaslp_lib_unb_ca_preprocess_input(&$variables) {
@@ -40,18 +47,12 @@ function aaslp_lib_unb_ca_preprocess_input(&$variables) {
   if (!empty($variables['attributes']['id'])) {
     $input_id = $variables['attributes']['id'];
 
-    // Pass label as variable to template.
+    // Pass label as variable to template. If no $sr_labels use ID.
     $variables['label'] = empty($sr_labels[$input_id]) ? $input_id
       : $sr_labels[$input_id];
   }
+  // If no ID either, use 'Input' as label.
   else {
     $variables['label'] = 'Input';
   }
-}
-
-function custom_reset_callback($form) {
-  // Custom reset callback. Simply hard redirect to /search.
-  $response = new RedirectResponse($form['#action'], 301);
-  $response->setContent('');
-  $response->send();
 }
