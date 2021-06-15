@@ -9,10 +9,10 @@ dependencies:
     - search_api
     - legal_article
   config:
-    - field.storage.node.field_date
-    - field.storage.node.body
     - field.storage.node.field_category
     - field.storage.node.field_crimes
+    - field.storage.node.field_date
+    - field.storage.node.body
     - field.storage.node.field_location
     - field.storage.node.field_punishments
     - search_api.server.drupal_solr_lib_unb_ca
@@ -80,7 +80,7 @@ field_settings:
     label: 'Full Text'
     datasource_id: 'entity:node'
     property_path: body
-    type: text
+    type: 'solr_text_custom:ngram'
     dependencies:
       config:
         - field.storage.node.body
