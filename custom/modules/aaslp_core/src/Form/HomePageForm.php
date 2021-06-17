@@ -107,7 +107,7 @@ class HomePageForm extends FormBase {
 
     $form['blurb'] = [
       '#type' => 'markup',
-      '#markup' => "<div class=\"hidden-xs message well\">" . $blurb . "</div>",
+      '#markup' => "<div>$blurb</div>",
     ];
 
     $form['nav-tabs'] = [

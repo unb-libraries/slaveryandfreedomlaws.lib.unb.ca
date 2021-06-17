@@ -41,8 +41,8 @@ body,
 }
 
 // Broad (also careful).
-// Article (node).
-article.node {
+// Article (node) and form message.
+article.node, #aaslp-core-homepage {
   p {
     text-align: justify;
   }
@@ -401,5 +401,28 @@ footer {
   .custom-editor-menu {
     /* Add space between long menu title text and toggle icon */
     margin-right: .25rem;
+  }
+}
+
+// Responsive.
+@media (max-width: 990px) {
+  // Homepage form.
+  #aaslp-core-homepage .form-submit {
+    margin: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  // Branding.
+  header .navbar-brand {
+    margin-right: 0;
+    padding: 0 !important;
+    white-space: pre-line;
+    text-align: center;
+  }
+}
+@media (max-width: 587px) {
+  // Branding.
+  header .navbar {
+    padding: 0 !important;
   }
 }
