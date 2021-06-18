@@ -1,0 +1,5 @@
+name: 'Contextual Branding Blocks'
+type: module
+description: 'Displays branding as <h1> on frontpage and <a> home elsewhere.'
+core: 8.x
+package: 'Contextual Branding Blocks'
