@@ -77,7 +77,7 @@
         }
     ],
     "require": {
-        "drupal/admin_toolbar": "3.0.0",
+        "drupal/admin_toolbar": "3.0.1",
         "drupal/anchor_link": "2.5",
         "drupal/bootstrap4": "2.1.9",
         "drupal/chosen": "3.0.1",
