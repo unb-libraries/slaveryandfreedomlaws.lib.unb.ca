@@ -1,0 +1,20 @@
+uuid: c212fa2c-2193-4c6e-81e1-03469c5ddba9
+langcode: en
+status: true
+dependencies:
+  module:
+    - context_branding
+  theme:
+    - aaslp_lib_unb_ca
+id: contextualbranding
+theme: aaslp_lib_unb_ca
+region: nav_branding
+weight: 0
+provider: null
+plugin: context_branding_block
+settings:
+  id: context_branding_block
+  label: 'Contextual Branding'
+  provider: context_branding
+  label_display: '0'
+visibility: {  }
