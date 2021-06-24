@@ -40,11 +40,26 @@ function legal_article_node_presave($entity) {
  * Implements hook_preprocess_hook().
  */
 function legal_article_preprocess_node__legal_article(&$variables) {
+  // Retrieve node ID.
+  $nid = $variables['node']->id();
   // Process and render annotations.
   // Recover full article text.
   $article_node = $variables['node'];
   $full_text = !empty($article_node->get('body')->getValue()[0]) ?
     $article_node->get('body')->getValue()[0]['value'] : NULL;
+
+  // Scan for annotation tags.
+  preg_match_all('#\[an\](.*?)\[\/an\]#s', $full_text, $matches, PREG_SET_ORDER);
+
+  // Process matched annotation tags.
+  foreach ($matches as $key => $match) {
+    // Replace tag with annotation link.
+    $i = $key + 1;
+    $href = "aaslp-anno-$i";
+    $anchor = "[<a href='#$href'>$i</a>]";
+    $full_text = str_replace($match[0], $anchor, $full_text);
+  }
+
   // Retrieve source annotations.
   $src_annos = !empty($article_node->get('field_annotations')->getValue()) ?
     $article_node->get('field_annotations')->getValue() : [];
