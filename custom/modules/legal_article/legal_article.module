@@ -52,12 +52,29 @@ function legal_article_preprocess_node__legal_article(&$variables) {
   preg_match_all('#\[an\](.*?)\[\/an\]#s', $full_text, $matches, PREG_SET_ORDER);
 
   // Process matched annotation tags.
+  $annos = [];
+
   foreach ($matches as $key => $match) {
     // Replace tag with annotation link.
     $i = $key + 1;
-    $href = "aaslp-anno-$i";
-    $anchor = "[<a href='#$href'>$i</a>]";
+    $source = "aaslp-tag-$i";
+    $target = "aaslp-anno-$i";
+    $anchor = "[<a id ='$source' href='#$target'>$i</a>]";
     $full_text = str_replace($match[0], $anchor, $full_text);
+
+    // Add annotation entry.
+    $annos[] = "<li><a id='$target' href='#$source'>$i.</a> $match[1].";
+  }
+
+  // Append annotations to end of text.
+  if (!empty($annos)) {
+    $full_text .= '<ul class="annotations">';
+
+    foreach ($annos as $anno) {
+      $full_text .= $anno;
+    }
+
+    $full_text .= '</ul>';
   }
 
   // Retrieve source annotations.
