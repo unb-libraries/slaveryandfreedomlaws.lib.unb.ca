@@ -48,34 +48,10 @@ function legal_article_preprocess_node__legal_article(&$variables) {
   $full_text = !empty($article_node->get('body')->getValue()[0]) ?
     $article_node->get('body')->getValue()[0]['value'] : NULL;
 
-  // Scan for annotation tags.
-  preg_match_all('#\[an\](.*?)\[\/an\]#s', $full_text, $matches, PREG_SET_ORDER);
-
-  // Process matched annotation tags.
-  $annos = [];
-
-  foreach ($matches as $key => $match) {
-    // Replace tag with annotation link.
-    $i = $key + 1;
-    $source = "aaslp-tag-$i";
-    $target = "aaslp-anno-$i";
-    $anchor = "[<a id ='$source' href='#$target'>$i</a>]";
-    $full_text = str_replace($match[0], $anchor, $full_text);
-
-    // Add annotation entry.
-    $annos[] = "<li><a id='$target' href='#$source'>$i.</a> $match[1].";
-  }
-
-  // Append annotations to end of text.
-  if (!empty($annos)) {
-    $full_text .= '<ul class="annotations">';
-
-    foreach ($annos as $anno) {
-      $full_text .= $anno;
-    }
-
-    $full_text .= '</ul>';
-  }
+  // Process annotations.
+  $full_text = annotate($full_text, 'an');
+  // Process editorial annotations.
+  $full_text = annotate($full_text, 'ed', TRUE);
 
   // Retrieve source annotations.
   $src_annos = !empty($article_node->get('field_annotations')->getValue()) ?
@@ -131,6 +107,59 @@ function legal_article_preprocess_node__legal_article(&$variables) {
 
   // Update full text field.
   $variables['content']['body'][0]['#text'] = $full_text;
+}
+
+function annotate($text, $tag, $alpha = FALSE, $upper = FALSE) {
+  // Build regex pattern to match tags.
+  $pattern = '#\[' . $tag . '\](.*?)\[\/' . $tag . '\]#s';
+  // Scan for annotation tags.
+  preg_match_all($pattern, $text, $matches, PREG_SET_ORDER);
+
+  // Process matched annotation tags.
+  $annos = [];
+
+  foreach ($matches as $key => $match) {
+    // $key starts at zero but we want to number from 1.
+    $i = $key + 1;
+
+    // Convert to sequential alphanumeric character if flag is set.
+    if ($alpha) {
+      // If uppercase flag not set, adding 32 to ASCII number converts to lower.
+      if (!$upper) {
+        $i += 32;
+      }
+
+      // Convert to character.
+      $i = chr($i + 64);
+    }
+
+    // Replace tag with annotation link.
+    $source = "anno-tag-$i";
+    $target = "annotation-$i";
+    $anchor = "[<a id ='$source' href='#$target'>$i</a>]";
+    $text = str_replace($match[0], $anchor, $text);
+
+    // Add annotation entry.
+    $annos[] = "
+      <li class='anno-tem'><a id='$target' href='#$source'>$i.</a> $match[1].</li>
+    ";
+  }
+
+  // Append annotations to end of text if any.
+  if (!empty($annos)) {
+    // Begin list.
+    $text .= '<ul class="anno-list">';
+
+    // Append annotations.
+    foreach ($annos as $anno) {
+      $text .= $anno;
+    }
+
+    // Close list.
+    $text .= '</ul>';
+  }
+
+  return $text;
 }
 
 /**
