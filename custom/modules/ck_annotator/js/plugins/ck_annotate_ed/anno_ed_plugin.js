@@ -9,7 +9,7 @@ CKEDITOR.plugins.add('anno_insert_ed', {
     // editor.addContentsCss( pluginDirectory + 'styles/trxn_insert.css' );
 
     editor.ui.addButton('anno_insert_ed', {
-      label: 'Insert Annotation',
+      label: 'Insert editorial annotation',
       command: 'anno_insert_ed',
       toolbar: 'formatting'
     });
