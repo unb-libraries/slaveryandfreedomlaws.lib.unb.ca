@@ -1,0 +1,7 @@
+name: CKEditor Annotator
+type: module
+description: CKEditor plugin for annotating text.
+core: 8.x
+package: Custom
+dependencies:
+  - ckeditor
