@@ -49,9 +49,9 @@ function legal_article_preprocess_node__legal_article(&$variables) {
     $article_node->get('body')->getValue()[0]['value'] : NULL;
 
   // Process annotations.
-  $full_text = annotate($full_text, 'an');
+  $full_text = annotate($full_text, 'an', 'Transcription annotations');
   // Process editorial annotations.
-  $full_text = annotate($full_text, 'ed', TRUE);
+  $full_text = annotate($full_text, 'ed', 'Editorial annotations', TRUE);
 
   // Retrieve source annotations.
   $src_annos = !empty($article_node->get('field_annotations')->getValue()) ?
@@ -109,7 +109,7 @@ function legal_article_preprocess_node__legal_article(&$variables) {
   $variables['content']['body'][0]['#text'] = $full_text;
 }
 
-function annotate($text, $tag, $alpha = FALSE, $upper = FALSE) {
+function annotate($text, $tag, $header = NULL, $alpha = FALSE, $upper = FALSE) {
   // Build regex pattern to match tags.
   $pattern = '#\[' . $tag . '\](.*?)\[\/' . $tag . '\]#s';
   // Scan for annotation tags.
@@ -147,6 +147,9 @@ function annotate($text, $tag, $alpha = FALSE, $upper = FALSE) {
 
   // Append annotations to end of text if any.
   if (!empty($annos)) {
+    // Insert header.
+    $text .= "<h2 class='anno-group-header'>$header</h2>";
+
     // Begin list.
     $text .= '<ul class="anno-list">';
 
