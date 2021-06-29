@@ -358,6 +358,18 @@ main > .container {
       .field {
         margin-top: 1.2rem;
       }
+
+      // Annotations.
+      .anno-group-header {
+        padding-top: .4rem;
+        border-top: 1px solid $lgray;
+        font-size: 1rem;
+      }
+
+      .anno-list {
+        padding-left: 0;
+        list-style: none;
+      }
     }
     // Search page title.
     #block-aaslp-lib-unb-ca-page-title .page-title {
