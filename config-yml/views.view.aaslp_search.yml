@@ -64,67 +64,17 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: table
+        type: default
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
-          override: true
-          sticky: true
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            title_1: title_1
-            search_api_excerpt: search_api_excerpt
-            search_year: search_year
-            search_location: search_location
-            search_category: search_category
-          info:
-            title_1:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            search_api_excerpt:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            search_year:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            search_location:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            search_category:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
       row:
         type: fields
         options:
           default_field_elements: true
-          inline:
-            search_year: search_year
-            search_location: search_location
-            search_category: search_category
-          separator: /
+          inline: {  }
+          separator: ''
           hide_empty: false
       fields:
         title_1:
@@ -134,7 +84,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Title
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -207,8 +157,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% if search_api_excerpt %}\r\n<div class=\"excerpt\">{{ search_api_excerpt }}</div>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -242,7 +192,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           link_to_item: false
@@ -257,8 +207,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Year
-          exclude: false
+          label: ''
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -319,11 +269,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Location
+          label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{%- if search_year -%}\r\n{{ search_year }}\r\n{%- if search_location -%}\r\n{{\", \" }}\r\n{%- endif -%}\r\n{%- endif -%}\r\n{{ search_location }}"
             make_link: false
             path: ''
             absolute: false
@@ -389,7 +339,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Category
+          label: ''
           exclude: false
           alter:
             alter_text: false

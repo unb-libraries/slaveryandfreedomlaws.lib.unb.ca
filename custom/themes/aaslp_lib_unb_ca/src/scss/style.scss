@@ -286,6 +286,15 @@ main > .container {
       margin-left: 1.2rem;
       margin-right: 1.2rem;
       // Views row.
+      .views-row {
+        margin-top: 1rem;
+
+        .views-field-search-api-excerpt .excerpt {
+          background-color: $lgray;
+          padding: 4px 8px;
+        }
+      }
+      // Table.
       table {
         th a {
           white-space: nowrap;
