@@ -1,8 +1,0 @@
-uuid: a057c6e5-bf22-49e2-a791-d885d8389286
-langcode: en
-status: true
-dependencies: {  }
-name: Annotations
-vid: annotations
-description: 'Legal article annotations.'
-weight: 0

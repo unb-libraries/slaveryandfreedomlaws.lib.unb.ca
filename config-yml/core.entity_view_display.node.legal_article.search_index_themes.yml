@@ -5,12 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.search_index_themes
     - field.field.node.legal_article.body
-    - field.field.node.legal_article.field_annotations
     - field.field.node.legal_article.field_category
     - field.field.node.legal_article.field_citation
     - field.field.node.legal_article.field_crimes
     - field.field.node.legal_article.field_date
-    - field.field.node.legal_article.field_editorial_annotations
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_notes
@@ -57,10 +55,8 @@ content:
     region: content
 hidden:
   body: true
-  field_annotations: true
   field_citation: true
   field_date: true
-  field_editorial_annotations: true
   field_full_title: true
   field_location: true
   field_notes: true
