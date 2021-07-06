@@ -11,19 +11,16 @@ dependencies:
     - field.field.node.legal_article.field_date
     - field.field.node.legal_article.field_editorial_annotations
     - field.field.node.legal_article.field_full_title
-    - field.field.node.legal_article.field_images
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_notes
     - field.field.node.legal_article.field_parent_location
     - field.field.node.legal_article.field_punishments
     - field.field.node.legal_article.field_revision_switch
     - field.field.node.legal_article.field_source
-    - image.style.thumbnail
     - node.type.legal_article
   module:
     - chosen_field
     - datetime
-    - image
     - inline_entity_form
     - text
 id: node.legal_article.default
@@ -108,14 +105,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_images:
-    weight: 3
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   field_location:
     weight: 7
