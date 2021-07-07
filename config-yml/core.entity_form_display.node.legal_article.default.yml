@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.legal_article.field_citation
     - field.field.node.legal_article.field_crimes
     - field.field.node.legal_article.field_date
+    - field.field.node.legal_article.field_document_image
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_notes
@@ -15,10 +16,12 @@ dependencies:
     - field.field.node.legal_article.field_punishments
     - field.field.node.legal_article.field_revision_switch
     - field.field.node.legal_article.field_source
+    - image.style.thumbnail
     - node.type.legal_article
   module:
     - chosen_field
     - datetime
+    - image
     - text
 id: node.legal_article.default
 targetEntityType: node
@@ -61,6 +64,14 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_document_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_full_title:
     weight: 4
     settings:
@@ -76,7 +87,7 @@ content:
     type: options_select
     region: content
   field_notes:
-    weight: 13
+    weight: 11
     settings:
       rows: 5
       placeholder: ''
@@ -85,7 +96,7 @@ content:
     region: content
   field_parent_location:
     type: entity_reference_autocomplete
-    weight: 16
+    weight: 14
     region: content
     settings:
       match_operator: CONTAINS
@@ -100,7 +111,7 @@ content:
     type: chosen_select
     region: content
   field_revision_switch:
-    weight: 15
+    weight: 13
     settings:
       display_label: true
     third_party_settings: {  }
@@ -116,7 +127,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 12
     region: content
     third_party_settings: {  }
   title:

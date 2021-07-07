@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.legal_article.field_citation
     - field.field.node.legal_article.field_crimes
     - field.field.node.legal_article.field_date
+    - field.field.node.legal_article.field_document_image
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_notes
@@ -57,6 +58,7 @@ hidden:
   body: true
   field_citation: true
   field_date: true
+  field_document_image: true
   field_full_title: true
   field_location: true
   field_notes: true
