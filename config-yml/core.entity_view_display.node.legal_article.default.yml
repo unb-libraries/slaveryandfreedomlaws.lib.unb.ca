@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.legal_article.field_punishments
     - field.field.node.legal_article.field_revision_switch
     - field.field.node.legal_article.field_source
+    - image.style.large_centre
     - node.type.legal_article
   module:
     - datetime
@@ -71,7 +72,7 @@ content:
     weight: 3
     label: above
     settings:
-      image_style: ''
+      image_style: large_centre
       image_link: ''
     third_party_settings: {  }
     type: image

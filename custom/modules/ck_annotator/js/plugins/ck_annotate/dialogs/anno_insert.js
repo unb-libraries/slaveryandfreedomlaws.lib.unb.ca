@@ -21,7 +21,7 @@ CKEDITOR.dialog.add('anno_insertDialog', function(editor) {
       var dialog = this;
       var annoSpan = editor.document.createElement('span');
       var annoText = dialog.getValueOf('tab-annotate', 'to-annotate');
-      annoText = ('[an]').concat(annoText).concat('[/an]');
+      annoText = (' [an]').concat(annoText).concat('[/an] ');
 
       annoSpan.setAttribute('class', 'anno-span');
       annoSpan.setText(annoText);

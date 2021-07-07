@@ -1,0 +1,15 @@
+uuid: de99f84d-349e-4168-9b2b-c0ce835036ef
+langcode: en
+status: true
+dependencies: {  }
+name: large_centre
+label: 'Large Centre (480x480)'
+effects:
+  2ac9d0b2-c88c-467d-9295-14a838855a71:
+    uuid: 2ac9d0b2-c88c-467d-9295-14a838855a71
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 480
+      anchor: center-center
