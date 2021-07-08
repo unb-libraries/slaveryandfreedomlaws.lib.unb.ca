@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - editor
-    - footnotes
 name: 'UNB Libraries'
 format: unb_libraries
 weight: -50
@@ -36,10 +35,3 @@ filters:
       allowed_html: '<a class href hreflang id> <em class> <strong class> <cite class> <blockquote cite class> <code class> <ul class type> <ol class start type> <li class> <dl class> <dt class> <dd class> <h2 class id> <h3 class id> <h4 class id> <h5 class id> <h6 class id> <s> <sup class> <sub class> <img class src alt data-entity-type data-entity-uuid data-align data-caption> <table class> <caption class> <tbody class> <thead class> <tfoot class> <th class> <td class> <tr class> <hr> <p class> <pre> <br> <div class> <small class> <span class id>'
       filter_html_help: true
       filter_html_nofollow: false
-  filter_footnotes:
-    id: filter_footnotes
-    provider: footnotes
-    status: true
-    weight: 0
-    settings:
-      footnotes_collapse: '0'

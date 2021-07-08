@@ -48,7 +48,6 @@ settings:
           items:
             - ShowBlocks
             - Source
-            - footnotes
             - anno_insert
             - anno_insert_ed
   plugins:
