@@ -27,14 +27,14 @@ class ContextBrandingBlock extends BlockBase {
     if ($is_front) {
       $site_title = "
         <h1 class='site-title'>
-          $site_name;
+          $site_name
         </h1>
       ";
     }
     else {
       $site_title = "
         <a href='/' title='Home' rel='home' class='site-title'>
-          $site_name;
+          $site_name
         </a>
       ";
     }
