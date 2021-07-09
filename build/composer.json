@@ -28,6 +28,9 @@
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
             ],
+            "libraries/ckeditor/plugins/{$name}": [
+                "vendor:ckeditor-plugin"
+            ],
             "libraries/{$name}": [
                 "type:drupal-library",
                 "harvesthq/chosen"
@@ -74,9 +77,25 @@
                 "version": "1.11.4"
             },
             "type": "package"
+        },
+        {
+            "package": {
+                "dist": {
+                    "type": "zip",
+                    "url": "https://download.ckeditor.com/widget/releases/widget_4.16.1.zip"
+                },
+                "name": "ckeditor-plugin/widget",
+                "require": {
+                    "composer/installers": "^1.2.0"
+                },
+                "type": "drupal-library",
+                "version": "4.16.1"
+            },
+            "type": "package"
         }
     ],
     "require": {
+        "ckeditor-plugin/widget": "4.16.1",
         "drupal/admin_toolbar": "3.0.1",
         "drupal/anchor_link": "2.5",
         "drupal/bootstrap4": "2.1.11",
