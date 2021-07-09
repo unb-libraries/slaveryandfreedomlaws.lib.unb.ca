@@ -18,6 +18,7 @@ spec:
       uri: dev-aaslp.lib.unb.ca
   replicas: 1
   revisionHistoryLimit: 2
+  minReadySeconds: 30
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -85,7 +86,7 @@ spec:
             -
               mountPath: /app/html/sites/default
               name: drupal-persistent-storage
-      priorityClassName: dev-med-priority-services
+      priorityClassName: dev-low-priority-services
       imagePullSecrets:
         -
           name: github-container-registry-auth
