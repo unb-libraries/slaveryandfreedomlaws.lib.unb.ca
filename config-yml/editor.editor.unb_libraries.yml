@@ -48,8 +48,7 @@ settings:
           items:
             - ShowBlocks
             - Source
-            - anno_insert
-            - anno_insert_ed
+            - annotate
   plugins:
     stylescombo:
       styles: ''
