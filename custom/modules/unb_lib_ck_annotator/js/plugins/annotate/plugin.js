@@ -15,9 +15,18 @@ CKEDITOR.plugins.add( 'annotate', {
 
       template:
         '<div class="unb-lib-anno">' +
-            '<h2 class="anno-title">Title</h2>' +
-            '<div class="anno-content"><p>Content...</p></div>' +
-        '</div>'
+            '<div class="anno-body">Annotation text...</div>' +
+        '</div>',
+
+        editables: {
+          content: {
+              selector: '.anno-body'
+          }
+      },
+
+      upcast: function( element ) {
+          return element.name == 'div' && element.hasClass( 'unb-lib-anno' );
+      }
     });
   }
 });
