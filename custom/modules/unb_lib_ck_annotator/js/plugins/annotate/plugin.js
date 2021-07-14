@@ -4,6 +4,8 @@ CKEDITOR.plugins.add( 'annotate', {
   icons: 'annotate',
 
   init: function( editor ) {
+    CKEDITOR.dtd.$editable['span'] = 1;
+
     editor.ui.addButton( 'annotate', {
       label: 'Annotate',
       title: 'Insert annotation',
@@ -14,9 +16,9 @@ CKEDITOR.plugins.add( 'annotate', {
       button: 'Insert annotation',
 
       template:
-        '<div class="unb-lib-anno">' +
-            '<div class="anno-body">Annotation text...</div>' +
-        '</div>',
+        '<span class="unb-lib-anno">&nbsp;' +
+            '<span class="anno-body">Annotation text...</span>' +
+        '&nbsp;</span>',
 
         editables: {
           content: {
@@ -25,7 +27,7 @@ CKEDITOR.plugins.add( 'annotate', {
       },
 
       upcast: function( element ) {
-          return element.name == 'div' && element.hasClass( 'unb-lib-anno' );
+          return element.name == 'span' && element.hasClass( 'unb-lib-anno' );
       }
     });
   }
