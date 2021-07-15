@@ -1,5 +1,5 @@
 // Anotator dialog.
-CKEDITOR.dialog.add( 'annotate', function(editor) {
+CKEDITOR.dialog.add('annotate', function(editor) {
   return {
     title: 'Annotation',
     minWidth: 400,
