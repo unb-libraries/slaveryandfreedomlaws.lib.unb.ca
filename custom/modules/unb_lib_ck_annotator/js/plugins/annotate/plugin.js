@@ -7,6 +7,10 @@ CKEDITOR.plugins.add( 'annotate', {
     // Make span tags editable in CKEDITOR dtd.
     CKEDITOR.dtd.$editable['span'] = 1;
 
+    // Add custom CSS to editor.
+    editor.addContentsCss(this.path + 'css/annotate.css');
+
+
     // Add button.
     editor.ui.addButton( 'annotate', {
       label: 'Annotate',
