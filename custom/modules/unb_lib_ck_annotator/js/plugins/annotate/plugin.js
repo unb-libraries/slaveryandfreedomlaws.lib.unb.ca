@@ -1,3 +1,4 @@
+// Annotator plugin.
 CKEDITOR.plugins.add( 'annotate', {
   requires: 'widget',
 
@@ -9,7 +10,6 @@ CKEDITOR.plugins.add( 'annotate', {
 
     // Add custom CSS to editor.
     editor.addContentsCss(this.path + 'css/annotate.css');
-
 
     // Add button.
     editor.ui.addButton( 'annotate', {
@@ -38,7 +38,13 @@ CKEDITOR.plugins.add( 'annotate', {
       // Function needs to return the outermost element for widget persistence.
       upcast: function( element ) {
           return element.name == 'span' && element.hasClass( 'unb-lib-anno' );
-      }
+      },
+
+      // Bind dialog to widget.
+      dialog: 'annotate'
     });
+
+    // Add dialog to editor.
+    CKEDITOR.dialog.add( 'annotate', this.path + 'dialogs/annotate.js' );
   }
 });
