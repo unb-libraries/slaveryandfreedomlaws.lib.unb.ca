@@ -367,6 +367,10 @@ main > .container {
       }
 
       // Annotations.
+      .anno-marker {
+        display: none;
+      }
+
       .anno-group-header {
         padding-top: .4rem;
         border-top: 1px solid $lgray;
