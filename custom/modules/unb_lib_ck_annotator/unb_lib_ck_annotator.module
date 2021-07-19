@@ -1,0 +1,87 @@
+<?php
+
+/**
+* @file
+* Contains unb_lib_ck_annotator.module.
+*/
+
+/**
+ * Implement hook_preprocess_field().
+ */
+function unb_lib_ck_annotator_preprocess_field(&$variables) {
+  // Apply only to field types...
+  $field_types = [
+    'text_long',
+    'text_with_summary',
+  ];
+
+  // If valid field type...
+  if (in_array($variables['element']['#field_type'], $field_types)) {
+    // Recover text.
+    $full_text = !empty($variables['items'][0]['content']['#text']) ?
+      $variables['items'][0]['content']['#text'] : NULL;
+
+    // Process annotations.
+    $full_text = annotate($full_text, 'an', 'Transcription annotations');
+    // Process editorial annotations.
+    $full_text = annotate($full_text, 'ed', 'Editorial annotations', TRUE);
+    // Update full text field.
+    $variables['items'][0]['content']['#text'] = $full_text;
+  }
+}
+
+function annotate($text, $tag, $header = NULL, $alpha = FALSE, $upper = FALSE) {
+  // Build regex pattern to match tags.
+  $pattern = '#\[' . $tag . '\](.*?)\[\/' . $tag . '\]#s';
+  // Scan for annotation tags.
+  preg_match_all($pattern, $text, $matches, PREG_SET_ORDER);
+
+  // Process matched annotation tags.
+  $annos = [];
+
+  foreach ($matches as $key => $match) {
+    // $key starts at zero but we want to number from 1.
+    $i = $key + 1;
+
+    // Convert to sequential alphanumeric character if flag is set.
+    if ($alpha) {
+      // If uppercase flag not set, adding 32 to ASCII number converts to lower.
+      if (!$upper) {
+        $i += 32;
+      }
+
+      // Convert to character.
+      $i = chr($i + 64);
+    }
+
+    // Replace tag with annotation link.
+    $source = "anno-tag-$i";
+    $target = "annotation-$i";
+    $anchor = "[<a id ='$source' href='#$target'>$i</a>]";
+    $text = str_replace($match[0], $anchor, $text);
+
+    // Add annotation entry.
+    $annos[] = "
+      <li class='anno-tem'><a id='$target' href='#$source'>$i.</a> $match[1].</li>
+    ";
+  }
+
+  // Append annotations to end of text if any.
+  if (!empty($annos)) {
+    // Insert header.
+    $text .= "<h2 class='anno-group-header'>$header</h2>";
+
+    // Begin list.
+    $text .= '<ul class="anno-list">';
+
+    // Append annotations.
+    foreach ($annos as $anno) {
+      $text .= $anno;
+    }
+
+    // Close list.
+    $text .= '</ul>';
+  }
+
+  return $text;
+}
