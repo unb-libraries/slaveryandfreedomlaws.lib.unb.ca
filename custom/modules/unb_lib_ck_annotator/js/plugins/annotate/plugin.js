@@ -25,8 +25,8 @@ CKEDITOR.plugins.add('annotate', {
       // Define template.
       template:
         '<span class="unb-lib-anno">' +
-          '<span class="anno-marker">MARKER_PLACEHOLDER</span>' +
-          '<span class="anno-open">[an]</span>' +
+          '<span class="anno-marker" title="Double-click to edit annotation">' +
+          'MARKER_PLACEHOLDER</span><span class="anno-open">[an]</span>' +
           '<span class="anno-body">BODY_PLACEHOLDER</span>' +
           '<span class="anno-close">[/an]</span>' +
         '</span>',
