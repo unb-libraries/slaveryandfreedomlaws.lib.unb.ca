@@ -40,8 +40,10 @@ CKEDITOR.plugins.add('annotate', {
 
       allowedContent:
         'span(!unb-lib-anno); ' +
-        'span(!anno-marker); span(!anno-open); ' +
+        'span(!anno-marker){title}; span(!anno-open); ' +
         'span(!anno-close); span(!anno-body){body, group};',
+
+      requiredContent: 'span(!unb-lib-anno);',
 
       // This variable makes parts of template available for updating.
       parts: {
