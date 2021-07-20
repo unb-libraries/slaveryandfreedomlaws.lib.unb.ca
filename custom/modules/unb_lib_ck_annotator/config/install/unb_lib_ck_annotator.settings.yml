@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ckeditor
+id: unb_lib_ck_annotator
+Label: 'UNB Libraries CKEditor Annotator'
+module: unb_lib_ck_annotator
+description: 'Provides widget plugin annotations for CKEditor in Drupal'
+core: 8.x
+types:
+  numbers:
+    enabled: true
+    label: Numbers
+  lowercase:
+    enabled: true
+    label: Lowercase
+  uppercase:
+    enabled: true
+    label: Uppercase
