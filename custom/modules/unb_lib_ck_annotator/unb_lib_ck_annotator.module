@@ -57,7 +57,7 @@ function annotate($text, $tag, $header = NULL, $alpha = FALSE, $upper = FALSE) {
     // Replace tag with annotation link.
     $source = "anno-tag-$i";
     $target = "annotation-$i";
-    $anchor = "[<a id ='$source' href='#$target'>$i</a>]";
+    $anchor = "<sup>[<a id ='$source' href='#$target'>$i</a>]</sup>";
     $text = str_replace($match[0], $anchor, $text);
 
     // Add annotation entry.
@@ -84,4 +84,15 @@ function annotate($text, $tag, $header = NULL, $alpha = FALSE, $upper = FALSE) {
   }
 
   return $text;
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function unb_lib_ck_annotator_page_attachments(array &$attachments) {
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+
+  if ($theme == 'seven') {
+    $attachments['#attached']['library'][] = 'unb_lib_ck_annotator/extra.admin';
+  }
 }
