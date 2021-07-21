@@ -38,6 +38,10 @@ body,
   h1.display-4, h1 > span, .navbar-brand .site-title {
     font-weight: bold;
   }
+  // Global superscript size.
+  sup {
+    font-size: .85rem;
+  }
 }
 
 // Broad (also careful).
