@@ -73,9 +73,6 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface 
       ],
     ];
 
-    kint($config);
-    exit;
-
     return [];
   }
 
