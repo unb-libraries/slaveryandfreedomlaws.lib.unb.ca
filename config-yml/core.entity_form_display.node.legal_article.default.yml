@@ -94,16 +94,6 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_parent_location:
-    type: entity_reference_autocomplete
-    weight: 14
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_punishments:
     weight: 9
     settings: {  }
@@ -140,6 +130,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_parent_location: true
   langcode: true
   path: true
   promote: true
