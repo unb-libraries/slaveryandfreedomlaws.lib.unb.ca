@@ -8,8 +8,8 @@ Label: 'UNB Libraries CKEditor Annotator'
 module: unb_lib_ck_annotator
 description: 'Provides widget plugin annotations for CKEditor in Drupal'
 core: 8.x
-types:
-  numbers:
+groups:
+  numbered:
     enabled: true
     label: Numbers
   lowercase:

@@ -1,0 +1,7 @@
+unb_lib_ck_annotator.settings:
+  path: '/admin/config/unb_lib_ck_annotator/settings'
+  defaults:
+    _form: '\Drupal\unb_lib_ck_annotator\Form\AnnotatorSettingsForm'
+    _title: 'UNB Libraries CKEditor annotation settings'
+  requirements:
+    _permission: 'administer site configuration'
