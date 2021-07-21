@@ -61,23 +61,20 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface 
     $config['groups'] = [
       'numbered' => [
         'enabled' => $groups['numbered']['enabled'],
-      ],
-      'lowercase' => [
-        'enabled' => $groups['lowercase']['enabled'],
-      ],
-      'uppercase' => [
-        'enabled' => $groups['uppercase']['enabled'],
-      ],
-      'numbered' => [
         'label' => $groups['numbered']['label'],
       ],
       'lowercase' => [
+        'enabled' => $groups['lowercase']['enabled'],
         'label' => $groups['lowercase']['label'],
       ],
       'uppercase' => [
+        'enabled' => $groups['uppercase']['enabled'],
         'label' => $groups['uppercase']['label'],
       ],
     ];
+
+    kint($config);
+    exit;
 
     return [];
   }
