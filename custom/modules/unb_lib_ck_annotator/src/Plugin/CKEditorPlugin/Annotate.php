@@ -44,7 +44,7 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface 
   public function getButtons() {
     return [
       'annotate' => [
-        'label' => t('Insert annotation'),
+        'label' => $this->t('Insert annotation'),
         'image' => drupal_get_path('module', 'unb_lib_ck_annotator') .
         '/js/plugins/annotate/icons/annotate.png',
       ],
@@ -76,7 +76,7 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface 
         ],
       'uppercase' => [
         'label' => $groups['uppercase']['label']
-        ]
+      ],
     ];
 
     return [];
