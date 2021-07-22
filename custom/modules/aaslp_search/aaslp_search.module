@@ -9,7 +9,12 @@ use Drupal\taxonomy\Entity\Term;
 
 function aaslp_search_preprocess_facets_item_list(&$variables) {
   // Only apply to facet facet_full_location.
-  if ($variables['facet']->id() == 'facet_full_location') {
+  $facets = [
+    'facet_full_location',
+    'metadata_location',
+  ];
+
+  if (in_array($variables['facet']->id(), $facets)) {
     // Get facet items and cycle through them.
     $items = $variables['items'];
 
