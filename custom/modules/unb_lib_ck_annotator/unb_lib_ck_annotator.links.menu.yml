@@ -1,0 +1,6 @@
+unb_lib_ck_annotator.admin:
+  title: 'UNB Libraries CKEditor annotator'
+  description: 'Select and configure annotation groups.'
+  parent: system.admin_config_content
+  route_name: unb_lib_ck_annotator.settings
+  weight: 100
