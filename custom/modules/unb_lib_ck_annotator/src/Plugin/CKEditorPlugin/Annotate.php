@@ -57,7 +57,7 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface 
   public function getConfig(Editor $editor) {
     // Get immutable Config (Read Only).
     $groups = \Drupal::config('unb_lib_ck_annotator.settings')->get('groups');
-    // Prepare configuration for plugin.
+    // Prepare additional configuration for plugin.
     $config['groups'] = [
       'numbered' => [
         'enabled' => $groups['numbered']['enabled'],
@@ -73,7 +73,7 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface 
       ],
     ];
 
-    return [];
+    return $config;
   }
 
   /**

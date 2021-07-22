@@ -22,9 +22,19 @@ function unb_lib_ck_annotator_preprocess_field(&$variables) {
       $variables['items'][0]['content']['#text'] : NULL;
 
     // Process annotations.
-    $full_text = annotate($full_text, 'an', 'Transcription annotations');
-    // Process editorial annotations.
-    $full_text = annotate($full_text, 'ed', 'Editorial annotations', TRUE);
+    // Get immutable Config (Read Only).
+    $groups = \Drupal::config('unb_lib_ck_annotator.settings')->get('groups');
+
+    // Annotate according to which types are enabled and their labels.
+    if ($groups['numbered']['enabled']) {
+      $full_text = annotate($full_text, 'num', $groups['numbered']['label']);
+    }
+    if ($groups['lowercase']['enabled']) {
+      $full_text = annotate($full_text, 'lower', $groups['lowercase']['label'], TRUE, FALSE);
+    }
+    if ($groups['uppercase']['enabled']) {
+      $full_text = annotate($full_text, 'upper', $groups['uppercase']['label'], FALSE, TRUE);
+    }
     // Update full text field.
     $variables['items'][0]['content']['#text'] = $full_text;
   }

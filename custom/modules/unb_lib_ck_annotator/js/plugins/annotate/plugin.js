@@ -90,25 +90,23 @@ CKEDITOR.plugins.add('annotate', {
 
         // Add group class.
         this.parts.annoSpan.addClass('group-' + group);
-        // Add annotation marker.
+        // Add annotation marker and tags.
         switch (group) {
           case 'lower':
             var marker = '[a]';
-            this.parts.openSpan.setHtml('[ed]');
-            this.parts.closeSpan.setHtml('[/ed]');
             break;
           case 'upper':
             var marker = '[A]';
             break;
           default:
             var marker = '[#]';
-            this.parts.openSpan.setHtml('[an]');
-            this.parts.closeSpan.setHtml('[/an]');
             break;
         }
+
+        this.parts.openSpan.setHtml('[' + group + ']');
+        this.parts.closeSpan.setHtml('[/' + group + ']');
         this.parts.openSpan.hide();
         this.parts.closeSpan.hide();
-
         this.parts.markerSpan.setHtml(marker);
 
         if (body) {

@@ -1,5 +1,20 @@
 // Anotator dialog.
 CKEDITOR.dialog.add('annotate', function(editor) {
+  // Set up 'groups' drop-down by using passed config.
+  // Custom config passed in Annotate.getConfig().
+  var groups = editor.config.groups;
+  var group_items = [];
+
+  if (groups.numbered.enabled) {
+    group_items.push([groups.numbered.label, 'num'])
+  }
+  if (groups.lowercase.enabled) {
+    group_items.push([groups.lowercase.label, 'lower'])
+  }
+  if (groups.uppercase.enabled) {
+    group_items.push([groups.uppercase.label, 'upper'])
+  }
+
   return {
     title: 'Annotation',
     minWidth: 400,
@@ -12,11 +27,7 @@ CKEDITOR.dialog.add('annotate', function(editor) {
             id: 'group',
             type: 'select',
             label: 'Group',
-            items: [
-              ['Numbers', 'num'],
-              ['Lowercase', 'lower'],
-              ['Uppercase', 'upper']
-            ],
+            items: group_items,
 
             setup: function(widget) {
               this.setValue(widget.data.group);
