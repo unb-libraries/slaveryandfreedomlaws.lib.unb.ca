@@ -1,0 +1,22 @@
+uuid: 82328ef1-03df-4410-a6f7-55f834aae661
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: legal_article_path
+label: 'Legal Article Path'
+type: 'canonical_entities:node'
+pattern: 'law/[node:field_location]-[node:field_date:date:html_year]'
+selection_criteria:
+  7bdeac4b-96be-45f5-a9fc-fc17b3ff00b4:
+    id: node_type
+    bundles:
+      legal_article: legal_article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7bdeac4b-96be-45f5-a9fc-fc17b3ff00b4
+selection_logic: and
+weight: -5
+relationships: {  }
