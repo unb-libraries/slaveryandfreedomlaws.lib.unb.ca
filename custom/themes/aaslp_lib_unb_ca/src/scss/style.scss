@@ -79,7 +79,9 @@ header {
         padding-bottom: 4rem;
         // Site title.
         .site-title {
+          display: block;
           padding-left: 1rem;
+          padding-right: 1rem;
           font-family: "Cinzel Decorative", Times, Serif;
           font-size: 1.6rem !important;
           text-transform: capitalize !important;
