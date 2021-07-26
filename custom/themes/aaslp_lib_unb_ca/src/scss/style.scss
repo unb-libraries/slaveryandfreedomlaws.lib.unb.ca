@@ -328,41 +328,42 @@ main > .container {
     // Views footer.
     .view-footer {
       margin: 1.2rem;
+    }
 
       // Views pager.
-      & + .pager {
+      .pager {
         margin: 1.2rem;
 
-        ul {
-          li.active a {
-            background-color: $lgray;
-            border-color: $lgray;
-          }
-          li:first-of-type {
-            border-top-left-radius: 2px;
-            border-bottom-left-radius: 2px;
+      ul {
+        li.active a {
+          background-color: $lgray;
+          border-color: $lgray;
+        }
+        li:first-of-type {
+          border-top-left-radius: 2px;
+          border-bottom-left-radius: 2px;
 
-            a {
-              border-top-left-radius: inherit;
-              border-bottom-left-radius: inherit;
-            }
-          }
-          li:last-of-type {
-            border-top-right-radius: 2px;
-            border-bottom-right-radius: 2px;
-
-            a {
-              border-top-right-radius: inherit;
-              border-bottom-right-radius: inherit;
-            }
-          }
           a {
-            font-size: 1rem;
-            color: $unb-darkgray !important;
+            border-top-left-radius: inherit;
+            border-bottom-left-radius: inherit;
           }
+        }
+        li:last-of-type {
+          border-top-right-radius: 2px;
+          border-bottom-right-radius: 2px;
+
+          a {
+            border-top-right-radius: inherit;
+            border-bottom-right-radius: inherit;
+          }
+        }
+        a {
+          font-size: 1rem;
+          color: $unb-darkgray !important;
         }
       }
     }
+
     // Node content.
     .node__content {
       margin: 2rem;
