@@ -6,7 +6,7 @@ dependencies:
     - search_api.index.aaslp_lib_unb_ca
   module:
     - search_api
-    - simple_timeline
+    - views_timelinejs
 id: aaslp_timeline
 label: 'AASLP Timeline'
 module: views
@@ -65,14 +65,38 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: simple_timeline
+        type: timelinejs
         options:
-          row_class: ''
-          default_row_class: true
-          position_items: alternate
-          position_marker: marker-center
-          wrapper_class: wrapper-list
-          class: item-list
+          timeline_config:
+            width: 100%
+            height: 30em
+            hash_bookmark: false
+            scale_factor: !!float 2
+            timenav_position: bottom
+            timenav_height: '300'
+            timenav_height_percentage: ''
+            timenav_mobile_height_percentage: ''
+            timenav_height_min: ''
+            start_at_end: false
+            language: ''
+          additional_config:
+            font: ''
+            start_at_current: false
+          timeline_fields:
+            headline: title_1
+            text: search_location
+            start_date: search_year
+            end_date: ''
+            display_date: ''
+            background: ''
+            background_color: ''
+            media: ''
+            credit: ''
+            caption: ''
+            thumbnail: ''
+            group: ''
+            type: ''
+            unique_id: ''
       row:
         type: fields
         options:

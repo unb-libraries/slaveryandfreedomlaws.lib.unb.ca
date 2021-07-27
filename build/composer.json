@@ -118,6 +118,7 @@
         "drupal/simple_timeline": "1.2",
         "drupal/token": "1.9",
         "drupal/twig_tweak": "2.9",
+        "drupal/views_timelinejs": "3.2",
         "oomphinc/composer-installers-extender": "1.1.2",
         "simeydotme/jquery-ui-slider-pips": "~1.11",
         "unb-libraries/drupal-builder": "^8.0.0",
