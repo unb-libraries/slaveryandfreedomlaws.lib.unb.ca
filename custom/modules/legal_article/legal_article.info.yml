@@ -2,4 +2,5 @@ name: Legal Article Module
 type: module
 description: Custom/extended functionality for content type legal_article
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: AASLP
