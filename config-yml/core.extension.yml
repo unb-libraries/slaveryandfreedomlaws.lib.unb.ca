@@ -2,6 +2,7 @@ module:
   aaslp_admin: 0
   aaslp_core: 0
   aaslp_search: 0
+  address: 0
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
@@ -28,6 +29,11 @@ module:
   file: 0
   filter: 0
   fontawesome: 0
+  geocoder: 0
+  geocoder_ajax_prepopulate: 0
+  geocoder_field: 0
+  geofield: 0
+  geofield_map: 0
   health_check: 0
   image: 0
   inline_entity_form: 0
@@ -35,6 +41,7 @@ module:
   language: 0
   layout_builder: 0
   layout_discovery: 0
+  leaflet: 0
   legal_article: 0
   link: 0
   menu_link_content: 0
