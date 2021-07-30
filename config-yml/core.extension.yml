@@ -50,7 +50,6 @@ module:
   search: 0
   search_api: 0
   search_api_solr: 0
-  simple_timeline: 0
   system: 0
   taxonomy: 0
   text: 0
