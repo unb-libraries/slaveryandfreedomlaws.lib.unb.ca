@@ -11,8 +11,8 @@ dependencies:
     - field.field.node.legal_article.field_document_image
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_location
+    - field.field.node.legal_article.field_location_address
     - field.field.node.legal_article.field_location_coordinates
-    - field.field.node.legal_article.field_location_country
     - field.field.node.legal_article.field_notes
     - field.field.node.legal_article.field_parent_location
     - field.field.node.legal_article.field_punishments
@@ -97,6 +97,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_location_address:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
   field_location_coordinates:
     weight: 13
     label: above
@@ -105,13 +112,6 @@ content:
       output_escape: true
     third_party_settings: {  }
     type: geofield_default
-    region: content
-  field_location_country:
-    weight: 14
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: address_country_default
     region: content
   field_notes:
     weight: 11
