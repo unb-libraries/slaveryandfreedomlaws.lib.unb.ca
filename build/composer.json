@@ -118,6 +118,7 @@
         "drupal/token": "1.9",
         "drupal/twig_tweak": "2.9",
         "drupal/views_timelinejs": "3.2",
+        "geocoder-php/nominatim-provider": "5.5.0",
         "oomphinc/composer-installers-extender": "^2",
         "simeydotme/jquery-ui-slider-pips": "~1.11",
         "unb-libraries/drupal-builder": "^9",

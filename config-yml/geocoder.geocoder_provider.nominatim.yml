@@ -1,0 +1,14 @@
+uuid: 0a329945-c30b-497e-986d-a6b8f2bbea22
+langcode: en
+status: true
+dependencies: {  }
+id: nominatim
+label: Nominatim
+plugin: nominatim
+configuration:
+  rootUrl: 'https://nominatim.openstreetmap.org'
+  userAgent: libsystems@unb.ca
+  referer: 'https://aaslp.lib.unb.ca'
+  throttle:
+    period: null
+    limit: null

@@ -98,7 +98,7 @@ content:
     type: geofield_latlon
     region: content
   field_location_country:
-    weight: 26
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: address_country_default

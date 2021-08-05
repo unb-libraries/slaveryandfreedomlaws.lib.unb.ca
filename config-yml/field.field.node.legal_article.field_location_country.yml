@@ -1,4 +1,4 @@
-uuid: 16ce20d8-25eb-46c2-9fc1-d3ece67f5474
+uuid: 4e1cc282-e5e9-4f04-bbaa-9b009c01cc00
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,26 @@ dependencies:
     - node.type.legal_article
   module:
     - address
+    - geocoder_field
+third_party_settings:
+  geocoder_field:
+    method: reverse_geocode
+    weight: 0
+    geocode:
+      field: ''
+      delta_handling: default
+    skip_not_empty_value: true
+    disabled: false
+    hidden: false
+    providers:
+      - nominatim
+    dumper: geojson
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+    delta_handling: default
+    field: field_location_coordinates
 id: node.legal_article.field_location_country
 field_name: field_location_country
 entity_type: node

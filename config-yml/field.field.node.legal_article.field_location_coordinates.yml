@@ -6,7 +6,27 @@ dependencies:
     - field.storage.node.field_location_coordinates
     - node.type.legal_article
   module:
+    - geocoder_field
     - geofield
+third_party_settings:
+  geocoder_field:
+    method: prepopulate_from_source
+    weight: 0
+    geocode:
+      field: field_location_country
+      delta_handling: default
+    skip_not_empty_value: false
+    disabled: false
+    hidden: false
+    providers:
+      - nominatim
+    dumper: wkt
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+    field: field_location_country
+    delta_handling: default
 id: node.legal_article.field_location_coordinates
 field_name: field_location_coordinates
 entity_type: node
