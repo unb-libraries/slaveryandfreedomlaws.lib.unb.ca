@@ -11,6 +11,8 @@ dependencies:
     - field.field.node.legal_article.field_document_image
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_location
+    - field.field.node.legal_article.field_location_coordinates
+    - field.field.node.legal_article.field_location_country
     - field.field.node.legal_article.field_notes
     - field.field.node.legal_article.field_parent_location
     - field.field.node.legal_article.field_punishments
@@ -19,8 +21,10 @@ dependencies:
     - image.style.thumbnail
     - node.type.legal_article
   module:
+    - address
     - chosen_field
     - datetime
+    - geofield
     - image
     - text
 id: node.legal_article.default
@@ -85,6 +89,19 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_location_coordinates:
+    weight: 27
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+    region: content
+  field_location_country:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: address_country_default
     region: content
   field_notes:
     weight: 11

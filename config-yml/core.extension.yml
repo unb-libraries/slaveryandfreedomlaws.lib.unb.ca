@@ -30,10 +30,13 @@ module:
   filter: 0
   fontawesome: 0
   geocoder: 0
+  geocoder_address: 0
   geocoder_ajax_prepopulate: 0
   geocoder_field: 0
+  geocoder_geofield: 0
   geofield: 0
   geofield_map: 0
+  geofield_map_extras: 0
   health_check: 0
   image: 0
   inline_entity_form: 0
@@ -42,6 +45,8 @@ module:
   layout_builder: 0
   layout_discovery: 0
   leaflet: 0
+  leaflet_markercluster: 0
+  leaflet_views: 0
   legal_article: 0
   link: 0
   menu_link_content: 0

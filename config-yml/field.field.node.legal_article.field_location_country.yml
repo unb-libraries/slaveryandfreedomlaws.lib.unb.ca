@@ -1,0 +1,22 @@
+uuid: 16ce20d8-25eb-46c2-9fc1-d3ece67f5474
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_country
+    - node.type.legal_article
+  module:
+    - address
+id: node.legal_article.field_location_country
+field_name: field_location_country
+entity_type: node
+bundle: legal_article
+label: 'Location Country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+field_type: address_country

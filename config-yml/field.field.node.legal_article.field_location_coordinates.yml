@@ -1,0 +1,21 @@
+uuid: f23716b4-d3d9-450a-a897-e329a5261d66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_coordinates
+    - node.type.legal_article
+  module:
+    - geofield
+id: node.legal_article.field_location_coordinates
+field_name: field_location_coordinates
+entity_type: node
+bundle: legal_article
+label: 'Location Coordinates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

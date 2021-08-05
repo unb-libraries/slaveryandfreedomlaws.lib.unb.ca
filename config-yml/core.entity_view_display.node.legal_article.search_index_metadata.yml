@@ -12,6 +12,8 @@ dependencies:
     - field.field.node.legal_article.field_document_image
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_location
+    - field.field.node.legal_article.field_location_coordinates
+    - field.field.node.legal_article.field_location_country
     - field.field.node.legal_article.field_notes
     - field.field.node.legal_article.field_parent_location
     - field.field.node.legal_article.field_punishments
@@ -77,6 +79,8 @@ hidden:
   field_category: true
   field_crimes: true
   field_document_image: true
+  field_location_coordinates: true
+  field_location_country: true
   field_notes: true
   field_parent_location: true
   field_punishments: true
