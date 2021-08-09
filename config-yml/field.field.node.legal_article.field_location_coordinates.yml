@@ -1,4 +1,4 @@
-uuid: f23716b4-d3d9-450a-a897-e329a5261d66
+uuid: 3fdf4beb-9fd0-4d47-90c4-7c3527cd8243
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ third_party_settings:
     method: prepopulate_from_source
     weight: 0
     geocode:
-      field: field_location_country
+      field: field_location_address
       delta_handling: default
     skip_not_empty_value: false
     disabled: false
@@ -25,7 +25,7 @@ third_party_settings:
       handling: preserve
       status_message: true
       log: true
-    field: field_location_country
+    field: field_location_address
     delta_handling: default
 id: node.legal_article.field_location_coordinates
 field_name: field_location_coordinates

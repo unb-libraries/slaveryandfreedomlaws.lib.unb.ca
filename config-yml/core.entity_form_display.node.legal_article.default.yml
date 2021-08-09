@@ -97,7 +97,7 @@ content:
     type: address_default
     region: content
   field_location_coordinates:
-    weight: 27
+    weight: 29
     settings:
       html5_geolocation: false
     third_party_settings: {  }

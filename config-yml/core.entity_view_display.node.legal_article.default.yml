@@ -105,7 +105,7 @@ content:
     type: address_default
     region: content
   field_location_coordinates:
-    weight: 13
+    weight: 15
     label: above
     settings:
       output_format: wkt
