@@ -322,7 +322,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ field_full_title }}\r\n<br>\r\n{{ field_document_image }}"
+            text: "{{ field_full_title }}\r\n<br><br>\r\n{{ field_document_image }}"
             make_link: false
             path: ''
             absolute: false
