@@ -1,5 +1,5 @@
 dockworker:
-  version: '3.0'
+  version: '4'
   application:
     name: aaslp.lib.unb.ca
     uuid: 3111
@@ -11,6 +11,8 @@ dockworker:
     environments:
       - dev
       - prod
+  drupal:
+    major: 9
   github:
     repo: aaslp.lib.unb.ca
     owner: unb-libraries
