@@ -21,6 +21,10 @@
     "description": "Drupal 8 component of aaslp.lib.unb.ca",
     "extra": {
         "enable-patching": true,
+        "installer-types": [
+                "bower-asset",
+                "npm-asset"
+            ],
         "installer-paths": {
             "core": [
                 "type:drupal-core"
@@ -33,6 +37,8 @@
             ],
             "libraries/{$name}": [
                 "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset",
                 "harvesthq/chosen"
             ],
             "modules/contrib/{$name}": [
@@ -48,6 +54,9 @@
         "patches": {
             "drupal/samlauth": {
                 "Ignore Role Restrictions": "/build/patches/samlauth_rolematch.patch"
+            },
+            "drupal/facets": {
+                "Use nouislider for facet range": "/build/patches/issue-3153622-nouislider_4.patch"
             }
         }
     },
@@ -56,6 +65,10 @@
     "prefer-stable": true,
     "name": "unb-libraries/aaslp.lib.unb.ca",
     "repositories": [
+        {
+          "type": "composer",
+          "url": "https://asset-packagist.org"
+        },
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
@@ -119,6 +132,7 @@
         "drupal/twig_tweak": "2.9",
         "drupal/views_timelinejs": "3.2",
         "geocoder-php/nominatim-provider": "5.5.0",
+        "npm-asset/nouislider": "^14",
         "oomphinc/composer-installers-extender": "^2",
         "simeydotme/jquery-ui-slider-pips": "~1.11",
         "unb-libraries/drupal-builder": "^9",
