@@ -12,11 +12,10 @@ use Drupal\node\Entity\Node;
 
 // Main.
 // Generate test sources.
-/*
 for ($i = 1; $i <= 2; $i++) {
-gen_source($i);
+  gen_source($i);
 }
- */
+
 // Generate test articles.
 for ($i = 1; $i <= 50; $i++) {
   gen_article($i, 5);
