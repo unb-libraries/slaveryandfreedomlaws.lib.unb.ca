@@ -67,11 +67,30 @@ function legal_article_form_alter(&$form, $form_state, $form_id) {
   // Hide revision switch field for legal article create/edit forms.
   if ($form_id == 'node_legal_article_form' or
     $form_id == 'node_legal_article_edit_form') {
-      // For theme Seven (from Stable).
-      $form['field_revision_switch']['#attributes']['class'][] = 'hidden';
-      // For Bootstrap themes.
-      $form['field_revision_switch']['#attributes']['class'][] = 'd-none';
-    }
+    // For theme Seven (from Stable).
+    $form['field_revision_switch']['#attributes']['class'][] = 'hidden';
+    // For Bootstrap themes.
+    $form['field_revision_switch']['#attributes']['class'][] = 'd-none';
+
+    // Display only relevant fields if entering a timeline event.
+    $show_field = [
+      'visible' => [
+        ':input[name*="field_timeline_event"]' => ['checked' => FALSE],
+      ],
+    ];
+
+    $form['field_category']['#states'] =
+      $form['field_citation']['#states'] =
+      $form['field_crimes']['#states'] =
+      $form['field_full_title']['#states'] =
+      $form['field_location']['#states'] =
+      $form['field_location_address']['#states'] =
+      $form['field_location_coordinates']['#states'] =
+      $form['field_notes']['#states'] =
+      $form['field_source']['#states'] =
+      $form['field_punishments']['#states'] =
+      $show_field;
+  }
 }
 
 /**
