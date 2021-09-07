@@ -16,21 +16,23 @@ use Drupal\Core\Entity\EntityInterface;
 function legal_article_node_presave($entity) {
   // Only apply to legal articles.
   if ($entity->bundle() == 'legal_article') {
-    // Get location term ID.
-    $lid = $entity->field_location->getValue()[0]['target_id'];
-    // Load term if there is one.
-    $lterm = !empty($lid) ? Term::load($lid) : NULL;
-    // If location term found...
-    if (!empty($lterm)) {
-      // If location has a parent...
-      if (!empty($lterm->parent->getValue())) {
-        // Get parent location term ID and populate field.
-        $lpid = $lterm->parent->getValue()[0]['target_id'];
-        $entity->field_parent_location = $lpid;
-      }
-      // Otherwise use own location term id as parent.
-      else {
-        $entity->field_parent_location = $lid;
+    if (!empty($entity->field_location->getValue()[0]['target_id'])) {
+      // Get location term ID.
+      $lid = $entity->field_location->getValue()[0]['target_id'];
+      // Load term if there is one.
+      $lterm = !empty($lid) ? Term::load($lid) : NULL;
+      // If location term found...
+      if (!empty($lterm)) {
+        // If location has a parent...
+        if (!empty($lterm->parent->getValue())) {
+          // Get parent location term ID and populate field.
+          $lpid = $lterm->parent->getValue()[0]['target_id'];
+          $entity->field_parent_location = $lpid;
+        }
+        // Otherwise use own location term id as parent.
+        else {
+          $entity->field_parent_location = $lid;
+        }
       }
     }
   }

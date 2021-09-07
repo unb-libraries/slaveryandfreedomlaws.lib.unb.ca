@@ -25,7 +25,6 @@ dependencies:
     - address
     - datetime
     - image
-    - leaflet
     - text
     - user
 id: node.legal_article.default
@@ -36,7 +35,7 @@ content:
   body:
     label: above
     type: text_default
-    weight: 12
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -57,7 +56,7 @@ content:
     type: string
     region: content
   field_crimes:
-    weight: 10
+    weight: 9
     label: above
     settings:
       link: true
@@ -105,84 +104,15 @@ content:
     third_party_settings: {  }
     type: address_default
     region: content
-  field_location_coordinates:
-    weight: 9
-    label: above
-    settings:
-      multiple_map: false
-      leaflet_map: 'OSM Mapnik'
-      height: 400
-      height_unit: px
-      hide_empty_map: false
-      disable_wheel: false
-      fullscreen_control: true
-      gesture_handling: false
-      reset_map:
-        control: false
-        position: topright
-      popup: false
-      popup_content: ''
-      map_position:
-        force: false
-        center:
-          lat: !!float 0
-          lon: !!float 0
-        zoom: 12
-        minZoom: 1
-        maxZoom: 18
-        zoomFiner: 0
-      weight: null
-      icon:
-        iconType: marker
-        iconUrl: ''
-        shadowUrl: ''
-        className: ''
-        iconSize:
-          x: null
-          'y': null
-        iconAnchor:
-          x: null
-          'y': null
-        shadowSize:
-          x: null
-          'y': null
-        shadowAnchor:
-          x: null
-          'y': null
-        popupAnchor:
-          x: null
-          'y': null
-        html: '<div></div>'
-        html_class: leaflet-map-divicon
-        circle_marker_options: '{"radius": 100, "color": "red", "fillColor": "#f03", "fillOpacity": 0.5}'
-      leaflet_markercluster:
-        control: false
-        options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
-        include_path: false
-      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
-      geocoder:
-        control: false
-        settings:
-          position: topright
-          input_size: 25
-          providers: {  }
-          min_terms: 4
-          delay: 800
-          zoom: 16
-          popup: false
-          options: ''
-    third_party_settings: {  }
-    type: leaflet_formatter_default
-    region: content
   field_notes:
-    weight: 13
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_punishments:
-    weight: 11
+    weight: 10
     label: above
     settings:
       link: true
@@ -198,7 +128,7 @@ content:
     type: entity_reference_label
     region: content
   field_timeline_event:
-    weight: 14
+    weight: 13
     label: above
     settings:
       format: default
@@ -213,6 +143,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_location_coordinates: true
   field_parent_location: true
   field_revision_switch: true
   langcode: true
