@@ -292,6 +292,13 @@ main > .container {
     }
 
     // Links.
+    a {
+      color: $unb-mango;
+    }
+    a:active,
+    a:focus,
+    a:focus-within,
+    a:target,
     a:hover {
       color: $unb-dmango;
     }
