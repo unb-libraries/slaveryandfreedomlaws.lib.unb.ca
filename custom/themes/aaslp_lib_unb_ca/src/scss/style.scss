@@ -207,6 +207,17 @@ main > .container {
         }
       }
     }
+
+    // Timeline checkbox facets.
+    ul[data-drupal-facet-id="timeline_crimes"],
+    ul[data-drupal-facet-id="timeline_location"],
+    ul[data-drupal-facet-id="timeline_punishments"] {
+      columns: 3;
+    }
+
+    ul[data-drupal-facet-id="timeline_punishments"] {
+      margin-bottom: 1rem;
+    }
   }
 
   // Content region.
