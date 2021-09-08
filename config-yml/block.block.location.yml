@@ -1,0 +1,28 @@
+uuid: 4214375a-b378-4f06-9c96-c2397866bf27
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.timeline_location
+  module:
+    - facets
+    - system
+  theme:
+    - aaslp_lib_unb_ca
+id: location
+theme: aaslp_lib_unb_ca
+region: content
+weight: 0
+provider: null
+plugin: 'facet_block:timeline_location'
+settings:
+  id: 'facet_block:timeline_location'
+  label: Location
+  provider: facets
+  label_display: '0'
+  block_id: location
+visibility:
+  request_path:
+    id: request_path
+    pages: '/timeline*'
+    negate: false

@@ -1,0 +1,28 @@
+uuid: ab9e68f2-0004-4a0c-95df-0912404610d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.timeline_crimes
+  module:
+    - facets
+    - system
+  theme:
+    - aaslp_lib_unb_ca
+id: crimes
+theme: aaslp_lib_unb_ca
+region: content
+weight: 0
+provider: null
+plugin: 'facet_block:timeline_crimes'
+settings:
+  id: 'facet_block:timeline_crimes'
+  label: Crimes
+  provider: facets
+  label_display: '0'
+  block_id: crimes
+visibility:
+  request_path:
+    id: request_path
+    pages: '/timeline*'
+    negate: false

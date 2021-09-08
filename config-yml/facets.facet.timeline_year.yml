@@ -1,20 +1,20 @@
-uuid: daf848b3-2b9a-428d-a7a6-b78d436ded66
+uuid: 541c27a6-f9e2-4397-b813-8ca81dc27040
 langcode: en
 status: true
 dependencies:
   config:
     - search_api.index.aaslp_lib_unb_ca
-    - views.view.aaslp_search
+    - views.view.aaslp_timeline
   module:
     - search_api
-id: facet_year
+id: timeline_year
 name: 'Year Range'
 url_alias: facet_year
 weight: 0
 min_count: 1
 show_only_one_result: true
 field_identifier: search_year
-facet_source_id: 'search_api:views_page__aaslp_search__page_1'
+facet_source_id: 'search_api:views_page__aaslp_timeline__page_1'
 widget:
   type: range_slider
   config:
