@@ -1,14 +1,14 @@
 aaslp.front:
-  title: 'Home'
-  description: 'Home'
+  title: 'Timeline'
+  description: 'Timeline'
   parent: main
   menu_name: main
-  route_name: 'aaslp_core.home'
+  url: internal:/timeline
   weight: 10
 aaslp.search:
-  title: 'Database'
-  description: 'Database'
+  title: 'Map'
+  description: 'Map'
   parent: main
   menu_name: main
-  url: internal:/search
+  url: internal:/locations
   weight: 20
