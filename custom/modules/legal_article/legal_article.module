@@ -16,6 +16,7 @@ use Drupal\Core\Entity\EntityInterface;
 function legal_article_node_presave($entity) {
   // Only apply to legal articles.
   if ($entity->bundle() == 'legal_article') {
+    // Process parent location.
     if (!empty($entity->field_location->getValue()[0]['target_id'])) {
       // Get location term ID.
       $lid = $entity->field_location->getValue()[0]['target_id'];
@@ -34,6 +35,22 @@ function legal_article_node_presave($entity) {
           $entity->field_parent_location = $lid;
         }
       }
+    }
+
+    // Purge all extra fields if timeline event.
+    if (!empty($entity->field_timeline_event->getValue()[0]['value']) and
+      $entity->field_timeline_event->getValue()[0]['value'] == 1) {
+        $entity->field_category =
+          $entity->field_citation =
+          $entity->field_crimes =
+          $entity->field_full_title =
+          $entity->field_location =
+          $entity->field_location_address =
+          $entity->field_location_coordinates =
+          $entity->field_notes =
+          $entity->field_source =
+          $entity->field_punishments =
+          NULL;
     }
   }
 }
