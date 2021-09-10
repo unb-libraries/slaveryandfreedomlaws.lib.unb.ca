@@ -79,7 +79,7 @@ display:
             timenav_height: '300'
             timenav_height_percentage: ''
             timenav_mobile_height_percentage: ''
-            timenav_height_min: ''
+            timenav_height_min: '300'
             start_at_end: false
             language: ''
           additional_config:
