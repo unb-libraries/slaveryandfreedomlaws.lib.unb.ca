@@ -257,8 +257,8 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ title_1 }}{{ " " }}<sup><i class="fa fa-external-link-alt"></i></sup>'
             make_link: false
             path: ''
             absolute: false
@@ -309,10 +309,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
+          field_rendering: false
           fallback_handler: search_api
           fallback_options:
-            link_to_item: false
+            link_to_item: true
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
