@@ -361,6 +361,11 @@ main > .container {
           }
         }
       }
+
+      // Hide timeline icon in timemarker content.
+      .tl-timemarker-content .tl-headline sup {
+        display: none;
+      }
     }
     // Views header, view empty.
     .view-header, .view-empty {
