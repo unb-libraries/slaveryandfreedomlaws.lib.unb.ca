@@ -272,6 +272,33 @@ main > .container {
           background-color: $unb-darkerred !important;
         }
       }
+
+      // Browse panels.
+      .browse-panels {
+        margin-top: 1rem;
+        .panel-img-link {
+          opacity: 60%;
+
+          &:hover {
+            opacity: 100%;
+          }
+        }
+        .fa-external-link-alt {
+          position: absolute;
+          top: 10px;
+          left: 93%;
+          z-index: 100;
+          color: $offwhite;
+        }
+        .panel-img {
+          max-width: 525px;
+        }
+        .browse-header {
+          margin-top: .5rem;
+          margin-bottom: .5rem;
+          font-family: "Cinzel Decorative", Times, Serif;
+        }
+      }
     }
 
     // Exposed search.

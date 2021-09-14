@@ -218,6 +218,38 @@ class HomePageForm extends FormBase {
       'max-age' => Cache::PERMANENT,
     ];
 
+    $browse = '
+      <div class="row">
+        <div class="col-sm-6 browse-panel browse-timeline">
+          <a href="/timeline" class="panel-img-link">
+            <img class="panel-img" src="/themes/custom/aaslp_lib_unb_ca/images/timeline-img.jpg">
+            <i class="fa fa-external-link-alt"></i>
+          </a>
+          <h2 class="browse-header">Browse Timeline</h2>
+          <p class="browse-blurb">
+            Browse legal articles in an interactive timeline. Explore the history
+            of slave law by comparing the year of their institution with
+            notable historical events.
+          </p>
+        </div>
+        <div class="col-sm-6 browse-panel browse-map">
+          <a href="/locations" class="panel-img-link">
+            <img class="panel-img" src="/themes/custom/aaslp_lib_unb_ca/images/map-img.jpg">
+            <i class="fa fa-external-link-alt"></i>
+          </a>
+          <h2 class="browse-header">Browse Map</h2>
+          <p class="browse-blurb">
+            Browse legal articles in an interactive maps. Visualize how slave laws
+            in the database were distributed geographically.
+        </div>
+      </div>
+      ';
+
+    $form['browse'] = [
+      '#type' => 'markup',
+      '#markup' => "<div class='container browse-panels'>$browse</div>",
+    ];
+
     // Attach JS.
     $form['#attached']['library'][] = 'aaslp_core/homepage-active-tabs';
     return $form;
