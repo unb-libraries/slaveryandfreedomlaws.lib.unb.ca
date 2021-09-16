@@ -237,9 +237,9 @@ class HomePageForm extends FormBase {
             <img class="panel-img" src="/themes/custom/aaslp_lib_unb_ca/images/map-img.jpg">
             <i class="fa fa-external-link-alt"></i>
           </a>
-          <h2 class="browse-header">Browse Map</h2>
+          <h2 class="browse-header">Browse Locations</h2>
           <p class="browse-blurb">
-            Browse legal articles in an interactive maps. Visualize how slave laws
+            Browse legal articles in an interactive map. Visualize how slave laws
             in the database were distributed geographically.
         </div>
       </div>
