@@ -493,7 +493,7 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts: {  }
-      title: 'AASLP Locations'
+      title: 'Slave Law Database | Locations'
       header: {  }
       footer: {  }
       empty: {  }
