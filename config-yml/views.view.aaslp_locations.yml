@@ -3,15 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_document_image
     - field.storage.node.field_full_title
     - field.storage.node.field_location_coordinates
     - field.storage.node.field_timeline_event
-    - image.style.thumbnail
     - node.type.legal_article
   module:
     - geofield
-    - image
     - leaflet_views
     - node
     - user
@@ -68,8 +65,8 @@ display:
           name_field: title
           description_field: field_full_title
           view_mode: full
-          leaflet_map: 'OSM Mapnik'
-          height: '400'
+          leaflet_map: esri-natgeo_world_map
+          height: '640'
           height_unit: px
           hide_empty_map: true
           disable_wheel: false
@@ -84,24 +81,24 @@ display:
               lat: !!float 0
               lon: !!float 0
             zoom: 12
-            minZoom: 1
+            minZoom: 4
             maxZoom: 18
             zoomFiner: 0
           weight: ''
           icon:
             iconType: marker
-            iconUrl: ''
+            iconUrl: themes/custom/aaslp_lib_unb_ca/images/map-marker.png
             shadowUrl: ''
             className: ''
-            html: '<div></div>'
+            html: '<i class="fa fa-scroll"></i>'
             html_class: leaflet-map-divicon
             circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
             iconSize:
-              x: ''
-              'y': ''
+              x: '32'
+              'y': '32'
             iconAnchor:
-              x: ''
-              'y': ''
+              x: '16'
+              'y': '12'
             shadowSize:
               x: ''
               'y': ''
@@ -187,70 +184,6 @@ display:
             output_format: wkt
             output_escape: true
           group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_document_image:
-          id: field_document_image
-          table: node__field_document_image
-          field: field_document_image
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_style: thumbnail
-            image_link: ''
-          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -512,7 +445,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_document_image'
         - 'config:field.storage.node.field_full_title'
         - 'config:field.storage.node.field_location_coordinates'
         - 'config:field.storage.node.field_timeline_event'
@@ -532,7 +464,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_document_image'
         - 'config:field.storage.node.field_full_title'
         - 'config:field.storage.node.field_location_coordinates'
         - 'config:field.storage.node.field_timeline_event'

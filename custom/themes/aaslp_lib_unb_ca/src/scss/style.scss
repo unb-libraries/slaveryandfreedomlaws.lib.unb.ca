@@ -393,6 +393,15 @@ main > .container {
       .tl-timemarker-content .tl-headline sup {
         display: none;
       }
+
+      // Map (Locations).
+      // Style divicon marker.
+      .leaflet-map-divicon {
+        padding: 4px;
+        font-size: .8rem;
+        color: $offwhite;
+        background-color: $unb-mango;
+      }
     }
     // Views header, view empty.
     .view-header, .view-empty {

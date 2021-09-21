@@ -46,6 +46,7 @@ module:
   layout_discovery: 0
   leaflet: 0
   leaflet_markercluster: 0
+  leaflet_more_maps: 0
   leaflet_views: 0
   legal_article: 0
   link: 0
