@@ -393,6 +393,10 @@ main > .container {
       .tl-timemarker-content .tl-headline sup {
         display: none;
       }
+      // Hide timeline icon in slidenav content.
+      .tl-slidenav-content-container .tl-slidenav-title sup {
+        display: none;
+      }
 
       // Map (Locations).
       // Style divicon marker.
