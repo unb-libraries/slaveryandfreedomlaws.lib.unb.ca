@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies: {  }
 name: large_centre
-label: 'Large Centre (480x480)'
+label: 'Large Centre (360×360)'
 effects:
   2ac9d0b2-c88c-467d-9295-14a838855a71:
     uuid: 2ac9d0b2-c88c-467d-9295-14a838855a71
     id: image_scale_and_crop
     weight: 1
     data:
-      width: 480
-      height: 480
+      width: 360
+      height: 360
       anchor: center-center
