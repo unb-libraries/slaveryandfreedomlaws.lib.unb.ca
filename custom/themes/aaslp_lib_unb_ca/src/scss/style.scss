@@ -550,3 +550,12 @@ footer {
     padding: 0 !important;
   }
 }
+
+// Browser-specific.
+// Mozilla only.
+@-moz-document url-prefix() {
+  // Homepage form.
+  form#aaslp-core-homepage .nav.nav-tabs a {
+    padding-bottom: 0 !important;
+  }
+}
