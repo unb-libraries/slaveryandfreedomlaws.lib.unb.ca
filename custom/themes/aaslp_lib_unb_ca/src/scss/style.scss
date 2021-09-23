@@ -193,7 +193,7 @@ main > .container {
         }
 
         label {
-          display: block;
+          display: flex;
           margin-bottom: 0;
           font-size: .9rem;
         }
@@ -204,6 +204,7 @@ main > .container {
           height: .6rem;
           margin-right: .2rem;
           margin-top: .2rem;
+          -moz-transform: scale(1);
         }
       }
     }
@@ -216,7 +217,7 @@ main > .container {
     }
 
     ul[data-drupal-facet-id="timeline_punishments"] {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
   }
 
