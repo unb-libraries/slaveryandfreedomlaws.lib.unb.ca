@@ -163,7 +163,7 @@ function gen_lipsum($paragraphs = 3, $length = 'medium', $headers = FALSE, $plai
   $str_head = $headers ? '/headers' : '';
   $str_plain = $plaintext ? '/plaintext' : '';
   // Request lipsum by parameters using loripsum.net api.
-  return file_get_contents("http://loripsum.net/api$str_para$str_len$str_head$str_plain");
+  return file_get_contents("https://loripsum.net/api$str_para$str_len$str_head$str_plain");
 }
 
 /**
