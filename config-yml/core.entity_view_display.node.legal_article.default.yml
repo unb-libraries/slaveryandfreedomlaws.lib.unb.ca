@@ -73,7 +73,7 @@ content:
     region: content
   field_document_image:
     weight: 1
-    label: above
+    label: visually_hidden
     settings:
       image_style: large_centre
       image_link: ''
