@@ -468,14 +468,21 @@ main > .container {
       }
 
       .anno-group-header {
-        padding-top: .4rem;
-        border-top: 1px solid $lgray;
+        margin-bottom: 0;
+        padding: .4rem 0;
+        border-top: 1px solid $unb-25gray;
         font-size: 1rem;
       }
 
       .anno-list {
         padding-left: 0;
         list-style: none;
+      }
+
+      .anno-group-header, .anno-list {
+        margin-left: 1.4rem;
+        padding: .2rem;
+        background-color: $lgray;
       }
 
       // Document image.
