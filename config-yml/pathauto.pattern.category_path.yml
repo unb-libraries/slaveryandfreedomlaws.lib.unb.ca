@@ -1,0 +1,23 @@
+uuid: e77ff052-3300-4774-9f11-1fc294eb28ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: category_path
+label: 'Category Path'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'categories/[term:name]'
+selection_criteria:
+  3913c19c-82f2-4365-8a12-40cfc3bed754:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      law_categories: law_categories
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 3913c19c-82f2-4365-8a12-40cfc3bed754
+selection_logic: and
+weight: -5
+relationships: {  }

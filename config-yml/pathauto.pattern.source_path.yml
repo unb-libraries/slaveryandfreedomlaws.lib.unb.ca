@@ -7,16 +7,16 @@ dependencies:
 id: source_path
 label: 'Source Path'
 type: 'canonical_entities:node'
-pattern: 'source/[node:title]'
+pattern: 'sources/[node:title]'
 selection_criteria:
-  347c98b9-a34a-4d1d-bb7f-b19b4742bcda:
+  2de95d34-60e4-417d-8d30-f0e191656a69:
     id: node_type
     bundles:
       source: source
     negate: false
     context_mapping:
       node: node
-    uuid: 347c98b9-a34a-4d1d-bb7f-b19b4742bcda
+    uuid: 2de95d34-60e4-417d-8d30-f0e191656a69
 selection_logic: and
 weight: -5
 relationships: {  }

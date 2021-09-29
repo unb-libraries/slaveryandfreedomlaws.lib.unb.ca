@@ -1,0 +1,23 @@
+uuid: eb8beda6-9b92-4478-916f-022a9c9319ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: punishment_path
+label: 'Punishment Path'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'punishments/[term:name]'
+selection_criteria:
+  decd8fe6-9c60-4905-a875-a9c653fccb94:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      punishments: punishments
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: decd8fe6-9c60-4905-a875-a9c653fccb94
+selection_logic: and
+weight: -5
+relationships: {  }
