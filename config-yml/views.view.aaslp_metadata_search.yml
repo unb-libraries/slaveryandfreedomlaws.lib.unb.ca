@@ -513,7 +513,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: 'Slave Law Database | Metadata Search'
+      title: 'Slave Law Metadata Search'
       header:
         result:
           id: result

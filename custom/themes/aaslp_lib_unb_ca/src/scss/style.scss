@@ -115,6 +115,13 @@ main > .container {
   padding-left: 0;
   padding-right: 0;
 
+  // Breadcrumbs.
+  .breadcrumb {
+    .fa-home {
+      margin-right: .5rem;
+    }
+  }
+
   // Page title.
   .block-page-title-block {
     padding: 1rem 0;
@@ -144,6 +151,13 @@ main > .container {
       padding-right: 0;
       padding-left: 0;
       padding-bottom: 1.2rem;
+    }
+
+    // Main area when sidebar is displayed.
+    & + .order-1 {
+      .page-title {
+        margin-left: 1rem;
+      }
     }
   }
 
