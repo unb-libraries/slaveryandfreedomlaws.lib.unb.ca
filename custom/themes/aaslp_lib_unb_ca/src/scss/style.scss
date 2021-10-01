@@ -38,6 +38,10 @@ body,
   h1.display-4, h1 > span, .navbar-brand .site-title {
     font-weight: bold;
   }
+  // Justify paragraph text.
+  p {
+    text-align: justify;
+  }
   // Global superscript size.
   sup {
     font-size: .85rem;
@@ -113,7 +117,7 @@ main > .container {
 
   // Page title.
   .block-page-title-block {
-    padding: 1rem;
+    padding: 1rem 0;
 
     h1, h1 > span {
       margin: 0;
@@ -489,6 +493,17 @@ main > .container {
       .field--name-field-document-image {
         float: right;
         margin: 1rem;
+        border: 1px solid $lgray;
+      }
+
+      // Metadata layout.
+      .con-metadata, .row-metadata, .col-metadata {
+        padding: inherit;
+      }
+      .row-metadata {
+        border-top: 1px solid $lgray;
+        border-bottom: 1px solid $lgray;
+        margin: 0;
       }
     }
     // Search page title.
