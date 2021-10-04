@@ -117,8 +117,17 @@ main > .container {
 
   // Breadcrumbs.
   .breadcrumb {
-    .fa-home {
+    border-radius: 0;
+
+    li {
       margin-right: .5rem;
+      font-style: italic;
+    }
+
+    a:active,
+    a:focus,
+    a:hover {
+      color: $unb-dmango;
     }
   }
 
@@ -428,9 +437,14 @@ main > .container {
       }
     }
     // Views header, view empty.
+    .views-exposed-form + div + .block-aaslp-lib-unb-ca-content {
+      .view-header, .view-empty {
+        padding-top: 3.8rem;
+      }
+    }
+    // Views header, view empty.
     .view-header, .view-empty {
       margin: 1.2rem;
-      padding-top: 3.8rem;
     }
     // Views footer.
     .view-footer {
