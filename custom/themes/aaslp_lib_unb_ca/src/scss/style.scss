@@ -49,12 +49,6 @@ body,
 }
 
 // Broad (also careful).
-// Article (node) and form message.
-article.node, #aaslp-core-homepage {
-  p {
-    text-align: justify;
-  }
-}
 // Input.
 input {
   border-radius: 2px !important;
@@ -251,6 +245,11 @@ main > .container {
   // Content region.
   .region-content {
     padding: 0 !important;
+
+    // Article.
+    article {
+      padding-bottom: 1rem;
+    }
 
     // Homepage form.
     form#aaslp-core-homepage {
