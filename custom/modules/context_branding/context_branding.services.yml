@@ -1,0 +1,4 @@
+services:
+  context_branding.context_branding_block:
+    class: Drupal\context_branding\Plugin\Block\ContextBrandingBlock
+    arguments: ['@path.matcher', '@settings']
