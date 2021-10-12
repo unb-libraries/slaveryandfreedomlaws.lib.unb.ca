@@ -19,7 +19,7 @@ class ContextBrandingBlock extends BlockBase implements ContainerFactoryPluginIn
   /**
    * For services dependency injection.
    *
-   * @var ContainerInterface $service
+   * @var Symfony\Component\DependencyInjection\ContainerInterface
    */
   protected $service;
 
@@ -27,21 +27,33 @@ class ContextBrandingBlock extends BlockBase implements ContainerFactoryPluginIn
    * Class constructor.
    *
    * @param array $configuration
+   *   The block configuration.
    * @param string $plugin_id
+   *   The plugin identifier.
    * @param mixed $plugin_definition
+   *   The plugin definition.
    * @param \Symfony\Component\DependencyInjection\ContainerInterface $service_container
+   *   The container interface for using services via dependency injection.
    */
-  public function __construct(array $configuration, $plugin_id,
-  $plugin_definition, ContainerInterface $service_container) {
+  public function __construct(array $configuration,
+  $plugin_id,
+  $plugin_definition,
+  ContainerInterface $service_container) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->service = $service_container;
   }
 
   /**
-   * @param \Symfony\Component\DependencyInjection\ContainerInterface $service_container
+   * Object create function.
+   *
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+   *   Container interface.
    * @param array $configuration
+   *   The block configuration.
    * @param string $plugin_id
+   *   The plugin identifier.
    * @param mixed $plugin_definition
+   *   The plugin definition.
    *
    * @return static
    */
