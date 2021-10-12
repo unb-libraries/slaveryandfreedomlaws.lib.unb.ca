@@ -3,8 +3,8 @@
 namespace Drupal\context_branding\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Path\PathMatcher;
-use Drupal\Core\Site\Settings;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides a custom block for site branding (non-homepage version).
@@ -15,41 +15,51 @@ use Drupal\Core\Site\Settings;
  *   category = @Translation("Misc"),
  * )
  */
-class ContextBrandingBlock extends BlockBase {
+class ContextBrandingBlock extends BlockBase implements ContainerFactoryPluginInterface {
   /**
-   * For path matcher dependency injection.
+   * For services dependency injection.
    *
-   * @var Drupal\Core\Path\PathMatcher
+   * @var ContainerInterface $service
    */
-  protected $pathMatcher;
+  protected $service;
 
   /**
-   * For site settings dependency injection.
+   * Class constructor.
    *
-   * @var Drupal\Core\Site\Settings
+   * @param array $configuration
+   * @param string $plugin_id
+   * @param mixed $plugin_definition
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $service_container
    */
-  protected $siteSettings;
-
-  /**
-   * Constructs a new ContextBrandingBlock object.
-   *
-   * @param Drupal\Core\Path\PathMatcher $pathMatcher
-   *   The path matcher object.
-   * @param Drupal\Core\Site\Settings $siteSettings
-   *   The site settings object.
-   */
-/*
-  public function __construct($pathMatcher, $siteSettings) {
-    $this->pathMatcher = $pathMatcher;
-    $this->siteSettings = $siteSettings;
+  public function __construct(array $configuration, $plugin_id,
+  $plugin_definition, ContainerInterface $service_container) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->service = $service_container;
   }
-*/
+
+  /**
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $service_container
+   * @param array $configuration
+   * @param string $plugin_id
+   * @param mixed $plugin_definition
+   *
+   * @return static
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('service_container')
+    );
+  }
+
   /**
    * {@inheritdoc}
    */
   public function build() {
-    $is_front = \Drupal::service('path.matcher')->isFrontPage();
-    $site_config = \Drupal::config('system.site');
+    $is_front = $this->service->get('path.matcher')->isFrontPage();
+    $site_config = $this->service->get('config.factory')->get('system.site');
     $site_name = $site_config->get('name');
     $site_slogan = $site_config->get('slogan');
 
