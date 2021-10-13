@@ -7,7 +7,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a custom block for site branding (non-homepage version).
+ * A custom dynamic block for site branding w/ non-link H1 frontpage title.
  *
  * @Block(
  *   id = "context_branding_block",
