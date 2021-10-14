@@ -12,7 +12,7 @@ use Drupal\node\Entity\Node;
 
 // Main.
 // Generate test sources.
-for ($i = 1; $i <= 2; $i++) {
+for ($i = 1; $i <= 5; $i++) {
   gen_source($i);
 }
 

@@ -238,7 +238,7 @@ display:
           decimal: .
           separator: ''
           format_plural: false
-          format_plural_string: !!binary MQNAY291bnQ=
+          format_plural_string: !!binary Aw==
           prefix: ''
           suffix: ''
           link_to_item: false
@@ -540,7 +540,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if field_timeline_event %}\r\n<p class=\"timeline-event\">Historical Event</p>\r\n{% endif %}\r\n{% if search_location %}\r\n<p>{{ search_location }}</p>\r\n{% endif %}\r\n{% if search_category and not  field_timeline_event %}\r\n<p>{{ search_category }}</p>\r\n{% endif %}\r\n"
+            text: "{% if field_timeline_event == \"Historical Events\" %}\r\n<p class=\"timeline-event\">Historical Event</p>\r\n{% endif %}\r\n{% if search_location %}\r\n<p>{{ search_location }}</p>\r\n{% endif %}\r\n{% if search_category and field_timeline_event == \"Slave Laws\" %}\r\n<p>{{ search_category }}</p>\r\n{% endif %}\r\n"
             make_link: false
             path: ''
             absolute: false
