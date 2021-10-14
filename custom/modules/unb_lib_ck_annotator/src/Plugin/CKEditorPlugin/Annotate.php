@@ -5,6 +5,8 @@ namespace Drupal\unb_lib_ck_annotator\Plugin\CKEditorPlugin;
 use Drupal\ckeditor\CKEditorPluginBase;
 use Drupal\ckeditor\CKEditorPluginCssInterface;
 use Drupal\editor\Entity\Editor;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Defines the "Annotator" CKEditor plugin. Inserts annotations.
@@ -15,7 +17,56 @@ use Drupal\editor\Entity\Editor;
  *   module = "unb_lib_ck_annotator"
  * )
  */
-class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface {
+class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface, ContainerFactoryPluginInterface {
+  /**
+   * For services dependency injection.
+   *
+   * @var Symfony\Component\DependencyInjection\ContainerInterface
+   */
+  protected $service;
+
+  /**
+   * Class constructor.
+   *
+   * @param array $configuration
+   *   The block configuration.
+   * @param string $plugin_id
+   *   The plugin identifier.
+   * @param mixed $plugin_definition
+   *   The plugin definition.
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $service_container
+   *   The container interface for using services via dependency injection.
+   */
+  public function __construct(array $configuration,
+  $plugin_id,
+  $plugin_definition,
+  ContainerInterface $service_container) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->service = $service_container;
+  }
+
+  /**
+   * Object create method.
+   *
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+   *   Container interface.
+   * @param array $configuration
+   *   The block configuration.
+   * @param string $plugin_id
+   *   The plugin identifier.
+   * @param mixed $plugin_definition
+   *   The plugin definition.
+   *
+   * @return static
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('service_container')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -56,7 +107,8 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface 
    */
   public function getConfig(Editor $editor) {
     // Get immutable Config (Read Only).
-    $groups = \Drupal::config('unb_lib_ck_annotator.settings')->get('groups');
+    $groups =
+      $this->service->get('config.factory')->get('unb_lib_ck_annotator.settings')->get('groups');
     // Prepare additional configuration for plugin.
     $config['groups'] = [
       'numbered' => [
