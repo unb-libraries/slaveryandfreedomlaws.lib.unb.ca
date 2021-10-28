@@ -138,10 +138,10 @@
         "oomphinc/composer-installers-extender": "^2",
         "simeydotme/jquery-ui-slider-pips": "~1.11",
         "unb-libraries/drupal-builder": "^9",
-        "unb-libraries/saml_features": "dev-8.x-1.x"
+        "unb-libraries/saml_features": "dev-9.x-1.x"
     },
     "require-dev": {
-        "unb-libraries/drupal-development-libraries": "^8.0.0"
+        "unb-libraries/drupal-development-libraries": "^9"
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
