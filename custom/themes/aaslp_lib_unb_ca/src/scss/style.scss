@@ -257,27 +257,26 @@ main > .container {
       // Navigation tabs.
       .nav.nav-tabs {
         margin-top: 2rem;
-        border-bottom: 1px solid $unb-25gray;
         height: 25px;
+        border-bottom: none;
 
         li {
           margin-bottom: -4px;
         }
 
         a {
-          padding-left: 10px;
-          padding-right: 10px;
-          padding-top: 10px;
-          padding-bottom: 4px;
+          padding: 10px !important;
 
           &.active {
-            border: 1px solid $unb-25gray;
-            border-bottom: 1px solid white;
+            background-color: $lgray;
           }
         }
       }
       // Tab content.
       #edit-tab-content {
+        margin-bottom: 2rem;
+        background-color: $lgray;
+        padding: 1rem;
 
         #title > div,
         #fulltext > div > div {
