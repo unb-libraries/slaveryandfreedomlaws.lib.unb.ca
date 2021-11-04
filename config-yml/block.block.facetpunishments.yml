@@ -12,7 +12,7 @@ dependencies:
 id: facetpunishments
 theme: aaslp_lib_unb_ca
 region: sidebar_first
-weight: -4
+weight: -8
 provider: null
 plugin: 'facet_block:facet_punishments'
 settings:

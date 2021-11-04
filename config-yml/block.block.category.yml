@@ -12,7 +12,7 @@ dependencies:
 id: category
 theme: aaslp_lib_unb_ca
 region: content
-weight: 0
+weight: -5
 provider: null
 plugin: 'facet_block:timeline_category'
 settings:
