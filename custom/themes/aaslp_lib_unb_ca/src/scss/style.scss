@@ -121,7 +121,7 @@ main > .container {
     a:active,
     a:focus,
     a:hover {
-      color: $unb-dmango;
+      color: $unb-dorange;
     }
   }
 
@@ -195,7 +195,7 @@ main > .container {
             transform: scaleY(.6) !important;
 
             .noUi-connect {
-              background-color: $unb-mango;
+              background-color: $unb-orange;
             }
           }
 
@@ -370,14 +370,14 @@ main > .container {
 
     // Links.
     a {
-      color: $unb-mango;
+      color: $unb-orange;
     }
     a:active,
     a:focus,
     a:focus-within,
     a:target,
     a:hover {
-      color: $unb-dmango;
+      color: $unb-dorange;
     }
 
     // Views content.
@@ -431,7 +431,7 @@ main > .container {
         padding: 4px;
         font-size: .8rem;
         color: $offwhite;
-        background-color: $unb-mango;
+        background-color: $unb-orange;
       }
     }
     // Views header, view empty.
