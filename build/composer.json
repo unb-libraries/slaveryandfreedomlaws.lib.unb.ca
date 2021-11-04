@@ -38,8 +38,7 @@
             "libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
-                "type:npm-asset",
-                "harvesthq/chosen"
+                "type:npm-asset"
             ],
             "modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -65,6 +64,18 @@
     "prefer-stable": true,
     "name": "unb-libraries/aaslp.lib.unb.ca",
     "repositories": [
+        {
+          "type": "package",
+          "package": {
+              "name": "harvesthq/chosen",
+              "version": "1.8.7",
+              "type": "drupal-library",
+              "dist": {
+                  "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.7/chosen_v1.8.7.zip",
+                  "type": "zip"
+              }
+          }
+        },
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
@@ -134,6 +145,7 @@
         "drupal/twig_tweak": "2.9",
         "drupal/views_timelinejs": "3.2",
         "geocoder-php/nominatim-provider": "5.5.0",
+        "harvesthq/chosen": "^1.8",
         "npm-asset/nouislider": "^14",
         "oomphinc/composer-installers-extender": "^2",
         "simeydotme/jquery-ui-slider-pips": "~1.11",
