@@ -6,8 +6,8 @@ aaslp.front:
   url: internal:/timeline
   weight: 10
 aaslp.search:
-  title: 'Map'
-  description: 'Map'
+  title: 'Locations'
+  description: 'Locations'
   parent: main
   menu_name: main
   url: internal:/locations
