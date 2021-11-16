@@ -128,7 +128,7 @@
         "drupal/fontawesome": "2.19",
         "drupal/geocoder": "3.20",
         "drupal/geocoder_ajax_prepopulate": "2.0",
-        "drupal/geofield": "1.34",
+        "drupal/geofield": "1.35",
         "drupal/geofield_map": "2.70",
         "drupal/google_analytics": "2.5",
         "drupal/health_check": "1.3",
