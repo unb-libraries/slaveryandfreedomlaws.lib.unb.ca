@@ -255,7 +255,7 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       sorts: {  }
-      title: 'Slave Law Sources'
+      title: Sources
       header: {  }
       footer: {  }
       empty: {  }

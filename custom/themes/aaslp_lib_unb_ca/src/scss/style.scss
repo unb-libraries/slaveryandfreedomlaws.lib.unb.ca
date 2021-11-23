@@ -111,7 +111,9 @@ main > .container {
 
   // Breadcrumbs.
   .breadcrumb {
+    margin-bottom: 0;
     border-radius: 0;
+    background-color: $lgray;
 
     li {
       margin-right: .5rem;
@@ -330,11 +332,13 @@ main > .container {
 
     // Exposed search.
     .views-exposed-form {
-      float: right;
       // Form.
       form {
-        padding-right: 1rem;
+        padding-left: 1rem;
         // Text input.
+        .form-item-search-api-fulltext {
+          width: 80%;
+        }
         .form-text {
           font-size: 1rem;
         }

@@ -426,7 +426,7 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts: {  }
-      title: 'Slave Law Locations'
+      title: Locations
       header: {  }
       footer: {  }
       empty: {  }

@@ -592,7 +592,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: 'Slave Law Timeline'
+      title: Timeline
       header: {  }
       footer:
         area_text_custom:
