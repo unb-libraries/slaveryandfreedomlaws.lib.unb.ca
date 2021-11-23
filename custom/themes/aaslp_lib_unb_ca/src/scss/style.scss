@@ -71,7 +71,7 @@ header {
     padding-bottom: 0;
 
     .container {
-    background-color: $unb-dturquoise;
+    background-color: $unb-turquoise;
       .navbar-brand {
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -91,11 +91,11 @@ header {
         // Main menu.
         .navbar-nav {
           a {
-            color: $doffwhite;
+            color: $offwhite;
             font-size: 1.2rem;
 
             &:hover {
-              color: $offwhite;
+              text-decoration: underline;
             }
           }
         }
@@ -121,7 +121,7 @@ main > .container {
     a:active,
     a:focus,
     a:hover {
-      color: $unb-dorange;
+      color: $unb-darkgray;
     }
   }
 
@@ -195,7 +195,7 @@ main > .container {
             transform: scaleY(.6) !important;
 
             .noUi-connect {
-              background-color: $unb-orange;
+              background-color: $jc-orange;
             }
           }
 
@@ -370,14 +370,14 @@ main > .container {
 
     // Links.
     a {
-      color: $unb-orange;
+      color: $jc-orange;
     }
     a:active,
     a:focus,
     a:focus-within,
     a:target,
     a:hover {
-      color: $unb-dorange;
+      color: $unb-darkgray;
     }
 
     // Views content.
@@ -431,7 +431,7 @@ main > .container {
         padding: 4px;
         font-size: .8rem;
         color: $offwhite;
-        background-color: $unb-orange;
+        background-color: $jc-orange;
       }
     }
     // Views header, view empty.
