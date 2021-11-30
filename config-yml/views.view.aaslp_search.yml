@@ -461,7 +461,7 @@ display:
             operator_limit_selection: false
             operator_list: {  }
             identifier: search_api_fulltext
-            required: false
+            required: true
             remember: false
             multiple: false
             remember_roles:

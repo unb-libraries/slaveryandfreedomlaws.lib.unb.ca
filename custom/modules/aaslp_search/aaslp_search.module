@@ -7,6 +7,24 @@
 
 use Drupal\taxonomy\Entity\Term;
 
+function aaslp_search_form_views_exposed_form_alter(&$form, &$form_state, $form_id){
+
+  $view_id = $form['#id'];
+
+  if (strpos($view_id, 'views-exposed-form-aaslp-metadata') === 0) {
+    $tip = "Search by title, location, year, crime, punishment or " .
+      "combination, i.e. Jamaica 1800.";
+  }
+  elseif (strpos($view_id, 'views-exposed-form-aaslp-search') === 0) {
+    $tip = "Search for keywords within the fulltext content of legal " .
+      "articles.";
+  }
+
+  if (isset($form['search_api_fulltext']) and $tip) {
+    $form['search_api_fulltext']['#description'] = t($tip);
+  }
+}
+
 function aaslp_search_preprocess_facets_item_list(&$variables) {
   // Only apply to facet facet_full_location.
   $facets = [
