@@ -7,6 +7,7 @@ use Drupal\ckeditor\CKEditorPluginCssInterface;
 use Drupal\editor\Entity\Editor;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Config\ConfigFactory;
 
 /**
  * Defines the "Annotator" CKEditor plugin. Inserts annotations.
@@ -18,12 +19,13 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * )
  */
 class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface, ContainerFactoryPluginInterface {
+
   /**
-   * For services dependency injection.
+   * For service dependency injection.
    *
-   * @var Symfony\Component\DependencyInjection\ContainerInterface
+   * @var Drupal\Core\Config\ConfigFactory
    */
-  protected $service;
+  protected $configFactory;
 
   /**
    * Class constructor.
@@ -34,15 +36,15 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface,
    *   The plugin identifier.
    * @param mixed $plugin_definition
    *   The plugin definition.
-   * @param \Symfony\Component\DependencyInjection\ContainerInterface $service_container
-   *   The container interface for using services via dependency injection.
+   * @param Drupal\Core\Config\ConfigFactory $config_factory
+   *   For using services via dependency injection.
    */
   public function __construct(array $configuration,
   $plugin_id,
   $plugin_definition,
-  ContainerInterface $service_container) {
+  ConfigFactory $config_factory) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->service = $service_container;
+    $this->configFactory = $config_factory;
   }
 
   /**
@@ -64,7 +66,7 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface,
       $configuration,
       $plugin_id,
       $plugin_definition,
-      $container->get('service_container')
+      $container->get('config.factory')
     );
   }
 
@@ -108,7 +110,7 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface,
   public function getConfig(Editor $editor) {
     // Get immutable Config (Read Only).
     $groups =
-      $this->service->get('config.factory')->get('unb_lib_ck_annotator.settings')->get('groups');
+      $this->configFactory->get('unb_lib_ck_annotator.settings')->get('groups');
     // Prepare additional configuration for plugin.
     $config['groups'] = [
       'numbered' => [
