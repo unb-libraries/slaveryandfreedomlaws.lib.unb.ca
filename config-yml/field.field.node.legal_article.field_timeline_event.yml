@@ -10,7 +10,7 @@ field_name: field_timeline_event
 entity_type: node
 bundle: legal_article
 label: 'Timeline Event'
-description: ''
+description: 'E.g. French Revolution. Timeline events are only displayed in the timeline and will not appear as laws in search results.'
 required: false
 translatable: false
 default_value:

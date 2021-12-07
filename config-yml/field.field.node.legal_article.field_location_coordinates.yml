@@ -32,7 +32,7 @@ field_name: field_location_coordinates
 entity_type: node
 bundle: legal_article
 label: 'Location Coordinates'
-description: ''
+description: '<i>For locations map only</i>. Click the button to populate coordinates from location address (recommended), or enter manually.'
 required: false
 translatable: false
 default_value: {  }

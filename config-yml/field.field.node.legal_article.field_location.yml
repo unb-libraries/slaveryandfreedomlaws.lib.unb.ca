@@ -11,7 +11,7 @@ field_name: field_location
 entity_type: node
 bundle: legal_article
 label: Location
-description: ''
+description: 'This will be displayed as the historical location for the law.'
 required: false
 translatable: false
 default_value: {  }

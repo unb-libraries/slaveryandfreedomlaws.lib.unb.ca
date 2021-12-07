@@ -11,7 +11,7 @@ field_name: field_source
 entity_type: node
 bundle: legal_article
 label: Source
-description: ''
+description: 'Click <a href="/node/add/source" target="_blank">here</a> to create a new source if you don''t find it on the list. '
 required: false
 translatable: false
 default_value: {  }

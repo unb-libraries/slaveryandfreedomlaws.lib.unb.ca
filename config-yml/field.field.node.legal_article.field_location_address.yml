@@ -32,7 +32,7 @@ field_name: field_location_address
 entity_type: node
 bundle: legal_article
 label: 'Location Address'
-description: ''
+description: '<i>For locations map only</i>. Select country and region (optional).'
 required: false
 translatable: false
 default_value: {  }
