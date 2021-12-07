@@ -9,6 +9,7 @@
 
 use Drupal\node\Entity\Node;
 
+clr_nodes('source');
 clr_nodes('legal_article');
 
 /**
