@@ -285,12 +285,12 @@ class HomePageForm extends FormBase {
 
       if ($query) {
         $form_state->setRedirectUrl(
-          Url::fromUri("internal:/search?search_api_fulltext=$query")
+          Url::fromUri("internal:/titles?search_api_fulltext=$query")
         );
       }
       else {
         $form_state->setRedirectUrl(
-          Url::fromUri("internal:/search")
+          Url::fromUri("internal:/titles")
         );
       }
     }
@@ -299,12 +299,12 @@ class HomePageForm extends FormBase {
 
       if ($query) {
         $form_state->setRedirectUrl(
-          Url::fromUri("internal:/metasearch?search_api_fulltext=$query")
+          Url::fromUri("internal:/laws?search_api_fulltext=$query")
         );
       }
       else {
         $form_state->setRedirectUrl(
-          Url::fromUri("internal:/metasearch")
+          Url::fromUri("internal:/laws")
         );
       }
     }

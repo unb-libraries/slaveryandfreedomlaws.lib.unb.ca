@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/metasearch*'
+    pages: "/metasearch*\r\n/laws?*\r\n/laws"
     negate: false
     context_mapping: {  }

@@ -1,0 +1,9 @@
+uuid: 10c8c14d-c7d4-4c8d-a90d-b74db8f0e24d
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__aaslp_search__page_1
+name: 'search_api:views_page__aaslp_search__page_1'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

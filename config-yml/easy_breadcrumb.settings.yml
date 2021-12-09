@@ -1,4 +1,4 @@
-applies_admin_routes: true
+applies_admin_routes: false
 include_home_segment: false
 alternative_title_field: field_breadcrumb_title
 home_segment_title: Home
@@ -11,7 +11,7 @@ remove_repeated_segments: true
 term_hierarchy: true
 absolute_paths: false
 hide_single_home_item: false
-title_from_page_when_available: true
+title_from_page_when_available: false
 capitalizator_mode: ucwords
 capitalizator_ignored_words:
   - of
@@ -30,7 +30,7 @@ use_site_title: false
 include_invalid_paths: false
 excluded_paths: ''
 replaced_titles: ''
-custom_paths: "/laws :: Slave Laws\r\n/sources :: Slave Law Sources"
+custom_paths: "/laws :: Laws\r\n/sources :: Sources"
 title_segment_as_link: false
 follow_redirects: true
 limit_segment_display: false
