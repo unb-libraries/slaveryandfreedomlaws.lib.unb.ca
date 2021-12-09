@@ -228,7 +228,7 @@ class HomePageForm extends FormBase {
           <h2 class="browse-header">Browse Timeline</h2>
           <p class="browse-blurb">
             Browse legal articles in an interactive timeline. Explore the history
-            of slave law by comparing the year of their institution with
+            of slave laws by comparing the year of their institution with
             notable historical events.
           </p>
         </div>
@@ -248,6 +248,21 @@ class HomePageForm extends FormBase {
     $form['browse'] = [
       '#type' => 'markup',
       '#markup' => "<div class='container browse-panels'>$browse</div>",
+    ];
+
+    $sshrc = '
+      <div class="row">
+        <div class="col-sm-12 sshrc-panel">
+          <a href="https://www.sshrc-crsh.gc.ca/" class="panel-img-link">
+            <img class="sshrc-logo" src="/themes/custom/aaslp_lib_unb_ca/images/sshrc.png">
+          </a>
+        </div>
+      </div>
+      ';
+
+    $form['sshrc'] = [
+      '#type' => 'markup',
+      '#markup' => "<div class='container sshrc-panel-container'>$sshrc</div>",
     ];
 
     // Attach JS.
