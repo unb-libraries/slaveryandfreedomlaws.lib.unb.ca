@@ -222,7 +222,8 @@ class HomePageForm extends FormBase {
       <div class="row">
         <div class="col-sm-6 browse-panel browse-timeline">
           <a href="/timeline" class="panel-img-link">
-            <img class="panel-img" src="/themes/custom/aaslp_lib_unb_ca/images/timeline-img.jpg">
+            <i class="sr-only">Browse Timeline</i>
+            <img class="panel-img" src="/themes/custom/aaslp_lib_unb_ca/images/timeline-img.jpg" alt="Browse Timeline">
             <i class="fa fa-external-link-alt"></i>
           </a>
           <h2 class="browse-header">Browse Timeline</h2>
@@ -234,7 +235,8 @@ class HomePageForm extends FormBase {
         </div>
         <div class="col-sm-6 browse-panel browse-map">
           <a href="/locations" class="panel-img-link">
-            <img class="panel-img" src="/themes/custom/aaslp_lib_unb_ca/images/map-img.jpg">
+            <i class="sr-only">Browse Timeline</i>
+            <img class="panel-img" src="/themes/custom/aaslp_lib_unb_ca/images/map-img.jpg" alt="Browse Locations">
             <i class="fa fa-external-link-alt"></i>
           </a>
           <h2 class="browse-header">Browse Locations</h2>
@@ -254,7 +256,8 @@ class HomePageForm extends FormBase {
       <div class="row">
         <div class="col-sm-12 sshrc-panel">
           <a href="https://www.sshrc-crsh.gc.ca/" class="panel-img-link">
-            <img class="sshrc-logo" src="/themes/custom/aaslp_lib_unb_ca/images/sshrc.png">
+            <i class="sr-only">Navigate to SSHRC Homepage</i>
+            <img class="sshrc-logo" src="/themes/custom/aaslp_lib_unb_ca/images/sshrc.png" alt="SSHRC Logo">
           </a>
         </div>
       </div>

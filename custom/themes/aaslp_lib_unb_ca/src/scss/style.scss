@@ -556,7 +556,7 @@ footer {
   & > .container {
     padding: .8rem 1.2rem !important;
     background-color: $unb-turquoise;
-    color: $offwhite !important;
+    color: white !important;
 
     // Footer logo.
     #footer-logo-img {
@@ -573,7 +573,7 @@ footer {
       }
 
       a {
-        color: $offwhite !important;
+        color: white !important;
       }
     }
   }
