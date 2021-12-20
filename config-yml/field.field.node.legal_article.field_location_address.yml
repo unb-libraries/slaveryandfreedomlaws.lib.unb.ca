@@ -12,21 +12,21 @@ third_party_settings:
   geocoder_field:
     method: reverse_geocode
     weight: 0
-    geocode:
-      field: body
-      delta_handling: default
+    field: field_location_coordinates
     skip_not_empty_value: true
     disabled: false
     hidden: false
     providers:
       - nominatim
     dumper: geojson
+    delta_handling: default
     failure:
       handling: preserve
       status_message: true
       log: true
-    delta_handling: default
-    field: field_location_coordinates
+    geocode:
+      field: body
+      delta_handling: default
 id: node.legal_article.field_location_address
 field_name: field_location_address
 entity_type: node

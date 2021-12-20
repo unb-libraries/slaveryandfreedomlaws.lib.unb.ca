@@ -18,12 +18,12 @@ plugin: 'facet_block:metadata_location'
 settings:
   id: 'facet_block:metadata_location'
   label: 'Metadata Location'
-  provider: facets
   label_display: '0'
+  provider: facets
   block_id: metadatalocation
 visibility:
   request_path:
     id: request_path
-    pages: "/laws\r\n/laws?*"
     negate: false
     context_mapping: {  }
+    pages: "/laws\r\n/laws?*"

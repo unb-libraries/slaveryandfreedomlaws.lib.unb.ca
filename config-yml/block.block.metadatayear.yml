@@ -18,12 +18,12 @@ plugin: 'facet_block:metadata_year'
 settings:
   id: 'facet_block:metadata_year'
   label: 'Metadata Year'
-  provider: facets
   label_display: '0'
+  provider: facets
   block_id: metadatayear
 visibility:
   request_path:
     id: request_path
-    pages: "/laws\r\n/laws?*"
     negate: false
     context_mapping: {  }
+    pages: "/laws\r\n/laws?*"

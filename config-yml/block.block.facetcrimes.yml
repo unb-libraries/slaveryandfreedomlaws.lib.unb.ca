@@ -18,12 +18,12 @@ plugin: 'facet_block:facet_crimes'
 settings:
   id: 'facet_block:facet_crimes'
   label: 'Facet Crimes'
-  provider: facets
   label_display: '0'
+  provider: facets
   block_id: facetcrimes
 visibility:
   request_path:
     id: request_path
-    pages: "/titles*\r\n"
     negate: false
     context_mapping: {  }
+    pages: "/titles*\r\n"

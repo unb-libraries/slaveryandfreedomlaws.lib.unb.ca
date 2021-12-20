@@ -3,21 +3,20 @@ langcode: en
 status: true
 dependencies:
   module:
-    - ctools
     - taxonomy
 id: location_path
 label: 'Location Path'
 type: 'canonical_entities:taxonomy_term'
-pattern: 'locations/[term:name]'
+pattern: 'locations/[term:parent:name]/[term:name]'
 selection_criteria:
-  790b4391-4987-4c75-aed6-79741e46aebc:
+  a8a674bc-22d6-4f8f-a820-0ace3345268e:
     id: 'entity_bundle:taxonomy_term'
-    bundles:
-      locations: locations
     negate: false
+    uuid: a8a674bc-22d6-4f8f-a820-0ace3345268e
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 790b4391-4987-4c75-aed6-79741e46aebc
+    bundles:
+      locations: locations
 selection_logic: and
 weight: -5
 relationships: {  }

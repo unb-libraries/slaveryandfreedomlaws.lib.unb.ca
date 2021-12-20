@@ -18,11 +18,11 @@ plugin: 'facet_block:timeline_punishments'
 settings:
   id: 'facet_block:timeline_punishments'
   label: Punishments
-  provider: facets
   label_display: '0'
+  provider: facets
   block_id: punishments
 visibility:
   request_path:
     id: request_path
-    pages: '/timeline*'
     negate: false
+    pages: '/timeline*'

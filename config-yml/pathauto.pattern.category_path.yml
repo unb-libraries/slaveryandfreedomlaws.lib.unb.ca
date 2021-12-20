@@ -12,12 +12,12 @@ pattern: 'categories/[term:name]'
 selection_criteria:
   3913c19c-82f2-4365-8a12-40cfc3bed754:
     id: 'entity_bundle:taxonomy_term'
-    bundles:
-      law_categories: law_categories
     negate: false
+    uuid: 3913c19c-82f2-4365-8a12-40cfc3bed754
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 3913c19c-82f2-4365-8a12-40cfc3bed754
+    bundles:
+      law_categories: law_categories
 selection_logic: and
 weight: -5
 relationships: {  }

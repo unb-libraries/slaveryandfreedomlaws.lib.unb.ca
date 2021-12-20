@@ -11,12 +11,12 @@ pattern: 'sources/[node:title]'
 selection_criteria:
   2de95d34-60e4-417d-8d30-f0e191656a69:
     id: node_type
-    bundles:
-      source: source
     negate: false
+    uuid: 2de95d34-60e4-417d-8d30-f0e191656a69
     context_mapping:
       node: node
-    uuid: 2de95d34-60e4-417d-8d30-f0e191656a69
+    bundles:
+      source: source
 selection_logic: and
 weight: -5
 relationships: {  }

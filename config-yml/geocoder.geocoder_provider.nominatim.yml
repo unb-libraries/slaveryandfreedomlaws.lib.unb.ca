@@ -6,9 +6,9 @@ id: nominatim
 label: Nominatim
 plugin: nominatim
 configuration:
-  rootUrl: 'https://nominatim.openstreetmap.org'
-  userAgent: libsystems@unb.ca
-  referer: 'https://aaslp.lib.unb.ca'
   throttle:
     period: null
     limit: null
+  rootUrl: 'https://nominatim.openstreetmap.org'
+  userAgent: libsystems@unb.ca
+  referer: 'https://aaslp.lib.unb.ca'

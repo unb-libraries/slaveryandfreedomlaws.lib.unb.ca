@@ -11,12 +11,12 @@ pattern: 'laws/[node:field_location]-[node:field_date:date:html_year]'
 selection_criteria:
   43cb5088-dcae-4d83-8813-bb020487c715:
     id: node_type
-    bundles:
-      legal_article: legal_article
     negate: false
+    uuid: 43cb5088-dcae-4d83-8813-bb020487c715
     context_mapping:
       node: node
-    uuid: 43cb5088-dcae-4d83-8813-bb020487c715
+    bundles:
+      legal_article: legal_article
 selection_logic: and
 weight: -5
 relationships: {  }

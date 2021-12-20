@@ -15,67 +15,12 @@ base_table: search_api_index_aaslp_lib_unb_ca
 base_field: search_api_id
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          bypass_access: false
-          skip_access: false
-          preserve_facet_query_args: false
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Search
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: full
-        options:
-          items_per_page: 25
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
-      style:
-        type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-      row:
-        type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+      title: 'Fulltext Search'
       fields:
         title_1:
           id: title_1
@@ -84,6 +29,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -146,7 +92,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          plugin_id: search_api_field
         search_api_excerpt:
           id: search_api_excerpt
           table: search_api_index_aaslp_lib_unb_ca
@@ -154,6 +99,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           label: ''
           exclude: false
           alter:
@@ -199,7 +145,6 @@ display:
           use_highlighting: true
           multi_type: separator
           multi_separator: ', '
-          plugin_id: search_api
         search_year:
           id: search_year
           table: search_api_index_aaslp_lib_unb_ca
@@ -207,6 +152,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_numeric
           label: ''
           exclude: true
           alter:
@@ -261,7 +207,6 @@ display:
           multi_type: separator
           multi_separator: ', '
           format_plural_values: {  }
-          plugin_id: search_api_numeric
         search_location:
           id: search_location
           table: search_api_index_aaslp_lib_unb_ca
@@ -269,6 +214,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -331,7 +277,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          plugin_id: search_api_field
         search_category:
           id: search_category
           table: search_api_index_aaslp_lib_unb_ca
@@ -339,6 +284,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -401,7 +347,83 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          plugin_id: search_api_field
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 25
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Search
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: 'The search did not match any records.'
+          tokenize: false
+      sorts:
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_aaslp_lib_unb_ca
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: search_api_relevance
+          exposed: false
+        field_date:
+          id: field_date
+          table: search_api_index_aaslp_lib_unb_ca
+          field: field_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: field_date
+          exposed: false
+      arguments: {  }
       filters:
         field_timeline_event:
           id: field_timeline_event
@@ -410,6 +432,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_boolean
           operator: '!='
           value: '1'
           group: 1
@@ -440,7 +463,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: search_api_boolean
         search_api_fulltext:
           id: search_api_fulltext
           table: search_api_index_aaslp_lib_unb_ca
@@ -448,6 +470,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_fulltext
           operator: and
           value: ''
           group: 1
@@ -468,8 +491,8 @@ display:
               authenticated: authenticated
               anonymous: '0'
               aaslp_editor: '0'
-            placeholder: ''
             expose_fields: false
+            placeholder: ''
             searched_fields_id: search_api_fulltext_searched_fields
           is_grouped: false
           group_info:
@@ -487,33 +510,30 @@ display:
           min_length: null
           fields:
             - search_body
-          plugin_id: search_api_fulltext
-      sorts:
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_aaslp_lib_unb_ca
-          field: search_api_relevance
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: search_api
-        field_date:
-          id: field_date
-          table: search_api_index_aaslp_lib_unb_ca
-          field: field_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: search_api
-      title: 'Fulltext Search'
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      query:
+        type: views_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+      relationships: {  }
       header:
         result:
           id: result
@@ -522,9 +542,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: result
           empty: false
           content: 'Displaying @start - @end of @total'
-          plugin_id: result
       footer:
         result:
           id: result
@@ -533,28 +553,10 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: result
           empty: false
           content: 'Displaying @start - @end of @total'
-          plugin_id: result
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content: 'The search did not match any records.'
-          plugin_id: text_custom
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -566,18 +568,18 @@ display:
       tags:
         - 'config:search_api.index.aaslp_lib_unb_ca'
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: titles
       cache:
         type: none
       defaults:
         cache: false
       exposed_block: true
+      display_extenders: {  }
+      path: titles
     cache_metadata:
       max-age: -1
       contexts:

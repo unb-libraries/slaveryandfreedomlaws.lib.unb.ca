@@ -12,21 +12,21 @@ third_party_settings:
   geocoder_field:
     method: prepopulate_from_source
     weight: 0
-    geocode:
-      field: field_location_address
-      delta_handling: default
+    field: field_location_address
     skip_not_empty_value: false
     disabled: false
     hidden: false
     providers:
       - nominatim
     dumper: wkt
+    delta_handling: default
     failure:
       handling: preserve
       status_message: true
       log: true
-    field: field_location_address
-    delta_handling: default
+    geocode:
+      field: field_location_address
+      delta_handling: default
 id: node.legal_article.field_location_coordinates
 field_name: field_location_coordinates
 entity_type: node

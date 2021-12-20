@@ -18,12 +18,12 @@ plugin: 'facet_block:metadata_category'
 settings:
   id: 'facet_block:metadata_category'
   label: 'Metadata Category'
-  provider: facets
   label_display: '0'
+  provider: facets
   block_id: metadatacategory
 visibility:
   request_path:
     id: request_path
-    pages: "/laws\r\n/laws?*"
     negate: false
     context_mapping: {  }
+    pages: "/laws\r\n/laws?*"

@@ -18,12 +18,12 @@ plugin: 'facet_block:facet_category'
 settings:
   id: 'facet_block:facet_category'
   label: 'Facet Category'
-  provider: facets
   label_display: '0'
+  provider: facets
   block_id: facetcategory
 visibility:
   request_path:
     id: request_path
-    pages: "/titles*\r\n"
     negate: false
     context_mapping: {  }
+    pages: "/titles*\r\n"

@@ -18,12 +18,12 @@ plugin: 'facet_block:facet_year'
 settings:
   id: 'facet_block:facet_year'
   label: 'Facet Year'
-  provider: facets
   label_display: '0'
+  provider: facets
   block_id: facetyear
 visibility:
   request_path:
     id: request_path
-    pages: "/titles*\r\n"
     negate: false
     context_mapping: {  }
+    pages: "/titles*\r\n"

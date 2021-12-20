@@ -27,53 +27,53 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.legal_article.search_index_metadata
 targetEntityType: node
 bundle: legal_article
 mode: search_index_metadata
 content:
   field_citation:
-    weight: 4
+    type: string
     label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 4
     region: content
   field_date:
-    weight: 0
+    type: datetime_default
     label: visually_hidden
     settings:
       timezone_override: ''
       format_type: html_date
     third_party_settings: {  }
-    type: datetime_default
+    weight: 0
     region: content
   field_full_title:
-    weight: 2
+    type: string
     label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
   field_location:
     type: entity_reference_label
-    weight: 3
-    region: content
     label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
+    weight: 3
+    region: content
   field_source:
-    weight: 1
+    type: entity_reference_label
     label: visually_hidden
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 1
     region: content
 hidden:
   body: true

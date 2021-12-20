@@ -26,36 +26,36 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.legal_article.search_index_themes
 targetEntityType: node
 bundle: legal_article
 mode: search_index_themes
 content:
   field_category:
-    weight: 2
+    type: entity_reference_label
     label: visually_hidden
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 2
     region: content
   field_crimes:
-    weight: 0
+    type: entity_reference_label
     label: visually_hidden
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 0
     region: content
   field_punishments:
-    weight: 1
+    type: entity_reference_label
     label: visually_hidden
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 1
     region: content
 hidden:
   body: true

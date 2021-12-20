@@ -18,12 +18,12 @@ plugin: 'facet_block:facet_full_location'
 settings:
   id: 'facet_block:facet_full_location'
   label: 'Facet Full Location'
-  provider: facets
   label_display: '0'
+  provider: facets
   block_id: facetfulllocation
 visibility:
   request_path:
     id: request_path
-    pages: "/titles*\r\n"
     negate: false
     context_mapping: {  }
+    pages: "/titles*\r\n"

@@ -18,12 +18,12 @@ plugin: 'facet_block:facet_punishments'
 settings:
   id: 'facet_block:facet_punishments'
   label: 'Facet Punishments'
-  provider: facets
   label_display: '0'
+  provider: facets
   block_id: facetpunishments
 visibility:
   request_path:
     id: request_path
-    pages: "/titles*\r\n"
     negate: false
     context_mapping: {  }
+    pages: "/titles*\r\n"
