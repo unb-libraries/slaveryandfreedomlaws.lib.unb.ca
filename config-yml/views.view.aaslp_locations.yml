@@ -13,7 +13,7 @@ dependencies:
     - node
     - user
 id: aaslp_locations
-label: 'AASLP Locations'
+label: 'AASLP Locations Map'
 module: views
 description: ''
 tag: ''
@@ -26,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Locations
+      title: 'Locations Map'
       fields:
         field_location_coordinates:
           id: field_location_coordinates
@@ -289,7 +289,18 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: 'No location coordinates present.'
+          tokenize: false
       sorts: {  }
       arguments: {  }
       filters:
@@ -455,7 +466,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: locations
+      path: locations-map
     cache_metadata:
       max-age: -1
       contexts:

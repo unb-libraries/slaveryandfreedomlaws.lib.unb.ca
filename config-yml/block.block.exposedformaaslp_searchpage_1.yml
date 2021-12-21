@@ -26,4 +26,4 @@ visibility:
     id: request_path
     negate: false
     context_mapping: {  }
-    pages: "/search*\r\n"
+    pages: "/laws-fulltext?*\r\n/laws-fulltext\r\n"

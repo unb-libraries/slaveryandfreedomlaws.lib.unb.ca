@@ -1,21 +1,19 @@
-uuid: 4bfb497a-a397-43b2-bc91-df9f52ad030a
+uuid: 549fb26f-3938-4c7a-89d0-84b3284ee3df
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - node.type.source
+    - taxonomy.vocabulary.locations
   module:
-    - node
-    - text
+    - taxonomy
     - user
-id: aaslp_sources
-label: 'AASLP Sources'
+id: aaslp_locations_list
+label: 'AASLP Locations'
 module: views
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: taxonomy_term_field_data
+base_field: tid
 display:
   default:
     id: default
@@ -23,19 +21,19 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Sources
+      title: Locations
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: field
-          label: Name
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: term_name
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -90,16 +88,19 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        body:
-          id: body
-          table: node__body
-          field: body
+          convert_spaces: false
+        parent_target_id:
+          id: parent_target_id
+          table: taxonomy_term__parent
+          field: parent_target_id
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: parent
           plugin_id: field
-          label: Description
-          exclude: false
+          label: ''
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -139,11 +140,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: text_trimmed
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            trim_length: 255
-          group_column: value
+            link: true
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -154,26 +155,9 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: full
+        type: none
         options:
           offset: 0
-          items_per_page: 25
-          total_pages: null
-          id: 0
-          tags:
-            next: ››
-            previous: ‹‹
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -201,18 +185,33 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No sources found in system.'
+          content: 'No locations found in system.'
           tokenize: false
       sorts:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: parent_target_id
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        name_1:
+          id: name_1
+          table: taxonomy_term_field_data
+          field: name
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
+          entity_type: taxonomy_term
+          entity_field: name
           plugin_id: standard
           order: ASC
           expose:
@@ -223,9 +222,9 @@ display:
       filters:
         status:
           id: status
-          table: node_field_data
+          table: taxonomy_term_field_data
           field: status
-          entity_type: node
+          entity_type: taxonomy_term
           entity_field: status
           plugin_id: boolean
           value: '1'
@@ -234,91 +233,31 @@ display:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          entity_type: taxonomy_term
+          entity_field: vid
           plugin_id: bundle
           value:
-            source: source
+            locations: locations
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        combine:
-          id: combine
-          table: views
-          field: combine
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: combine
-          operator: allwords
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: combine_op
-            label: ''
-            description: 'Search by name, description or combination, e.g. Collection newspapers.'
-            use_operator: false
-            operator: combine_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: combine
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              aaslp_editor: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          fields: {  }
       style:
-        type: table
+        type: html_list
         options:
-          grouping: {  }
-          row_class: ''
+          grouping:
+            -
+              field: parent_target_id
+              rendered: true
+              rendered_strip: false
+          row_class: location-row
           default_row_class: true
-          columns:
-            title: title
-            body: body
-          default: '-1'
-          info:
-            title:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            body:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          override: true
-          sticky: false
-          summary: ''
-          empty_table: false
-          caption: ''
-          description: ''
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: fields
       query:
@@ -329,18 +268,19 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
-      header:
-        result:
-          id: result
-          table: views
-          field: result
+      relationships:
+        parent_target_id:
+          id: parent_target_id
+          table: taxonomy_term__parent
+          field: parent_target_id
           relationship: none
           group_type: group
-          admin_label: ''
-          plugin_id: result
-          empty: false
-          content: 'Displaying @start - @end of @total'
+          admin_label: Parent
+          entity_type: taxonomy_term
+          entity_field: parent
+          plugin_id: standard
+          required: true
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -348,12 +288,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
-        - url.query_args
-        - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
+      tags: {  }
   page_1:
     id: page_1
     display_title: Page
@@ -361,15 +297,11 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: sources
+      path: locations
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
-        - url.query_args
-        - 'user.node_grants:view'
         - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
+      tags: {  }

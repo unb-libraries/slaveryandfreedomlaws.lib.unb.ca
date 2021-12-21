@@ -10,5 +10,5 @@ aaslp.search:
   description: 'Locations'
   parent: main
   menu_name: main
-  url: internal:/locations
+  url: internal:/locations-map
   weight: 20

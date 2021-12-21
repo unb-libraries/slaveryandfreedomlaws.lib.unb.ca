@@ -378,6 +378,45 @@ main > .container {
       }
     }
 
+    // For combined filters.
+    form.views-exposed-form {
+      padding-left: 1rem;
+      // Text input.
+      .form-item-search-api-fulltext {
+        width: 80%;
+      }
+      .form-text {
+        font-size: 1rem;
+      }
+      // Submit buttons.
+      .form-actions {
+        display: inline-block;
+        margin-top: 1.1rem;
+        font-size: 1.1rem;
+
+        [id^="edit-submit-taxonomy-term"],
+        [id^="edit-submit-taxonomy-term"]:active,
+        [id^="edit-submit-aaslp-sources"],
+        [id^="edit-submit-aaslp-sources"]:active,
+        [id^="edit-custom-reset"],
+        [id^="edit-custom-reset"]:active {
+          margin: 0;
+          padding-left: .2rem;
+          background-color: transparent !important;
+          color: $unb-darkgray;
+          border: none;
+          box-shadow: none;
+          font-family: 'Font Awesome\ 5 Free';
+          font-weight: 900;
+        }
+        [id^="edit-submit-taxonomy-term"]:hover,
+        [id^="edit-submit-aaslp-sources"]:hover,
+        [id^="edit-custom-reset"]:hover {
+          color: $unb-turquoise;
+        }
+      }
+    }
+
     // Links.
     a {
       color: $jc-orange;
@@ -422,6 +461,19 @@ main > .container {
             &.is-active {
               background-color: initial;
             }
+          }
+        }
+      }
+      // Item list.
+      .item-list {
+        h3 {
+          font-weight: normal;
+        }
+        ul {
+          list-style: none;
+
+          li:nth-of-type(odd) {
+            background-color: $lgray;
           }
         }
       }

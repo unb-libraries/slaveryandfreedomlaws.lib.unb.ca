@@ -303,7 +303,7 @@ class HomePageForm extends FormBase {
 
       if ($query) {
         $form_state->setRedirectUrl(
-          Url::fromUri("internal:/titles?search_api_fulltext=$query")
+          Url::fromUri("internal:/laws-fulltext?search_api_fulltext=$query")
         );
       }
       else {
