@@ -2,11 +2,8 @@
 @import "../../../../../vendor/twbs/bootstrap/scss/functions";
 @import "../../../../../vendor/twbs/bootstrap/scss/variables";
 
-// Variable overrides.
-@import 'overrides/variables';
-
-// Custom variables.
-@import 'custom/variables';
+// Overrides.
+@import 'overrides';
 
 // Bootstrap v4.x.
 @import "../../../../../vendor/twbs/bootstrap/scss/bootstrap.scss";
