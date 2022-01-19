@@ -122,7 +122,7 @@
         "drupal/bootstrap4": "2.1.14",
         "drupal/chosen": "3.0.1",
         "drupal/core": "9.3.2",
-        "drupal/easy_breadcrumb": "2.0.1",
+        "drupal/easy_breadcrumb": "2.0.2",
         "drupal/entity_reference_revisions": "1.9",
         "drupal/facets": "2.0.0",
         "drupal/fontawesome": "2.19",
