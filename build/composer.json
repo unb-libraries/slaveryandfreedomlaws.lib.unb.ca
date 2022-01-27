@@ -117,7 +117,7 @@
     ],
     "require": {
         "ckeditor-plugin/widget": "4.16.1",
-        "drupal/admin_toolbar": "3.0.3",
+        "drupal/admin_toolbar": "3.1.0",
         "drupal/address": "1.9",
         "drupal/bootstrap4": "2.1.14",
         "drupal/chosen": "3.0.1",
