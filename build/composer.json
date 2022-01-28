@@ -52,7 +52,11 @@
         },
         "patches": {
             "drupal/samlauth": {
-                "Ignore Role Restrictions": "/build/patches/samlauth_rolematch.patch"
+                "Ignore role restrictions": "/build/patches/samlauth_rolematch.patch"
+            },
+            "drupal/facets": {
+                "Fix range_slider jquery_ui D9": "/build/patches/facets_slider_d9.patch",
+                "Fix Views AJAX Facets D9": "https://www.drupal.org/files/issues/2018-09-25/ajax_facet_block_views_context-2986981-13.patch"
             }
         }
     },
