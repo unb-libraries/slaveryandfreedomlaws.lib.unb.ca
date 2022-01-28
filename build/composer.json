@@ -53,9 +53,6 @@
         "patches": {
             "drupal/samlauth": {
                 "Ignore Role Restrictions": "/build/patches/samlauth_rolematch.patch"
-            },
-            "drupal/facets": {
-                "Use nouislider for facet range": "/build/patches/issue-3153622-nouislider_4.patch"
             }
         }
     },
@@ -146,7 +143,6 @@
         "drupal/views_timelinejs": "3.2",
         "geocoder-php/nominatim-provider": "5.5.0",
         "harvesthq/chosen": "^1.8",
-        "npm-asset/nouislider": "^14",
         "oomphinc/composer-installers-extender": "^2",
         "simeydotme/jquery-ui-slider-pips": "~1.11",
         "unb-libraries/drupal-builder": "^9",
