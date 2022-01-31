@@ -188,21 +188,14 @@ main > .container {
         list-style: none;
 
         // Range slider.
-        .facet-slider.noUi-target {
-          box-shadow: none;
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-
-          .noUi-connects {
-            transform: scaleY(.6) !important;
-
-            .noUi-connect {
-              background-color: $jc-orange;
-            }
+        .facet-slider {
+          // First value.
+          .ui-slider-pip-first {
+            color: $unb-turquoise;
           }
-
-          .noUi-handle {
-            transform: scale(.8) !important;
+          // Last value.
+          .ui-slider-pip-last {
+            color: $jc-orange;
           }
         }
 
