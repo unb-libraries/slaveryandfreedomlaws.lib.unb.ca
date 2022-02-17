@@ -1,16 +1,19 @@
 {
-  "license": "MIT",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "name": "unb-libraries/composites.lib.unb.ca",
-  "description": "Scaffold and provision local development for composites.lib.unb.ca",
   "config": {
-    "preferred-install": {
-      "*": "dist"
-    },
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "preferred-install": {
+      "*": "dist"
     }
+  },
+  "description": "Scaffold and provision local development for composites.lib.unb.ca",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "name": "unb-libraries/composites.lib.unb.ca",
+  "prefer-stable": true,
+  "replace": {
+    "drupal/core": "*"
   },
   "repositories": [
     {
@@ -19,16 +22,13 @@
     }
   ],
   "require-dev": {
-    "twbs/bootstrap": "~4.5.3",
     "drupal/bootstrap4": "2.1.14",
+    "twbs/bootstrap": "~4.5.3",
     "unb-libraries/dockworker-drupal": "^4"
   },
   "scripts": {
     "post-update-cmd": [
       "vendor/bin/dockworker dockworker:git:setup-hooks"
     ]
-  },
-  "replace": {
-    "drupal/core": "*"
   }
 }
