@@ -159,7 +159,7 @@
     "drupal/leaflet": "2.1.23",
     "drupal/leaflet_more_maps": "2.1.2",
     "drupal/node_edit_protection": "1.0",
-    "drupal/pathauto": "1.9",
+    "drupal/pathauto": "1.10",
     "drupal/redis": "1.5",
     "drupal/samlauth": "3.5",
     "drupal/search_api": "1.23",
