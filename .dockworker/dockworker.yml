@@ -1,5 +1,5 @@
 dockworker:
-  version: '4'
+  version: '5'
   application:
     name: aaslp.lib.unb.ca
     uuid: 3111
