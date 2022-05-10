@@ -298,6 +298,15 @@ main > .container {
       // Browse panels.
       .browse-panels {
         margin-top: 1rem;
+
+        .browse-timeline {
+          padding-left: 0;
+        }
+
+        .browse-map {
+          padding-right: 0;
+        }
+
         .panel-img-link {
           opacity: 100%;
 
