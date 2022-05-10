@@ -480,13 +480,25 @@ main > .container {
         }
       }
 
-      // Hide timeline icon in timemarker content.
-      .tl-timemarker-content .tl-headline sup {
-        display: none;
-      }
-      // Hide timeline icon in slidenav content.
-      .tl-slidenav-content-container .tl-slidenav-title sup {
-        display: none;
+      // Timeline.
+      #timelinejs-aaslp-timeline-page-1 {
+        // Hide timeline icon in timemarker content.
+        .tl-timemarker-content .tl-headline sup {
+          display: none;
+        }
+        // Hide timeline icon in slidenav content.
+        .tl-slidenav-content-container .tl-slidenav-title sup {
+          display: none;
+        }
+        // Time group labels.
+        .tl-timegroup-message {
+          color: $unb-darkgray;
+          text-shadow: none;
+        }
+        // Historical events panel.
+        .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate {
+          background-color: gold;
+        }
       }
 
       // Map (Locations).
