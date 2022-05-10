@@ -56,12 +56,12 @@ input {
 }
 // Buttons.
 .btn {
-  border-color: $unb-turquoise !important;
-  background-color: $unb-turquoise !important;
+  border-color: $aaslp-blue !important;
+  background-color: $aaslp-blue !important;
 }
 .btn:hover, {
-  border-color: $unb-dturquoise !important;
-  background-color: $unb-dturquoise !important;
+  border-color: $aaslp-dblue !important;
+  background-color: $aaslp-dblue !important;
 }
 
 // Header.
@@ -71,7 +71,7 @@ header {
     padding-bottom: 0;
 
     .container {
-    background-color: $unb-turquoise;
+    background-color: $aaslp-blue;
       .navbar-brand {
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -191,7 +191,7 @@ main > .container {
         .facet-slider {
           // First value.
           .ui-slider-pip-first {
-            color: $unb-turquoise;
+            color: $aaslp-blue;
           }
           // Last value.
           .ui-slider-pip-last {
@@ -365,7 +365,7 @@ main > .container {
           [id^="edit-submit-aaslp-search"]:hover,
           [id^="edit-submit-aaslp-metadata-search"]:hover,
           [id^="edit-custom-reset"]:hover {
-            color: $unb-turquoise;
+            color: $aaslp-blue;
           }
         }
       }
@@ -405,7 +405,7 @@ main > .container {
         [id^="edit-submit-taxonomy-term"]:hover,
         [id^="edit-submit-aaslp-sources"]:hover,
         [id^="edit-custom-reset"]:hover {
-          color: $unb-turquoise;
+          color: $aaslp-blue;
         }
       }
     }
@@ -600,7 +600,7 @@ footer {
 
   & > .container {
     padding: .8rem 1.2rem !important;
-    background-color: $unb-turquoise;
+    background-color: $aaslp-blue;
     color: white !important;
 
     // Footer logo.
