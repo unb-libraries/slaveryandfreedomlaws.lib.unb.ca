@@ -234,7 +234,7 @@ class HomePageForm extends FormBase {
           </p>
         </div>
         <div class="col-sm-6 browse-panel browse-map">
-          <a href="/locations" class="panel-img-link">
+          <a href="/locations-map" class="panel-img-link">
             <i class="sr-only">Browse Timeline</i>
             <img class="panel-img" src="/themes/custom/aaslp_lib_unb_ca/images/map-img.jpg" alt="Browse Locations">
             <i class="fa fa-external-link-alt"></i>
