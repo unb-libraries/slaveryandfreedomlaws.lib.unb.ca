@@ -497,7 +497,14 @@ main > .container {
         }
         // Historical events panel.
         .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate {
-          background-color: gold;
+          background-color: $aaslp-lblue;
+        }
+        // Historical events panel.
+        .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate + .tl-timegroup {
+          background-color: $aaslp-lgold;
+        }
+        .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate + .tl-timegroup + .tl-timegroup.tl-timegroup-alternate {
+          background-color: $aaslp-lgold;
         }
       }
 
