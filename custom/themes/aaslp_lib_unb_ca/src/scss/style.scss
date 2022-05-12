@@ -481,7 +481,7 @@ main > .container {
       }
 
       // Timeline.
-      #timelinejs-aaslp-timeline-page-1 {
+      [id^="timelinejs-aaslp-timeline-page"] {
         // Hide timeline icon in timemarker content.
         .tl-timemarker-content .tl-headline sup {
           display: none;
@@ -506,6 +506,10 @@ main > .container {
         .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate + .tl-timegroup + .tl-timegroup.tl-timegroup-alternate {
           background-color: $aaslp-lgold;
         }
+      }
+
+      #timelinejs-aaslp-timeline-page-2 {
+        height: 38vw !important;
       }
 
       // Map (Locations).
@@ -619,6 +623,14 @@ main > .container {
     #block-aaslp-lib-unb-ca-page-title .page-title {
       text-align: left !important;
     }
+  }
+}
+
+// Fullscreen timeline.
+main.timeline-full {
+  #main-content + div.container {
+    max-width: 100%;
+    padding: 1vw;
   }
 }
 

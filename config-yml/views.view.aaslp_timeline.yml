@@ -569,14 +569,14 @@ display:
         options:
           timeline_config:
             width: 100%
-            height: 30em
+            height: 24vw
             hash_bookmark: false
             start_at_end: false
             scale_factor: !!float 2
             language: ''
             timenav_position: bottom
-            timenav_height: '300'
-            timenav_height_percentage: ''
+            timenav_height: ''
+            timenav_height_percentage: '70'
             timenav_mobile_height_percentage: ''
             timenav_height_min: '300'
           additional_config:
@@ -611,8 +611,7 @@ display:
           skip_access: false
           preserve_facet_query_args: false
       relationships: {  }
-      header: {  }
-      footer:
+      header:
         area_text_custom:
           id: area_text_custom
           table: views
@@ -622,8 +621,9 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: ''
+          content: '<a href="/timeline">Collapse <i class="fa fa-compress-alt"></i></a>'
           tokenize: false
+      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -646,9 +646,41 @@ display:
         type: none
       defaults:
         cache: false
+        header: false
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: '<a href="/timeline-full">Fullscreen <i class="fa fa-expand-alt"></i></a>'
+          tokenize: false
       exposed_block: true
       display_extenders: {  }
       path: timeline
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_document_image'
+        - 'config:field.storage.node.field_timeline_event'
+        - 'config:search_api.index.aaslp_lib_unb_ca'
+  page_2:
+    id: page_2
+    display_title: 'Page 2'
+    display_plugin: page
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: timeline-full
     cache_metadata:
       max-age: -1
       contexts:
