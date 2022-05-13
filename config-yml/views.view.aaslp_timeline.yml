@@ -621,7 +621,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<a href="/timeline">Collapse <i class="fa fa-compress-alt"></i></a>'
+          content: '<a href="/timeline">Back to page display <i class="fa fa-compress-alt"></i></a>'
           tokenize: false
       footer: {  }
       display_extenders: {  }
@@ -657,7 +657,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<a href="/timeline-full">Fullscreen <i class="fa fa-expand-alt"></i></a>'
+          content: '<a href="/timeline-full">View in full window <i class="fa fa-expand-alt"></i></a>'
           tokenize: false
       exposed_block: true
       display_extenders: {  }

@@ -482,6 +482,28 @@ main > .container {
 
       // Timeline.
       [id^="timelinejs-aaslp-timeline-page"] {
+        // Base font size.
+        .tl-timeline {
+          font-size: 22px;
+        }
+        // Time marker.
+        .tl-timemarker .tl-timemarker-content-container {
+          background-color: #f2f2f2;
+
+          .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
+            color: #222;
+          }
+        }
+        // Time axis.
+        .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major .tl-timeaxis-tick {
+          font-size: 14px;
+          color: #aa0404;
+        }
+
+        .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor .tl-timeaxis-tick {
+          font-size: 12px;
+          color: #666;
+        }
         // Hide timeline icon in timemarker content.
         .tl-timemarker-content .tl-headline sup {
           display: none;
