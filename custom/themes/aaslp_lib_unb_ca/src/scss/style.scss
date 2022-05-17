@@ -486,6 +486,26 @@ main > .container {
         .tl-timeline {
           font-size: 22px;
         }
+        // Full background image links.
+        .tl-full-image-background a {
+          color: white;
+
+          &:active,
+          &:focus,
+          &:focus-within,
+          &:target,
+          &:hover {
+            color: $unb-25gray;
+          }
+        }
+        // Hide default year display (full date included instead).
+        .tl-text-content-container .tl-headline-date {
+          display: none;
+        }
+        // Headline.
+        .tl-text-content-container > .tl-headline {
+          line-height: 2rem;
+        }
         // Time marker.
         .tl-timemarker .tl-timemarker-content-container {
           background-color: #f2f2f2;
@@ -530,6 +550,7 @@ main > .container {
         }
       }
 
+      // Maximized timeline only.
       #timelinejs-aaslp-timeline-page-2 {
         height: 38vw !important;
       }
