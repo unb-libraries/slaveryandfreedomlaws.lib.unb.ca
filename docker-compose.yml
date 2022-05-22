@@ -9,8 +9,6 @@ services:
       - "3306"
     networks:
       - aaslp.lib.unb.ca
-    volumes:
-      - mysql-data:/var/lib/mysql
   drupal-solr-lib-unb-ca:
     image: ghcr.io/unb-libraries/solr-drupal:8.x-4.x
     restart: unless-stopped
@@ -23,8 +21,6 @@ services:
     entrypoint:
       - docker-entrypoint-multiple.sh
       - aaslp.lib.unb.ca:/solr-conf
-    volumes:
-      - solr-data:/opt/solr/server/solr/mycores
   drupal-redis-lib-unb-ca:
     image: redis:5-alpine
     restart: unless-stopped
@@ -50,7 +46,7 @@ services:
     env_file:
       - ./env/drupal.env
     volumes:
-      - drupal-data:/app/html/sites/default
+      - /app/html/sites/default
       - ./config-yml:/app/configuration
       - ./custom/modules:/app/html/modules/custom
       - ./custom/themes:/app/html/themes/custom
@@ -65,16 +61,6 @@ services:
       - "4111:8025"
     networks:
       - aaslp.lib.unb.ca
-  drupal.mysql.lib.unb.ca:
-    volumes:
-      - mysql-data:/var/lib/mysql
-  drupal.solr.lib.unb.ca:
-    volumes:
-      - solr-data:/opt/solr/server/solr/mycores
 networks:
   aaslp.lib.unb.ca:
     name: aaslp.lib.unb.ca
-volumes:
-  drupal-data:
-  mysql-data:
-  solr-data:
