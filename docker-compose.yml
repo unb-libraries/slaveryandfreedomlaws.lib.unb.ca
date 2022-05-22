@@ -11,7 +11,6 @@ services:
       - aaslp.lib.unb.ca
     volumes:
       - mysql-data:/var/lib/mysql
-      - mysql-data:/var/lib/mysql
   drupal-solr-lib-unb-ca:
     image: ghcr.io/unb-libraries/solr-drupal:8.x-4.x
     restart: unless-stopped
@@ -25,7 +24,6 @@ services:
       - docker-entrypoint-multiple.sh
       - aaslp.lib.unb.ca:/solr-conf
     volumes:
-      - solr-data:/opt/solr/server/solr/mycores
       - solr-data:/opt/solr/server/solr/mycores
   drupal-redis-lib-unb-ca:
     image: redis:5-alpine
