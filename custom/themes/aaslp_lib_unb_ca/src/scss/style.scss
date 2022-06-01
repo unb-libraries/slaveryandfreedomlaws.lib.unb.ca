@@ -484,7 +484,7 @@ main > .container {
       [id^="timelinejs-aaslp-timeline-page"] {
         // Base font size.
         .tl-timeline {
-          font-size: 22px;
+          font-size: 20px;
         }
         // Full background image links.
         .tl-full-image-background a {
@@ -534,6 +534,7 @@ main > .container {
         }
         // Time group labels.
         .tl-timegroup-message {
+          font-size: 20px;
           color: $unb-darkgray;
           text-shadow: none;
         }
