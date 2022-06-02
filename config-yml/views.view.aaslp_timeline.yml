@@ -642,7 +642,7 @@ display:
         options:
           timeline_config:
             width: 100%
-            height: 24vw
+            height: 42em
             hash_bookmark: false
             start_at_end: false
             scale_factor: !!float 2
