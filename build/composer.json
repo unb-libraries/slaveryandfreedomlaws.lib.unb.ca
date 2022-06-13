@@ -145,7 +145,7 @@
     "drupal/entity_reference_revisions": "1.9",
     "drupal/facets": "2.0.2",
     "drupal/fontawesome": "2.23",
-    "drupal/geocoder": "3.26",
+    "drupal/geocoder": "3.28",
     "drupal/geocoder_ajax_prepopulate": "2.0",
     "drupal/geofield": "1.39",
     "drupal/geofield_map": "2.75",
