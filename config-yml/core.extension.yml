@@ -26,6 +26,7 @@ module:
   easy_breadcrumb: 0
   editor: 0
   entity_reference_revisions: 0
+  externalauth: 10
   facets: 0
   facets_range_widget: 0
   field: 0
@@ -60,11 +61,14 @@ module:
   link: 0
   menu_link_content: 0
   menu_ui: 0
+  minimal: 1000
+  mysql: 0
   node: 0
   node_edit_protection: 0
   page_cache: 0
   path: 0
   path_alias: 0
+  pathauto: 1
   redis: 0
   saml_features: 0
   samlauth: 0
@@ -83,9 +87,6 @@ module:
   views: 0
   views_timelinejs: 0
   views_ui: 0
-  pathauto: 1
-  externalauth: 10
-  minimal: 1000
 theme:
   stark: 0
   stable: 0
