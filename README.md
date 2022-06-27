@@ -1,3 +1,4 @@
+![aaslp.lib.unb.ca screenshot]( "aaslp.lib.unb.ca screenshot")
 # [aaslp.lib.unb.ca](https://aaslp.lib.unb.ca/) : Lean Instance Repository
 [![Build Status](https://github.com/unb-libraries/aaslp.lib.unb.ca/actions/workflows/deployment-workflow.yaml/badge.svg?branch=prod)](https://github.com/unb-libraries/aaslp.lib.unb.ca/actions/workflows/deployment-workflow.yaml)
 [![GitHub license](https://img.shields.io/github/license/unb-libraries/aaslp.lib.unb.ca)](https://github.com/unb-libraries/aaslp.lib.unb.ca/blob/prod/LICENSE)
