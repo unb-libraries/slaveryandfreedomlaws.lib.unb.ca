@@ -165,7 +165,7 @@
     "drupal/search_api_solr": "4.2.7",
     "drupal/token": "1.10",
     "drupal/twig_tweak": "2.9",
-    "drupal/views_timelinejs": "3.2",
+    "drupal/views_timelinejs": "4.0.0",
     "furf/jquery-ui-touch-punch": "dev-master",
     "geocoder-php/nominatim-provider": "5.5.0",
     "harvesthq/chosen": "^1.8",
