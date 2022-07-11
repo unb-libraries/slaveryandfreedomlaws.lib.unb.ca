@@ -143,7 +143,7 @@
     "drupal/core": "9.4.2",
     "drupal/easy_breadcrumb": "2.0.3",
     "drupal/entity_reference_revisions": "1.9",
-    "drupal/facets": "2.0.2",
+    "drupal/facets": "2.0.4",
     "drupal/fontawesome": "2.23",
     "drupal/geocoder": "3.29",
     "drupal/geocoder_ajax_prepopulate": "2.0",
