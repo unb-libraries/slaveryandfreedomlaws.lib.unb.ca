@@ -58,9 +58,6 @@
       "npm-asset"
     ],
     "patches": {
-      "drupal/facets": {
-        "Fix Views AJAX Facets D9": "https://www.drupal.org/files/issues/2018-09-25/ajax_facet_block_views_context-2986981-13.patch"
-      },
       "drupal/samlauth": {
         "Ignore role restrictions": "/build/patches/samlauth_rolematch.patch"
       }
