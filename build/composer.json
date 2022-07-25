@@ -152,7 +152,7 @@
     "drupal/jquery_ui": "1.4",
     "drupal/jquery_ui_slider": "1.1",
     "drupal/jquery_ui_touch_punch": "1.0.1",
-    "drupal/leaflet": "2.2.3",
+    "drupal/leaflet": "2.2.4",
     "drupal/leaflet_more_maps": "2.1.2",
     "drupal/node_edit_protection": "1.0",
     "drupal/pathauto": "1.10",
