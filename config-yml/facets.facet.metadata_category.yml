@@ -11,6 +11,8 @@ id: metadata_category
 name: Category
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: facet_category
 facet_source_id: 'search_api:views_page__aaslp_metadata_search__page_1'
 field_identifier: search_category
