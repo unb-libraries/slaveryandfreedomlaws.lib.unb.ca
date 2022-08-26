@@ -377,7 +377,6 @@ display:
           height_unit: px
           hide_empty_map: true
           disable_wheel: false
-          fullscreen_control: true
           gesture_handling: false
           reset_map:
             control: false
@@ -418,7 +417,7 @@ display:
           leaflet_markercluster:
             control: false
             options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds":false}'
-            include_path: 0
+            include_path: false
           path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
           geocoder:
             control: false
@@ -434,6 +433,7 @@ display:
               zoom: 16
               popup: false
               options: ''
+          fullscreen_control: true
       row:
         type: fields
       query:

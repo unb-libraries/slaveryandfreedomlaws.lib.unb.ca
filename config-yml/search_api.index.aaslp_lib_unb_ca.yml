@@ -139,7 +139,7 @@ field_settings:
     boost: !!float 2
     configuration:
       roles:
-        anonymous: anonymous
+        - anonymous
       view_mode:
         'entity:node':
           legal_article: search_index_metadata
@@ -160,7 +160,7 @@ field_settings:
     boost: !!float 2
     configuration:
       roles:
-        anonymous: anonymous
+        - anonymous
       view_mode:
         'entity:node':
           legal_article: search_index_themes
