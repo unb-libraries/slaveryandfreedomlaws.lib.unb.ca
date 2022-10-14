@@ -58,9 +58,6 @@
       "npm-asset"
     ],
     "patches": {
-      "drupal/samlauth": {
-        "Ignore role restrictions": "/build/patches/samlauth_rolematch.patch"
-      }
     }
   },
   "license": "MIT",
