@@ -67,6 +67,17 @@ services:
       - "4111:8025"
     networks:
       - aaslp.lib.unb.ca
+  cypress:
+    image: ghcr.io/unb-libraries/cypress-drupal:10.x-9.x-1.x
+    container_name: cypress.aaslp.lib.unb.ca
+    depends_on:
+      - aaslp.lib.unb.ca
+    environment:
+      - BASE_URL=http://aaslp.lib.unb.ca
+    volumes:
+      - ./tests/cypress/default/e2e:/cypress/e2e
+    networks:
+      - aaslp.lib.unb.ca
 networks:
   aaslp.lib.unb.ca:
     name: aaslp.lib.unb.ca
