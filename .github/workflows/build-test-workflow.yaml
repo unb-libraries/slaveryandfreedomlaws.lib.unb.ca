@@ -1,6 +1,9 @@
 name: Drupal 9 Build and Test with Cypress Workflow
 
 on:
+  push:
+    branches:
+      - cypress
   workflow_dispatch:
     inputs:
       secrets:
