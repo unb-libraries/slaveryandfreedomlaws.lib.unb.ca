@@ -5,16 +5,6 @@ on:
     branches:
       - cypress
   workflow_dispatch:
-    inputs:
-      secrets:
-        DOCKER_CLOUD_ACCESS_TOKEN:
-          required: true
-        DOCKER_CLOUD_USER_NAME:
-          required: true
-        GH_CONTAINER_REGISTRY_TOKEN:
-          required: true
-        GH_CONTAINER_REGISTRY_USER:
-          required: true
 
 jobs:
   set-deployment-image-tag:
