@@ -135,4 +135,4 @@ jobs:
         run: vendor/bin/dockworker local:start --no-tail-logs --only-start --force-recreate --only-primary
       -
         name: Start cypress and run all tests
-        run: vendor/bin/dockworker cypress
+        run: vendor/bin/dockworker tests:all
