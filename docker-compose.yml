@@ -56,7 +56,7 @@ services:
       - ./config-yml:/app/configuration
       - ./custom/modules:/app/html/modules/custom
       - ./custom/themes:/app/html/themes/custom
-      - ./tests:/app/tests
+      - ./tests:/app/html/tests
   mailhog:
     image: mailhog/mailhog
     restart: unless-stopped
@@ -76,6 +76,7 @@ services:
       - BASE_URL=http://aaslp.lib.unb.ca
     volumes:
       - ./tests/cypress/default/e2e:/cypress/e2e
+      - ./tests/cypress/default/fixtures:/cypress/fixtures
     networks:
       - aaslp.lib.unb.ca
 networks:
