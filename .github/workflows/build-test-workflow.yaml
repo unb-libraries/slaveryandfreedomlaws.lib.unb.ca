@@ -103,7 +103,7 @@ jobs:
           path: ./docker-compose.yml
 
   start-install-test-application:
-    name: Start-Up Application
+    name: Start-Up & Test Application
     runs-on: ubuntu-latest
     needs: [build-image, update-docker-compose]
     steps:
