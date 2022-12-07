@@ -56,7 +56,7 @@ services:
       - ./config-yml:/app/configuration
       - ./custom/modules:/app/html/modules/custom
       - ./custom/themes:/app/html/themes/custom
-      - ./tests:/app/tests
+      - ./tests:/app/html/tests
   mailhog:
     image: mailhog/mailhog
     restart: unless-stopped
@@ -65,6 +65,18 @@ services:
       - "8025"
     ports:
       - "4111:8025"
+    networks:
+      - aaslp.lib.unb.ca
+  cypress:
+    image: ghcr.io/unb-libraries/cypress-drupal:10.x-9.x-1.x
+    container_name: cypress.aaslp.lib.unb.ca
+    depends_on:
+      - aaslp.lib.unb.ca
+    environment:
+      - BASE_URL=http://aaslp.lib.unb.ca
+    volumes:
+      - ./tests/cypress/default/e2e:/cypress/e2e
+      - ./tests/cypress/default/fixtures:/cypress/fixtures
     networks:
       - aaslp.lib.unb.ca
 networks:

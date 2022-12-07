@@ -1,0 +1,18 @@
+[
+  {
+    "name": "user",
+    "pass": "1234",
+    "email": "user@aaslp.lib.unb.ca",
+    "roles": [
+      "authenticated"
+    ]
+  },
+  {
+    "name": "editor",
+    "pass": "2345",
+    "email": "editor@aaslp.lib.unb.ca",
+    "roles": [
+      "aaslp_editor"
+    ]
+  }
+]

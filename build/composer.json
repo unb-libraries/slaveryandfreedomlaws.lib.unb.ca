@@ -168,7 +168,8 @@
     "unb-libraries/saml_features": "dev-9.x-1.x"
   },
   "require-dev": {
-    "unb-libraries/drupal-development-libraries": "^9"
+    "unb-libraries/drupal-development-libraries": "^9",
+    "drupal/migrate_plus": "^6.0"
   },
   "scripts": {
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
