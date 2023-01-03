@@ -5,3 +5,7 @@ composer.lock
 tests/features/bootstrap
 build/scripts/local
 config-yml/.htaccess
+
+# Node
+node_modules
+package-lock.json

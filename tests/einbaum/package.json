@@ -1,0 +1,8 @@
+{
+  "name": "einbaum.aaslp.lib.unb.ca",
+  "version": "0.9",
+  "author": "UNB Libraries Systems <libsystems@unb.ca>",
+  "dependencies": {
+    "@unb-libraries/einbaum": "github:unb-libraries/einbaum"
+  }
+}
