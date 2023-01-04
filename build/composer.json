@@ -133,7 +133,7 @@
     "drupal/admin_toolbar": "3.2.1",
     "drupal/bootstrap4": "2.1.15",
     "drupal/chosen": "3.0.3",
-    "drupal/core": "9.4.8",
+    "drupal/core": "9.5.1",
     "drupal/easy_breadcrumb": "2.0.4",
     "drupal/entity_reference_revisions": "1.10",
     "drupal/facets": "2.0.5",
@@ -168,8 +168,8 @@
     "unb-libraries/saml_features": "dev-9.x-1.x"
   },
   "require-dev": {
-    "unb-libraries/drupal-development-libraries": "^9",
-    "drupal/migrate_plus": "^6.0"
+    "drupal/migrate_plus": "^6.0",
+    "unb-libraries/drupal-development-libraries": "^9"
   },
   "scripts": {
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
