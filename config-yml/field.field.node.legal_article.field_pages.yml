@@ -1,0 +1,19 @@
+uuid: f4436ecd-f877-40d7-8a8e-be3a9449d1eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pages
+    - node.type.legal_article
+id: node.legal_article.field_pages
+field_name: field_pages
+entity_type: node
+bundle: legal_article
+label: Pages
+description: 'The pages in the document containing the referenced legal article.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

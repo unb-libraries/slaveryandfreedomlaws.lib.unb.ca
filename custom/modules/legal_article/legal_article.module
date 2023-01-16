@@ -102,6 +102,7 @@ function legal_article_form_alter(&$form, $form_state, $form_id) {
       $form['field_citation']['#states'] =
       $form['field_crimes']['#states'] =
       $form['field_full_title']['#states'] =
+      $form['field_pages']['#states'] =
       $form['field_location']['#states'] =
       $form['field_location_address']['#states'] =
       $form['field_location_coordinates']['#states'] =
