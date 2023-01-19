@@ -41,7 +41,7 @@ function aaslp_search_preprocess_facets_item_list(&$variables) {
       $tid = $item['#title']['#raw_value'];
       $term = Term::load($tid);
       // Get ID for parent term.
-      $parent = $term->parent->target_id;
+      $parent = $term->parent->target_id ?? NULL;
 
       // If the term has a parent, add class child-location to wrapper.
       if ($parent == '0') {
