@@ -1,0 +1,17 @@
+uuid: 16b8468f-a49e-4d9b-9c07-c8b0e622263f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Saved Coordinates'
+type: saved_coordinates
+description: 'To create or reuse a named set of coordinates.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

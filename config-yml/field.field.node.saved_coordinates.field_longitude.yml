@@ -1,0 +1,23 @@
+uuid: c89a82df-9edf-45fb-8734-f9c7592cc5be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_longitude
+    - node.type.saved_coordinates
+id: node.saved_coordinates.field_longitude
+field_name: field_longitude
+entity_type: node
+bundle: saved_coordinates
+label: Longitude
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

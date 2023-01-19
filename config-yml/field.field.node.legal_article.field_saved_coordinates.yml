@@ -1,0 +1,29 @@
+uuid: 01c62c90-a956-4af7-8c87-2344c9b0ddb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_saved_coordinates
+    - node.type.legal_article
+    - node.type.saved_coordinates
+id: node.legal_article.field_saved_coordinates
+field_name: field_saved_coordinates
+entity_type: node
+bundle: legal_article
+label: 'Saved Coordinates'
+description: '<i>For locations map only</i>. To create or reuse a named set of coordinates. Values here will override location address coordinates.<br><br>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      saved_coordinates: saved_coordinates
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

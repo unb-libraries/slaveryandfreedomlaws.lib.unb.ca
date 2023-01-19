@@ -1,0 +1,22 @@
+uuid: 8ad0e214-c70a-4e33-8bb4-37526b5a57ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.saved_coordinates
+id: node.saved_coordinates.promote
+field_name: promote
+entity_type: node
+bundle: saved_coordinates
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

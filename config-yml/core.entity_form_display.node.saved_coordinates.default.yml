@@ -1,0 +1,43 @@
+uuid: c56d2d98-dd5e-40ed-8365-d1981b492321
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.saved_coordinates.field_latitude
+    - field.field.node.saved_coordinates.field_longitude
+    - node.type.saved_coordinates
+id: node.saved_coordinates.default
+targetEntityType: node
+bundle: saved_coordinates
+mode: default
+content:
+  field_latitude:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_longitude:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

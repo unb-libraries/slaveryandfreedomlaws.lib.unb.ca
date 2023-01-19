@@ -1,0 +1,23 @@
+uuid: 98122d7a-ec6a-4dfa-b818-224c935a9f70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_latitude
+    - node.type.saved_coordinates
+id: node.saved_coordinates.field_latitude
+field_name: field_latitude
+entity_type: node
+bundle: saved_coordinates
+label: Latitude
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

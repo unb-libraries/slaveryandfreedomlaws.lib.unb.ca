@@ -1,0 +1,11 @@
+uuid: 09c68892-a5e8-4122-8bae-7a63bd70e313
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.saved_coordinates
+id: node.saved_coordinates
+target_entity_type_id: node
+target_bundle: saved_coordinates
+default_langcode: site_default
+language_alterable: false

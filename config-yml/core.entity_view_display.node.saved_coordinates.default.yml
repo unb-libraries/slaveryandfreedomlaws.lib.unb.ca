@@ -1,0 +1,45 @@
+uuid: c7e2bc6b-25e4-4f16-9144-5d4ad709406e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.saved_coordinates.field_latitude
+    - field.field.node.saved_coordinates.field_longitude
+    - node.type.saved_coordinates
+  module:
+    - user
+id: node.saved_coordinates.default
+targetEntityType: node
+bundle: saved_coordinates
+mode: default
+content:
+  field_latitude:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_longitude:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

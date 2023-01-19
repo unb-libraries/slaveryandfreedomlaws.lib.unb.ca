@@ -1,0 +1,26 @@
+uuid: 0a5a1c05-e3bc-423b-bdee-7f2f0d779d31
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.saved_coordinates.field_latitude
+    - field.field.node.saved_coordinates.field_longitude
+    - node.type.saved_coordinates
+  module:
+    - user
+id: node.saved_coordinates.teaser
+targetEntityType: node
+bundle: saved_coordinates
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_latitude: true
+  field_longitude: true
+  langcode: true
+  search_api_excerpt: true

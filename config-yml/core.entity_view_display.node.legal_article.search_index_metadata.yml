@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.legal_article.field_parent_location
     - field.field.node.legal_article.field_punishments
     - field.field.node.legal_article.field_revision_switch
+    - field.field.node.legal_article.field_saved_coordinates
     - field.field.node.legal_article.field_source
     - field.field.node.legal_article.field_timeline_event
     - node.type.legal_article
@@ -88,6 +89,7 @@ hidden:
   field_parent_location: true
   field_punishments: true
   field_revision_switch: true
+  field_saved_coordinates: true
   field_timeline_event: true
   langcode: true
   links: true

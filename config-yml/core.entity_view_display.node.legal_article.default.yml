@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.legal_article.field_parent_location
     - field.field.node.legal_article.field_punishments
     - field.field.node.legal_article.field_revision_switch
+    - field.field.node.legal_article.field_saved_coordinates
     - field.field.node.legal_article.field_source
     - field.field.node.legal_article.field_timeline_event
     - image.style.large_centre
@@ -121,6 +122,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 9
+    region: content
+  field_saved_coordinates:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_source:
     type: entity_reference_label
