@@ -37,6 +37,21 @@ function legal_article_node_presave($entity) {
       }
     }
 
+    // Override coordinates with saved if present.
+    $latitude = !empty($entity->field_saved_coordinates->entity) ? 
+      $entity->field_saved_coordinates->entity->field_latitude->getValue()[0]['value'] : NULL;
+    $longitude = !empty($entity->field_saved_coordinates->entity) ?   
+      $entity->field_saved_coordinates->entity->field_longitude->getValue()[0]['value'] : NULL;
+ 
+    if ($latitude and $longitude) {
+      $entity->field_location_coordinates = [
+        'value' => "POINT ($longitude $latitude)",
+        'geo_type' => 'Point',
+        'lon' => $longitude,
+        'lat' => $latitude,
+      ];
+    }
+
     // Purge all extra fields if timeline event.
     if (!empty($entity->field_timeline_event->getValue()[0]['value']) and
       $entity->field_timeline_event->getValue()[0]['value'] == 1) {
