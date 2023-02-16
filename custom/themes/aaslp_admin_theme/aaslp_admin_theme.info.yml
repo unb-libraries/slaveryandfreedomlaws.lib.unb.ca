@@ -1,13 +1,13 @@
 core: 8.x
 core_version_requirement: ^8 || ^9
 type: theme
-name: 'aaslp_admin'
+name: 'aaslp_admin_theme'
 package: 'AASLP'
 description: 'Admin theme for aaslp.lib.unb.ca'
 base theme: seven
 
 libraries:
-  - aaslp_admin/global-styling
+  - aaslp_admin_theme/global-styling
 
 regions:
   header: 'Header'

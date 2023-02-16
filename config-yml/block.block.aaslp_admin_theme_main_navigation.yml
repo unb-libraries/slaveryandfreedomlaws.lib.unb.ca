@@ -1,0 +1,27 @@
+uuid: ae624660-2565-47b8-8710-a8471f047305
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - aaslp_admin_theme
+_core:
+  default_config_hash: 35BFwuaW_wb2mnnYk1tNg7T9Ro9RaewrCqOTtyQ7VJE
+id: aaslp_admin_theme_main_navigation
+theme: aaslp_admin_theme
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

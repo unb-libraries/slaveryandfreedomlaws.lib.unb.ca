@@ -1,0 +1,22 @@
+uuid: b53d6ba3-bf0d-419b-91e9-a59737e31c4a
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - aaslp_admin_theme
+_core:
+  default_config_hash: B4RbOEFqUHi5Wx38pRiZzYXo1hhKzCpF50HCAvpOYf4
+id: aaslp_admin_theme_breadcrumbs
+theme: aaslp_admin_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
