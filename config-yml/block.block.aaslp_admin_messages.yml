@@ -1,0 +1,22 @@
+uuid: 30ed45f9-74d7-4a64-8ee7-69b88bed43fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aaslp_admin
+_core:
+  default_config_hash: tZtWC6EKIYALVtpV4mPz79GsLZD6IFWb7Wk1B7Rd8Go
+id: aaslp_admin_messages
+theme: aaslp_admin
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

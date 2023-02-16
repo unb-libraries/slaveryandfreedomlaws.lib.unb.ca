@@ -1,0 +1,22 @@
+uuid: 48a1df4b-6550-4599-85d8-4b7bde55df5f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - aaslp_admin
+_core:
+  default_config_hash: IzSbK3zk-Gon9y7WLEWop15Wn__7LeKzBJIXqajlb00
+id: aaslp_admin_local_tasks
+theme: aaslp_admin
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

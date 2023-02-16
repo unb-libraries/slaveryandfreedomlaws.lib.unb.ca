@@ -144,9 +144,16 @@ add_terms('locations', $children, $parent);
 
 // Set up categories.
 $categories = [
-  'Amelioration',
-  'Comprehensive Law',
+  'Ameliorative',
+  'Consolidated',
   'Manumission',
+  'Punitive Laws',
+  'Hiring',
+  'Property in Persons',
+  'Protective Law',
+  'Registry of Enslaved People'
+  'Reward'
+  'Slave Trade'
 ];
 
 add_terms('law_categories', $categories);

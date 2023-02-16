@@ -1,0 +1,20 @@
+uuid: 08854350-a3fc-4c8e-a3ee-cc1b839ffd05
+langcode: en
+status: true
+dependencies:
+  theme:
+    - aaslp_admin
+_core:
+  default_config_hash: rKurRLaH08AjwE5wsNzeL2fa77rF5pXKSR9WopsFYyI
+id: aaslp_admin_local_actions
+theme: aaslp_admin
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

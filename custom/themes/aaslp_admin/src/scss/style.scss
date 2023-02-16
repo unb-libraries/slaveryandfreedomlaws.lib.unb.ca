@@ -1,0 +1,5 @@
+// Display categories in law form as two columns.
+#edit-field-category {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
