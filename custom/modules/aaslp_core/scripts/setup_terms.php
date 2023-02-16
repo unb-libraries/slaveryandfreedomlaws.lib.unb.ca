@@ -151,7 +151,7 @@ $categories = [
   'Hiring',
   'Property in Persons',
   'Protective Law',
-  'Registry of Enslaved People'
+  'Registry of Enslaved People',
   'Reward',
   'Slave Trade',
 ];
