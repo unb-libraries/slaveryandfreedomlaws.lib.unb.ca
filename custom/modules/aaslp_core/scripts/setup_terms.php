@@ -152,8 +152,8 @@ $categories = [
   'Property in Persons',
   'Protective Law',
   'Registry of Enslaved People'
-  'Reward'
-  'Slave Trade'
+  'Reward',
+  'Slave Trade',
 ];
 
 add_terms('law_categories', $categories);
