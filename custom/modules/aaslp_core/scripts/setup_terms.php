@@ -136,8 +136,13 @@ $parent = add_terms('locations', [$parent_locs[7]])[0];
 // Create children.
 $children = [
   'East and West Florida (Spain 1783-1823, U.S. after 1823)',
+  'Georgia',
   'Indian Reserve (U.S. after 1783)',
   'Quebec southwest of the Great Lakes (U.S. after 1783)',
+  'Maryland',
+  'North Carolina',
+  'South Carolina',
+  'Virginia',
 ];
 
 add_terms('locations', $children, $parent);
