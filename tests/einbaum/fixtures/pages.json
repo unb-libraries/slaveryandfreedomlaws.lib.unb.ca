@@ -1,0 +1,8 @@
+{
+  "lawAddForm": {
+    "path": "/node/add/legal_article",
+    "title": "Create Legal Article",
+    "public": false,
+    "role": "aaslp_editor"
+  }
+}
