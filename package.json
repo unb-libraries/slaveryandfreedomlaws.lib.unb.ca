@@ -3,6 +3,7 @@
   "version": "0.9",
   "author": "UNB Libraries Systems <libsystems@unb.ca>",
   "dependencies": {
-    "@unb-libraries/einbaum": "github:unb-libraries/einbaum"
+    "@unb-libraries/einbaum": "github:unb-libraries/einbaum",
+    "@unb-libraries/cypress-drupal": "github:unb-libraries/cypress-drupal"
   }
 }
