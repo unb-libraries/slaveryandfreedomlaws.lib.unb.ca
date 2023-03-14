@@ -1,0 +1,34 @@
+id: laws
+label: Laws
+migration_tags:
+  - e2e
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - tests/einbaum/fixtures/laws.json
+  fields:
+    -
+      name: id
+      label: ID
+      selector: /id
+    -
+      name: title
+      label: Title
+      selector: /title
+  ids:
+    id:
+      type: integer
+  constants:
+    type: "legal_article"
+process:
+  _id:
+    plugin: skip_on_value
+    value: -1
+    method: row
+    source: id
+  type: constants/type
+  title: title
+destination:
+  plugin: entity:node
