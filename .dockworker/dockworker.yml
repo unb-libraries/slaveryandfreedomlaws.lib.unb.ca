@@ -1,7 +1,7 @@
 dockworker:
   version: '5'
   application:
-    name: aaslp.lib.unb.ca
+    name: slaveryandfreedomlaws.lib.unb.ca
     uuid: 3111
     finish_marker: '99_zz_notify_user_URI'
     project_prefix: AASLP
@@ -17,12 +17,12 @@ dockworker:
   drupal:
     major: 9
   github:
-    repo: aaslp.lib.unb.ca
+    repo: slaveryandfreedomlaws.lib.unb.ca
     owner: unb-libraries
   image:
     push_branches:
       - dev
       - prod
-    name: ghcr.io/unb-libraries/aaslp.lib.unb.ca
+    name: ghcr.io/unb-libraries/slaveryandfreedomlaws.lib.unb.ca
     date_tag_image: true
     repository: ghcr

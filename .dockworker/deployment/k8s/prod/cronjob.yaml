@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: cron-aaslp-lib-unb-ca
+  name: cron-slaveryandfreedomlaws-lib-unb-ca
   namespace: prod
   labels:
     app: drupal
@@ -12,7 +12,7 @@ spec:
   concurrencyPolicy: Forbid
   jobTemplate:
     metadata:
-      name: cron-aaslp-lib-unb-ca
+      name: cron-slaveryandfreedomlaws-lib-unb-ca
       labels:
         app: drupal
         tier: cron
@@ -23,7 +23,7 @@ spec:
             deployenv: prod
           containers:
             -
-              name: cron-aaslp-lib-unb-ca
+              name: cron-slaveryandfreedomlaws-lib-unb-ca
               command:
                 - /scripts/drupalCronEntry.sh
               env:
@@ -51,4 +51,4 @@ spec:
             -
               name: drupal-persistent-storage
               persistentVolumeClaim:
-                claimName: aaslp-lib-unb-ca
+                claimName: slaveryandfreedomlaws-lib-unb-ca

@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: cron-testing-aaslp-lib-unb-ca
+  name: cron-testing-slaveryandfreedomlaws-lib-unb-ca
   namespace: testing
   labels:
     app: cypress
@@ -12,7 +12,7 @@ spec:
   concurrencyPolicy: Forbid
   jobTemplate:
     metadata:
-      name: cron-testing-aaslp-lib-unb-ca
+      name: cron-testing-slaveryandfreedomlaws-lib-unb-ca
       labels:
         app: cypress
         tier: cron
@@ -23,19 +23,19 @@ spec:
           nodeSelector:
             environment: testing
           containers:
-            - name: cron-testing-aaslp-lib-unb-ca
+            - name: cron-testing-slaveryandfreedomlaws-lib-unb-ca
               env:
                 - name: CYPRESS_REPORTER_VERBOSITY
                   value: "20"
                 - name: CYPRESS_SPEC_FILE
                   valueFrom:
                     secretKeyRef:
-                      name: aaslp-lib-unb-ca-cypress
+                      name: slaveryandfreedomlaws-lib-unb-ca-cypress
                       key: file
                 - name: CYPRESS_SPEC_FILE_NAME
                   valueFrom:
                     secretKeyRef:
-                      name: aaslp-lib-unb-ca-cypress
+                      name: slaveryandfreedomlaws-lib-unb-ca-cypress
                       key: file_name
                 - name: DEPLOY_ENV
                   value: testing

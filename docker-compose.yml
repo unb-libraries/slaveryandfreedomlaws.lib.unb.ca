@@ -8,7 +8,7 @@ services:
     expose:
       - "3306"
     networks:
-      - aaslp.lib.unb.ca
+      - slaveryandfreedomlaws.lib.unb.ca
     volumes:
       - mysql-data:/var/lib/mysql
   drupal-solr-lib-unb-ca:
@@ -19,10 +19,10 @@ services:
     expose:
       - "8983"
     networks:
-      - aaslp.lib.unb.ca
+      - slaveryandfreedomlaws.lib.unb.ca
     entrypoint:
       - docker-entrypoint-multiple.sh
-      - aaslp.lib.unb.ca:/solr-conf
+      - slaveryandfreedomlaws.lib.unb.ca:/solr-conf
     volumes:
       - solr-data:/opt/solr/server/solr/mycores
   drupal-redis-lib-unb-ca:
@@ -31,14 +31,14 @@ services:
     expose:
       - "6379"
     networks:
-      - aaslp.lib.unb.ca
+      - slaveryandfreedomlaws.lib.unb.ca
     env_file:
       - ./env/redis.env
-  aaslp.lib.unb.ca:
+  slaveryandfreedomlaws.lib.unb.ca:
     build:
       context: .
     restart: unless-stopped
-    container_name: aaslp.lib.unb.ca
+    container_name: slaveryandfreedomlaws.lib.unb.ca
     depends_on:
       - drupal-mysql-lib-unb-ca
       - drupal-solr-lib-unb-ca
@@ -46,7 +46,7 @@ services:
     expose:
       - "80"
     networks:
-      - aaslp.lib.unb.ca
+      - slaveryandfreedomlaws.lib.unb.ca
     ports:
       - "3111:80"
     env_file:
@@ -66,22 +66,22 @@ services:
     ports:
       - "4111:8025"
     networks:
-      - aaslp.lib.unb.ca
+      - slaveryandfreedomlaws.lib.unb.ca
   cypress:
     image: ghcr.io/unb-libraries/einbaum/drupal:12.x-1.x
-    container_name: einbaum.aaslp.lib.unb.ca
+    container_name: einbaum.slaveryandfreedomlaws.lib.unb.ca
     depends_on:
-      - aaslp.lib.unb.ca
+      - slaveryandfreedomlaws.lib.unb.ca
     environment:
-      - BASE_URL=http://aaslp.lib.unb.ca
+      - BASE_URL=http://slaveryandfreedomlaws.lib.unb.ca
     volumes:
       - ./tests/einbaum/e2e:/einbaum/e2e
       - ./tests/einbaum/fixtures:/einbaum/fixtures
     networks:
-      - aaslp.lib.unb.ca
+      - slaveryandfreedomlaws.lib.unb.ca
 networks:
-  aaslp.lib.unb.ca:
-    name: aaslp.lib.unb.ca
+  slaveryandfreedomlaws.lib.unb.ca:
+    name: slaveryandfreedomlaws.lib.unb.ca
 volumes:
   drupal-data:
   mysql-data:

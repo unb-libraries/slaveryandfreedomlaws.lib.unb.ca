@@ -25,7 +25,7 @@
   "conflict": {
     "drupal/drupal": "*"
   },
-  "description": "Drupal 8 component of aaslp.lib.unb.ca",
+  "description": "Drupal 8 component of slaveryandfreedomlaws.lib.unb.ca",
   "extra": {
     "enable-patching": true,
     "installer-paths": {
@@ -61,7 +61,7 @@
   },
   "license": "MIT",
   "minimum-stability": "dev",
-  "name": "unb-libraries/aaslp.lib.unb.ca",
+  "name": "unb-libraries/slaveryandfreedomlaws.lib.unb.ca",
   "prefer-stable": true,
   "repositories": [
     {

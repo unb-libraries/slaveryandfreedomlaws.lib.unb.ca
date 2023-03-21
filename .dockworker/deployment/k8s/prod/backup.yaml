@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: hourly-backup-aaslp-lib-unb-ca
+  name: hourly-backup-slaveryandfreedomlaws-lib-unb-ca
   namespace: prod
   labels:
     app: drupal
@@ -12,7 +12,7 @@ spec:
   concurrencyPolicy: Forbid
   jobTemplate:
     metadata:
-      name: hourly-backup-aaslp-lib-unb-ca
+      name: hourly-backup-slaveryandfreedomlaws-lib-unb-ca
       labels:
         app: drupal
         tier: backup
@@ -23,7 +23,7 @@ spec:
             deployenv: dev
           containers:
             -
-              name: hourly-backup-aaslp-lib-unb-ca
+              name: hourly-backup-slaveryandfreedomlaws-lib-unb-ca
               args: ["hourly"]
               env:
                 -
@@ -62,12 +62,12 @@ spec:
             -
               name: backup-persistent-storage
               persistentVolumeClaim:
-                claimName: backup-aaslp-lib-unb-ca
+                claimName: backup-slaveryandfreedomlaws-lib-unb-ca
 ---
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: daily-backup-aaslp-lib-unb-ca
+  name: daily-backup-slaveryandfreedomlaws-lib-unb-ca
   namespace: prod
   labels:
     app: drupal
@@ -78,7 +78,7 @@ spec:
   concurrencyPolicy: Forbid
   jobTemplate:
     metadata:
-      name: daily-backup-aaslp-lib-unb-ca
+      name: daily-backup-slaveryandfreedomlaws-lib-unb-ca
       labels:
         app: drupal
         tier: backup
@@ -89,7 +89,7 @@ spec:
             deployenv: dev
           containers:
             -
-              name: daily-backup-aaslp-lib-unb-ca
+              name: daily-backup-slaveryandfreedomlaws-lib-unb-ca
               args: ["daily"]
               env:
                 -
@@ -131,12 +131,12 @@ spec:
             -
               name: backup-persistent-storage
               persistentVolumeClaim:
-                claimName: backup-aaslp-lib-unb-ca
+                claimName: backup-slaveryandfreedomlaws-lib-unb-ca
 ---
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: weekly-backup-aaslp-lib-unb-ca
+  name: weekly-backup-slaveryandfreedomlaws-lib-unb-ca
   namespace: prod
   labels:
     app: drupal
@@ -147,7 +147,7 @@ spec:
   concurrencyPolicy: Forbid
   jobTemplate:
     metadata:
-      name: weekly-backup-aaslp-lib-unb-ca
+      name: weekly-backup-slaveryandfreedomlaws-lib-unb-ca
       labels:
         app: drupal
         tier: backup
@@ -158,7 +158,7 @@ spec:
             deployenv: dev
           containers:
             -
-              name: weekly-backup-aaslp-lib-unb-ca
+              name: weekly-backup-slaveryandfreedomlaws-lib-unb-ca
               args: ["weekly"]
               env:
                 -
@@ -203,12 +203,12 @@ spec:
             -
               name: backup-persistent-storage
               persistentVolumeClaim:
-                claimName: backup-aaslp-lib-unb-ca
+                claimName: backup-slaveryandfreedomlaws-lib-unb-ca
 ---
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: monthly-backup-aaslp-lib-unb-ca
+  name: monthly-backup-slaveryandfreedomlaws-lib-unb-ca
   namespace: prod
   labels:
     app: drupal
@@ -219,7 +219,7 @@ spec:
   concurrencyPolicy: Forbid
   jobTemplate:
     metadata:
-      name: monthly-backup-aaslp-lib-unb-ca
+      name: monthly-backup-slaveryandfreedomlaws-lib-unb-ca
       labels:
         app: drupal
         tier: backup
@@ -230,7 +230,7 @@ spec:
             deployenv: dev
           containers:
             -
-              name: monthly-backup-aaslp-lib-unb-ca
+              name: monthly-backup-slaveryandfreedomlaws-lib-unb-ca
               args: ["monthly"]
               env:
                 -
@@ -278,4 +278,4 @@ spec:
             -
               name: backup-persistent-storage
               persistentVolumeClaim:
-                claimName: backup-aaslp-lib-unb-ca
+                claimName: backup-slaveryandfreedomlaws-lib-unb-ca

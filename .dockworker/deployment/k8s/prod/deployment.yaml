@@ -4,18 +4,18 @@ metadata:
   labels:
     app: drupal
     appMajor: "9"
-    instance: aaslp.lib.unb.ca
+    instance: slaveryandfreedomlaws.lib.unb.ca
     tier: frontend
-    uri: aaslp.lib.unb.ca
+    uri: slaveryandfreedomlaws.lib.unb.ca
     vcsOwner: unb-libraries
-    vcsRepository: aaslp.lib.unb.ca
+    vcsRepository: slaveryandfreedomlaws.lib.unb.ca
     vcsRef: prod
-  name: aaslp-lib-unb-ca
+  name: slaveryandfreedomlaws-lib-unb-ca
   namespace: prod
 spec:
   selector:
     matchLabels:
-      uri: aaslp.lib.unb.ca
+      uri: slaveryandfreedomlaws.lib.unb.ca
   replicas: 1
   revisionHistoryLimit: 2
   minReadySeconds: 30
@@ -29,18 +29,18 @@ spec:
       labels:
         app: drupal
         appMajor: "9"
-        instance: aaslp.lib.unb.ca
+        instance: slaveryandfreedomlaws.lib.unb.ca
         tier: frontend
-        uri: aaslp.lib.unb.ca
+        uri: slaveryandfreedomlaws.lib.unb.ca
         vcsOwner: unb-libraries
-        vcsRepository: aaslp.lib.unb.ca
+        vcsRepository: slaveryandfreedomlaws.lib.unb.ca
         vcsRef: prod
     spec:
       nodeSelector:
         deployenv: prod
       containers:
         -
-          name: aaslp-lib-unb-ca
+          name: slaveryandfreedomlaws-lib-unb-ca
           readinessProbe:
             httpGet:
               path: /health
@@ -101,4 +101,4 @@ spec:
         -
           name: drupal-persistent-storage
           persistentVolumeClaim:
-            claimName: aaslp-lib-unb-ca
+            claimName: slaveryandfreedomlaws-lib-unb-ca
