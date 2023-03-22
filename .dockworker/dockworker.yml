@@ -4,7 +4,7 @@ dockworker:
     name: slaveryandfreedomlaws.lib.unb.ca
     uuid: 3111
     finish_marker: '99_zz_notify_user_URI'
-    project_prefix: AASLP
+    project_prefix: FREEDOM
     upstream_images:
       - ghcr.io/unb-libraries/drupal:9.x-2.x-unblib
   deployment:
