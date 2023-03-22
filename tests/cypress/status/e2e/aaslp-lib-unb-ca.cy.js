@@ -1,5 +1,5 @@
-const host = 'https://aaslp.lib.unb.ca'
-describe('Anglo-Atlantic Slave Law Project', {baseUrl: host, groups: ['sites']}, () => {
+const host = 'https://slaveryandfreedomlaws.lib.unb.ca'
+describe('Laws of Enslavement and Freedom', {baseUrl: host, groups: ['sites']}, () => {
   context('Front page', {baseUrl: host}, () => {
     beforeEach(() => {
       cy.visit('/')

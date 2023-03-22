@@ -18,7 +18,7 @@ class HomePageTitleController {
    *   The title of the homepage.
    */
   public function getTitle() {
-    return $this->t('The Anglo-Atlantic Slave Law Project');
+    return $this->t('Laws of Enslavement and Freedom in the Anglo-Atlantic World');
   }
 
 }

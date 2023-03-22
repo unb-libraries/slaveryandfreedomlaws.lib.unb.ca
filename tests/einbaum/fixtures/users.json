@@ -2,7 +2,7 @@
   "user": {
     "name": "user",
     "pass": "1234",
-    "email": "user@aaslp.lib.unb.ca",
+    "email": "user@slaveryandfreedomlaws.lib.unb.ca",
     "roles": [
       "authenticated"
     ]
@@ -10,7 +10,7 @@
   "editor": {
     "name": "editor",
     "pass": "2345",
-    "email": "editor@aaslp.lib.unb.ca",
+    "email": "editor@slaveryandfreedomlaws.lib.unb.ca",
     "roles": [
       "aaslp_editor"
     ]

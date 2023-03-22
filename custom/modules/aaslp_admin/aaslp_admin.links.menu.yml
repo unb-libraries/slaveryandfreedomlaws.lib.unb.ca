@@ -1,5 +1,5 @@
 aaslp_admin.admin:
-  title: 'The Anglo-Atlantic Slave Law Project'
+  title: 'Laws of Enslavement and Freedom in the Anglo-Atlantic World'
   description: 'Manage content admin features.'
   route_name: <front>
   parent: system.admin

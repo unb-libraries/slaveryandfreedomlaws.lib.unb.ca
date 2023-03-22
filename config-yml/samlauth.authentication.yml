@@ -11,7 +11,7 @@ logout_different_user: false
 drupal_login_roles:
   authenticated: '0'
   aaslp_editor: '0'
-sp_entity_id: 'https://aaslp.lib.unb.ca'
+sp_entity_id: 'https://slaveryandfreedomlaws.lib.unb.ca'
 sp_name_id_format: ''
 sp_x509_certificate: ''
 sp_new_certificate: ''
@@ -52,6 +52,7 @@ security_want_name_id: true
 security_request_authn_context: true
 security_lowercase_url_encoding: false
 security_logout_reuse_sigs: false
+security_allow_repeat_attribute_name: false
 debug_display_error_details: false
 debug_log_in: false
 debug_log_saml_in: false

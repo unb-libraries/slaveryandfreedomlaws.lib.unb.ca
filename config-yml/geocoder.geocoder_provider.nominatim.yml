@@ -11,4 +11,4 @@ configuration:
     limit: null
   rootUrl: 'https://nominatim.openstreetmap.org'
   userAgent: libsystems@unb.ca
-  referer: 'https://aaslp.lib.unb.ca'
+  referer: 'https://slaveryandfreedomlaws.lib.unb.ca'
