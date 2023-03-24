@@ -59,7 +59,7 @@ input {
   border-color: $aaslp-blue !important;
   background-color: $aaslp-blue !important;
 }
-.btn:hover, {
+.btn:hover {
   border-color: $aaslp-dblue !important;
   background-color: $aaslp-dblue !important;
 }
@@ -86,8 +86,8 @@ header {
           color: $offwhite !important;
         }
       }
-      // Main navigation region.
-      .region-nav-main {
+      // Branding navigation region.
+      .region-nav-branding {
         // Main menu.
         .navbar-nav {
           a {
@@ -221,6 +221,9 @@ main > .container {
           margin-right: .2rem;
           margin-top: .2rem;
           -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -webkit-transform: scale(1);
+          transform: scale(1);
         }
       }
     }
