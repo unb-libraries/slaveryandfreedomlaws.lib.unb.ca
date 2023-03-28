@@ -97,14 +97,14 @@ class ContextBrandingBlock extends BlockBase implements ContainerFactoryPluginIn
     if ($is_front) {
       $site_title = "
         <h1 class='site-title'>
-          $site_name
+          <span>$site_name</span><span>$site_slogan</span>
         </h1>
       ";
     }
     else {
       $site_title = "
         <a href='/' title='Home' rel='home' class='site-title'>
-          $site_name
+          <span>$site_name</span><span>$site_slogan</span>
         </a>
       ";
     }
@@ -112,11 +112,8 @@ class ContextBrandingBlock extends BlockBase implements ContainerFactoryPluginIn
     $markup = "
       <div class='contextual-region block block-system block-system-branding-block'>
         <div class='navbar-brand d-flex align-items-center'>
-          <div>
+          <div class='site-title-container'>
             $site_title
-            <div class='site-slogan'>
-              $site_slogan
-            </div>
           </div>
         </div>
       </div>

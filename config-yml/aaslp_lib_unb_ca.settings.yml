@@ -11,11 +11,11 @@ favicon:
 b4_top_container: container
 b4_body_schema: none
 b4_body_bg_schema: none
-b4_navbar_schema: none
+b4_navbar_schema: dark
 b4_navbar_bg_schema: none
-b4_footer_schema: none
+b4_footer_schema: dark
 b4_footer_bg_schema: none
-subtheme_folder: ''
-subtheme_name: ''
-subtheme_machine_name: ''
+subtheme_folder: themes/custom
+subtheme_name: 'B4 subtheme'
+subtheme_machine_name: b4subtheme
 b4_top_container_config: ''

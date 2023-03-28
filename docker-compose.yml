@@ -22,7 +22,7 @@ services:
       - slaveryandfreedomlaws.lib.unb.ca
     entrypoint:
       - docker-entrypoint-multiple.sh
-      - slaveryandfreedomlaws.lib.unb.ca:/solr-conf
+      - aaslp.lib.unb.ca:/solr-conf
     volumes:
       - solr-data:/opt/solr/server/solr/mycores
   drupal-redis-lib-unb-ca:

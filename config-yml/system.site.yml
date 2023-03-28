@@ -2,9 +2,9 @@ _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
 langcode: en
 uuid: 842a4c70-3da8-41a9-8948-9dbec80be2bd
-name: 'Laws of Enslavement and Freedom in the Anglo-Atlantic World'
+name: 'Laws of Enslavement and Freedom'
 mail: admin@example.com
-slogan: ''
+slogan: 'in the Anglo-Atlantic World'
 page:
   403: ''
   404: ''

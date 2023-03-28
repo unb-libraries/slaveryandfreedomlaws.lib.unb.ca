@@ -71,25 +71,46 @@ header {
     padding-bottom: 0;
 
     .container {
+      display: block;
     background-color: $aaslp-blue;
-      .navbar-brand {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-        // Site title.
-        .site-title {
-          display: block;
-          padding-left: 1rem;
-          padding-right: 1rem;
-          font-family: "Cinzel Decorative", Times, Serif;
-          font-size: 1.6rem !important;
-          text-transform: capitalize !important;
-          color: $offwhite !important;
+
+      .col-auto {
+        width: 100%;
+        ;
+        .navbar-brand {
+          margin-right: 0;
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+          // Title container.
+          .site-title-container {
+            margin: auto;
+            text-align: center;
+            // Site title.
+            .site-title {
+              display: block;
+              padding-left: 1rem;
+              padding-right: 1rem;
+              font-family: "Cinzel Decorative", Times, Serif;
+              font-size: 1.6rem !important;
+              text-transform: capitalize !important;
+              color: $offwhite !important;
+
+              span {
+                font-size: inherit;
+
+                &:last-of-type {
+                  margin-left: .5rem;
+                }
+              }
+            }
+          }
         }
       }
-      // Branding navigation region.
-      .region-nav-branding {
+      // Main navigation region.
+      .region-nav-main {
         // Main menu.
         .navbar-nav {
+          margin-left: 1rem;
           a {
             color: $offwhite;
             font-size: 1.2rem;
@@ -722,10 +743,25 @@ footer {
 }
 
 // Responsive.
-@media (max-width: 990px) {
+@media (max-width: 1199px) {
+  // Site title.
+  #block-contextualbranding .site-title span {
+    display: block;
+
+    &:last-of-type {
+      margin-left: 0;
+    }
+  }
+}
+@media (max-width: 992px) {
   // Homepage form.
   #aaslp-core-homepage .form-submit {
     margin: 0 !important;
+  }
+  // Menu controls.
+  header .navbar .navbar-toggler {
+    display: block;
+    border: none;
   }
 }
 @media (max-width: 767px) {
@@ -743,7 +779,6 @@ footer {
     padding: 0 !important;
   }
 }
-
 // Browser-specific.
 // Mozilla only.
 @-moz-document url-prefix() {
