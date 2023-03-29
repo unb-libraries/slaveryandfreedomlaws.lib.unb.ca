@@ -169,7 +169,6 @@
     "unb-libraries/saml_features": "dev-9.x-1.x"
   },
   "require-dev": {
-    "drupal/migrate_plus": "^6.0",
     "unb-libraries/drupal-development-libraries": "^9"
   },
   "scripts": {
