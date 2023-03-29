@@ -4,7 +4,7 @@ applies_admin_routes: false
 include_invalid_paths: false
 excluded_paths: ''
 replaced_titles: 'Title Search::Laws'
-custom_paths: "/laws :: Laws\r\n/sources :: Sources\r\n"
+custom_paths: "regex!/laws/([^/]*) :: Laws | /laws\r\n/sources :: Sources\r\n"
 include_home_segment: false
 alternative_title_field: field_breadcrumb_title
 home_segment_title: Home
@@ -14,6 +14,7 @@ title_from_page_when_available: true
 title_segment_as_link: false
 use_menu_title_as_fallback: false
 use_page_title_as_menu_title_fallback: false
+menu_title_preferred_menu: ''
 remove_repeated_segments: true
 language_path_prefix_as_segment: false
 absolute_paths: false
@@ -36,7 +37,9 @@ capitalizator_forced_words_case_sensitivity: true
 capitalizator_forced_words_first_letter: false
 follow_redirects: true
 limit_segment_display: false
-segment_display_limit: ''
+segment_display_limit: null
 truncator_mode: false
-truncator_length: 100
-truncator_dots: true
+truncator_length: 0
+truncator_dots: false
+remove_repeated_segments_text_only: 0
+home_segment_validation_skip: 0
