@@ -1,7 +1,6 @@
 aaslp_core.home:
   path: '/home'
   defaults:
-    _title_callback: '\Drupal\aaslp_core\Controller\HomePageTitleController::getTitle'
     _form: '\Drupal\aaslp_core\Form\HomePageForm'
   requirements:
     _permission: 'access content'
