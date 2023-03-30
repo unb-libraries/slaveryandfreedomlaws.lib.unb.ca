@@ -15,7 +15,7 @@ function datetime_settings($element) {
   // Only for field_date.
   if ($element['#parents'][0] == 'field_date') {
     // Set HTML5 range attributes. Prevents defaulting to loaded value.
-    $element['date']['#attributes']['min'] = '1700-01-01';
+    $element['date']['#attributes']['min'] = '1000-01-01';
     $element['date']['#attributes']['max'] = date('Y-m-d');
   }
 

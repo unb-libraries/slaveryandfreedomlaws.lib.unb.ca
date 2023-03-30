@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.legal_article.body
+    - field.field.node.legal_article.field_abstract
     - field.field.node.legal_article.field_category
     - field.field.node.legal_article.field_citation
     - field.field.node.legal_article.field_crimes
@@ -45,6 +46,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_abstract: true
   field_category: true
   field_citation: true
   field_crimes: true

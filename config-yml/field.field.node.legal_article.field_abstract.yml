@@ -1,0 +1,21 @@
+uuid: b8df0d69-47f2-4839-89e1-ba2e0eb5ada9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abstract
+    - node.type.legal_article
+  module:
+    - text
+id: node.legal_article.field_abstract
+field_name: field_abstract
+entity_type: node
+bundle: legal_article
+label: Abstract
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

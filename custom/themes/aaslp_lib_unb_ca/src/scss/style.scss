@@ -689,6 +689,27 @@ main > .container {
         padding-top: 0;
         padding-bottom: 10px;
       }
+      .field--name-field-abstract {
+        display:inline-block;
+        font-family:sans-serif;
+        border:solid 1em $lgray;
+        margin:0;
+        padding:1em;
+        position:relative;
+        &:before {
+          background-color: white;
+          bottom: -1em;
+          content: "";
+          left: 2em;
+          position: absolute;
+          right: 2em;
+          top: -1em;
+        }
+        > * {
+          position: relative;
+          z-index: 1;
+        }            
+      }
     }
     // Search page title.
     #block-aaslp-lib-unb-ca-page-title .page-title {
