@@ -1,6 +1,6 @@
 uuid: 4525ff5e-cb2e-4dc8-9f08-ea7b71932cd2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.metadata_category

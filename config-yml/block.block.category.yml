@@ -1,6 +1,6 @@
 uuid: 83726aad-7541-4a12-927b-892be4cbaf74
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.timeline_category

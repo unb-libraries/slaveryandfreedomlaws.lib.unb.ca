@@ -36,14 +36,6 @@ targetEntityType: node
 bundle: legal_article
 mode: search_index_themes
 content:
-  field_category:
-    type: entity_reference_label
-    label: visually_hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_crimes:
     type: entity_reference_label
     label: visually_hidden
@@ -63,6 +55,7 @@ content:
 hidden:
   body: true
   field_abstract: true
+  field_category: true
   field_citation: true
   field_date: true
   field_document_image: true
