@@ -692,9 +692,10 @@ main > .container {
       .field--name-field-abstract {
         display:inline-block;
         font-family:sans-serif;
-        border:solid 1em $lgray;
-        margin:0;
-        padding:1em;
+        border:solid .5em $lgray;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        padding:.7em;
         position:relative;
         &:before {
           background-color: white;
