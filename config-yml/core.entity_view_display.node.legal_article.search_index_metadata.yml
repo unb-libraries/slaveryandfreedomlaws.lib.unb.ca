@@ -27,6 +27,7 @@ dependencies:
   module:
     - datetime
     - layout_builder
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -37,6 +38,13 @@ targetEntityType: node
 bundle: legal_article
 mode: search_index_metadata
 content:
+  field_abstract:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_citation:
     type: string
     label: visually_hidden
@@ -80,7 +88,6 @@ content:
     region: content
 hidden:
   body: true
-  field_abstract: true
   field_category: true
   field_crimes: true
   field_document_image: true

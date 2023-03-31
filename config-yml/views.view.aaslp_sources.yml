@@ -261,7 +261,7 @@ display:
           expose:
             operator_id: combine_op
             label: ''
-            description: 'Search by name, description or combination, e.g. Collection newspapers.'
+            description: 'Search by name, description, or combination, e.g. Collection newspapers.'
             use_operator: false
             operator: combine_op
             operator_limit_selection: false

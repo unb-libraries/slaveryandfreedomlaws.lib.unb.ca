@@ -86,6 +86,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_timeline_event
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        - anonymous
+      view_mode: {  }
   search_body:
     label: 'Full Text'
     datasource_id: 'entity:node'
@@ -190,12 +198,15 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  entity_type: {  }
   highlight:
     weights:
       postprocess_query: 0
     prefix: '<strong>'
     suffix: '</strong>'
     excerpt: true
+    excerpt_always: false
     excerpt_length: 100
     exclude_fields:
       - article_year
@@ -233,4 +244,5 @@ tracker_settings:
 options:
   cron_limit: 50
   index_directly: true
+  track_changes_in_references: true
 server: drupal_solr_lib_unb_ca

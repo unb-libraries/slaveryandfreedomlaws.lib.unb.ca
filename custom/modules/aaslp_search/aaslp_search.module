@@ -12,7 +12,7 @@ function aaslp_search_form_views_exposed_form_alter(&$form, &$form_state, $form_
   $view_id = $form['#id'];
 
   if (strpos($view_id, 'views-exposed-form-aaslp-metadata') === 0) {
-    $tip = "Search by title, location, year, crime, punishment or " .
+    $tip = "Search by title, location, year, tags, abstract, or " .
       "combination, i.e. Jamaica 1800.";
   }
   elseif (strpos($view_id, 'views-exposed-form-aaslp-search') === 0) {
