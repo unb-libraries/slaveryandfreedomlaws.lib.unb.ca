@@ -1,6 +1,6 @@
 uuid: ab9e68f2-0004-4a0c-95df-0912404610d1
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.timeline_crimes

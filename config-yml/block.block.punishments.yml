@@ -1,6 +1,6 @@
 uuid: 7a2b9b7a-0aa4-4494-b9c4-14944893be21
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.timeline_punishments

@@ -1,6 +1,6 @@
 uuid: 4be464a2-dc9a-4ff5-8147-19705f3f60f0
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.facet_punishments

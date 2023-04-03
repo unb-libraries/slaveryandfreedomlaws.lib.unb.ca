@@ -35,28 +35,13 @@ id: node.legal_article.search_index_themes
 targetEntityType: node
 bundle: legal_article
 mode: search_index_themes
-content:
-  field_crimes:
-    type: entity_reference_label
-    label: visually_hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  field_punishments:
-    type: entity_reference_label
-    label: visually_hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
+content: {  }
 hidden:
   body: true
   field_abstract: true
   field_category: true
   field_citation: true
+  field_crimes: true
   field_date: true
   field_document_image: true
   field_full_title: true
@@ -66,6 +51,7 @@ hidden:
   field_notes: true
   field_pages: true
   field_parent_location: true
+  field_punishments: true
   field_revision_switch: true
   field_saved_coordinates: true
   field_source: true

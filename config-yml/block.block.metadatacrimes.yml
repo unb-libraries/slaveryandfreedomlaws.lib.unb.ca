@@ -1,6 +1,6 @@
 uuid: b5bb94b0-bc81-4562-b893-99114eb41316
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.metadata_crimes
