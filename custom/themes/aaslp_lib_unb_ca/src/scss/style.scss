@@ -692,11 +692,12 @@ main > .container {
       .field--name-field-abstract {
         display:inline-block;
         font-family:sans-serif;
-        border:solid .5em $aaslp-blue;
+        border: solid .2em $aaslp-blue;
         margin-top: 0;
-        margin-right: 1rem;
-        margin-left: 1rem;
-        padding:.7em;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        margin-bottom: 1.5rem;
+        padding:.9em;
         position:relative;
         &:before {
           background-color: white;
