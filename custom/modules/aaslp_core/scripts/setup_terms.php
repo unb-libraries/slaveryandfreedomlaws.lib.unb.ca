@@ -12,14 +12,8 @@ use Drupal\taxonomy\Entity\Term;
 // Set up locations.
 // Parent locations.
 $parent_locs = [
-  'Caribbean, Mid-Atlantic, South America',
-  'Jamaica and its dependencies',
-  'Leeward Islands',
-  'Middle Colonies (1706-1783)',
-  'New England Colonies (1706-1783)',
-  'Pre-confederation Canada',
-  'Windward Islands',
-  'Other',
+  'Caribbean',
+  'North America',
 ];
 
 // Caribbean.
@@ -27,33 +21,48 @@ $parent_locs = [
 $parent = add_terms('locations', [$parent_locs[0]])[0];
 // Create children.
 $children = [
+  'Anguilla',
+  'Antigua',
   'Bahamas',
+  'Barbados',
   'Berbice',
   'Bermuda',
-  'Cape of Good Hope',
+  'British Honduras (Belize)',
   'Demerara',
   'Dominica',
-  'Honduras/Belize',
+  'Grenada',
   'Jamaica',
-  'Mauritius',
+  'Leeward Islands',
+  'Montserrat',
+  'Nevis',
+  'St. Christopher',
   'St. Lucia',
-  'St. Vincent and the Grenadines',
+  'St. Vincent',
   'Tobago',
   'Trinidad',
 ];
 
 add_terms('locations', $children, $parent);
 
-// Jamaica.
+// North America.
 // Create parent.
 $parent = add_terms('locations', [$parent_locs[1]])[0];
 // Create children.
 $children = [
-  'Bay Islands',
-  'Belize (British Honduras)',
-  'Cayman Islands',
-  'Jamaica',
-  'Mosquito Coast',
+  'Connecticut',
+  'Delaware',
+  'Georgia',
+  'New Hampshire',
+  'New Jersey',
+  'New York',
+  'North Carolina',
+  'Maryland',
+  'Massachusetts',
+  'Pennsylvania',
+  'Prince Edward Island',
+  'Rhode Island',
+  'South Carolina',
+  'Virginia',
 ];
 
 add_terms('locations', $children, $parent);
