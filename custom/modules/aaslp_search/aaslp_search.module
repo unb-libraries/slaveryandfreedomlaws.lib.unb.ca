@@ -32,6 +32,8 @@ function aaslp_search_preprocess_facets_item_list(&$variables) {
     'metadata_location',
   ];
 
+  $parents = [];
+
   if (in_array($variables['facet']->id(), $facets)) {
     // Get facet items and cycle through them.
     $items = $variables['items'];
@@ -40,18 +42,26 @@ function aaslp_search_preprocess_facets_item_list(&$variables) {
       // Get taxonomy term ID for facet.
       $tid = $item['#title']['#raw_value'];
       $term = Term::load($tid);
+
       // Get ID for parent term.
       $parent = $term->parent->target_id ?? NULL;
 
-      // If the term has a parent, add class child-location to wrapper.
-      if ($parent == '0') {
+      // If the term has no parent, add class parent-location to wrapper.
+      if (!$parent) {
         $variables['items'][$key]['#wrapper_attributes']['class'][]
           = 'parent-location';
+        $variables['items'][$key]['#parent'] = $tid - 1;
       }
       else {
         $variables['items'][$key]['#wrapper_attributes']['class'][]
-          = 'child-location';
+        = 'child-location';
+        $variables['items'][$key]['#parent'] = $parent;
       }
     }
+
+    $title = array_column($variables['items'], '#title');
+    $parents = array_column($variables['items'], '#parent');
+    array_multisort($parents, SORT_ASC, $title, SORT_ASC, $variables['items']);
   }
+
 }
