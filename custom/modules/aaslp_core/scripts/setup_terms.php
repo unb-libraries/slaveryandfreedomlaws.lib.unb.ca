@@ -65,144 +65,85 @@ $children = [
   'Virginia',
 ];
 
-add_terms('locations', $children, $parent);
+// add_terms('locations', $children, $parent);
 
-// Leeward.
-// Create parent.
-$parent = add_terms('locations', [$parent_locs[2]])[0];
-// Create children.
-$children = [
-  'Anguilla',
-  'Antigua',
-  'Barbuda',
-  'British Virgin Islands',
-  'Montserrat',
-  'Nevis',
-  'St. Christopher',
-];
-
-add_terms('locations', $children, $parent);
-
-// Middle Colonies.
-// Create parent.
-$parent = add_terms('locations', [$parent_locs[3]])[0];
-// Create children.
-$children = [
-  'Delaware',
-  'New York',
-  'New Jersey',
-  'Pennsylvania',
-];
-
-add_terms('locations', $children, $parent);
-
-// New England Colonies.
-// Create parent.
-$parent = add_terms('locations', [$parent_locs[4]])[0];
-// Create children.
-$children = [
-  'Connecticut',
-  'Massachusetts',
-  'New Hampshire',
-  'Rhode Island & Providence',
-];
-
-add_terms('locations', $children, $parent);
-
-// Pre-confederation Canada.
-// Create parent.
-$parent = add_terms('locations', [$parent_locs[5]])[0];
-// Create children.
-$children = [
-  'British Arctic Territories',
-  'Island of St. John',
-  'Newfoundland',
-  'North-Western Territory',
-  'Nova Scotia',
-  'Quebec',
-  'Rupert’s Land',
-];
-
-add_terms('locations', $children, $parent);
-
-// Windward Islands.
-// Create parent.
-$parent = add_terms('locations', [$parent_locs[6]])[0];
-// Create children.
-$children = [
-  'Barbados',
-  'Dominica (detached from Grenada in 1770)',
-  'Grenada',
-  'St. Vincent',
-  'Tobago (detached from Grenada in 1768)',
-];
-
-add_terms('locations', $children, $parent);
-
-// Other.
-// Create parent.
-$parent = add_terms('locations', [$parent_locs[7]])[0];
-// Create children.
-$children = [
-  'East and West Florida (Spain 1783-1823, U.S. after 1823)',
-  'Georgia',
-  'Indian Reserve (U.S. after 1783)',
-  'Quebec southwest of the Great Lakes (U.S. after 1783)',
-  'Maryland',
-  'North Carolina',
-  'South Carolina',
-  'Virginia',
-];
-
-add_terms('locations', $children, $parent);
-
-// Set up categories.
-$categories = [
-  'Ameliorative',
-  'Consolidated',
-  'Manumission',
-  'Punitive Laws',
-  'Hiring',
-  'Property in Persons',
-  'Protective Law',
-  'Registry of Enslaved People',
-  'Reward',
-  'Slave Trade',
-];
-
-add_terms('law_categories', $categories);
-
-// Set up crimes.
-$crimes = [
+// Set up tags.
+$tags = [
+  'Abolition',
+  'Absenteeism',
+  'Advertisements',
+  'Age of Enslaved People',
+  'Aged/Elderly Bondspeople',
+  'Armed conflict',
   'Arson',
-  'Gathering in groups',
-  'Hiding a runaway',
-  'Rape',
-  'Running away',
-  'Theft',
-  'Use of instruments/weapons',
-  'Violence against any white person',
-];
-
-add_terms('crimes', $crimes);
-
-// Set up punishments.
-$punishments = [
-  'Whip/flog',
+  'Baptism',
   'Branding',
+  'Buying and selling goods',
+  'Cage',
+  'Capital Offense',
+  'Childbirth',
+  'Children, Enslaved',
+  'Clandestine meetings',
+  'Corporeal punishment',
+  'Curfew',
+  'Dismemberment/Loss of Limb',
+  'Drivers',
+  'Education',
+  'Felony',
+  'Foreigners',
+  'Free People of Colour',
+  'Haitian Revolution',
+  'Harming or threatening whites',
+  'Health of Enslaved People',
+  'Holidays',
+  'Hospital',
+  'Indigenous',
+  'Intoxication',
+  'Jewish People',
+  'Jail/confinement',
+  'Jury',
+  'Killing of an Enslaved Person',
+  'Livestock',
+  'Manumission',
+  'Marriage',
+  'Maroons',
+  'Murder',
+  'Mutilation',
+  'Nose Slit',
+  'Obeah',
+  'Owning property',
+  'Perjury',
+  'Poison',
+  'Poverty',
+  'Pregnant Bondswomen',
+  'Pro-natal policy',
+  'Provision Grounds',
+  'Provost Marshall',
+  'Punishment, shackles/iron',
+  'Quakers',
+  'Real Estate',
+  'Rebellion/Conspiracy',
+  'Religion',
+  'Reward',
+  'Running away',
+  'Selling/Trading with Enslaved',
+  'Sickness',
+  'Slave Trade',
+  'Take Up/Custody of Enslaved',
+  'Taxes and Duties',
+  'Testimony of free people of colour',
+  'Testimony of enslaved people',
+  'Tickets',
   'Transportation',
-  'Stocks',
-  'Pillory',
+  'Theft',
+  'Weapons',
+  'Without benefit of clergy',
+  'Whipping',
+  'White Servants',
   'Workhouse',
-  'Dismemberment',
-  'Slitting of nose',
-  'Slitting of ears',
-  'However he/she shall think fit to inflict',
-  'Death',
-  'Castration',
 ];
 
-add_terms('punishments', $punishments);
+add_terms('law_tags', $tags);
 
 /**
  * Add multiple terms to a given vocabulary.
