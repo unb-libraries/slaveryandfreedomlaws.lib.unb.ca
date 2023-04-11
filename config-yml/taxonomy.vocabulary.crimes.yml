@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: Crimes
 vid: crimes
-description: 'Crimes addressed by slave laws.'
+description: 'Crimes addressed by slavery laws.'
 weight: 0

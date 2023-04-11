@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: Punishments
 vid: punishments
-description: 'Punishments for crimes addressed by slave laws.'
+description: 'Punishments for crimes addressed by slavery laws.'
 weight: 0

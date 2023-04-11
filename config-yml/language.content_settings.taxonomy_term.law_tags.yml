@@ -1,0 +1,11 @@
+uuid: ee2994ec-a641-4a33-8f4f-0c0b1f7423c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.law_tags
+id: taxonomy_term.law_tags
+target_entity_type_id: taxonomy_term
+target_bundle: law_tags
+default_langcode: site_default
+language_alterable: false

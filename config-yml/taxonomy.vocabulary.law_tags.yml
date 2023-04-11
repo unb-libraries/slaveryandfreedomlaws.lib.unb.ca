@@ -1,0 +1,8 @@
+uuid: 1cd89dd1-57cc-4361-8f0e-efb3a6717898
+langcode: en
+status: true
+dependencies: {  }
+name: 'Law Tags'
+vid: law_tags
+description: 'Search tags associated with slavery laws.'
+weight: 0

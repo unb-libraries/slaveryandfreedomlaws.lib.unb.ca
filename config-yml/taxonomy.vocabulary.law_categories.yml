@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Law Categories'
 vid: law_categories
-description: 'Categorize slave laws.'
+description: 'Categorize slavery laws.'
 weight: 0

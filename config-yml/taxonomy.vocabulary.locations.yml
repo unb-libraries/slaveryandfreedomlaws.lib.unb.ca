@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: Locations
 vid: locations
-description: 'Locations where slave laws were in effect.'
+description: 'Locations where slavery laws were in effect.'
 weight: 0
