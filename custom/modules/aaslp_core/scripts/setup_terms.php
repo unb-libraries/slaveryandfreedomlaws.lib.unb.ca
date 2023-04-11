@@ -67,7 +67,7 @@ $children = [
   'Virginia',
 ];
 
-// add_terms('locations', $children, $parent);
+add_terms('locations', $children, $parent);
 
 // Set up tags.
 $tags = [
