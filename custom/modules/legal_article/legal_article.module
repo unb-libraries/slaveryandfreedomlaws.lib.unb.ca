@@ -25,7 +25,7 @@ function legal_article_node_presave($entity) {
       // If location term found...
       if (!empty($lterm)) {
         // If location has a parent...
-        if (!empty($lterm->parent->getValue())) {
+        if (!empty($lterm->parent->getValue()[0]['target_id'])) {
           // Get parent location term ID and populate field.
           $lpid = $lterm->parent->getValue()[0]['target_id'];
           $entity->field_parent_location = $lpid;
