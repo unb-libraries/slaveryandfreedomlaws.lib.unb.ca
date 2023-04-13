@@ -45,25 +45,27 @@ function aaslp_search_preprocess_facets_item_list(&$variables) {
 
       // Get ID for parent term.
       $parent = $term->parent->target_id ?? NULL;
+      $name = $term->getName();
 
       // If the term has no parent, add class parent-location to wrapper.
       if (!$parent) {
         $variables['items'][$key]['#wrapper_attributes']['class'][]
           = 'parent-location';
-        $variables['items'][$key]['#parent'] = $tid - 1;
+        $variables['items'][$key]['#parent'] = $name;
       }
       else {
+        $term = Term::load($parent);
+        $name = $term->getName();
         $variables['items'][$key]['#wrapper_attributes']['class'][]
         = 'child-location';
-        $variables['items'][$key]['#parent'] = $parent;
+        $variables['items'][$key]['#parent'] = $name . "_";
       }
     }
     
     $title = array_column($variables['items'], '#title');
-    $name = array_column($title, '#count');
     $parents = array_column($variables['items'], '#parent');
     $count = array_column($title, '#count');
-    array_multisort($parents, SORT_ASC, $count, SORT_DESC, $name, SORT_ASC, $variables['items']);
+    array_multisort($parents, SORT_ASC, $count, SORT_DESC, $variables['items']);
   }
 
 }
