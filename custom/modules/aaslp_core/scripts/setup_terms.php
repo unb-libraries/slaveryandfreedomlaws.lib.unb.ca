@@ -13,8 +13,8 @@ use Drupal\taxonomy\Entity\Term;
 // Parent locations.
 $parent_locs = [
   'Caribbean',
-  'North America',
   'Greater Atlantic World',
+  'North America',
 ];
 
 // Caribbean.
@@ -45,6 +45,17 @@ $children = [
 
 /* add_terms('locations', $children, $parent); */
 
+// Greater Atlantic World.
+// Create parent.
+/* $parent = add_terms('locations', [$parent_locs[2]])[0]; */
+// Create children.
+$children = [
+  'Cape of Good Hope',
+  'Mauritius',
+];
+
+/* add_terms('locations', $children, $parent); */
+
 // North America.
 // Create parent.
 /* $parent = add_terms('locations', [$parent_locs[1]])[0]; */
@@ -64,18 +75,7 @@ $children = [
   'Rhode Island',
   'South Carolina',
   'Virginia',
-];
-
-/* add_terms('locations', $children, $parent); */
-
-// Greater Atlantic World.
-// Create parent.
-/* $parent = add_terms('locations', [$parent_locs[2]])[0]; */
-// Create children.
-$children = [
-  'Cape of Good Hope',
-  'Mauritius',
-];
+];  
 
 /* add_terms('locations', $children, $parent); */
 
