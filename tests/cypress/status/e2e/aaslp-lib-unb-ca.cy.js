@@ -4,7 +4,7 @@ describe('Laws of Enslavement and Freedom', {baseUrl: host, groups: ['sites']}, 
     beforeEach(() => {
       cy.visit('/')
       cy.title()
-        .should('contain', 'The Anglo-Atlantic Slave Law Project')
+        .should('contain', 'Laws of Enslavement and Freedom')
     })
 
     specify('Submitting "Title Search" query should lead to "laws" page', () => {
