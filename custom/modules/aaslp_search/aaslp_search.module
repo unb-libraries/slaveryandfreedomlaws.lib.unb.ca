@@ -64,8 +64,9 @@ function aaslp_search_preprocess_facets_item_list(&$variables) {
     
     $title = array_column($variables['items'], '#title');
     $parents = array_column($variables['items'], '#parent');
+    $name = array_column($title, '#value');
     $count = array_column($title, '#count');
-    array_multisort($parents, SORT_ASC, $count, SORT_DESC, $variables['items']);
+    array_multisort($parents, SORT_ASC, $count, SORT_DESC, $name, SORT_ASC, $variables['items']);
   }
 
 }
