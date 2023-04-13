@@ -75,7 +75,7 @@ $children = [
   'Rhode Island',
   'South Carolina',
   'Virginia',
-];  
+];
 
 /* add_terms('locations', $children, $parent); */
 
