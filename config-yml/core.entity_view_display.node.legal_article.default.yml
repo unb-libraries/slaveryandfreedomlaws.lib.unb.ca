@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.legal_article.field_date
     - field.field.node.legal_article.field_document_image
     - field.field.node.legal_article.field_full_title
+    - field.field.node.legal_article.field_law_tags
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_location_address
     - field.field.node.legal_article.field_location_coordinates
@@ -83,6 +84,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_law_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
     region: content
   field_location:
     type: entity_reference_label
