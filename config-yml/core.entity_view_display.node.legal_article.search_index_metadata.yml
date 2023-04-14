@@ -71,6 +71,14 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_law_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_location:
     type: entity_reference_label
     label: visually_hidden
@@ -92,7 +100,6 @@ hidden:
   field_category: true
   field_crimes: true
   field_document_image: true
-  field_law_tags: true
   field_location_address: true
   field_location_coordinates: true
   field_notes: true
