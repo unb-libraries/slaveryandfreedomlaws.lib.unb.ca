@@ -17,9 +17,10 @@ provider: null
 plugin: 'facet_block:facet_full_location'
 settings:
   id: 'facet_block:facet_full_location'
-  label: 'Facet Full Location'
+  label: 'Full Location'
   label_display: '0'
   provider: facets
+  context_mapping: {  }
   block_id: facetfulllocation
 visibility:
   request_path:

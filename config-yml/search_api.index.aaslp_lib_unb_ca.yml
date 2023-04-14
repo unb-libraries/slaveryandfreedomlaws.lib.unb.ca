@@ -9,6 +9,7 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_location
     - field.storage.node.field_punishments
+    - field.storage.node.field_law_tags
     - field.storage.node.field_timeline_event
     - search_api.server.drupal_solr_lib_unb_ca
     - core.entity_view_mode.node.search_index_metadata
@@ -151,6 +152,16 @@ field_settings:
       view_mode:
         'entity:node':
           legal_article: search_index_metadata
+  search_name:
+    label: 'Tags » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_law_tags:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_law_tags
+      module:
+        - taxonomy
   search_punishments:
     label: 'Punishments » Taxonomy term » Name'
     datasource_id: 'entity:node'

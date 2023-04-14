@@ -1,30 +1,29 @@
-uuid: 2cf45812-27b6-47cc-9beb-33370ce9405e
+uuid: 90c0200d-e5a6-4b01-bd39-b118b5347982
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.facet_year
+    - facets.facet.facet_tags
   module:
     - facets
     - system
   theme:
     - aaslp_lib_unb_ca
-id: facetyear
+id: facet_tags
 theme: aaslp_lib_unb_ca
 region: sidebar_first
-weight: -12
+weight: 0
 provider: null
-plugin: 'facet_block:facet_year'
+plugin: 'facet_block:facet_tags'
 settings:
-  id: 'facet_block:facet_year'
-  label: 'Full Year'
+  id: 'facet_block:facet_tags'
+  label: 'Full Tags'
   label_display: '0'
   provider: facets
   context_mapping: {  }
-  block_id: facetyear
+  block_id: facet_tags
 visibility:
   request_path:
     id: request_path
     negate: false
-    context_mapping: {  }
-    pages: "/laws-fulltext*\r\n"
+    pages: "/laws-fulltext\r\n/laws-fulltext?*"

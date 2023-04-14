@@ -1,30 +1,29 @@
-uuid: 2cf45812-27b6-47cc-9beb-33370ce9405e
+uuid: e772eeba-7789-4743-a592-ca6b7812f523
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.facet_year
+    - facets.facet.timeline_tags
   module:
     - facets
     - system
   theme:
     - aaslp_lib_unb_ca
-id: facetyear
+id: timelinetags
 theme: aaslp_lib_unb_ca
-region: sidebar_first
-weight: -12
+region: content
+weight: 0
 provider: null
-plugin: 'facet_block:facet_year'
+plugin: 'facet_block:timeline_tags'
 settings:
-  id: 'facet_block:facet_year'
-  label: 'Full Year'
+  id: 'facet_block:timeline_tags'
+  label: Tags
   label_display: '0'
   provider: facets
   context_mapping: {  }
-  block_id: facetyear
+  block_id: timelinetags
 visibility:
   request_path:
     id: request_path
     negate: false
-    context_mapping: {  }
-    pages: "/laws-fulltext*\r\n"
+    pages: "/timeline\r\n/timeline?*"

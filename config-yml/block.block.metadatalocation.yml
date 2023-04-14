@@ -20,6 +20,7 @@ settings:
   label: 'Metadata Location'
   label_display: '0'
   provider: facets
+  context_mapping: {  }
   block_id: metadatalocation
 visibility:
   request_path:
