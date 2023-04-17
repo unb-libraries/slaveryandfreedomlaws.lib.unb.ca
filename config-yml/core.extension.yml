@@ -19,6 +19,7 @@ module:
   contact: 0
   context_branding: 0
   contextual: 0
+  csv_serialization: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -66,11 +67,13 @@ module:
   path: 0
   path_alias: 0
   redis: 0
+  rest: 0
   saml_features: 0
   samlauth: 0
   search: 0
   search_api: 0
   search_api_solr: 0
+  serialization: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -81,6 +84,7 @@ module:
   update: 0
   user: 0
   views: 0
+  views_data_export: 0
   views_timelinejs: 0
   views_ui: 0
   pathauto: 1
