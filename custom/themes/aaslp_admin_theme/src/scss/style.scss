@@ -3,3 +3,9 @@
   display: grid;
   grid-template-columns: 50% 50%;
 }
+
+// Hide "About text formats" form component.
+.field--widget-text-textarea-with-summary [id$="format"],
+.field--widget-text-textarea [id$="format"] {
+  display: none;
+}
