@@ -40,7 +40,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 13
+    weight: 10
     region: content
     settings:
       rows: 9
@@ -50,7 +50,7 @@ content:
     third_party_settings: {  }
   field_abstract:
     type: text_textarea
-    weight: 4
+    weight: 3
     region: content
     settings:
       rows: 5
@@ -58,7 +58,7 @@ content:
     third_party_settings: {  }
   field_citation:
     type: string_textfield
-    weight: 6
+    weight: 11
     region: content
     settings:
       size: 60
@@ -66,13 +66,13 @@ content:
     third_party_settings: {  }
   field_date:
     type: datetime_default
-    weight: 7
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_document_image:
     type: image_image
-    weight: 2
+    weight: 14
     region: content
     settings:
       progress_indicator: throbber
@@ -80,33 +80,33 @@ content:
     third_party_settings: {  }
   field_full_title:
     type: string_textfield
-    weight: 3
+    weight: 2
     region: content
     settings:
-      size: 60
+      size: 1023
       placeholder: ''
     third_party_settings: {  }
   field_law_tags:
     type: chosen_select
-    weight: 12
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_location:
     type: options_select
-    weight: 8
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_location_address:
     type: address_default
-    weight: 9
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   field_location_coordinates:
     type: geofield_map
-    weight: 10
+    weight: 8
     region: content
     settings:
       html5_geolocation: false
@@ -158,19 +158,9 @@ content:
     third_party_settings: {  }
   field_pages:
     type: string_textfield
-    weight: 5
+    weight: 12
     region: content
     settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_parent_location:
-    type: entity_reference_autocomplete
-    weight: 18
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
@@ -183,7 +173,7 @@ content:
     third_party_settings: {  }
   field_saved_coordinates:
     type: inline_entity_form_complex
-    weight: 11
+    weight: 9
     region: content
     settings:
       form_mode: default
@@ -201,7 +191,7 @@ content:
     third_party_settings: {  }
   field_source:
     type: options_select
-    weight: 14
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -224,13 +214,14 @@ content:
     weight: 1
     region: content
     settings:
-      size: 60
+      size: 255
       placeholder: ''
     third_party_settings: {  }
 hidden:
   created: true
   field_category: true
   field_crimes: true
+  field_parent_location: true
   field_punishments: true
   langcode: true
   path: true

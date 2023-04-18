@@ -11,7 +11,7 @@ id: node.legal_article.field_document_image
 field_name: field_document_image
 entity_type: node
 bundle: legal_article
-label: 'Document Image'
+label: 'Document Image(s)'
 description: ''
 required: false
 translatable: false
