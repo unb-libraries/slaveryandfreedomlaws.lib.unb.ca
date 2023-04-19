@@ -10,12 +10,13 @@
       });
       // On clicking the facet soft-limit link.
       $(".facets-soft-limit-link").click( function() {
+        // If facet open...
         if ($(this).hasClass("open")) {
           // Prepend fontawesome minus icon to facet soft-limit link.
           $(this).prepend('<i class="fa fa-minus"></i>');
         }
         else {
-          // Prepend fontawesome minus icon to facet soft-limit link.
+          // Prepend fontawesome plus icon to facet soft-limit link.
           $(this).prepend('<i class="fa fa-plus"></i>');
         }
       });
