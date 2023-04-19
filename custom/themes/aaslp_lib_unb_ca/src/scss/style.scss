@@ -260,6 +260,21 @@ main > .container {
     ul[data-drupal-facet-id="timeline_punishments"] {
       margin-bottom: 2rem;
     }
+
+    // Facets soft-limit link.
+    .facets-soft-limit-link {
+      font-size: .9rem;
+      margin-left: 1rem;
+
+      svg {
+        display: none;
+
+        &:first-child {
+          display: initial;
+          margin-right: .2rem;
+        }
+      }
+    }
   }
 
   // Content region.

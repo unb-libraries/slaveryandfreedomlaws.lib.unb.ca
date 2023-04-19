@@ -8,6 +8,8 @@
 use Drupal\taxonomy\Entity\Term;
 
 function aaslp_search_form_views_exposed_form_alter(&$form, &$form_state, $form_id){
+  // Attach facet decoration JS.
+  $form['#attached']['library'][] = 'aaslp_search/facet-limit-decor';
 
   $view_id = $form['#id'];
 
@@ -26,15 +28,16 @@ function aaslp_search_form_views_exposed_form_alter(&$form, &$form_state, $form_
 }
 
 function aaslp_search_preprocess_facets_item_list(&$variables) {
-  // Only apply to facet facet_full_location.
-  $facets = [
+  // Only for location facets.
+  $location_facets = [
     'facet_full_location',
     'metadata_location',
+    'timeline_location',
   ];
 
   $parents = [];
 
-  if (in_array($variables['facet']->id(), $facets)) {
+  if (in_array($variables['facet']->id(), $location_facets)) {
     // Get facet items and cycle through them.
     $items = $variables['items'];
 
@@ -68,5 +71,4 @@ function aaslp_search_preprocess_facets_item_list(&$variables) {
     $count = array_column($title, '#count');
     array_multisort($parents, SORT_ASC, $count, SORT_DESC, $name, SORT_ASC, $variables['items']);
   }
-
 }

@@ -1,0 +1,7 @@
+facet-limit-decor:
+  version: VERSION
+  js:
+    js/facet-limit-decor.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
