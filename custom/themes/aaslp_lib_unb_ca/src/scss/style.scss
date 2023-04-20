@@ -168,6 +168,11 @@ main > .container {
     .block-facets {
       padding-top: 1rem;
 
+      a:active,
+      a:hover {
+        color: $unb-darkgray;
+      }
+
       h3 {
         font-size: 1.15rem;
         font-weight: bold;
@@ -191,6 +196,11 @@ main > .container {
   // Facet blocks.
   .block-facets {
     padding-top: 1rem;
+
+    a:active,
+    a:hover {
+      color: $unb-darkgray;
+    }
 
     h3 {
       font-size: 1.15rem;
@@ -247,6 +257,10 @@ main > .container {
           -webkit-transform: scale(1.1);
           transform: scale(1.1);
         }
+
+        .facet-item__value {
+          margin-right: .2rem;
+        }
       }
     }
 
@@ -263,7 +277,7 @@ main > .container {
 
     // Facets soft-limit link.
     .facets-soft-limit-link {
-      font-size: .9rem;
+      font-size: .8rem;
       margin-left: 1rem;
 
       svg {
