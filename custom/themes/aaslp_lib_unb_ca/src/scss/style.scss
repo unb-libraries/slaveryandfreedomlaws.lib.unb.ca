@@ -513,6 +513,7 @@ main > .container {
           }
           td {
             border: none;
+            padding: .5rem;
 
             &.is-active {
               background-color: initial;
@@ -527,10 +528,13 @@ main > .container {
         }
         ul {
           list-style: none;
+          columns: 3;
 
+          /*  
           li:nth-of-type(odd) {
             background-color: $lgray;
           }
+          */
         }
       }
 
