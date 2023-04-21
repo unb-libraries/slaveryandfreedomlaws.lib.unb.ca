@@ -1,17 +1,17 @@
-uuid: 97103ca6-c455-42cf-b9c8-0f5950399f69
+uuid: e4cd95e1-01c3-4daa-9a2b-1203cba83122
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_document_image
+    - field.storage.node.field_document_images
     - node.type.legal_article
   module:
     - image
-id: node.legal_article.field_document_image
-field_name: field_document_image
+id: node.legal_article.field_document_images
+field_name: field_document_images
 entity_type: node
 bundle: legal_article
-label: 'Document Image'
+label: 'Document Image(s)'
 description: ''
 required: false
 translatable: false
