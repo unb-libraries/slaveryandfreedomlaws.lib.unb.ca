@@ -16,3 +16,6 @@ if (extension_loaded('newrelic')) {
 }
 
 $settings['config_sync_directory'] = 'DRUPAL_CONFIGURATION_DIR';
+
+// Title length module.
+$settings['node_title_length_chars'] = 2048;
