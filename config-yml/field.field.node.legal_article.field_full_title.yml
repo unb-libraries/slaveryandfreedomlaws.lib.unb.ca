@@ -11,7 +11,7 @@ entity_type: node
 bundle: legal_article
 label: 'Full Title'
 description: 'Full transcribed title of legal article.'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
