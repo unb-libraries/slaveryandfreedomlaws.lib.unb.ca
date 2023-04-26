@@ -16,6 +16,8 @@ use Drupal\Core\Entity\EntityInterface;
 function legal_article_node_presave($entity) {
   // Only apply to legal articles.
   if ($entity->bundle() == 'legal_article') {
+    // Auto-generate title from full title.
+    $entity->title = substr($entity->field_full_title->getValue()[0]['value'], 0, 255);
     // Process parent location.
     if (!empty($entity->field_location->getValue()[0]['target_id'])) {
       // Get location term ID.
@@ -116,7 +118,7 @@ function legal_article_form_alter(&$form, $form_state, $form_id) {
     $form['field_citation']['#states'] =
       // $form['field_category']['#states'] =
       // $form['field_crimes']['#states'] =
-      $form['field_full_title']['#states'] =
+      // $form['field_full_title']['#states'] =
       $form['field_pages']['#states'] =
       $form['field_location']['#states'] =
       $form['field_location_address']['#states'] =
