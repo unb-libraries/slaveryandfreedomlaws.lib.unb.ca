@@ -679,8 +679,24 @@ main > .container {
       // Field containers.
       .field {
         margin-top: 1.2rem;
+
       }
 
+      // Tags.
+      .field--name-field-law-tags {
+        .field__item {
+          display: inline-block;
+
+          &::after {
+            content: ',';
+          }
+
+          &:last-of-type::after {
+            content: '.';
+          }
+        } 
+      } 
+      
       // Annotations.
       .anno-marker {
         display: none;
