@@ -68,7 +68,6 @@ function legal_article_node_presave($entity) {
         $entity->field_category =
           $entity->field_citation =
           $entity->field_crimes =
-          $entity->field_full_title =
           $entity->field_location =
           $entity->field_location_address =
           $entity->field_location_coordinates =
