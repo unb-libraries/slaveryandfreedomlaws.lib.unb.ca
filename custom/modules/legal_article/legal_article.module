@@ -5,10 +5,12 @@
 * Contains legal_article.module.
 */
 
-use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Entity;
-use Drupal\node\Entity\Node;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+
 
 /**
  * Implements hook_ENTITY_TYPE_presave().
@@ -149,4 +151,13 @@ function article_preprocess(&$form, $form_state) {
   // Flip field_revision_switch to force new revision on submit.
   $switch = $form_state->getValue('field_revision_switch')['value'];
   $form_state->setValue('field_revision_switch', ['value' => (int)!$switch]);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view() for node entities.
+ */
+function legal_article_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->getType() == 'legal_article') {
+    $build['title'][0]['#context']['value'] = $entity->field_full_title->getString();
+  }
 }

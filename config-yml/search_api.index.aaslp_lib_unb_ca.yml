@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_crimes
     - field.storage.node.field_date
     - field.storage.node.body
+    - field.storage.node.field_full_title
     - field.storage.node.field_location
     - field.storage.node.field_punishments
     - field.storage.node.field_law_tags
@@ -78,6 +79,15 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_date
+  field_full_title:
+    label: 'Full Title'
+    datasource_id: 'entity:node'
+    property_path: field_full_title
+    type: text
+    boost: !!float 3
+    dependencies:
+      config:
+        - field.storage.node.field_full_title
   field_timeline_event:
     label: 'Timeline Event'
     datasource_id: 'entity:node'
