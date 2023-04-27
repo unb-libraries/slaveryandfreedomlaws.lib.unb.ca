@@ -18,11 +18,14 @@ function legal_article_node_presave($entity) {
   if ($entity->bundle() == 'legal_article') {
     // Auto-generate title from full title.
     $full = $entity->field_full_title->getValue()[0]['value'];
-    // Truncate to nearest word if longer than 255 characters.
+    // Truncate to word if longer than 255 characters.
     if (strlen($full) > 255) {
       $full = preg_replace('/\s+?(\S+)?$/', '', substr($full, 0, 256));
     }
-    $entity->title = $full;
+    // Only override title if full title exists.
+    if ($full) {
+      $entity->title = $full;
+    }
     // Process parent location.
     if (!empty($entity->field_location->getValue()[0]['target_id'])) {
       // Get location term ID.

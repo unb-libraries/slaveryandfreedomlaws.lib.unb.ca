@@ -30,7 +30,8 @@ function refresh_nodes(string $bundle) {
       $node = Node::load($nid);
 
       if ($node and empty($node->get('field_full_title')->getValue()[0]['value'])) {
-        $title = $node->getTitle();
+        $title = $node->$title;
+        echo "\n" . print_r($node->$title);
         $node->set('field_full_title', $title);
         $node->save();
         $full = $node->get('field_full_title')->getValue()[0]['value'];
