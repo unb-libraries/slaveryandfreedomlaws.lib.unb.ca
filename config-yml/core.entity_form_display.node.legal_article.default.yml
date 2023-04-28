@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.legal_article.body
     - field.field.node.legal_article.field_abstract
     - field.field.node.legal_article.field_category
-    - field.field.node.legal_article.field_citation
     - field.field.node.legal_article.field_crimes
     - field.field.node.legal_article.field_date
     - field.field.node.legal_article.field_document_image
@@ -55,14 +54,6 @@ content:
     region: content
     settings:
       rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_citation:
-    type: string_textfield
-    weight: 10
-    region: content
-    settings:
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_date:
