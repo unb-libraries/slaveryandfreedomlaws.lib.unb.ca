@@ -163,6 +163,7 @@
     "drupal/search_api_solr": "4.2.10",
     "drupal/title_length": "1.2",
     "drupal/token": "1.11",
+    "drupal/twig_field_value": "2.0.2",
     "drupal/twig_tweak": "2.10",
     "drupal/views_timelinejs": "4.0.0",
     "furf/jquery-ui-touch-punch": "dev-master",
