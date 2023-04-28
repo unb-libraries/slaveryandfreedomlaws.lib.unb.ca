@@ -99,23 +99,19 @@
         <div class="col-sm-6 col-metadata">
           {{ content.field_date }}
           {{ content.field_location }}
-          {#
-          {{ content.field_category }}
-          #}
-          {{ content.field_pages }}
         </div>
         <div class="col-sm-6 col-metadata">
           {{ content.field_law_tags }}
-          {#
-          {{ content.field_crimes }}
-          {{ content.field_punishments }}
-          #}
+
         </div>
       </div>
     </div>
     {{ content.field_abstract }}
     {{ content.body }}
-    {{ content.field_source }}
+    {{- content.field_source -}}
+    {%- if content.field_source and content.field_pages -%}
+      <span>{{ '(Pages: '}}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
+    {%- endif -%}
     {{ content.field_notes }}
   </div>
 

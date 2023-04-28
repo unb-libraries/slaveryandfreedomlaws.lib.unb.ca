@@ -529,12 +529,6 @@ main > .container {
         ul {
           list-style: none;
           columns: 3;
-
-          /*  
-          li:nth-of-type(odd) {
-            background-color: $lgray;
-          }
-          */
         }
       }
 
@@ -679,7 +673,6 @@ main > .container {
       // Field containers.
       .field {
         margin-top: 1.2rem;
-
       }
 
       // Tags.
@@ -764,6 +757,9 @@ main > .container {
         & p:last-of-type {
           margin-bottom: 0;
         }
+      }
+      .field--name-field-source {
+        display: inline-block;
       }
     }
     // Search page title.
