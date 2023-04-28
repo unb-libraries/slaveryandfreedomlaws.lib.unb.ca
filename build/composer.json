@@ -59,7 +59,11 @@
       "bower-asset",
       "npm-asset"
     ],
-    "patches": {}
+    "patches": {
+      "drupal/core": {
+        "Fix form state notice issue 2700667": "https://www.drupal.org/files/issues/2021-05-12/2700667-133a.patch"
+      }
+    }
   },
   "license": "MIT",
   "minimum-stability": "dev",
