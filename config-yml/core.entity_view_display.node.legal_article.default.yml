@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.legal_article.field_document_image
     - field.field.node.legal_article.field_document_images
     - field.field.node.legal_article.field_full_title
+    - field.field.node.legal_article.field_images_pdf
     - field.field.node.legal_article.field_law_tags
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_location_address
@@ -28,6 +29,7 @@ dependencies:
   module:
     - colorbox
     - datetime
+    - file
     - text
     - user
 id: node.legal_article.default
@@ -79,6 +81,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_images_pdf:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 15
     region: content
   field_law_tags:
     type: entity_reference_label

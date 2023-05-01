@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.legal_article.field_document_image
     - field.field.node.legal_article.field_document_images
     - field.field.node.legal_article.field_full_title
+    - field.field.node.legal_article.field_images_pdf
     - field.field.node.legal_article.field_law_tags
     - field.field.node.legal_article.field_location
     - field.field.node.legal_article.field_location_address
@@ -29,6 +30,7 @@ dependencies:
     - address
     - chosen_field
     - datetime
+    - file
     - geofield_map
     - image
     - inline_entity_form
@@ -77,6 +79,13 @@ content:
     settings:
       size: 1023
       placeholder: ''
+    third_party_settings: {  }
+  field_images_pdf:
+    type: file_generic
+    weight: 26
+    region: content
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
   field_law_tags:
     type: chosen_select
