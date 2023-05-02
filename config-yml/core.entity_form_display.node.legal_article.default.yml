@@ -30,7 +30,6 @@ dependencies:
     - address
     - chosen_field
     - datetime
-    - file
     - geofield_map
     - image
     - inline_entity_form
@@ -79,13 +78,6 @@ content:
     settings:
       size: 1023
       placeholder: ''
-    third_party_settings: {  }
-  field_images_pdf:
-    type: file_generic
-    weight: 26
-    region: content
-    settings:
-      progress_indicator: throbber
     third_party_settings: {  }
   field_law_tags:
     type: chosen_select
@@ -215,6 +207,7 @@ hidden:
   field_category: true
   field_crimes: true
   field_document_image: true
+  field_images_pdf: true
   field_parent_location: true
   field_punishments: true
   langcode: true
