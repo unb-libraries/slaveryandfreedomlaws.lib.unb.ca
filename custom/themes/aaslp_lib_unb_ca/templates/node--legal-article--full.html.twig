@@ -72,6 +72,7 @@
  * @ingroup themeable
  */
 #}
+
 <article{{ attributes }}>
 
   {{ title_prefix }}
@@ -93,7 +94,6 @@
   {% endif %}
 
   <div class="node__content">
-    {{ content.field_document_images }}
     <div class="container con-metadata">
       <div class="row row-metadata">
         <div class="col-sm-6 col-metadata">
@@ -110,7 +110,7 @@
     {{ content.body }}
     {{- content.field_source -}}
     {%- if content.field_source and content.field_pages -%}
-      <span>{{ '(Pages: '}}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
+      <span>{{ '(Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
     {%- endif -%}
     {{ content.field_notes }}
   </div>
