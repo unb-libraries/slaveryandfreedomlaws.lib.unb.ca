@@ -8,6 +8,8 @@
 use Drupal\Core\Entity;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\file\Entity\File;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 
@@ -76,6 +78,7 @@ function legal_article_node_presave($entity) {
           $entity->field_notes =
           $entity->field_source =
           $entity->field_punishments =
+          $entity->field_images_pdf =
           NULL;
     }
   }
@@ -109,13 +112,15 @@ function legal_article_theme($existing, $type, $theme, $path) {
  * Implements hook_form_alter().
  */
 function legal_article_form_alter(&$form, $form_state, $form_id) {
-  // Hide revision switch field for legal article create/edit forms.
+  // Hide revision switch and URL alias fields for legal article create/edit forms.
   if ($form_id == 'node_legal_article_form' or
     $form_id == 'node_legal_article_edit_form') {
     // For theme Seven (from Stable).
     $form['field_revision_switch']['#attributes']['class'][] = 'hidden';
+    $form['path']['#attributes']['class'][] = 'hidden';
     // For Bootstrap themes.
     $form['field_revision_switch']['#attributes']['class'][] = 'd-none';
+    $form['path']['#attributes']['class'][] = 'd-none';
 
     // Display only relevant fields if entering a timeline event.
     $show_field = [
@@ -151,6 +156,27 @@ function article_preprocess(&$form, $form_state) {
   // Flip field_revision_switch to force new revision on submit.
   $switch = $form_state->getValue('field_revision_switch')['value'];
   $form_state->setValue('field_revision_switch', ['value' => (int)!$switch]);
+  // Override field_images_pdf filename.
+  $pdf_file = $form_state->getValue('field_images_pdf');
+  $file = File::load($pdf_file[0]['fids'][0]);
+  // Gets contents from file.
+  $file_real_path = \Drupal::service('file_system')->realpath($file->getFileUri());
+  $file_contents = file_get_contents($file_real_path);
+  // Get entity URL value.
+  $url = $form_state->getValue('path')[0]['alias'];
+  // Save new file with fixed name.
+  if ($url) {
+    $parts = explode('/', $url);
+    $filename = end($parts);
+    $new_file = \Drupal::service('file.repository')->writeData($file_contents, "public://pdf/$filename", FileSystemInterface::EXISTS_REPLACE);
+  }
+  else {
+  }
+  // Update file reference in field.
+  $pdf_file[0]['fids'][0] = $new_file->id();
+  $form_state->setValue('field_images_pdf', $pdf_file);
+  // Deletes the uploaded file.
+  $file->delete();
 }
 
 /**
