@@ -158,25 +158,28 @@ function article_preprocess(&$form, $form_state) {
   $form_state->setValue('field_revision_switch', ['value' => (int)!$switch]);
   // Override field_images_pdf filename.
   $pdf_file = $form_state->getValue('field_images_pdf');
-  $file = File::load($pdf_file[0]['fids'][0]);
-  // Gets contents from file.
-  $file_real_path = \Drupal::service('file_system')->realpath($file->getFileUri());
-  $file_contents = file_get_contents($file_real_path);
-  // Get entity URL value.
-  $url = $form_state->getValue('path')[0]['alias'];
-  // Save new file with fixed name.
-  if ($url) {
-    $parts = explode('/', $url);
-    $filename = end($parts);
-    $new_file = \Drupal::service('file.repository')->writeData($file_contents, "public://pdf/$filename", FileSystemInterface::EXISTS_REPLACE);
+  
+  if (!empty($pdf_file[0]['fids'][0])) {
+    $file = File::load($pdf_file[0]['fids'][0]);
+    // Gets contents from file.
+    $file_real_path = \Drupal::service('file_system')->realpath($file->getFileUri());
+    $file_contents = file_get_contents($file_real_path);
+    // Get entity URL value.
+    $url = $form_state->getValue('path')[0]['alias'];
+    // Save new file with fixed name.
+    if ($url) {
+      $parts = explode('/', $url);
+      $filename = end($parts);
+      $new_file = \Drupal::service('file.repository')->writeData($file_contents, "public://pdf/$filename.pdf", FileSystemInterface::EXISTS_REPLACE);
+    }
+    else {
+    }
+    // Update file reference in field.
+    $pdf_file[0]['fids'][0] = $new_file->id();
+    $form_state->setValue('field_images_pdf', $pdf_file);
+    // Deletes the uploaded file.
+    $file->delete();
   }
-  else {
-  }
-  // Update file reference in field.
-  $pdf_file[0]['fids'][0] = $new_file->id();
-  $form_state->setValue('field_images_pdf', $pdf_file);
-  // Deletes the uploaded file.
-  $file->delete();
 }
 
 /**
