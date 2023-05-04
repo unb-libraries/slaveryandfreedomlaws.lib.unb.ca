@@ -24,9 +24,11 @@ dependencies:
     - field.field.node.legal_article.field_saved_coordinates
     - field.field.node.legal_article.field_source
     - field.field.node.legal_article.field_timeline_event
+    - image.style.large_centre
     - node.type.legal_article
   module:
     - datetime
+    - pdfpreview
     - text
     - user
 id: node.legal_article.default
@@ -65,13 +67,27 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_images_pdf:
+    type: pdfpreview
+    label: above
+    settings:
+      image_style: large_centre
+      image_link: file
+      show_description: '1'
+      tag: span
+      image_loading:
+        attribute: lazy
+      fallback_formatter: 0
+    third_party_settings: {  }
+    weight: 8
+    region: content
   field_law_tags:
     type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
   field_location:
     type: entity_reference_label
@@ -86,7 +102,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_pages:
     type: string
@@ -102,7 +118,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   field_source:
     type: entity_reference_label
@@ -120,7 +136,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   links:
     settings: {  }
@@ -132,7 +148,6 @@ hidden:
   field_crimes: true
   field_document_image: true
   field_document_images: true
-  field_images_pdf: true
   field_location_address: true
   field_location_coordinates: true
   field_parent_location: true

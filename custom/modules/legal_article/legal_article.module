@@ -69,15 +69,12 @@ function legal_article_node_presave($entity) {
     // Purge all extra fields if timeline event.
     if (!empty($entity->field_timeline_event->getValue()[0]['value']) and
       $entity->field_timeline_event->getValue()[0]['value'] == 1) {
-        $entity->field_category =
-          $entity->field_citation =
-          $entity->field_crimes =
+        $entity->field_citation =
           $entity->field_location =
           $entity->field_location_address =
           $entity->field_location_coordinates =
           $entity->field_notes =
           $entity->field_source =
-          $entity->field_punishments =
           $entity->field_images_pdf =
           NULL;
     }
@@ -156,37 +153,30 @@ function article_preprocess(&$form, $form_state) {
   // Flip field_revision_switch to force new revision on submit.
   $switch = $form_state->getValue('field_revision_switch')['value'];
   $form_state->setValue('field_revision_switch', ['value' => (int)!$switch]);
-  // Override field_images_pdf filename.
-  $pdf_file = $form_state->getValue('field_images_pdf');
-  
-  if (!empty($pdf_file[0]['fids'][0])) {
-    $file = File::load($pdf_file[0]['fids'][0]);
-    // Gets contents from file.
-    $file_real_path = \Drupal::service('file_system')->realpath($file->getFileUri());
-    $file_contents = file_get_contents($file_real_path);
-    // Get entity URL value.
-    $url = $form_state->getValue('path')[0]['alias'];
-    // Save new file with fixed name.
-    if ($url) {
-      $parts = explode('/', $url);
-      $filename = end($parts);
-      $new_file = \Drupal::service('file.repository')->writeData($file_contents, "public://pdf/$filename.pdf", FileSystemInterface::EXISTS_REPLACE);
-    }
-    else {
-    }
-    // Update file reference in field.
-    $pdf_file[0]['fids'][0] = $new_file->id();
-    $form_state->setValue('field_images_pdf', $pdf_file);
-    // Deletes the uploaded file.
-    $file->delete();
-  }
 }
 
 /**
  * Implements hook_ENTITY_TYPE_view() for node entities.
  */
 function legal_article_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
-  if ($entity->getType() == 'legal_article') {
+  if ($view_mode == 'full' and $entity->getType() == 'legal_article') {
+    // Full title to title.
     $build['title'][0]['#context']['value'] = $entity->field_full_title->getString();
+    // PDF attachment filename override.
+    $alias = explode('/', $entity->path->getValue()[0]['alias'])[2];
+    $pdf_entity = $entity->field_images_pdf->entity;
+    $pdf = $pdf_entity ? explode('.', $entity->field_images_pdf->entity->getFilename())[0] : NULL;
+    // Update pdf file if not a match.
+    if ($pdf and $pdf != $alias) {
+      $fid = $pdf_entity->id();
+      $file = File::load($fid);
+      // Gets contents from file.
+      $file_real_path = \Drupal::service('file_system')->realpath($file->getFileUri());
+      $file_contents = file_get_contents($file_real_path);
+      $new_file = \Drupal::service('file.repository')->writeData($file_contents, "public://pdf/$alias.pdf", FileSystemInterface::EXISTS_REPLACE);
+      $entity->set('field_images_pdf', $new_file);
+      $entity->save();
+      $file->delete();
+    } 
   }
 }
