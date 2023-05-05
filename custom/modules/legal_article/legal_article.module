@@ -30,6 +30,7 @@ function legal_article_node_presave($entity) {
     if ($full) {
       $entity->title = $full;
     }
+
     // Process parent location.
     if (!empty($entity->field_location->getValue()[0]['target_id'])) {
       // Get location term ID.
@@ -50,13 +51,13 @@ function legal_article_node_presave($entity) {
         }
       }
     }
-
+    
     // Override coordinates with saved if present.
     $latitude = !empty($entity->field_saved_coordinates->entity) ? 
-      $entity->field_saved_coordinates->entity->field_latitude->getValue()[0]['value'] : NULL;
+    $entity->field_saved_coordinates->entity->field_latitude->getValue()[0]['value'] : NULL;
     $longitude = !empty($entity->field_saved_coordinates->entity) ?   
-      $entity->field_saved_coordinates->entity->field_longitude->getValue()[0]['value'] : NULL;
- 
+    $entity->field_saved_coordinates->entity->field_longitude->getValue()[0]['value'] : NULL;
+    
     if ($latitude and $longitude) {
       $entity->field_location_coordinates = [
         'value' => "POINT ($longitude $latitude)",
@@ -65,18 +66,37 @@ function legal_article_node_presave($entity) {
         'lat' => $latitude,
       ];
     }
-
+    
     // Purge all extra fields if timeline event.
     if (!empty($entity->field_timeline_event->getValue()[0]['value']) and
-      $entity->field_timeline_event->getValue()[0]['value'] == 1) {
-        $entity->field_citation =
-          $entity->field_location =
-          $entity->field_location_address =
-          $entity->field_location_coordinates =
-          $entity->field_notes =
-          $entity->field_source =
-          $entity->field_images_pdf =
-          NULL;
+    $entity->field_timeline_event->getValue()[0]['value'] == 1) {
+      $entity->field_citation =
+      $entity->field_location =
+      $entity->field_location_address =
+      $entity->field_location_coordinates =
+      $entity->field_notes =
+      $entity->field_source =
+      $entity->field_images_pdf =
+      NULL;
+    }
+
+    // Update field_images_pdf filename.
+    $pdf_id = $entity->field_images_pdf->getValue()[0]['target_id'] ?? NULL;
+    $location = $entity->field_location->entity->getName() ?? NULL;
+    $year = substr($entity->field_date->getString(), 0, 4) ?? NULL;
+    
+    if ($pdf_id and $location and $year) {
+      $alias = "$location-$year";
+      $file = File::load($pdf_id);
+      // Gets contents from file.
+      $file_real_path = \Drupal::service('file_system')->realpath($file->getFileUri());
+      $file_contents = file_get_contents($file_real_path);
+      // Save new file with fixed name.
+      $new_file = \Drupal::service('file.repository')->writeData($file_contents, "public://pdf/$alias.pdf", FileSystemInterface::EXISTS_RENAME);
+      // Update file reference in field.
+      $entity->set('field_images_pdf', $new_file);
+      // Deletes the original, copied file.
+      $file->delete();
     }
   }
 }
@@ -152,7 +172,7 @@ function legal_article_form_node_legal_article_edit_form_alter(&$form, $form_sta
 function article_preprocess(&$form, $form_state) {
   // Flip field_revision_switch to force new revision on submit.
   $switch = $form_state->getValue('field_revision_switch')['value'];
-  $form_state->setValue('field_revision_switch', ['value' => (int)!$switch]);
+  $form_state->setValue('field_revision_switch', ['value' => (int)!$switch]);  
 }
 
 /**
@@ -162,21 +182,5 @@ function legal_article_node_view(array &$build, EntityInterface $entity, EntityV
   if ($view_mode == 'full' and $entity->getType() == 'legal_article') {
     // Full title to title.
     $build['title'][0]['#context']['value'] = $entity->field_full_title->getString();
-    // PDF attachment filename override.
-    $alias = explode('/', $entity->path->getValue()[0]['alias'])[2];
-    $pdf_entity = $entity->field_images_pdf->entity;
-    $pdf = $pdf_entity ? explode('.', $entity->field_images_pdf->entity->getFilename())[0] : NULL;
-    // Update pdf file if not a match.
-    if ($pdf and $pdf != $alias) {
-      $fid = $pdf_entity->id();
-      $file = File::load($fid);
-      // Gets contents from file.
-      $file_real_path = \Drupal::service('file_system')->realpath($file->getFileUri());
-      $file_contents = file_get_contents($file_real_path);
-      $new_file = \Drupal::service('file.repository')->writeData($file_contents, "public://pdf/$alias.pdf", FileSystemInterface::EXISTS_REPLACE);
-      $entity->set('field_images_pdf', $new_file);
-      $entity->save();
-      $file->delete();
-    } 
   }
 }

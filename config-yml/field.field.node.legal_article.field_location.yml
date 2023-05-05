@@ -12,7 +12,7 @@ entity_type: node
 bundle: legal_article
 label: Location
 description: 'This will be displayed as the historical location for the law.'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
