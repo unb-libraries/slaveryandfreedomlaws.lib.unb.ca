@@ -82,21 +82,50 @@ function legal_article_node_presave($entity) {
 
     // Update field_images_pdf filename.
     $pdf_id = $entity->field_images_pdf->getValue()[0]['target_id'] ?? NULL;
-    $location = $entity->field_location->entity->getName() ?? NULL;
+    $location = strtolower($entity->field_location->entity->getName()) ?? NULL;
     $year = substr($entity->field_date->getString(), 0, 4) ?? NULL;
     
     if ($pdf_id and $location and $year) {
-      $alias = "$location-$year";
-      $file = File::load($pdf_id);
-      // Gets contents from file.
-      $file_real_path = \Drupal::service('file_system')->realpath($file->getFileUri());
-      $file_contents = file_get_contents($file_real_path);
-      // Save new file with fixed name.
-      $new_file = \Drupal::service('file.repository')->writeData($file_contents, "public://pdf/$alias.pdf", FileSystemInterface::EXISTS_RENAME);
-      // Update file reference in field.
-      $entity->set('field_images_pdf', $new_file);
-      // Deletes the original, copied file.
-      $file->delete();
+      // Default alias.
+      $name = "$location-$year";
+      $alias = "/laws/$name";
+      $old_alias = $entity->path->getValue()[0]['alias'] ?? NULL;
+
+      // If alias components have not been updtaed...
+      if (str_starts_with($old_alias, $alias)) {
+        // Existing path and therefore filename are still valid.
+        $parts= explode('/', $old_alias);
+        $name = array_pop($parts);
+      }
+      else {
+        // Check for existing aliases.
+        $alias_repo = \Drupal::service('path_alias.repository');
+        $existing = $alias_repo->lookupByAlias($alias, 'en')['alias'] ?? NULL;
+        $i = 0;
+
+        while ($existing) {
+          $name = "$location-$year-$i";
+          $alias = "/laws/$name";
+          $existing = $alias_repo->lookupByAlias($alias, 'en')['alias'] ?? NULL;
+          $i++;
+        };
+      }
+
+      $old_name = $entity->field_images_pdf->entity->filename->getString() ?? NULL;
+      
+      // Only rename PDF file if it's not a match.
+      if ("$name.pdf" != $old_name) {
+        $file = File::load($pdf_id);
+        // Gets contents from file.
+        $file_real_path = \Drupal::service('file_system')->realpath($file->getFileUri());
+        $file_contents = file_get_contents($file_real_path);
+        // Save new file with fixed name.
+        $new_file = \Drupal::service('file.repository')->writeData($file_contents, "public://pdf/$name.pdf", FileSystemInterface::EXISTS_REPLACE);
+        // Update file reference in field.
+        $entity->set('field_images_pdf', $new_file);
+        // Deletes the original, copied file.
+        $file->delete();
+      }
     }
   }
 }
