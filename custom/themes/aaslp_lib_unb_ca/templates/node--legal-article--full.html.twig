@@ -94,23 +94,27 @@
   {% endif %}
 
   <div class="node__content">
-  {{ content.field_images_pdf }}
+  {{ content.field_abstract }}
     <div class="container con-metadata">
       <div class="row row-metadata">
         <div class="col-sm-6 col-metadata">
           {{ content.field_date }}
           {{ content.field_location }}
+          {{ content.field_law_tags }}
         </div>
         <div class="col-sm-6 col-metadata">
-          {{ content.field_law_tags }}
-
+          {{ content.field_images_pdf }}
+          <a class="btn btn-secondary">Download Images</a>
+          <a class="btn btn-secondary">Download Transcription</a>
         </div>
       </div>
     </div>
-    {{ content.field_abstract }}
     {{ content.body }}
+    <div>
+      <h2>Dynamic citation goes here</h2>
+    </div>
     {{- content.field_source -}}
-    {%- if content.field_source and content.field_pages -%}
+    {%- if content.field_source|field_value and content.field_pages|field_value -%}
       <span>{{ '(Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
     {%- endif -%}
     {{ content.field_notes }}
