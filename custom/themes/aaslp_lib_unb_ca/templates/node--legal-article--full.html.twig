@@ -107,7 +107,9 @@
           <div class="field field--name-download-buttons">
             <div class="field__label">Download</div>
             <div class="field__item mt-1">
-              <a class="btn btn-secondary">Images<i class="fa fa-image ml-1"></i> </a>
+              {% if content.field_images_pdf|field_value %}
+                <a class="btn btn-secondary">Original<i class="fa fa-scroll ml-1"></i> </a>
+              {% endif %}
               <a class="btn btn-secondary">Transcription<i class="fa fa-file-alt ml-1"></i></a>
             </div>
           </div>
@@ -118,9 +120,10 @@
     <div>
       <h2>Dynamic citation goes here</h2>
     </div>
-    {{- content.field_source -}}
+    <div class="field__label">Source</div>
+    {{- content.field_source|field_value -}}
     {%- if content.field_source|field_value and content.field_pages|field_value -%}
-      <span>{{ '(Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
+      <span>{{ ' (Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
     {%- endif -%}
     {{ content.field_notes }}
   </div>
