@@ -725,29 +725,29 @@ main > .container {
       .con-metadata, .row-metadata, .col-metadata {
         padding: inherit;
       }
+
+      .btn, .btn:visited, .btn:focus, .btn:focus-within {
+        padding: .1rem .4rem !important;
+        color: white !important;
+        background-color: $jc-orange !important;
+        border: none !important;
+        font-size: .9rem !important;
+        font-weight: bold;
+        box-shadow: none !important;
+      }
+      .btn:hover, .btn:active, .btn:target {
+        padding: .1rem .4rem !important;
+        color: white !important;
+        background-color: $unb-darkgray !important;
+        border: none !important;
+        font-size: .9rem !important;
+        font-weight: bold;
+      }
       .row-metadata {
         border-bottom: 1px solid $lgray;
         margin: 20px 0;
         padding-top: 0;
         padding-bottom: 10px;
-
-        .btn, .btn:visited, .btn:focus, .btn:focus-within, {
-          padding: .1rem .4rem !important;
-          color: white !important;
-          background-color: $jc-orange !important;
-          border: none !important;
-          font-size: .9rem !important;
-          font-weight: bold;
-          box-shadow: none !important;
-        }
-        .btn:hover, .btn:active, .btn:target {
-          padding: .1rem .4rem !important;
-          color: white !important;
-          background-color: $unb-darkgray !important;
-          border: none !important;
-          font-size: .9rem !important;
-          font-weight: bold;
-        }
       }
       .field--name-field-abstract {
         display:inline-block;

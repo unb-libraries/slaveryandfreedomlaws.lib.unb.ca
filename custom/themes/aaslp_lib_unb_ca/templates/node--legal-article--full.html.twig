@@ -119,15 +119,28 @@
       </div>
     </div>
     {{ content.body }}
-    <div>
-      <h2>Dynamic citation goes here</h2>
+    <div class="field field--name-dynamic-citation">
+      <div class="field__label">Citation</div>
+      <div class="field__item">
+        {{- '"' ~ label|field_value[0]['#context']['value'] ~ '." ' -}}
+        {{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
+        {{- 'now'|date('M j, Y, ') -}}
+        <a href "{{- global_variables.base_url ~ '/node/' ~ node.id() -}}">
+          {{- global_variables.base_url ~ '/node/' ~ node.id() -}}
+        </a>
+        <a class="btn btn-secondary">Copy<i class="fa fa-clipboard-check ml-1"></i></a>
+      </div>
     </div>
-    <div class="field__label">Source</div>
-    {{- content.field_source|field_value -}}
-    {%- if content.field_source|field_value and content.field_pages|field_value -%}
-      <span>{{ ' (Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
-    {%- endif -%}
-    {{ content.field_notes }}
+    <div class="field field--name-dynamic-source">
+      <div class="field__label">Source</div>
+      <div class="field__item">
+        {{- content.field_source|field_value -}}
+        {%- if content.field_source|field_value and content.field_pages|field_value -%}
+          <span>{{ ' (Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
+        {%- endif -%}
+        {{ content.field_notes }}
+      </div>
+    </div>
   </div>
 
 </article>
