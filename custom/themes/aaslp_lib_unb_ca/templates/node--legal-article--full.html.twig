@@ -108,7 +108,9 @@
             <div class="field__label">Download</div>
             <div class="field__item mt-1">
               {% if content.field_images_pdf|field_value %}
-                <a class="btn btn-secondary">Original<i class="fa fa-scroll ml-1"></i> </a>
+                <a class="btn btn-secondary" href="{{ content.field_images_pdf|field_value[0]['#url'].getOptions()['path'] }}" download>
+                  Original<i class="fa fa-scroll ml-1"></i>
+                </a>
               {% endif %}
               <a class="btn btn-secondary">Transcription<i class="fa fa-file-alt ml-1"></i></a>
             </div>

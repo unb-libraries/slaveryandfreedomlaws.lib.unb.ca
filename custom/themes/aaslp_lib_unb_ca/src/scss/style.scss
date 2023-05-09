@@ -475,7 +475,7 @@ main > .container {
     }
 
     // Links.
-    a {
+    a, a:visited {
       color: $jc-orange;
     }
     a:active,
@@ -540,7 +540,8 @@ main > .container {
           font-size: 20px;
         }
         // Full background image links.
-        .tl-full-image-background a {
+        .tl-full-image-background a,
+        .tl-full-image-background a:visited {
           color: white;
 
           &:active,
@@ -730,15 +731,16 @@ main > .container {
         padding-top: 0;
         padding-bottom: 10px;
 
-        .btn {
+        .btn, .btn:visited, .btn:focus, .btn:focus-within, {
           padding: .1rem .4rem !important;
           color: white !important;
           background-color: $jc-orange !important;
           border: none !important;
           font-size: .9rem !important;
           font-weight: bold;
+          box-shadow: none !important;
         }
-        .btn:hover, .btn:active, .btn:focus {
+        .btn:hover, .btn:active, .btn:target {
           padding: .1rem .4rem !important;
           color: white !important;
           background-color: $unb-darkgray !important;
