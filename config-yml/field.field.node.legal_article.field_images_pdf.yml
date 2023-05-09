@@ -11,7 +11,7 @@ id: node.legal_article.field_images_pdf
 field_name: field_images_pdf
 entity_type: node
 bundle: legal_article
-label: 'Document Image(s)'
+label: 'Document Images'
 description: 'Legal article images should be uploaded in a single PDF file.'
 required: false
 translatable: false

@@ -97,15 +97,20 @@
   {{ content.field_abstract }}
     <div class="container con-metadata">
       <div class="row row-metadata">
-        <div class="col-sm-6 col-metadata">
+        <div class="col-sm-8 col-metadata">
           {{ content.field_date }}
           {{ content.field_location }}
           {{ content.field_law_tags }}
         </div>
-        <div class="col-sm-6 col-metadata">
+        <div class="col-sm-4 col-metadata">
           {{ content.field_images_pdf }}
-          <a class="btn btn-secondary">Download Images</a>
-          <a class="btn btn-secondary">Download Transcription</a>
+          <div class="field field--name-download-buttons">
+            <div class="field__label">Download</div>
+            <div class="field__item mt-1">
+              <a class="btn btn-secondary">Images<i class="fa fa-image ml-1"></i> </a>
+              <a class="btn btn-secondary">Transcription<i class="fa fa-file-alt ml-1"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

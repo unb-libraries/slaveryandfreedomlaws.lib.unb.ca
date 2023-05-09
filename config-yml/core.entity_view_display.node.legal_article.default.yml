@@ -24,7 +24,7 @@ dependencies:
     - field.field.node.legal_article.field_saved_coordinates
     - field.field.node.legal_article.field_source
     - field.field.node.legal_article.field_timeline_event
-    - image.style.large_centre
+    - image.style.medium
     - node.type.legal_article
   module:
     - datetime
@@ -71,7 +71,7 @@ content:
     type: pdfpreview
     label: above
     settings:
-      image_style: large_centre
+      image_style: medium
       image_link: file
       show_description: '1'
       tag: span

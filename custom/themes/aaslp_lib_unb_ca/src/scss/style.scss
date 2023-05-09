@@ -56,6 +56,7 @@ input {
 }
 // Buttons.
 .btn {
+  border-radius: 2px !important;
   border-color: $aaslp-blue !important;
   background-color: $aaslp-blue !important;
 }
@@ -714,8 +715,7 @@ main > .container {
       }
 
       // Document image.
-      .field--name-field-document-image {
-        float: right;
+      .pdfpreview-file {
         margin: 1rem;
         border: 1px solid $lgray;
       }
@@ -725,11 +725,27 @@ main > .container {
         padding: inherit;
       }
       .row-metadata {
-        border-top: 1px solid $lgray;
         border-bottom: 1px solid $lgray;
         margin: 20px 0;
         padding-top: 0;
         padding-bottom: 10px;
+
+        .btn {
+          padding: .1rem .4rem !important;
+          color: white !important;
+          background-color: $jc-orange !important;
+          border: none !important;
+          font-size: .9rem !important;
+          font-weight: bold;
+        }
+        .btn:hover, .btn:active, .btn:focus {
+          padding: .1rem .4rem !important;
+          color: white !important;
+          background-color: $unb-darkgray !important;
+          border: none !important;
+          font-size: .9rem !important;
+          font-weight: bold;
+        }
       }
       .field--name-field-abstract {
         display:inline-block;
