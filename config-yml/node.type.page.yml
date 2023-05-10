@@ -1,4 +1,4 @@
-uuid: f9248d1d-7787-4253-bc44-56ac1671a93c
+uuid: 4c88ba45-517b-4344-a642-e07b34742702
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: 'Legal Article'
-type: legal_article
-description: 'A document that describes a specific slavery law.'
+name: Page
+type: page
+description: 'For information pages.'
 help: ''
 new_revision: true
-preview_mode: 1
+preview_mode: 2
 display_submitted: false
