@@ -112,7 +112,9 @@
                   Original<i class="fa fa-scroll ml-1"></i>
                 </a>
               {% endif %}
-              <a class="btn btn-secondary">Transcription<i class="fa fa-file-alt ml-1"></i></a>
+              {% if content.body|field_value %}
+                <a class="btn btn-secondary">Transcription<i class="fa fa-file-alt ml-1"></i></a>
+              {% endif %}
             </div>
           </div>
         </div>
@@ -128,7 +130,7 @@
         <a href "{{- global_variables.base_url ~ '/node/' ~ node.id() -}}">
           {{- global_variables.base_url ~ '/node/' ~ node.id() -}}
         </a>
-        <a class="btn btn-secondary">Copy<i class="fa fa-clipboard-check ml-1"></i></a>
+        <a id="copy-trans" class="btn btn-secondary">Copy<i class="fa fa-clipboard-check ml-1"></i></a>
       </div>
     </div>
     <div class="field field--name-dynamic-source">

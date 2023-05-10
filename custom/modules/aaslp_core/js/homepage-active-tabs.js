@@ -27,6 +27,20 @@
               return false;
           }
       });
+
+      // Transcription copy button.
+      $('#copy-trans').on('click', function() {
+        navigator.clipboard.writeText($('.field--name-dynamic-citation > .field__item')).then(
+          function() {
+            // Clipboard successfully set.
+            window.alert('Transcription copied to clipboard') 
+          }, 
+          function() {
+            // Clipboard write failed.
+            window.alert('ERROR: Clipboard API unsupported by browser')
+          }
+        );
+      });
     },
   };
 })(jQuery);
