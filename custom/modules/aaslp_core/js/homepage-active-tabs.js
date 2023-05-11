@@ -29,11 +29,11 @@
       });
 
       // Transcription copy button.
-      $('#copy-trans', context).once('copyTrans').on('click', function() {
-        navigator.clipboard.writeText($('.field--name-dynamic-citation > .field__item').html()).then(
+      $('#cite', context).once('copyCitation').on('click', function() {
+        navigator.clipboard.writeText($('#citation').html()).then(
           function() {
             // Clipboard successfully set.
-            window.alert('Transcription copied to clipboard') 
+            window.alert('Citation copied to clipboard') 
           }, 
           function() {
             // Clipboard write failed.
