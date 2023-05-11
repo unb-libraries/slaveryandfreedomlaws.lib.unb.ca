@@ -29,7 +29,7 @@
       });
 
       // Transcription copy button.
-      $('#copy-trans').on('click', function() {
+      $('#copy-trans').onclick(function() {
         navigator.clipboard.writeText($('.field--name-dynamic-citation > .field__item')).then(
           function() {
             // Clipboard successfully set.
