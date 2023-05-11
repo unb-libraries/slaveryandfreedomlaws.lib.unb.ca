@@ -30,7 +30,7 @@
 
       // Transcription copy button.
       $('#copy-trans', context).once('copyTrans').on('click', function() {
-        navigator.clipboard.writeText($('.field--name-dynamic-citation > .field__item')).then(
+        navigator.clipboard.writeText($('.field--name-dynamic-citation > .field__item').toString()).then(
           function() {
             // Clipboard successfully set.
             window.alert('Transcription copied to clipboard') 
