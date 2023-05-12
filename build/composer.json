@@ -135,6 +135,7 @@
   ],
   "require": {
     "ckeditor-plugin/widget": "4.16.1",
+    "dompdf/dompdf": "2.0.3",
     "drupal/address": "1.11",
     "drupal/admin_toolbar": "3.3.0",
     "drupal/bootstrap4": "2.1.16",
@@ -176,8 +177,10 @@
     "furf/jquery-ui-touch-punch": "dev-master",
     "geocoder-php/nominatim-provider": "5.5.0",
     "harvesthq/chosen": "^1.8",
+    "mikehaertl/phpwkhtmltopdf": "~2.1",
     "oomphinc/composer-installers-extender": "^2",
     "simeydotme/jquery-ui-slider-pips": "~1.11",
+    "tecnickcom/tcpdf": "~6",
     "unb-libraries/drupal-builder": "^9",
     "unb-libraries/saml_features": "dev-9.x-1.x"
   },
