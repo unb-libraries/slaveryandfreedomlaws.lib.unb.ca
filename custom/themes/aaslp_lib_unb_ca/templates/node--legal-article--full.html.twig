@@ -125,7 +125,7 @@
       <div class="field__label">Citation</div>
       <div class="field__item">
       `<span id="citation">
-          {{- '"' ~ label|field_value[0]['#context']['value'] ~ '." ' -}}
+          {{- '"' ~ label|field_value[0]['#context']['value'] ~ '" ' -}}
           {{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
           {{- 'now'|date('M j, Y, ') -}}
           <a href="{{- global_variables.base_url ~ '/node/' ~ node.id() -}}">
