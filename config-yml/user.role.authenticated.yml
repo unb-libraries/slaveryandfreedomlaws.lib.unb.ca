@@ -1,7 +1,10 @@
 uuid: 78833604-b2a3-459c-8be1-2dc901817c52
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - google_analytics
+    - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
