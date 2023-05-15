@@ -1,4 +1,4 @@
-(function(jQuery, navigator, Drupal, once) {
+(function($, navigator, Drupal, once) {
   'use strict';
 
   Drupal.behaviors.homepageActiveTabs = {
@@ -43,4 +43,4 @@
       });
     },
   };
-})(jQuery, navigator, Drupal, once);
+})($, navigator, Drupal, once);
