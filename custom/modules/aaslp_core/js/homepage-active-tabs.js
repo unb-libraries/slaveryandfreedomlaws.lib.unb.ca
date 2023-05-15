@@ -29,7 +29,7 @@
       });
 
       // Transcription copy button.
-      $(once('#cite')).on('click', function() {
+      once('copyCitation', '#cite', context).on('click', function() {
         navigator.clipboard.writeText($('#citation').html()).then(
           function() {
             // Clipboard successfully set.
@@ -43,4 +43,4 @@
       });
     },
   };
-}(jQuery, navigator, Drupal, once);
+}(jQuery, navigator, Drupal, once));
