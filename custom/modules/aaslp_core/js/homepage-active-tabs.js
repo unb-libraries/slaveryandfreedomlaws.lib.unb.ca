@@ -43,4 +43,4 @@
       });
     },
   };
-})($, navigator, Drupal, once);
+}(jQuery, navigator, Drupal, once);
