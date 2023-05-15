@@ -1,4 +1,4 @@
-(function($) {
+(function(Drupal, $, once) {
   'use strict';
 
   Drupal.behaviors.homepageActiveTabs = {
@@ -29,7 +29,7 @@
       });
 
       // Transcription copy button.
-      $('#cite', context).once('copyCitation').on('click', function() {
+      $(once('#cite')).on('click', function() {
         navigator.clipboard.writeText($('#citation').html()).then(
           function() {
             // Clipboard successfully set.
@@ -43,4 +43,4 @@
       });
     },
   };
-})(jQuery);
+})(Drupal, jQuery, once);
