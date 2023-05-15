@@ -1,9 +1,9 @@
-(function(Drupal, $, once) {
+(function(jQuery, navigator, Drupal, once) {
   'use strict';
 
   Drupal.behaviors.homepageActiveTabs = {
     attach: function (context, settings) {
-      // On documeny ready.
+      // On document ready.
       $(document).ready( function() {
         // Ensure that tab titles are active when their content is.
         if ($('#title').hasClass('active')) {
@@ -43,4 +43,4 @@
       });
     },
   };
-})(Drupal, jQuery, once);
+})(jQuery, navigator, Drupal, once);
