@@ -1,4 +1,4 @@
-(function($, navigator, Drupal, once) {
+(function($, navigator, Drupal) {
   'use strict';
 
   Drupal.behaviors.homepageActiveTabs = {
@@ -12,35 +12,35 @@
         if ($('#fulltext').hasClass('active')) {
           $('#tab-fulltext').addClass('active');
         }
-      });
+        
+        // Autofocus the search input of clicked tab.
+        $('.nav-tabs a[data-toggle="tab"]').on('shown.bs.tab', function() {
+            $('#aaslp-core-homepage input[type="text"]:visible').focus();
+        });
 
-      // Autofocus the search input of clicked tab.
-      $('.nav-tabs a[data-toggle="tab"]').on('shown.bs.tab', function() {
-          $('#aaslp-core-homepage input[type="text"]:visible').focus();
-      });
+        // Simulate click function when user presses enter key.
+        $('input[type="text"]').on('keypress', function (e) {
+            if (e.keyCode == 13) {
+                $('#aaslp-core-homepage input[type=submit]:visible').focus();
+                $('#aaslp-core-homepage input[type=submit]:visible').click();
+                return false;
+            }
+        });
 
-      // Simulate click function when user presses enter key.
-      $('input[type="text"]').on('keypress', function (e) {
-          if (e.keyCode == 13) {
-              $('#aaslp-core-homepage input[type=submit]:visible').focus();
-              $('#aaslp-core-homepage input[type=submit]:visible').click();
-              return false;
-          }
-      });
-
-      // Transcription copy button.
-      once('copyCitation', '#cite', context).on('click', function() {
-        navigator.clipboard.writeText($('#citation').html()).then(
-          function() {
-            // Clipboard successfully set.
-            window.alert('Citation copied to clipboard') 
-          }, 
-          function() {
-            // Clipboard write failed.
-            window.alert('ERROR: Clipboard API unsupported by browser')
-          }
-        );
+        // Transcription copy button.
+        $('#cite').click(function() {
+          navigator.clipboard.writeText($('#citation').html()).then(
+            function() {
+              // Clipboard successfully set.
+              window.alert('Citation copied to clipboard') 
+            }, 
+            function() {
+              // Clipboard write failed.
+              window.alert('ERROR: Clipboard API unsupported by browser')
+            }
+          );
+        });
       });
     },
   };
-}(jQuery, navigator, Drupal, once));
+}(jQuery, navigator, Drupal));
