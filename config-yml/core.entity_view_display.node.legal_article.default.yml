@@ -24,7 +24,7 @@ dependencies:
     - field.field.node.legal_article.field_saved_coordinates
     - field.field.node.legal_article.field_source
     - field.field.node.legal_article.field_timeline_event
-    - image.style.medium
+    - image.style.pdf_preview
     - node.type.legal_article
   module:
     - datetime
@@ -69,12 +69,12 @@ content:
     region: content
   field_images_pdf:
     type: pdfpreview
-    label: above
+    label: visually_hidden
     settings:
-      image_style: medium
+      image_style: pdf_preview
       image_link: file
       show_description: '1'
-      tag: span
+      tag: div
       image_loading:
         attribute: lazy
       fallback_formatter: 0

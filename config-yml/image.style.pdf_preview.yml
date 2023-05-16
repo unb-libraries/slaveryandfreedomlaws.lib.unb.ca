@@ -1,0 +1,15 @@
+uuid: 731b2ec3-6c1a-43aa-a85b-aec373de7975
+langcode: en
+status: true
+dependencies: {  }
+name: pdf_preview
+label: 'PDF Preview (300x300)'
+effects:
+  2481dceb-c013-4ec3-9ed0-e9d18ab42a89:
+    uuid: 2481dceb-c013-4ec3-9ed0-e9d18ab42a89
+    id: image_scale
+    weight: 1
+    data:
+      width: 300
+      height: null
+      upscale: true
