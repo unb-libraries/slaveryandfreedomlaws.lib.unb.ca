@@ -129,14 +129,14 @@
           {{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
           {{- 'now'|date('M j, Y, ') -}}
           <a href="{{- global_variables.base_url ~ '/node/' ~ node.id() -}}">
-            {{- global_variables.base_url ~ '/node/' ~ node.id() -}}
+            {{- global_variables.base_url ~ '/laws/' ~ node.id() -}}
           </a>
         </span>
         <span id="citation" class="sr-only">
           {{- '"' ~ label|field_value[0]['#context']['value'] ~ '" ' -}}
           {{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
           {{- 'now'|date('M j, Y, ') -}}
-          {{- global_variables.base_url ~ '/node/' ~ node.id() -}}
+          {{- global_variables.base_url ~ '/laws/' ~ node.id() -}}
         </span>
         <a id="cite" class="btn btn-secondary">Copy</a>
       </div>
