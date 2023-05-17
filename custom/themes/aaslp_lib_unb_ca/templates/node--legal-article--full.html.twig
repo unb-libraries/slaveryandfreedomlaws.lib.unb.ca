@@ -124,7 +124,7 @@
     <div class="field field--name-dynamic-citation">
       <div class="field__label">Citation</div>
       <div class="field__item">
-      <span id="citation">
+        <span id="citation-display">
           {{- '"' ~ label|field_value[0]['#context']['value'] ~ '" ' -}}
           {{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
           {{- 'now'|date('M j, Y, ') -}}
@@ -132,7 +132,13 @@
             {{- global_variables.base_url ~ '/node/' ~ node.id() -}}
           </a>
         </span>
-        <a id="cite" class="btn btn-secondary">Copy<i class="fa fa-clipboard-check ml-1"></i></a>
+        <span id="citation" class="sr-only">
+          {{- '"' ~ label|field_value[0]['#context']['value'] ~ '" ' -}}
+          {{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
+          {{- 'now'|date('M j, Y, ') -}}
+          {{- global_variables.base_url ~ '/node/' ~ node.id() -}}
+        </span>
+        <a id="cite" class="btn btn-secondary">Copy</a>
       </div>
     </div>
     <div class="field field--name-dynamic-source">

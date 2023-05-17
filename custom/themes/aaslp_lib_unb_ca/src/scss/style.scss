@@ -729,11 +729,16 @@ main > .container {
       .btn, .btn:visited, .btn:focus, .btn:focus-within {
         padding: .3rem .4rem .1rem .3rem !important;
         color: white !important;
-        background-color: $unb-25gray !important;
+        background-color: $jc-orange !important;
         border: none !important;
         font-size: .9rem !important;
         font-weight: bold;
         box-shadow: none !important;
+
+        &#cite {
+          padding: 0 .2rem 0 .1rem !important;
+          background-color: $unb-25gray !important;
+        }
       }
       .btn:hover, .btn:active, .btn:target {
         padding: .3rem .4rem .1rem .3rem !important;
@@ -742,6 +747,11 @@ main > .container {
         border: none !important;
         font-size: .9rem !important;
         font-weight: bold;
+
+        &#cite {
+          padding: 0 .2rem 0 .1rem !important;
+          background-color: $unb-darkgray !important;
+        }
       }
       .row-metadata {
         border-bottom: 1px solid $lgray;

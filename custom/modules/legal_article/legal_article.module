@@ -11,6 +11,7 @@ use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\file\Entity\File;
 use Drupal\node\Entity\Node;
+use Drupal\path_alias\Entity\PathAlias;
 use Drupal\taxonomy\Entity\Term;
 
 
@@ -126,6 +127,22 @@ function legal_article_node_presave($entity) {
         // Deletes the original, copied file.
         $file->delete();
       }
+    }
+
+    // Create law/{nid} path alias if it doesn't exist. Reuse alias repo if present.
+    $alias_repo = $alias_repo ?? \Drupal::service('path_alias.repository');
+
+    $nid = $entity->id();
+    $alias = "/laws/$nid";
+    $existing = $alias_repo->lookupByAlias($alias, 'en')['alias'] ?? NULL;
+
+    if (!$existing) {
+      $path_alias = PathAlias::create([
+        'path' => "/node/$nid",
+        'alias' => $alias,
+      ]);
+
+      $path_alias->save();
     }
   }
 }
