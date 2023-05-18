@@ -1,0 +1,8 @@
+legal_article.pdf:
+  path: '/node/{nid}/legal_article/pdf'
+  defaults:
+    _controller: '\Drupal\legal_article\Controller\LegalArticleController::legalArticlePdf'
+    _title: 'PDF'
+  requirements:
+    _permission: 'access content'
+    _custom_access: '\Drupal\legal_article\Controller\LegalArticleController::checkLegalArticle'
