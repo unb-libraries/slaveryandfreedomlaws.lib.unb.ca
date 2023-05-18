@@ -4,7 +4,7 @@
   Drupal.behaviors.homepageActiveTabs = {
     attach: function (context, settings) {
       // On document ready.
-      $(document).ready( function() {
+      once('homepageActiveTabs', 'html').forEach(function (element) {
         // Ensure that tab titles are active when their content is.
         if ($('#title').hasClass('active')) {
           $('#tab-title').addClass('active');
@@ -19,7 +19,7 @@
         });
 
         // Simulate click function when user presses enter key.
-        $('input[type="text"]').on('keypress', function (e) {
+        $('input[type="text"]').on('keypress', function (element) {
             if (e.keyCode == 13) {
                 $('#aaslp-core-homepage input[type=submit]:visible').focus();
                 $('#aaslp-core-homepage input[type=submit]:visible').click();
