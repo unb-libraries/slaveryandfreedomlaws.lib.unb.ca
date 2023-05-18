@@ -102,17 +102,19 @@
           {{ content.field_location }}
           {{ content.field_law_tags }}
           <div class="field field--name-download-buttons">
-            <div class="field__label">Download</div>
-            <div class="field__item mt-1">
-              {% if content.field_images_pdf|field_value %}
-                <a class="btn btn-secondary" href="{{ content.field_images_pdf|field_value[0]['#url'].getOptions()['path'] }}" download>
-                  Original<i class="fa fa-scroll ml-1"></i>
-                </a>
-              {% endif %}
-              {% if content.body|field_value %}
-                <a class="btn btn-secondary">Transcription<i class="fa fa-file-alt ml-1"></i></a>
-              {% endif %}
-            </div>
+            {% if content.field_images_pdf|field_value or content.body|field_value %}
+              <div class="field__label">Downloads</div>
+              <div class="field__item mt-1">
+                {% if content.field_images_pdf|field_value %}
+                  <a class="btn btn-secondary" href="{{ content.field_images_pdf|field_value[0]['#url'].getOptions()['path'] }}" download>
+                    Original<i class="fa fa-scroll ml-1"></i>
+                  </a>
+                {% endif %}
+                {% if content.body|field_value %}
+                  <a class="btn btn-secondary">Transcription<i class="fa fa-file-alt ml-1"></i></a>
+                {% endif %}
+              </div>
+            {% endif %}
           </div>
         </div>
         <div class="col-sm-4 col-metadata">
@@ -142,14 +144,16 @@
       </div>
     </div>
     <div class="field field--name-dynamic-source">
-      <div class="field__label">Source</div>
-      <div class="field__item">
-        {{- content.field_source|field_value -}}
-        {%- if content.field_source|field_value and content.field_pages|field_value -%}
-          <span>{{ ' (Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
-        {%- endif -%}
-        {{ content.field_notes }}
-      </div>
+      {%- if content.field_source|field_value %}
+        <div class="field__label">Source</div>
+        <div class="field__item">
+          {{- content.field_source|field_value -}}
+          {%- if content.field_pages|field_value -%}
+            <span>{{ ' (Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      {{ content.field_notes }}
     </div>
   </div>
 
