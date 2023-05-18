@@ -83,7 +83,7 @@ function legal_article_node_presave($entity) {
 
     // Update field_images_pdf filename.
     $pdf_id = $entity->field_images_pdf->getValue()[0]['target_id'] ?? NULL;
-    $location = strtolower($entity->field_location->entity) ?
+    $location = $entity->field_location->entity ?
       strtolower($entity->field_location->entity->getName()) : NULL;
     $year = substr($entity->field_date->getString(), 0, 4) ?? NULL;
     

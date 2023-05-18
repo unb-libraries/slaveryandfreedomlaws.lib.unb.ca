@@ -736,7 +736,8 @@ main > .container {
         box-shadow: none !important;
 
         &#cite {
-          padding: 0 .2rem 0 .1rem !important;
+          padding: 0 .3rem 0 .2rem !important;
+          line-height: 1.4;
           background-color: $unb-25gray !important;
         }
       }
@@ -749,7 +750,8 @@ main > .container {
         font-weight: bold;
 
         &#cite {
-          padding: 0 .2rem 0 .1rem !important;
+          padding: 0 .3rem 0 .2rem !important;
+          line-height: 1.4;
           background-color: $unb-darkgray !important;
         }
       }
