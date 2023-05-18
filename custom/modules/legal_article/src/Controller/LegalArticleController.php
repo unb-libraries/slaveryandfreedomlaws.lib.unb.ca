@@ -2,12 +2,13 @@
 
 namespace Drupal\legal_article\Controller;
 
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Controller\ControllerBase;
-use Symfony\Component\HttpFoundation\Response;
-use Dompdf\Dompdf;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Render\Renderer;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\Response;
+use Dompdf\Dompdf;
 
 /**
  * Controller definition.
@@ -60,7 +61,7 @@ class LegalArticleController extends ControllerBase {
   /**
    * Creates and serves PDF file.
    */
-  public function lawPdf($nid) {
+  public function legalArticlePdf($nid) {
     // Instantiate and use the dompdf class.
     $dompdf = new Dompdf();
 
@@ -92,6 +93,15 @@ class LegalArticleController extends ControllerBase {
     $response->headers->set('Content-Type', 'Content-type:application/pdf');
     $response->headers->set('Content-Disposition', "attachment; filename=\"{$pdf_name}.pdf\"");
     return $response;
+  }
+
+  /**
+   * Check if node is a legal article.
+   */
+  public function checkLegalArticle($nid) {
+    $node =
+      $this->entityTypeManager->getStorage('node')->load($nid);
+    return AccessResult::allowedIf($node->bundle() === 'legal_article');
   }
 
 }

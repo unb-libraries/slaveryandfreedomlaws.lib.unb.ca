@@ -4,3 +4,11 @@ aaslp_core.home:
     _form: '\Drupal\aaslp_core\Form\HomePageForm'
   requirements:
     _permission: 'access content'
+aaslp_core.legal_article_pdf:
+  path: '/node/{nid}/legal_article/pdf'
+  defaults:
+    _controller: '\Drupal\legal_article\Controller\LegalArticleController::legalArticlePdf'
+    _title: 'PDF'
+  requirements:
+    _permission: 'access content'
+    _custom_access: '\Drupal\legal_article\Controller\LegalArticleController::checkLegalArticle'
