@@ -2,13 +2,13 @@
 
 namespace Drupal\legal_article\Controller;
 
+use Dompdf\Dompdf;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Render\Renderer;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Response;
-use Dompdf\Dompdf;
 
 /**
  * Controller definition.

@@ -152,9 +152,9 @@ function legal_article_node_presave($entity) {
  * Implements hook_theme().
  */
 function legal_article_theme($existing, $type, $theme, $path) {
-  // Use custom template to display annotations field.
   $theme = [];
-
+  
+  // Use custom template to display annotations field.
   $theme['field__field_annotations'] = [
     'render element' => 'content',
     'base hook' => 'field',
