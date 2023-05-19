@@ -6,3 +6,11 @@ legal_article.pdf:
   requirements:
     _permission: 'access content'
     _custom_access: '\Drupal\legal_article\Controller\LegalArticleController::checkLegalArticle'
+legal_article.citation_link:
+  path: '/laws/{nid}'
+  defaults:
+    _controller: '\Drupal\legal_article\Controller\LegalArticleController::citationLink'
+    _title: 'Citation Link'
+  requirements:
+    _permission: 'access content'
+    _custom_access: '\Drupal\legal_article\Controller\LegalArticleController::checkLegalArticle'

@@ -8,6 +8,7 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Render\Renderer;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -92,6 +93,15 @@ class LegalArticleController extends ControllerBase {
     $response->headers->set('Content-Type', 'Content-type:application/pdf');
     $response->headers->set('Content-Disposition', "attachment; filename=\"{$pdf_name}.pdf\"");
     return $response;
+  }
+
+  /**
+   * Redirect citation links.
+   */
+  public function citationLink($nid) {
+    if (is_numeric($nid)) {
+      return new RedirectResponse("/node/$nid");
+    }
   }
 
   /**
