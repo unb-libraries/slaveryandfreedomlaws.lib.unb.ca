@@ -169,6 +169,19 @@ function legal_article_theme($existing, $type, $theme, $path) {
     'path' => drupal_get_path('module', 'legal_article') . '/templates',
   ];
 
+  // Assign template for PDF export.
+  $theme['node__legal_article__pdf'] = [
+    'arguments' => [
+      'view' => NULL,
+      'field' => NULL,
+      'row' => NULL,
+      'output' => NULL,
+    ],
+    'base hook' => 'node__legal_article__pdf',
+    'template' => 'node--legal_article--pdf',
+    'path' => drupal_get_path('module', 'legal_article') . '/templates',
+  ];
+
   return $theme;
 }
 

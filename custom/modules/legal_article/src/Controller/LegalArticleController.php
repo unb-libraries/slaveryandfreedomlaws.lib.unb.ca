@@ -70,8 +70,7 @@ class LegalArticleController extends ControllerBase {
       $this->entityTypeManager->getStorage('node')->load($nid);
     $view_builder = $this->entityTypeManager->getViewBuilder('node');
     $renderarray = $view_builder->view($node, 'pdf');
-    $html =
-      $this->renderer->renderRoot($renderarray);
+    $html = $this->renderer->renderRoot($renderarray);
 
     // Get module path.
     $path = DRUPAL_ROOT . '/' . drupal_get_path("module", "legal_article");
