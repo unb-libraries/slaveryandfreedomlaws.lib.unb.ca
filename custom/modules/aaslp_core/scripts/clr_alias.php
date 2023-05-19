@@ -12,7 +12,7 @@ $path_alias_manager = \Drupal::entityTypeManager()->getStorage('path_alias');
 // Load all path alias for this node for es language.
 $alias_objects = $path_alias_manager->loadByProperties([
   'path'     => '/node/' . $nid,
-  'langcode' => 'es',
+  'langcode' => 'en',
 ]);
 
 foreach ($alias_objects as $alias_object) {
