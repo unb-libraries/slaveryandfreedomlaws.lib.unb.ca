@@ -178,7 +178,7 @@ function legal_article_theme($existing, $type, $theme, $path) {
       'output' => NULL,
     ],
     'base hook' => 'node__legal_article__pdf',
-    'template' => 'node--legal_article--pdf',
+    'template' => 'node--legal-article--pdf',
     'path' => drupal_get_path('module', 'legal_article') . '/templates',
   ];
 
