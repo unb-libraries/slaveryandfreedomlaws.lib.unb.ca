@@ -16,6 +16,16 @@ use Drupal\taxonomy\Entity\Term;
 
 
 /**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function legal_article_node_delete($entity) {
+  // Delete field_images_pdf file.
+  $pdf_id = $entity->field_images_pdf->getValue()[0]['target_id'] ?? NULL;
+  $file = File::load($pdf_id);
+  $file->delete();
+}
+
+/**
  * Implements hook_ENTITY_TYPE_presave().
  */
 function legal_article_node_presave($entity) {
