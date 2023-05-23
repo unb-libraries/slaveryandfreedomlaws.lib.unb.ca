@@ -93,7 +93,7 @@
     </footer>
   {% endif %}
 
-  <div class="node__content">
+  <div class="node__content node__legal_article">
   {{ content.field_abstract }}
     <div class="container con-metadata">
       <div class="row row-metadata">
@@ -103,7 +103,7 @@
           {{ content.field_law_tags }}
           <div class="field field--name-download-buttons">
             {% if content.field_images_pdf|field_value or content.body|field_value %}
-              <div class="field__label">Downloads</div>
+              <h2 class="field__label">Downloads</h2>
               <div class="field__item mt-1">
                 {% if content.field_images_pdf|field_value %}
                   <a class="btn btn-secondary" href="{{ content.field_images_pdf|field_value[0]['#url'].getOptions()['path'] }}" download>
@@ -124,7 +124,7 @@
     </div>
     {{ content.body }}
     <div class="field field--name-dynamic-citation">
-      <div class="field__label">Citation</div>
+      <h2 class="field__label">Citation</h2>
       <div class="field__item">
         <span id="citation">
           {{- '"' ~ label|field_value[0]['#context']['value'] ~ '" ' -}}
@@ -137,7 +137,7 @@
     </div>
     <div class="field field--name-dynamic-source">
       {%- if content.field_source|field_value %}
-        <div class="field__label">Source</div>
+        <h2 class="field__label">Source</h2>
         <div class="field__item">
           {{- content.field_source|field_value -}}
           {%- if content.field_pages|field_value -%}

@@ -670,6 +670,10 @@ main > .container {
     .node__content {
       margin: 0;
 
+      &.node__legal_article h2 {
+        font-size: 1rem !important;
+      }
+
       // Field containers.
       .field {
         margin-top: 1.2rem;
@@ -754,10 +758,9 @@ main > .container {
         }
       }
       .row-metadata {
-        border-bottom: 1px solid $lgray;
-        margin: 20px 0;
+        margin: 5px 0 10px;
         padding-top: 0;
-        padding-bottom: 10px;
+        padding-bottom: 8px;
       }
       .field--name-field-abstract {
         display:inline-block;
