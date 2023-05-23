@@ -111,7 +111,7 @@
                   </a>
                 {% endif %}
                 {% if content.body|field_value %}
-                  <a class="btn btn-secondary">Transcription<i class="fa fa-file-alt ml-1"></i></a>
+                  <a class="btn btn-secondary" href="/node/{{ node.id() }}/legal_article/pdf">Transcription<i class="fa fa-file-alt ml-1"></i></a>
                 {% endif %}
               </div>
             {% endif %}

@@ -81,10 +81,29 @@
 
 	<body>
 		<article{{ attributes }}>
-			<footer>
-			</footer>
+			<h1>{{ content.field_full_title|field_value }}</h1>
 
-			<h2>{{ node.field_full_title|field_value }}</h2>
-		</article>
+			<p>
+				{{ content.field_date|field_value[0]['#text'] ~ ', ' }}
+				{{ content.field_location|field_value[0]['#title'] }}
+			</p>
+
+			<h2 class="field__label">Transcription</h2>
+			<div class="field__item">
+				{{ content.body|field_value }}
+			</div>			
+
+			<h2 class="field__label"><b>Citation</b></h2>
+			<div class="field__item">
+				<span id="citation">
+					{{- '"' ~ label|field_value[0]['#context']['value'] ~ '" ' -}}
+					{{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
+					{{- 'now'|date('M j, Y, ') -}}
+					{{- global_variables.base_url ~ '/laws/' ~ node.id() -}}
+				</span>        
+			</div>
+
+		</article>		
 	</body>
+
 </html>
