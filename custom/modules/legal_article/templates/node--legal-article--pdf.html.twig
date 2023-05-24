@@ -103,6 +103,15 @@
 				</span>        
 			</div>
 
+			{%- if content.field_source|field_value %}
+				<h2 class="field__label">Source</h2>
+				<div class="field__item">
+					{{- content.field_source|field_value['0']['#title'] -}}
+					{%- if content.field_pages|field_value -%}
+						<span>{{ ' (Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
+					{%- endif -%}
+				</div>
+			{%- endif -%}
 		</article>		
 	</body>
 
