@@ -87,8 +87,12 @@ class LegalArticleController extends ControllerBase {
     $dompdf->render();
 
     // Name PDF file.
-    $pdf_name = $node->getTitle();
+    $alias = $node->path->getValue()[0]['alias'] ?? NULL;
+    $parts = $alias ? explode('/', $alias) : NULL;
+    $name = $parts ? array_pop($parts) : NULL;
+    $pdf_name = "$name-transcription" ?? $node->getTitle();
 
+    // Return PDF file response.
     $response = new Response($dompdf->output());
     $response->headers->set('Content-Type', 'Content-type:application/pdf');
     $response->headers->set('Content-Disposition', "attachment; filename=\"{$pdf_name}.pdf\"");
