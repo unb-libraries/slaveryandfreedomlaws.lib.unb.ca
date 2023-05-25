@@ -139,22 +139,6 @@ function legal_article_node_presave($entity) {
         $file->delete();
       }
     }
-
-    // Create law/{nid} path alias if it doesn't exist. Reuse alias repo if present.
-    $alias_repo = $alias_repo ?? \Drupal::service('path_alias.repository');
-
-    $nid = $entity->id();
-    $alias = "/laws/$nid";
-    $existing = $alias_repo->lookupByAlias($alias, 'en')['alias'] ?? NULL;
-
-    if (!$existing) {
-      $path_alias = PathAlias::create([
-        'path' => "/node/$nid",
-        'alias' => $alias,
-      ]);
-
-      $path_alias->save();
-    }
   }
 }
 
