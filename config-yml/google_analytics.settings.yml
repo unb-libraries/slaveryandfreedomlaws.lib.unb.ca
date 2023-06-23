@@ -1,6 +1,6 @@
 _core:
   default_config_hash: goermvpa21m8H97TedFfQQmZmQz62WjX_SCiT4JhsXg
-account: G-NN392ETNKJ
+account: G-4XGETLV5PN
 domain_mode: 0
 cross_domains: ''
 visibility:
@@ -9,7 +9,6 @@ visibility:
   user_role_mode: 0
   user_role_roles:
     anonymous: anonymous
-    aaslp_editor: aaslp_editor
   user_account_mode: 1
 track:
   outbound: true
