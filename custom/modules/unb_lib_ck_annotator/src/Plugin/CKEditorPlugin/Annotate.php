@@ -4,10 +4,10 @@ namespace Drupal\unb_lib_ck_annotator\Plugin\CKEditorPlugin;
 
 use Drupal\ckeditor\CKEditorPluginBase;
 use Drupal\ckeditor\CKEditorPluginCssInterface;
-use Drupal\editor\Entity\Editor;
-use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Config\ConfigFactory;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\editor\Entity\Editor;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Defines the "Annotator" CKEditor plugin. Inserts annotations.

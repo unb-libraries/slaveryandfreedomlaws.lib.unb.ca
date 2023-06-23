@@ -7,8 +7,8 @@
  * Generates test data for aaslp.lib.unb.ca.
  */
 
-use Drupal\taxonomy\Entity\Term;
 use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
 
 // Main.
 // Generate test sources.
