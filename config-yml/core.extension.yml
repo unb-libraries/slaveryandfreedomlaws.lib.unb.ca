@@ -66,6 +66,7 @@ module:
   mysql: 0
   node: 0
   node_edit_protection: 0
+  page: 0
   page_cache: 0
   path: 0
   path_alias: 0

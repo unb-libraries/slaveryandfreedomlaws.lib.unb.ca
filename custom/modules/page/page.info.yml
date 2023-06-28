@@ -1,0 +1,6 @@
+name: Page Module
+type: module
+description: Custom/extended functionality for content type page
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: AASLP

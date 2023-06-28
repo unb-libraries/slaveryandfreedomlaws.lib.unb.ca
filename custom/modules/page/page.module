@@ -1,0 +1,28 @@
+<?php
+
+/**
+* @file
+* Contains page.module.
+*/
+
+use Drupal\path_alias\Entity\PathAlias;
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function page_node_presave($entity) {
+  // Only apply to pages.
+  if ($entity->bundle() == 'page') {
+    // Auto-generate alias from title.
+    $nid = $entity->id();
+    $alias = \Drupal::service('pathauto.alias_cleaner')->cleanString(strToLower(trim($entity->title->getValue()[0]['value'])));
+
+    $path_alias = PathAlias::create([
+      'path' => "/node/$nid",
+      'alias' => "/$alias",
+    ]);
+    
+    $path_alias->save();
+  }
+}
+
