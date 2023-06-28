@@ -8,9 +8,9 @@
 use Drupal\path_alias\Entity\PathAlias;
 
 /**
- * Implements hook_ENTITY_TYPE_presave().
+ * Implements hook_ENTITY_TYPE_insert().
  */
-function page_node_presave($entity) {
+function page_node_insert($entity) {
   // Only apply to pages.
   if ($entity->bundle() == 'page') {
     // Auto-generate alias from title.
@@ -26,3 +26,21 @@ function page_node_presave($entity) {
   }
 }
 
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function page_node_update($entity) {
+  // Only apply to pages.
+  if ($entity->bundle() == 'page') {
+    // Auto-generate alias from title.
+    $nid = $entity->id();
+    $alias = \Drupal::service('pathauto.alias_cleaner')->cleanString(strToLower(trim($entity->title->getValue()[0]['value'])));
+
+    $path_alias = PathAlias::create([
+      'path' => "/node/$nid",
+      'alias' => "/$alias",
+    ]);
+    
+    $path_alias->save();
+  }
+}
