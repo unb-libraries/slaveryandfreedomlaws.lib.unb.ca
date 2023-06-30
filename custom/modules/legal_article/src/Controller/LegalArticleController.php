@@ -112,9 +112,14 @@ class LegalArticleController extends ControllerBase {
    * Check if node is a legal article.
    */
   public function checkLegalArticle($nid) {
-    $node =
-      $this->entityTypeManager->getStorage('node')->load($nid);
-    return AccessResult::allowedIf($node->bundle() === 'legal_article');
+    $node = $this->entityTypeManager->getStorage('node')->load($nid);
+
+    if ($node) {
+      return AccessResult::allowedIf($node->bundle() === 'legal_article');
+    }
+    else {
+      return FALSE;
+    }
   }
 
 }
