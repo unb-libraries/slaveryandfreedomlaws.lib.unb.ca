@@ -96,13 +96,25 @@ class HomePageForm extends FormBase {
 
     $blurb =
       "<p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+      The Laws of Enslavement and Freedom in the Anglo-Atlantic World is an ongoing 
+      project that seeks to provide worldwide, digital access to the laws governing 
+      slavery and freedom in the Anglo-Atlantic World, with a particular focus on 
+      the British Caribbean. This digital archive, the first of its kind, spans 
+      from the early founding laws of the seventeenth century to the laws that 
+      governed emancipation in the nineteenth century. The body of British slavery 
+      legislation is vast and consists of both manuscript and printed laws, which 
+      can be found in various UK, North American, and Caribbean archives and online 
+      databases. The Laws of Enslavement and Freedom seeks to make all these laws 
+      accessible to scholars, students, and the general public. This project is a 
+      work-in-progress and is regularly updated with new source materials.<br><br>
+
+      The Slavery And Freedom Laws website itself is the product of three years of 
+      development by a multidisciplinary team of librarians, application developers, 
+      graduate students, and in consultation with leading historians of Atlantic 
+      World slavery. The Social Sciences and Humanities Council of Canada was the 
+      original sponsor of this project carried out at the University of New 
+      Brunswick. The Laws of Enslavement and Freedom in the Anglo-Atlantic World was 
+      created and is maintained by Dr. Stefanie Hunt-Kennedy.
       </p>";
 
     $form['blurb'] = [
