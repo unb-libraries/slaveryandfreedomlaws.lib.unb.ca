@@ -95,26 +95,11 @@ class HomePageForm extends FormBase {
     $fulltext_url->setOptions($fulltext_link_options);
 
     $blurb =
-      "<p><em>The Laws of Enslavement and Freedom in the Anglo-Atlantic World</em> 
-      is an ongoing project that seeks to provide worldwide, digital access to the 
-      laws governing slavery and freedom in the Anglo-Atlantic World, with a 
-      particular focus on the British Caribbean. This digital archive, the first 
-      of its kind, spans from the early founding laws of the seventeenth century 
-      to the laws that governed emancipation in the nineteenth century. The body 
-      of British slavery legislation is vast and consists of both manuscript and 
-      printed laws, which can be found in various UK, North American, and Caribbean 
-      archives and online databases. <em>The Laws of Enslavement and Freedom in the 
-      Anglo-Atlantic World</em> seeks to make all these laws accessible to scholars, 
-      students, and the general public. This project is a work-in-progress and is 
-      regularly updated with new source materials.</p>
-
-      <p>The Slavery And Freedom Laws website itself is the product of three years of 
-      development by a multidisciplinary team of librarians, application developers, 
-      graduate students, and in consultation with leading historians of Atlantic 
-      World slavery. The Social Sciences and Humanities Council of Canada was the 
-      original sponsor of this project carried out at the University of New 
-      Brunswick. <em>The Laws of Enslavement and Freedom in the Anglo-Atlantic World
-      </em> was created and is maintained by Dr. Stefanie Hunt-Kennedy.</p>";
+      "<p><em>The Laws of Enslavement and Freedom in the Anglo-Atlantic World</em> is an 
+      ongoing project that seeks to provide digital access to the laws governing 
+      slavery and freedom in the Anglo-Atlantic World from the early founding laws 
+      of the seventeenth century to the laws that governed emancipation in the 
+      nineteenth century. <a href='/about'>Read more about the project and its contributors</a>.</p>";
 
     $form['blurb'] = [
       '#type' => 'markup',
