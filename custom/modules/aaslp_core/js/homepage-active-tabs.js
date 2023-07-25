@@ -8,9 +8,11 @@
         // Ensure that tab titles are active when their content is.
         if ($('#title').hasClass('active')) {
           $('#tab-title').addClass('active');
+          $('#tab-fulltext').removeClass('active');
         }
         if ($('#fulltext').hasClass('active')) {
           $('#tab-fulltext').addClass('active');
+          $('#tab-title').removeClass('active');
         }
         
         // Autofocus the search input of clicked tab.
@@ -19,11 +21,20 @@
         });
 
         // Simulate click function when user presses enter key.
-        $('input[type="text"]').on('keypress', function (element) {
+        $('input[type="text"]').on('keypress', function (e) {
             if (e.keyCode == 13) {
-                $('#aaslp-core-homepage input[type=submit]:visible').focus();
-                $('#aaslp-core-homepage input[type=submit]:visible').click();
+              e.preventDefault();
+              if ($('#title').hasClass('active')) {
+                alert("Using title");
+                $('#edit-submit-title').focus();
+                $('#edit-submit-title').click();
                 return false;
+              }
+              else {
+                $('#edit-submit-fulltext').focus();
+                $('#edit-submit-fulltext').click();
+                return false;
+              }
             }
         });
 
