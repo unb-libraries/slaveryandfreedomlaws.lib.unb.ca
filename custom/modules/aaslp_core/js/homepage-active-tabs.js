@@ -25,7 +25,6 @@
             if (e.keyCode == 13) {
               e.preventDefault();
               if ($('#title').hasClass('active')) {
-                alert("Using title");
                 $('#edit-submit-title').focus();
                 $('#edit-submit-title').click();
                 return false;
