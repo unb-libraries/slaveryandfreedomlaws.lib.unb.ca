@@ -97,7 +97,7 @@ class HomePageForm extends FormBase {
     $blurb =
       "<p><em>The Laws of Enslavement and Freedom in the Anglo-Atlantic World</em> is an 
       ongoing project that seeks to provide digital access to the laws governing 
-      slavery and freedom in the Anglo-Atlantic World from the early founding laws 
+      slavery and freedom in the Anglo-Atlantic World, from the early laws 
       of the seventeenth century to the laws that governed emancipation in the 
       nineteenth century. <a href='/about'>Read more about the project and its contributors</a>.</p>";
 
