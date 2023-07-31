@@ -155,7 +155,7 @@ class HomePageForm extends FormBase {
     $form['tab-content']['title']['input_title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Search legal article titles'),
-      '#description' => $this->t('Search by title, location, year, tags, abstract, or combination, i.e. Jamaica 1800.'),
+      '#description' => $this->t('Search by title, location, year, tags, abstract, or combination, i.e. Jamaica 1744.'),
     ];
 
     $form['tab-content']['title']['submit_title'] = [

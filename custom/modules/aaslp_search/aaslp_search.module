@@ -15,7 +15,7 @@ function aaslp_search_form_views_exposed_form_alter(&$form, &$form_state, $form_
 
   if (strpos($view_id, 'views-exposed-form-aaslp-metadata') === 0) {
     $tip = "Search by title, location, year, tags, abstract, or " .
-      "combination, i.e. Jamaica 1800.";
+      "combination, i.e. Jamaica 1744.";
   }
   elseif (strpos($view_id, 'views-exposed-form-aaslp-search') === 0) {
     $tip = "Search for keywords within the full text content of legal " .

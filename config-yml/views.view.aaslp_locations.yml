@@ -370,14 +370,13 @@ display:
           data_source: field_location_coordinates
           entity_source: __base_table
           name_field: title
-          description_field: field_full_title
           view_mode: full
           leaflet_map: esri-natgeo_world_map
           height: '640'
           height_unit: px
           hide_empty_map: true
-          gesture_handling: false
           disable_wheel: false
+          gesture_handling: false
           reset_map:
             control: false
             position: topright
@@ -416,8 +415,8 @@ display:
             circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
           leaflet_markercluster:
             control: false
-            options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds":false}'
             include_path: false
+            options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds":false}'
           path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
           geocoder:
             control: false
@@ -433,6 +432,7 @@ display:
               zoom: 16
               popup: false
               options: ''
+          description_field: field_full_title
           fullscreen_control: true
       row:
         type: fields

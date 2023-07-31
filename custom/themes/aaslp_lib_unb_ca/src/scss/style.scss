@@ -398,7 +398,11 @@ main > .container {
         padding-left: 1rem;
         // Text input.
         .form-item-search-api-fulltext {
-          width: 80%;
+          width: 75%;
+
+          > input {
+            margin: 0;  
+          }
         }
         .form-text {
           font-size: 1rem;
@@ -406,8 +410,6 @@ main > .container {
         // Submit buttons.
         .form-actions {
           display: inline-block;
-          margin-top: 1.1rem;
-          font-size: 1.1rem;
 
           [id^="edit-submit-aaslp-search"],
           [id^="edit-submit-aaslp-search"]:active,
@@ -415,19 +417,9 @@ main > .container {
           [id^="edit-submit-aaslp-metadata-search"]:active,
           [id^="edit-custom-reset"],
           [id^="edit-custom-reset"]:active {
-            margin: 0;
-            padding-left: .2rem;
-            background-color: transparent !important;
-            color: $unb-darkgray;
+            margin-right: 0;
             border: none;
             box-shadow: none;
-            font-family: 'Font Awesome\ 5 Free';
-            font-weight: 900;
-          }
-          [id^="edit-submit-aaslp-search"]:hover,
-          [id^="edit-submit-aaslp-metadata-search"]:hover,
-          [id^="edit-custom-reset"]:hover {
-            color: $aaslp-blue;
           }
         }
       }
@@ -438,7 +430,11 @@ main > .container {
       padding-left: 1rem;
       // Text input.
       .form-item-search-api-fulltext {
-        width: 80%;
+        width: 75%;
+
+        > input {
+          margin: 0;  
+        }
       }
       .form-text {
         font-size: 1rem;
@@ -446,8 +442,6 @@ main > .container {
       // Submit buttons.
       .form-actions {
         display: inline-block;
-        margin-top: 1.1rem;
-        font-size: 1.1rem;
 
         [id^="edit-submit-taxonomy-term"],
         [id^="edit-submit-taxonomy-term"]:active,
@@ -455,19 +449,9 @@ main > .container {
         [id^="edit-submit-aaslp-sources"]:active,
         [id^="edit-custom-reset"],
         [id^="edit-custom-reset"]:active {
-          margin: 0;
-          padding-left: .2rem;
-          background-color: transparent !important;
-          color: $unb-darkgray;
           border: none;
+          margin-right: 0;
           box-shadow: none;
-          font-family: 'Font Awesome\ 5 Free';
-          font-weight: 900;
-        }
-        [id^="edit-submit-taxonomy-term"]:hover,
-        [id^="edit-submit-aaslp-sources"]:hover,
-        [id^="edit-custom-reset"]:hover {
-          color: $aaslp-blue;
         }
       }
     }
