@@ -20,21 +20,24 @@
             $('#aaslp-core-homepage input[type="text"]:visible').focus();
         });
 
-        // Simulate click function when user presses enter key.
+        // Simulate context-click when user presses enter key onm homepage.
         $('input[type="text"]').on('keypress', function (e) {
-            if (e.keyCode == 13) {
-              e.preventDefault();
-              if ($('#title').hasClass('active')) {
-                $('#edit-submit-title').focus();
-                $('#edit-submit-title').click();
-                return false;
+            // If homepage...
+            if ($('#aaslp-core-homepage').length) {
+              if (e.keyCode == 13) {
+                e.preventDefault();
+                if ($('#title').hasClass('active')) {
+                  $('#edit-submit-title').focus();
+                  $('#edit-submit-title').click();
+                  return false;
+                }
+                else {
+                  $('#edit-submit-fulltext').focus();
+                  $('#edit-submit-fulltext').click();
+                  return false;
+                }
               }
-              else {
-                $('#edit-submit-fulltext').focus();
-                $('#edit-submit-fulltext').click();
-                return false;
-              }
-            }
+          }
         });
 
         // Transcription copy button.
