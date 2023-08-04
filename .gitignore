@@ -1,11 +1,12 @@
 .gitkeep
 .idea
 vendor
-composer.lock
+/composer.lock
 tests/features/bootstrap
 build/scripts/local
-config-yml/.htaccess
+configuration/.htaccess
 custom/themes/aaslp_lib_unb_ca/dist
+/build/vendor
 
 # Node
 node_modules

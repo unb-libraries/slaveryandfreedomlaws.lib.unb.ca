@@ -74,7 +74,7 @@ class LegalArticleController extends ControllerBase {
     $html = $this->renderer->renderRoot($renderarray);
 
     // Get module path.
-    $path = DRUPAL_ROOT . '/' . drupal_get_path("module", "legal_article");
+    $path = DRUPAL_ROOT . '/' . \Drupal::service('extension.list.module')->getPath("legal_article");
 
     // Set base path for CSS.
     $path .= "/css";

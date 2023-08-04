@@ -2,7 +2,7 @@ name: AASLP Core Module
 type: module
 description: Core functionality for asslp.lib.unb.ca
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 package: AASLP
 test_dependencies:
   - migrate_plus

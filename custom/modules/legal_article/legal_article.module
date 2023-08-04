@@ -153,14 +153,14 @@ function legal_article_theme($existing, $type, $theme, $path) {
     'render element' => 'content',
     'base hook' => 'field',
     'template' => 'field--node--field-annotations--legal-article',
-    'path' => drupal_get_path('module', 'legal_article') . '/templates',
+    'path' => \Drupal::service('extension.list.module')->getPath('legal_article') . '/templates',
   ];
 
   $theme['field__field_editorial_annotations'] = [
     'render element' => 'content',
     'base hook' => 'field',
     'template' => 'field--node--field-editorial-annotations--legal-article',
-    'path' => drupal_get_path('module', 'legal_article') . '/templates',
+    'path' => \Drupal::service('extension.list.module')->getPath('legal_article') . '/templates',
   ];
 
   // Assign template for PDF export.
@@ -173,7 +173,7 @@ function legal_article_theme($existing, $type, $theme, $path) {
     ],
     'base hook' => 'node__legal_article__pdf',
     'template' => 'node--legal-article--pdf',
-    'path' => drupal_get_path('module', 'legal_article') . '/templates',
+    'path' => \Drupal::service('extension.list.module')->getPath('legal_article') . '/templates',
   ];
 
   return $theme;

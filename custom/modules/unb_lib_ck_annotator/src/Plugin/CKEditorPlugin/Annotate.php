@@ -88,7 +88,7 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface,
    * {@inheritdoc}
    */
   public function getFile() {
-    return drupal_get_path('module', 'unb_lib_ck_annotator') . '/js/plugins/annotate/plugin.js';
+    return \Drupal::service('extension.list.module')->getPath('unb_lib_ck_annotator') . '/js/plugins/annotate/plugin.js';
   }
 
   /**
@@ -98,7 +98,7 @@ class Annotate extends CKEditorPluginBase implements CKEditorPluginCssInterface,
     return [
       'annotate' => [
         'label' => $this->t('Insert annotation'),
-        'image' => drupal_get_path('module', 'unb_lib_ck_annotator') .
+        'image' => \Drupal::service('extension.list.module')->getPath('unb_lib_ck_annotator') .
         '/js/plugins/annotate/icons/annotate.png',
       ],
     ];
