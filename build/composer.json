@@ -197,11 +197,11 @@
     "oomphinc/composer-installers-extender": "^2",
     "simeydotme/jquery-ui-slider-pips": "^1",
     "tecnickcom/tcpdf": "^6",
-    "unb-libraries/saml_features": "dev-9.x-1.x"
+    "unb-libraries/saml_features": "dev-9.x-1.x",
+    "unb-libraries/composer-drupal-scaffold": "^10"
   },
   "require-dev": {
-    "unb-libraries/drupal-development-libraries": "^10",
-    "unb-libraries/composer-drupal-scaffold": "^10"
+    "unb-libraries/drupal-development-libraries": "^10"
   },
   "type": "project"
 }
