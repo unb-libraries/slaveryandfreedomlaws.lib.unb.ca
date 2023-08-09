@@ -15,7 +15,7 @@ dockworker:
       id: slaveryandfreedomlaws.lib.unb.ca
       slug: slaveryandfreedomlaws-lib-unb-ca
       short_slug: slaveryandfreedomlaws
-      uuid: 3094
+      uuid: 3111
     framework:
       name: Drupal
       version: 10
