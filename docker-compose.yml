@@ -37,7 +37,7 @@ services:
   slaveryandfreedomlaws-lib-unb-ca:
     build:
       context: .
-    container_name: hit-lib-unb-ca
+    container_name: slaveryandfreedomlaws-lib-unb-ca
     restart: unless-stopped
     depends_on:
       - drupal-mysql-lib-unb-ca
