@@ -186,7 +186,7 @@ function legal_article_form_alter(&$form, $form_state, $form_id) {
   // Hide revision switch and URL alias fields for legal article create/edit forms.
   if ($form_id == 'node_legal_article_form' or
     $form_id == 'node_legal_article_edit_form') {
-    // For theme Seven (from Stable).
+    // For admin theme.
     $form['field_revision_switch']['#attributes']['class'][] = 'hidden';
     $form['path']['#attributes']['class'][] = 'hidden';
     // For Bootstrap themes.

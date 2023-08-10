@@ -4,7 +4,7 @@ type: theme
 name: 'aaslp_admin_theme'
 package: 'AASLP'
 description: 'Admin theme for aaslp.lib.unb.ca'
-base theme: seven
+base theme: claro
 
 libraries:
   - aaslp_admin_theme/global-styling

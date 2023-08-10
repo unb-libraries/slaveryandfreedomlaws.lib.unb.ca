@@ -8,7 +8,7 @@ Some quick notes:
 * The configured theme is ```aaslp_lib_unb_ca```, and all changes should be made to it. Its location in the repository is ```/themes/custom```.
 * The theme ```aaslp_lib_unb_ca``` inherits from ```bootstrap4```.
 * There is also a minor-customization admin theme named ```aaslp_admin_theme```.
-* The teme ```aaslp_admin_theme``` inherits from ```seven```.  
+* The teme ```aaslp_admin_theme``` inherits from ```claro```.  
 * Once deployed locally, any changes to the _themes_ or _assets_ can then be updated with the usual: ```dockworker theme:build-all```
 
 ## Data Overview

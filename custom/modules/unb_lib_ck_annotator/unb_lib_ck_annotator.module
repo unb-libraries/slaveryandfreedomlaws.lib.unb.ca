@@ -102,7 +102,7 @@ function annotate($text, $tag, $header = NULL, $alpha = FALSE, $upper = FALSE) {
 function unb_lib_ck_annotator_page_attachments(array &$attachments) {
   $theme = \Drupal::theme()->getActiveTheme()->getName();
 
-  if ($theme == 'seven') {
+  if ($theme == 'claro') {
     $attachments['#attached']['library'][] = 'unb_lib_ck_annotator/extra.admin';
   }
 }

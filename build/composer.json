@@ -153,7 +153,7 @@
     "dompdf/dompdf": "^2",
     "drupal/address": "^1",
     "drupal/admin_toolbar": "^3",
-    "drupal/bootstrap4": "^2",
+    "drupal/bootstrap4": "^3",
     "drupal/chosen": "^3",
     "drupal/colorbox": "^2",
     "drupal/core-composer-scaffold": "^10",
@@ -197,7 +197,7 @@
     "oomphinc/composer-installers-extender": "^2",
     "simeydotme/jquery-ui-slider-pips": "^1",
     "tecnickcom/tcpdf": "^6",
-    "unb-libraries/saml_features": "dev-9.x-1.x",
+    "unb-libraries/saml_features": "dev-10.x-1.x",
     "unb-libraries/composer-drupal-scaffold": "^10"
   },
   "require-dev": {
