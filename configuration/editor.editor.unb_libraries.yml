@@ -4,10 +4,8 @@ status: true
 dependencies:
   config:
     - filter.format.unb_libraries
-  module:
-    - ckeditor5
 format: unb_libraries
-editor: ckeditor5
+editor: ckeditor
 settings:
   toolbar:
     rows:

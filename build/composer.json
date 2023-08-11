@@ -28,7 +28,7 @@
   "conflict": {
     "drupal/drupal": "*"
   },
-  "description": "Drupal 8 component of slaveryandfreedomlaws.lib.unb.ca",
+  "description": "Drupal component of slaveryandfreedomlaws.lib.unb.ca",
   "extra": {
     "enable-patching": true,
     "drupal-scaffold": {

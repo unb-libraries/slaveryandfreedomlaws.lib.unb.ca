@@ -1,8 +1,5 @@
 langcode: en
 status: true
-dependencies:
-  module:
-    - ckeditor
 id: unb_lib_ck_annotator
 Label: 'UNB Libraries CKEditor Annotator'
 module: unb_lib_ck_annotator
