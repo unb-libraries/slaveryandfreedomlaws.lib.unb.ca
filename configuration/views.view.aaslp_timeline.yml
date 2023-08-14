@@ -575,7 +575,7 @@ display:
             height: 42em
             hash_bookmark: false
             start_at_end: false
-            scale_factor: !!float 2
+            scale_factor: 2.0
             language: ''
             timenav_position: bottom
             timenav_height: ''
