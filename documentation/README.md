@@ -23,6 +23,5 @@ FREEDOM uses Drupal content structures exclusively. No custom entities are defin
 * aaslp_admin: Encompasses all customization pertaining to administrative site tasks.
 * aaslp_search: Provides extended search functionality (indexing, facets, etc).
 * aaslp_core: Core custom functionality module. Encompasses all custom functionality not directly releated to specific data structure CRUD.
-* legal_article: Encompasses all custom functionality related to the legal_article data structure.
-* unb_lib_ck_annotator: Provides a custom annotation plugin for CKEditor.   
+* legal_article: Encompasses all custom functionality related to the legal_article data structure.  
 * context_branding: Offers a custom branding block which renders the site title as a no-link H1 header on homepage only.
