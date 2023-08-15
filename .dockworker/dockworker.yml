@@ -4,9 +4,9 @@ dockworker:
     name: Laws Of Enslavement And Freedomin The Anglo-Atlantic World
     uri: https://slaveryandfreedomlaws.lib.unb.ca
     description: >
-      The Laws of Enslavement and Freedom in the Anglo-Atlantic World is an ongoing project 
-      that seeks to provide digital access to the laws governing slavery and freedom in the 
-      Anglo-Atlantic World, from the founding laws of the seventeenth century to the laws 
+      The Laws of Enslavement and Freedom in the Anglo-Atlantic World is an ongoing project
+      that seeks to provide digital access to the laws governing slavery and freedom in the
+      Anglo-Atlantic World, from the founding laws of the seventeenth century to the laws
       that governed emancipation in the nineteenth century.
     topics:
       - history
@@ -69,7 +69,3 @@ dockworker:
             - .dockworker/tests/e2e/slaveryandfreedomlaws.lib.unb.ca.yml
           namespaces:
             - prod
-    local:
-      additional_hostnames:
-        - slaveryandfreedomlaws.lib.unb.ca
-        - slaveryandfreedomlaws.lib.unb.ca.local
