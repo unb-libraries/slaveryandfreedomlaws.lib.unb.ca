@@ -1,0 +1,43 @@
+uuid: 3234bc0f-a545-4f01-9dae-248bf75f8c8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.unb_libraries
+  module:
+    - ckeditor5
+format: unb_libraries
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - italic
+      - strikethrough
+      - subscript
+      - superscript
+      - removeFormat
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
+      - blockQuote
+      - drupalInsertImage
+      - insertTable
+      - horizontalLine
+  plugins:
+    ckeditor5_imageResize:
+      allow_resize: true
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: 0
+    height: 0

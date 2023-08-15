@@ -1,0 +1,29 @@
+uuid: 946490a1-0939-4cd2-a4ed-bec6473cb969
+langcode: en
+status: true
+dependencies: {  }
+name: 'UNB Libraries'
+format: unb_libraries
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <strong> <em> <s> <sub> <sup> <blockquote> <a href> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <img src alt height width data-entity-uuid data-entity-type data-caption data-align>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.unb_libraries
     - node.type.legal_article
     - node.type.page
     - node.type.saved_coordinates
     - node.type.source
   module:
+    - filter
     - node
     - system
     - taxonomy
@@ -34,6 +36,7 @@ permissions:
   - 'edit any source content'
   - 'revert legal_article revisions'
   - 'revert page revisions'
+  - 'use text format unb_libraries'
   - 'view legal_article revisions'
   - 'view page revisions'
   - 'view the administration theme'
