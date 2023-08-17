@@ -28,11 +28,11 @@ $unb-dturquoise: darken($unb-turquoise, 10%);
 $unb-dmango: darken($unb-mango, 15%);
 $unb-lmango: lighten($unb-mango, 50%);
 $unb-dorange: darken($unb-orange, 15%);
-$offwhite: #f8f9fa;
+$offwhite: #f5f4ec; // Base.
 $doffwhite: darken($offwhite, 20%);
 $lgray: #edf0f3;
-$jc-orange: #a62500;
-$aaslp-blue: #00A3DA;
+$jc-orange: #9d2406; // Accent.
+$aaslp-blue: #124d64; // Primary.
 $aaslp-dblue: darken($aaslp-blue, 10%);
 $aaslp-lblue: lighten($aaslp-blue, 20%);
-$aaslp-lgold: lighten(gold, 20%);
+$aaslp-lgold: #fde39b; // Highlight.
