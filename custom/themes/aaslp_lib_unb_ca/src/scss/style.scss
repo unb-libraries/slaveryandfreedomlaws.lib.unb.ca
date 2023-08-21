@@ -7,7 +7,7 @@ body,
 .font-regular {
   font-family: 'DM Sans', Arial, sans-serif;
   font-size: 1rem;
-  color: $unb-darkgray;
+  color: $aaslp-blue;
   // Global header sizing.
   h1,
   h1.display-4,
@@ -66,12 +66,15 @@ input {
 // Header.
 header {
   .navbar {
-    padding-top: 0;
-    padding-bottom: 0;
-
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    
     .container {
       display: block;
-    background-color: $aaslp-blue;
+      margin: 0 !important;
+      max-width: 100%;
+      background-color: $aaslp-blue;
 
       .col-auto {
         width: 100%;
@@ -292,6 +295,7 @@ main > .container {
 
   // Content region.
   .region-content {
+    background-color: $offwhite;
     padding: 0 !important;
 
     // Article.
