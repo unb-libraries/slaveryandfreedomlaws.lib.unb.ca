@@ -78,50 +78,45 @@ header {
 
       .col-auto {
         width: 100%;
-        ;
-        .navbar-brand {
-          margin-right: 0;
-          padding-top: 4rem;
-          padding-bottom: 4rem;
-          // Title container.
-          .site-title-container {
-            margin: auto;
-            text-align: center;
-            // Site title.
-            .site-title {
-              display: block;
-              padding-left: 1rem;
-              padding-right: 1rem;
+
+        #block-contextualbranding {
+          display: inline-block;
+          margin: 0;
+
+          .navbar-brand {
+            display: inline-block !important;
+            margin: 0;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            // Title container.
+            .site-title-container {
+              margin: 0;
+              margin: auto;
+              text-align: left;
               font-family: "Besley", Times, Serif;
-              font-size: 1.6rem !important;
-              letter-spacing: normal;
-              text-transform: capitalize !important;
-              color: $offwhite !important;
+              // Site title.
+              .site-title {
+                display: block;
+                margin-bottom: 0;
+                font-size: 2.4rem !important;
+                letter-spacing: normal;
+                text-transform: initial !important;
+                color: $offwhite !important;
 
-              span {
-                font-size: inherit;
+                span {
+                  font-size: inherit;
 
-                &:last-of-type {
-                  margin-left: .5rem;
+                  &:last-of-type {
+                    margin-left: .5rem;
+                  }
                 }
               }
             }
           }
         }
-      }
-      // Main navigation region.
-      .region-nav-main {
-        // Main menu.
-        .navbar-nav {
-          margin-left: 1rem;
-          a {
-            color: $offwhite;
-            font-size: 1.2rem;
 
-            &:hover {
-              text-decoration: underline;
-            }
-          }
+        #block-aaslp-lib-unb-ca-main-navigation {
+          display: inline-block;
         }
       }
     }

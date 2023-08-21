@@ -1,7 +1,7 @@
 dockworker:
   version: '6'
   application:
-    name: Laws Of Enslavement And Freedomin The Anglo-Atlantic World
+    name: Laws of Enslavement and Freedomin The Anglo-Atlantic World
     uri: https://slaveryandfreedomlaws.lib.unb.ca
     description: >
       The Laws of Enslavement and Freedom in the Anglo-Atlantic World is an ongoing project
