@@ -3,9 +3,43 @@
 
 // Global (careful here).
 // Global font.
+/* Headings: Jubilat SemiBold*/
+h1, h2, h3, h4 {
+  font-family: jubilat,'Georgia', serif;
+  font-weight: 600;
+}
+/* Headings: Jubilat Medium*/
+h3, h4 {
+  font-weight: 500;
+}
+/* Headings: Utile Bold*/
+h5, h6 {
+  font-family: utile, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* Headings: Utile SemiBold*/
+h6 {
+  font-weight: 600;
+}
+/* Body copy: Utile Medium */
+body, .font-regular {
+  font-family: utile, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+/* Site naivagation & buttons: Utile SemiBold */
+.navbar-nav {
+  font-family: utile, 'Trebuchet MS', sans-serif;
+  font-weight: 600;   
+}
+
 body,
 .font-regular {
-  font-family: 'DM Sans', Arial, sans-serif;
   font-size: 1rem;
   color: $aaslp-blue;
   // Global header sizing.
@@ -93,7 +127,6 @@ header {
               margin: 0;
               margin: auto;
               text-align: left;
-              font-family: "Besley", Times, Serif;
               // Site title.
               .site-title {
                 display: block;
@@ -379,7 +412,6 @@ main > .container {
         .browse-header {
           margin-top: .5rem;
           margin-bottom: .5rem;
-          font-family: "Cinzel Decorative", Times, Serif;
         }
       }
 
@@ -747,7 +779,6 @@ main > .container {
       }
       .field--name-field-abstract {
         display:inline-block;
-        font-family:sans-serif;
         border: solid .2em $aaslp-blue;
         margin-top: 0;
         margin-right: 2rem;
