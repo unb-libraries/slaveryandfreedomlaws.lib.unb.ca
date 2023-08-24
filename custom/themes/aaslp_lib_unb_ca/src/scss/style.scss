@@ -4,7 +4,7 @@
 // Global (careful here).
 // Global font.
 /* Headings: Jubilat SemiBold*/
-h1, .site-slogan, h2, h3, h4 {
+h1, .site-title-container, h2, h3, h4 {
   font-family: jubilat,'Georgia', serif !important;
   font-weight: 600;
 }
@@ -158,6 +158,16 @@ header {
 
         #block-aaslp-lib-unb-ca-main-navigation {
           display: inline-block;
+          top: -2.4rem;
+          margin-left: 10rem;
+
+          a {
+            color: $offwhite !important;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }

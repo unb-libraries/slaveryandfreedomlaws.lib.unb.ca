@@ -1,14 +1,28 @@
-aaslp.front:
-  title: 'Timeline'
-  description: 'Timeline'
+aaslp.about:
+  title: 'ABOUT'
+  description: 'About'
   parent: main
   menu_name: main
-  url: internal:/timeline
+  url: internal:/about
   weight: 10
 aaslp.search:
-  title: 'Locations'
-  description: 'Locations'
+  title: 'SEARCH'
+  description: 'Search'
+  parent: main
+  menu_name: main
+  url: internal:/laws
+  weight: 20
+aaslp.tags:
+  title: 'TAGS'
+  description: 'Tags'
+  parent: main
+  menu_name: main
+  url: internal:/tags
+  weight: 30
+aaslp.map:
+  title: 'MAP'
+  description: 'Map'
   parent: main
   menu_name: main
   url: internal:/locations-map
-  weight: 20
+  weight: 40
