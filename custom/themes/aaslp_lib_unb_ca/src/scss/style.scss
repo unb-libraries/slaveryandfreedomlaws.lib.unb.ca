@@ -4,8 +4,8 @@
 // Global (careful here).
 // Global font.
 /* Headings: Jubilat SemiBold*/
-h1, h2, h3, h4 {
-  font-family: jubilat,'Georgia', serif;
+h1, .site-slogan, h2, h3, h4 {
+  font-family: jubilat,'Georgia', serif !important;
   font-weight: 600;
 }
 /* Headings: Jubilat Medium*/
@@ -48,6 +48,9 @@ body,
   h1 > span,
   .navbar-brand .site-title {
     font-size: 1.8rem;
+  }
+  .site-slogan {
+    font-size: 1.4rem !important;
   }
   h2,
   h2 > a {
@@ -113,34 +116,39 @@ header {
       .col-auto {
         width: 100%;
 
-        #block-contextualbranding {
-          display: inline-block;
-          margin: 0;
+        .region-nav-branding {
+          text-align: center;
 
-          .navbar-brand {
-            display: inline-block !important;
+          #block-contextualbranding {
+            text-align: center;
+            display: inline-block;
             margin: 0;
-            padding-top: 4rem;
-            padding-bottom: 4rem;
-            // Title container.
-            .site-title-container {
+
+            .navbar-brand {
+              display: inline-block !important;
               margin: 0;
-              margin: auto;
-              text-align: left;
-              // Site title.
-              .site-title {
-                display: block;
-                margin-bottom: 0;
-                font-size: 2.4rem !important;
-                letter-spacing: normal;
-                text-transform: initial !important;
-                color: $offwhite !important;
+              padding-top: 4rem;
+              padding-bottom: 4rem;
+              // Title container.
+              .site-title-container {
+                margin: 0;
+                margin: auto;
+                text-align: left;
+                // Site title.
+                .site-title {
+                  display: block;
+                  margin-bottom: 0;
+                  font-size: 2.4rem !important;
+                  letter-spacing: normal;
+                  text-transform: initial !important;
+                  color: $offwhite !important;
 
-                span {
-                  font-size: inherit;
+                  span {
+                    font-size: inherit;
 
-                  &:last-of-type {
-                    margin-left: .5rem;
+                    &:last-of-type {
+                      margin-left: .5rem;
+                    }
                   }
                 }
               }

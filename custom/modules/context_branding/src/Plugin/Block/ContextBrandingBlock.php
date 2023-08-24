@@ -114,7 +114,7 @@ class ContextBrandingBlock extends BlockBase implements ContainerFactoryPluginIn
         <div class='navbar-brand d-flex align-items-center'>
           <div class='site-title-container'>
             $site_title
-            $site_slogan
+            <span class='site-slogan'>$site_slogan</span>
           </div>
         </div>
       </div>
