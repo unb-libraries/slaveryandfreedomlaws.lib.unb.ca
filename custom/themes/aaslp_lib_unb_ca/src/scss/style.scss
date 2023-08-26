@@ -341,8 +341,11 @@ main > .container {
 
   // Content region.
   .region-content {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
     background-color: $offwhite;
     padding: 0 !important;
+    border-radius: 1rem;
 
     // Article.
     article {
