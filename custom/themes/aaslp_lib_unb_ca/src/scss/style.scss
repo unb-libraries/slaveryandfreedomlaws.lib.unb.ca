@@ -127,8 +127,8 @@ header {
             .navbar-brand {
               display: inline-block !important;
               margin: 0;
-              padding-top: 4rem;
-              padding-bottom: 4rem;
+              padding-top: 2rem;
+              padding-bottom: 2rem;
               // Title container.
               .site-title-container {
                 margin: 0;
@@ -890,6 +890,15 @@ footer {
   }
 }
 @media (max-width: 992px) {
+  // Nav branding region.
+  .region-nav-branding {
+    line-height: .1;
+  }
+  // Branding block.
+  #block-contextualbranding,
+  #block-aaslp-lib-unb-ca-main-navigation {
+    padding-left: 1rem;
+  }
   // Homepage form.
   #aaslp-core-homepage .form-submit {
     margin: 0 !important;
