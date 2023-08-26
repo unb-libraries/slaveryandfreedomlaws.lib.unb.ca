@@ -122,7 +122,7 @@ header {
           #block-contextualbranding {
             text-align: center;
             display: inline-block;
-            margin: 0;
+            margin-right: 24rem;
 
             .navbar-brand {
               display: inline-block !important;
@@ -156,17 +156,17 @@ header {
           }
         }
 
-        #block-aaslp-lib-unb-ca-main-navigation {
-          display: inline-block;
-          top: -2.4rem;
-          margin-left: 10rem;
+      }
+      
+      #navbarSupportedContent {
+        max-width: 1140px;
+        margin: auto;
+        
+        a {
+          color: $offwhite !important;
 
-          a {
-            color: $offwhite !important;
-
-            &:hover {
-              text-decoration: underline;
-            }
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
