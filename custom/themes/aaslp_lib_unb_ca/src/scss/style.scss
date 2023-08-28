@@ -364,7 +364,6 @@ main > .container {
 
         p {
           font-family: jubilat,'Georgia', serif;
-          font-weight: 100;
           text-align: center !important;
         }
 
@@ -387,12 +386,14 @@ main > .container {
         a {
           padding-right: 3rem;
           color: $aaslp-blue !important;
+          text-underline-offset: .5rem;
 
-          &.active {
-            background-color: $offwhite;
+          &:not(.active) {
+            opacity: .6;
           }
         }
       }
+
       // Tab content.
       #edit-tab-content {
         margin-bottom: 2rem;
@@ -408,6 +409,19 @@ main > .container {
         .js-form-type-textfield {
           max-width: 100% !important;
           width: 100%;
+
+          label {
+            margin: 0;
+          }
+
+          input {
+            height: 3rem;
+          }
+        }
+
+        // Input description.
+        .description {
+          opacity: .6;
         }
 
         // Search buttons.
