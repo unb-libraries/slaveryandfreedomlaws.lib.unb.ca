@@ -95,15 +95,18 @@ class HomePageForm extends FormBase {
     $fulltext_url->setOptions($fulltext_link_options);
 
     $blurb =
-      "<p><em>The Laws of Enslavement and Freedom in the Anglo-Atlantic World</em> is an 
+      "<p>The Laws of Enslavement and Freedom in the Anglo-Atlantic World is an 
       ongoing project that seeks to provide digital access to the laws governing 
       slavery and freedom in the Anglo-Atlantic World, from the founding laws 
       of the seventeenth century to the laws that governed emancipation in the 
-      nineteenth century. <a href='/about'>Read more about the project and its contributors</a>.</p>";
+      nineteenth century.</p>
+      
+      <a href='/about'>MORE ABOUT THE PROJECT AND ITS CONTRIBUTORS</a>"
+    ;
 
     $form['blurb'] = [
       '#type' => 'markup',
-      '#markup' => "<div>$blurb</div>",
+      '#markup' => "<div id='site-blurb'>$blurb</div>",
     ];
 
     $form['nav-tabs'] = [
@@ -243,10 +246,12 @@ class HomePageForm extends FormBase {
       </div>
       ';
 
-    $form['browse'] = [
+    /*
+      $form['browse'] = [
       '#type' => 'markup',
       '#markup' => "<div class='container browse-panels'>$browse</div>",
     ];
+    */
 
     $sshrc = '
       <div class="row">
@@ -259,10 +264,12 @@ class HomePageForm extends FormBase {
       </div>
       ';
 
+    /*
     $form['sshrc'] = [
       '#type' => 'markup',
       '#markup' => "<div class='container sshrc-panel-container'>$sshrc</div>",
     ];
+    */
 
     // Attach JS.
     $form['#attached']['library'][] = 'aaslp_core/homepage-active-tabs';

@@ -354,7 +354,26 @@ main > .container {
 
     // Homepage form.
     form#aaslp-core-homepage {
-      padding: 1.2rem;
+      padding: 3rem;
+
+      // Blurb container.
+      #site-blurb {
+        padding: 2rem;
+        border-bottom: 1px dotted;
+        text-align: center !important;
+
+        p {
+          font-family: jubilat,'Georgia', serif;
+          font-weight: 100;
+          text-align: center !important;
+        }
+
+        a {
+          font-size: 1rem;
+          color: $aaslp-blue !important;
+        }
+      }
+      
       // Navigation tabs.
       .nav.nav-tabs {
         margin-top: 2rem;
