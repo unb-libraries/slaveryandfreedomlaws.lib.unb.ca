@@ -123,11 +123,11 @@ class HomePageForm extends FormBase {
       ],
     ];
     $form['nav-tabs']['title'] = [
-      '#markup' => '<li class="tab' . $title_tab_class . '">' . Link::fromTextAndUrl($this->t('Title Search'), $title_url)
+      '#markup' => '<li class="tab' . $title_tab_class . '">' . Link::fromTextAndUrl($this->t('TITLE SEARCH'), $title_url)
         ->toString() . '</li>',
     ];
     $form['nav-tabs']['fulltext'] = [
-      '#markup' => '<li class="tab' . $fulltext_tab_class . '">' . Link::fromTextAndUrl($this->t('Fulltext Search'), $fulltext_url)
+      '#markup' => '<li class="tab' . $fulltext_tab_class . '">' . Link::fromTextAndUrl($this->t('FULLTEXT SEARCH'), $fulltext_url)
         ->toString() . '</li>',
     ];
 
@@ -165,6 +165,11 @@ class HomePageForm extends FormBase {
       '#type' => 'submit',
       '#value' => $this->t('Search/Browse Titles'),
       '#field_prefix' => '<span class="input-group-btn">',
+      '#attributes' => [
+        'class' => [
+          'sr-only',
+        ]
+      ],
     ];
     $form['tab-content']['fulltext'] = [
       '#type' => 'container',
@@ -202,7 +207,7 @@ class HomePageForm extends FormBase {
       '#field_suffix' => '</span>',
       '#attributes' => [
         'class' => [
-          'btn-danger',
+          'sr-only',
         ],
       ],
     ];

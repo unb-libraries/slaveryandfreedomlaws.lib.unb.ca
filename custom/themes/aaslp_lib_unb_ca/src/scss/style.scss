@@ -385,23 +385,29 @@ main > .container {
         }
 
         a {
-          padding: 10px !important;
+          padding-right: 3rem;
+          color: $aaslp-blue !important;
 
           &.active {
-            background-color: $lgray;
+            background-color: $offwhite;
           }
         }
       }
       // Tab content.
       #edit-tab-content {
         margin-bottom: 2rem;
-        background-color: $lgray;
-        padding: 1rem;
+        background-color: $offwhite;
 
         #title > div,
         #fulltext > div > div {
           display: inline-block;
           max-width: 600px;
+        }
+
+        // Text field containers.
+        .js-form-type-textfield {
+          max-width: 100% !important;
+          width: 100%;
         }
 
         // Search buttons.
