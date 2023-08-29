@@ -38,6 +38,10 @@ b, strong {
   font-weight: 600;   
 }
 
+body {
+  background-color: $offwhite;
+}
+
 body,
 .font-regular {
   font-size: 1rem;
@@ -174,43 +178,77 @@ header {
   }
 }
 
-// Main conainer.
-main > .container {
+// Main.
+main {
+  background-image: url(/themes/custom/aaslp_lib_unb_ca/images/bg-map.jpg);
+  background-size: 100%;
+
+  // Main container.
+  .container {
   padding-left: 0;
   padding-right: 0;
 
-  // Breadcrumbs.
-  .breadcrumb {
-    margin-bottom: 0;
-    border-radius: 0;
-    background-color: $lgray;
+    // Breadcrumbs.
+    .breadcrumb {
+      margin-bottom: 0;
+      border-radius: 0;
+      background-color: $lgray;
 
-    li {
-      margin-right: .5rem;
-      font-style: italic;
+      li {
+        margin-right: .5rem;
+        font-style: italic;
+      }
+
+      a:active,
+      a:focus,
+      a:hover {
+        color: $unb-darkgray;
+      }
     }
 
-    a:active,
-    a:focus,
-    a:hover {
-      color: $unb-darkgray;
+    // Page title.
+    .block-page-title-block {
+      padding: 1rem 0;
+
+      h1, h1 > span {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
     }
-  }
 
-  // Page title.
-  .block-page-title-block {
-    padding: 1rem 0;
+    // Sidebar.
+    .order-2 {
+      background-color: $lgray;
 
-    h1, h1 > span {
-      margin: 0;
-      font-size: 1.4rem;
-      font-weight: 500;
+      // Facet blocks.
+      .block-facets {
+        padding-top: 1rem;
+
+        a:active,
+        a:hover {
+          color: $unb-darkgray;
+        }
+
+        h3 {
+          font-size: 1.15rem;
+          font-weight: bold;
+        }
+      }
+
+      .region-sidebar-first {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 1.2rem;
+      }
+
+      // Main area when sidebar is displayed.
+      & + .order-1 {
+        .page-title {
+          margin-left: 1rem;
+        }
+      }
     }
-  }
-
-  // Sidebar.
-  .order-2 {
-    background-color: $lgray;
 
     // Facet blocks.
     .block-facets {
@@ -223,269 +261,256 @@ main > .container {
 
       h3 {
         font-size: 1.15rem;
-        font-weight: bold;
+        font-weight: normal;
+        margin: 0;
+        padding: .2rem;
+        padding-left: 1rem;
+        color: $unb-darkgray !important;
       }
-    }
-
-    .region-sidebar-first {
-      padding-right: 0;
-      padding-left: 0;
-      padding-bottom: 1.2rem;
-    }
-
-    // Main area when sidebar is displayed.
-    & + .order-1 {
-      .page-title {
-        margin-left: 1rem;
-      }
-    }
-  }
-
-  // Facet blocks.
-  .block-facets {
-    padding-top: 1rem;
-
-    a:active,
-    a:hover {
-      color: $unb-darkgray;
-    }
-
-    h3 {
-      font-size: 1.15rem;
-      font-weight: normal;
-      margin: 0;
-      padding: .2rem;
-      padding-left: 1rem;
-      color: $unb-darkgray !important;
-    }
-    ul {
-      padding-left: 1rem;
-      padding-right: 1.2rem;
-      margin: .5rem;
-
-      li {
-        line-height: 1.2rem;
-        list-style: none;
-
-        // Range slider.
-        .facet-slider {
-          // First value.
-          .ui-slider-pip-first {
-            color: $aaslp-blue;
-          }
-          // Last value.
-          .ui-slider-pip-last {
-            color: $jc-orange;
-          }
-        }
-
-        &.parent-location {
-          font-weight: bold;
-          margin-top: .4rem;
-        }
-
-        &.child-location {
-          margin-left: 1rem;
-        }
-
-        label {
-          display: flex;
-          margin-bottom: 0;
-          font-size: .9rem;
-        }
-
-        input {
-          display: block;
-          float: left;
-          height: .6rem;
-          margin-right: .2rem;
-          margin-top: .2rem;
-          -moz-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-          -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-        }
-
-        .facet-item__value {
-          margin-right: .2rem;
-        }
-      }
-    }
-
-    // Timeline checkbox facets.
-    ul[data-drupal-facet-id="timeline_crimes"],
-    ul[data-drupal-facet-id="timeline_location"],
-    ul[data-drupal-facet-id="timeline_punishments"] {
-      columns: 3;
-    }
-
-    ul[data-drupal-facet-id="timeline_punishments"] {
-      margin-bottom: 2rem;
-    }
-
-    // Facets soft-limit link.
-    .facets-soft-limit-link {
-      font-size: .8rem;
-      margin-left: 1rem;
-
-      svg {
-        display: none;
-
-        &:first-child {
-          display: initial;
-          margin-right: .2rem;
-        }
-      }
-    }
-  }
-
-  // Content region.
-  .region-content {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-    background-color: $offwhite;
-    padding: 0 !important;
-    border-radius: 1rem;
-
-    // Article.
-    article {
-      padding-bottom: 1rem;
-    }
-
-    // Homepage form.
-    form#aaslp-core-homepage {
-      padding: 3rem;
-
-      // Blurb container.
-      #site-blurb {
-        padding: 2rem;
-        border-bottom: 1px dotted;
-        text-align: center !important;
-
-        p {
-          font-family: jubilat,'Georgia', serif;
-          text-align: center !important;
-        }
-
-        a {
-          font-size: 1rem;
-          color: $aaslp-blue !important;
-        }
-      }
-      
-      // Navigation tabs.
-      .nav.nav-tabs {
-        margin-top: 2rem;
-        height: 25px;
-        border-bottom: none;
+      ul {
+        padding-left: 1rem;
+        padding-right: 1.2rem;
+        margin: .5rem;
 
         li {
-          margin-bottom: -4px;
-        }
+          line-height: 1.2rem;
+          list-style: none;
 
-        a {
-          padding-right: 3rem;
-          color: $aaslp-blue !important;
-          text-underline-offset: .5rem;
-
-          &:not(.active) {
-            opacity: .6;
+          // Range slider.
+          .facet-slider {
+            // First value.
+            .ui-slider-pip-first {
+              color: $aaslp-blue;
+            }
+            // Last value.
+            .ui-slider-pip-last {
+              color: $jc-orange;
+            }
           }
-        }
-      }
 
-      // Tab content.
-      #edit-tab-content {
-        margin-bottom: 2rem;
-        background-color: $offwhite;
+          &.parent-location {
+            font-weight: bold;
+            margin-top: .4rem;
+          }
 
-        #title > div,
-        #fulltext > div > div {
-          display: inline-block;
-          max-width: 600px;
-        }
-
-        // Text field containers.
-        .js-form-type-textfield {
-          max-width: 100% !important;
-          width: 100%;
+          &.child-location {
+            margin-left: 1rem;
+          }
 
           label {
-            margin: 0;
+            display: flex;
+            margin-bottom: 0;
+            font-size: .9rem;
           }
 
           input {
-            height: 3rem;
+            display: block;
+            float: left;
+            height: .6rem;
+            margin-right: .2rem;
+            margin-top: .2rem;
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
           }
-        }
 
-        // Input description.
-        .description {
-          opacity: .6;
-        }
-
-        // Search buttons.
-        .btn-primary {
-          vertical-align: top;
-          margin-top: 3.2rem;
-        }
-        // Fulltext search button.
-        #edit-submit-fulltext {
-          border-color: $unb-darkred !important;
-          background-color: $unb-darkred !important;
-        }
-        #edit-submit-fulltext:hover {
-          border-color: $unb-darkerred !important;
-          background-color: $unb-darkerred !important;
+          .facet-item__value {
+            margin-right: .2rem;
+          }
         }
       }
 
-      // Browse panels.
-      .browse-panels {
-        margin-top: 1rem;
-
-        .browse-timeline {
-          padding-left: 0;
-        }
-
-        .browse-map {
-          padding-right: 0;
-        }
-
-        .panel-img-link {
-          opacity: 100%;
-
-          &:hover {
-            opacity: 70%;
-          }
-        }
-        .fa-external-link-alt {
-          position: absolute;
-          top: 10px;
-          left: 93%;
-          z-index: 100;
-          color: $offwhite;
-        }
-        .panel-img {
-          max-width: 100%;
-        }
-        .browse-header {
-          margin-top: .5rem;
-          margin-bottom: .5rem;
-        }
+      // Timeline checkbox facets.
+      ul[data-drupal-facet-id="timeline_crimes"],
+      ul[data-drupal-facet-id="timeline_location"],
+      ul[data-drupal-facet-id="timeline_punishments"] {
+        columns: 3;
       }
 
-      // SSHRC logo.
-      .sshrc-panel {
-        margin-top: 2rem;
-        text-align: center;
+      ul[data-drupal-facet-id="timeline_punishments"] {
+        margin-bottom: 2rem;
+      }
+
+      // Facets soft-limit link.
+      .facets-soft-limit-link {
+        font-size: .8rem;
+        margin-left: 1rem;
+
+        svg {
+          display: none;
+
+          &:first-child {
+            display: initial;
+            margin-right: .2rem;
+          }
+        }
       }
     }
 
-    // Exposed search.
-    .views-exposed-form {
-      // Form.
-      form {
+    // Content region.
+    .region-content {
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+      background-color: $offwhite;
+      padding: 0 !important;
+      border-radius: .6rem;
+
+      // Article.
+      article {
+        padding-bottom: 1rem;
+      }
+
+      // Homepage form.
+      #aaslp-core-homepage {
+        // Blurb container.
+        #site-blurb {
+          padding-top: 3rem;
+          padding-bottom: 2rem;
+          margin-left: 4rem;
+          margin-right: 4rem;
+          border-bottom: 1px dotted;
+          text-align: center !important;
+
+          p {
+            text-align: center !important;
+            font-size: 1.1rem;
+            font-family: jubilat,'Georgia', serif;
+          }
+
+          a {
+            color: $aaslp-blue !important;
+            font-weight: bold;
+          }
+        }
+        
+        // Navigation tabs.
+        .nav.nav-tabs {
+          margin-top: 2rem;
+          margin-left: 4rem;
+          margin-right: 4rem;
+          height: 25px;
+          border-bottom: none;
+
+          li {
+            margin-bottom: -4px;
+          }
+
+          a {
+            padding-right: 3rem;
+            color: $aaslp-blue !important;
+            text-underline-offset: .5rem;
+
+            &:not(.active) {
+              opacity: .6;
+            }
+          }
+        }
+
+        // Tab content.
+        #edit-tab-content {
+          margin-bottom: 3rem;
+          margin-left: 4rem;
+          margin-right: 4rem;
+          background-color: $offwhite;
+
+          #title > div,
+          #fulltext > div > div {
+            display: inline-block;
+            max-width: 600px;
+          }
+
+          // Text field containers.
+          .js-form-type-textfield {
+            max-width: 82% !important;
+            width: 82%;
+
+            label {
+              margin: 0;
+            }
+
+            input {
+              border-radius: .6rem;
+              height: 3rem;
+            }
+          }
+
+          // Input description.
+          .description {
+            opacity: .6;
+          }
+
+          // Search buttons.
+          .btn-primary {
+            vertical-align: top;
+            margin-top: 2.8rem;
+            height: 47px;
+            border-radius: .6rem;
+          }
+          // Fulltext search button.
+          #edit-submit-fulltext {
+            border-color: $unb-darkred !important;
+            background-color: $unb-darkred !important;
+          }
+          #edit-submit-fulltext:hover {
+            border-color: $unb-darkerred !important;
+            background-color: $unb-darkerred !important;
+          }
+        }
+
+        // Browse map.
+        .browse-map {
+          
+          img {
+            width: 100%;
+            border-bottom-left-radius: .6rem;
+            border-bottom-right-radius: .6rem;
+          }
+        }
+
+        // SSHRC logo.
+        .sshrc-panel {
+          margin-top: 2rem;
+          text-align: center;
+        }
+      }
+
+      // Exposed search.
+      .views-exposed-form {
+        // Form.
+        form {
+          padding-left: 1rem;
+          // Text input.
+          .form-item-search-api-fulltext {
+            width: 65%;
+
+            > input {
+              margin: 0;  
+            }
+          }
+          .form-text {
+            font-size: 1rem;
+          }
+          // Submit buttons.
+          .form-actions {
+            display: inline-block;
+
+            [id^="edit-submit-aaslp-search"],
+            [id^="edit-submit-aaslp-search"]:active,
+            [id^="edit-submit-aaslp-metadata-search"],
+            [id^="edit-submit-aaslp-metadata-search"]:active,
+            [id^="edit-custom-reset"],
+            [id^="edit-custom-reset"]:active {
+              margin-right: 0;
+              border: none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+
+      // For combined filters.
+      form.views-exposed-form {
         padding-left: 1rem;
         // Text input.
         .form-item-search-api-fulltext {
@@ -502,374 +527,343 @@ main > .container {
         .form-actions {
           display: inline-block;
 
-          [id^="edit-submit-aaslp-search"],
-          [id^="edit-submit-aaslp-search"]:active,
-          [id^="edit-submit-aaslp-metadata-search"],
-          [id^="edit-submit-aaslp-metadata-search"]:active,
+          [id^="edit-submit-taxonomy-term"],
+          [id^="edit-submit-taxonomy-term"]:active,
+          [id^="edit-submit-aaslp-sources"],
+          [id^="edit-submit-aaslp-sources"]:active,
           [id^="edit-custom-reset"],
           [id^="edit-custom-reset"]:active {
-            margin-right: 0;
             border: none;
+            margin-right: 0;
             box-shadow: none;
           }
         }
       }
-    }
 
-    // For combined filters.
-    form.views-exposed-form {
-      padding-left: 1rem;
-      // Text input.
-      .form-item-search-api-fulltext {
-        width: 65%;
-
-        > input {
-          margin: 0;  
-        }
+      // Links.
+      a, a:visited {
+        color: $jc-orange;
       }
-      .form-text {
-        font-size: 1rem;
+      a:active,
+      a:focus,
+      a:focus-within,
+      a:target,
+      a:hover {
+        color: $unb-darkgray;
       }
-      // Submit buttons.
-      .form-actions {
-        display: inline-block;
 
-        [id^="edit-submit-taxonomy-term"],
-        [id^="edit-submit-taxonomy-term"]:active,
-        [id^="edit-submit-aaslp-sources"],
-        [id^="edit-submit-aaslp-sources"]:active,
-        [id^="edit-custom-reset"],
-        [id^="edit-custom-reset"]:active {
-          border: none;
-          margin-right: 0;
-          box-shadow: none;
-        }
-      }
-    }
+      // Views content.
+      .views-element-container .view-content {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+        margin-bottom: 1.2rem;
+        // Views row.
+        .views-row {
+          margin-top: 1rem;
 
-    // Links.
-    a, a:visited {
-      color: $jc-orange;
-    }
-    a:active,
-    a:focus,
-    a:focus-within,
-    a:target,
-    a:hover {
-      color: $unb-darkgray;
-    }
-
-    // Views content.
-    .views-element-container .view-content {
-      margin-left: 1.2rem;
-      margin-right: 1.2rem;
-      margin-bottom: 1.2rem;
-      // Views row.
-      .views-row {
-        margin-top: 1rem;
-
-        .views-field-search-api-excerpt .excerpt {
-          background-color: $lgray;
-          padding: 4px 8px;
-        }
-      }
-      // Table.
-      table {
-        th a {
-          white-space: nowrap;
-        }
-        tr {
-          &:nth-of-type(even) {
+          .views-field-search-api-excerpt .excerpt {
             background-color: $lgray;
+            padding: 4px 8px;
           }
-          &:nth-of-type(odd) {
-            background-color: white;
+        }
+        // Table.
+        table {
+          th a {
+            white-space: nowrap;
           }
-          td {
-            border: none;
-            padding: .5rem;
+          tr {
+            &:nth-of-type(even) {
+              background-color: $lgray;
+            }
+            &:nth-of-type(odd) {
+              background-color: white;
+            }
+            td {
+              border: none;
+              padding: .5rem;
 
-            &.is-active {
-              background-color: initial;
+              &.is-active {
+                background-color: initial;
+              }
             }
           }
         }
-      }
-      // Item list.
-      .item-list {
-        h3 {
-          font-weight: normal;
-        }
-        ul {
-          list-style: none;
-          columns: 3;
-        }
-      }
-
-      // Timeline.
-      [id^="timelinejs-aaslp-timeline-page"] {
-        // Base font size.
-        .tl-timeline {
-          font-size: 20px;
-        }
-        // Full background image links.
-        .tl-full-image-background a,
-        .tl-full-image-background a:visited {
-          color: white;
-
-          &:active,
-          &:focus,
-          &:focus-within,
-          &:target,
-          &:hover {
-            color: $unb-25gray;
+        // Item list.
+        .item-list {
+          h3 {
+            font-weight: normal;
+          }
+          ul {
+            list-style: none;
+            columns: 3;
           }
         }
-        // Hide default year display (full date included instead).
-        .tl-text-content-container .tl-headline-date {
-          display: none;
-        }
-        // Headline.
-        .tl-text-content-container > .tl-headline {
-          line-height: 2rem;
-        }
-        // Time marker.
-        .tl-timemarker .tl-timemarker-content-container {
-          background-color: #f2f2f2;
 
-          .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
-            color: #222;
+        // Timeline.
+        [id^="timelinejs-aaslp-timeline-page"] {
+          // Base font size.
+          .tl-timeline {
+            font-size: 20px;
+          }
+          // Full background image links.
+          .tl-full-image-background a,
+          .tl-full-image-background a:visited {
+            color: white;
+
+            &:active,
+            &:focus,
+            &:focus-within,
+            &:target,
+            &:hover {
+              color: $unb-25gray;
+            }
+          }
+          // Hide default year display (full date included instead).
+          .tl-text-content-container .tl-headline-date {
+            display: none;
+          }
+          // Headline.
+          .tl-text-content-container > .tl-headline {
+            line-height: 2rem;
+          }
+          // Time marker.
+          .tl-timemarker .tl-timemarker-content-container {
+            background-color: #f2f2f2;
+
+            .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
+              color: #222;
+            }
+          }
+          // Time axis.
+          .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major .tl-timeaxis-tick {
+            font-size: 14px;
+            color: #aa0404;
+          }
+
+          .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor .tl-timeaxis-tick {
+            font-size: 12px;
+            color: #666;
+          }
+          // Hide timeline icon in timemarker content.
+          .tl-timemarker-content .tl-headline sup {
+            display: none;
+          }
+          // Hide timeline icon in slidenav content.
+          .tl-slidenav-content-container .tl-slidenav-title sup {
+            display: none;
+          }
+          // Time group labels.
+          .tl-timegroup-message {
+            font-size: 20px;
+            color: $unb-darkgray;
+            text-shadow: none;
+          }
+          // Historical events panel.
+          .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate {
+            background-color: $aaslp-lblue;
+          }
+          // Historical events panel.
+          .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate + .tl-timegroup {
+            background-color: $aaslp-lgold;
+          }
+          .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate + .tl-timegroup + .tl-timegroup.tl-timegroup-alternate {
+            background-color: $aaslp-lgold;
           }
         }
-        // Time axis.
-        .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major .tl-timeaxis-tick {
-          font-size: 14px;
-          color: #aa0404;
+
+        // Maximized timeline only.
+        #timelinejs-aaslp-timeline-page-2 {
+          height: 38vw !important;
         }
 
-        .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor .tl-timeaxis-tick {
-          font-size: 12px;
-          color: #666;
-        }
-        // Hide timeline icon in timemarker content.
-        .tl-timemarker-content .tl-headline sup {
-          display: none;
-        }
-        // Hide timeline icon in slidenav content.
-        .tl-slidenav-content-container .tl-slidenav-title sup {
-          display: none;
-        }
-        // Time group labels.
-        .tl-timegroup-message {
-          font-size: 20px;
-          color: $unb-darkgray;
-          text-shadow: none;
-        }
-        // Historical events panel.
-        .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate {
-          background-color: $aaslp-lblue;
-        }
-        // Historical events panel.
-        .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate + .tl-timegroup {
-          background-color: $aaslp-lgold;
-        }
-        .tl-timeaxis-background + .tl-timegroup.tl-timegroup-alternate + .tl-timegroup + .tl-timegroup.tl-timegroup-alternate {
-          background-color: $aaslp-lgold;
+        // Map (Locations).
+        // Style divicon marker.
+        .leaflet-map-divicon {
+          padding: 4px;
+          font-size: .8rem;
+          color: $offwhite;
+          background-color: $jc-orange;
         }
       }
-
-      // Maximized timeline only.
-      #timelinejs-aaslp-timeline-page-2 {
-        height: 38vw !important;
+      // Views header, view empty.
+      .views-exposed-form + div + .block-aaslp-lib-unb-ca-content {
+        .view-header, .view-empty {
+          padding-top: 3.8rem;
+        }
       }
-
-      // Map (Locations).
-      // Style divicon marker.
-      .leaflet-map-divicon {
-        padding: 4px;
-        font-size: .8rem;
-        color: $offwhite;
-        background-color: $jc-orange;
-      }
-    }
-    // Views header, view empty.
-    .views-exposed-form + div + .block-aaslp-lib-unb-ca-content {
+      // Views header, view empty.
       .view-header, .view-empty {
-        padding-top: 3.8rem;
-      }
-    }
-    // Views header, view empty.
-    .view-header, .view-empty {
-      margin: 1.2rem;
-    }
-    // Views footer.
-    .view-footer {
-      margin: 1.2rem;
-    }
-
-      // Views pager.
-      .pager {
         margin: 1.2rem;
+      }
+      // Views footer.
+      .view-footer {
+        margin: 1.2rem;
+      }
 
-      ul {
-        li.active a {
-          background-color: $lgray;
-          border-color: $lgray;
-        }
-        li:first-of-type {
-          border-top-left-radius: 2px;
-          border-bottom-left-radius: 2px;
+        // Views pager.
+        .pager {
+          margin: 1.2rem;
 
+        ul {
+          li.active a {
+            background-color: $lgray;
+            border-color: $lgray;
+          }
+          li:first-of-type {
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+
+            a {
+              border-top-left-radius: inherit;
+              border-bottom-left-radius: inherit;
+            }
+          }
+          li:last-of-type {
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+
+            a {
+              border-top-right-radius: inherit;
+              border-bottom-right-radius: inherit;
+            }
+          }
           a {
-            border-top-left-radius: inherit;
-            border-bottom-left-radius: inherit;
+            font-size: 1rem;
+            color: $unb-darkgray !important;
           }
         }
-        li:last-of-type {
-          border-top-right-radius: 2px;
-          border-bottom-right-radius: 2px;
+      }
 
-          a {
-            border-top-right-radius: inherit;
-            border-bottom-right-radius: inherit;
-          }
+      // Node content.
+      .node__content {
+        margin: 0;
+
+        &.node__legal_article h2 {
+          font-size: 1rem !important;
         }
-        a {
-          font-size: 1rem;
-          color: $unb-darkgray !important;
+
+        // Field containers.
+        .field {
+          margin-top: 1.2rem;
         }
-      }
-    }
 
-    // Node content.
-    .node__content {
-      margin: 0;
+        // Tags.
+        .field--name-field-law-tags {
+          .field__item {
+            display: inline-block;
 
-      &.node__legal_article h2 {
-        font-size: 1rem !important;
-      }
+            &::after {
+              content: ',';
+            }
 
-      // Field containers.
-      .field {
-        margin-top: 1.2rem;
-      }
-
-      // Tags.
-      .field--name-field-law-tags {
-        .field__item {
-          display: inline-block;
-
-          &::after {
-            content: ',';
-          }
-
-          &:last-of-type::after {
-            content: '.';
-          }
+            &:last-of-type::after {
+              content: '.';
+            }
+          } 
         } 
-      } 
-      
-      // Annotations.
-      .anno-marker {
-        display: none;
-      }
-
-      .anno-group-header {
-        margin-bottom: 0;
-        padding: .4rem 0;
-        border-top: 1px solid $unb-25gray;
-        font-size: 1rem;
-      }
-
-      .anno-list {
-        padding-left: 0;
-        list-style: none;
-      }
-
-      .anno-group-header, .anno-list {
-        margin-left: 1.4rem;
-        padding: .2rem;
-        background-color: $lgray;
-      }
-
-      // Document image.
-      .pdfpreview-file {
-        margin: 1rem;
-        border: 1px solid $lgray;
-      }
-
-      // Metadata layout.
-      .con-metadata, .row-metadata, .col-metadata {
-        padding: inherit;
-      }
-
-      .btn, .btn:visited, .btn:focus, .btn:focus-within {
-        padding: .3rem .4rem .1rem .3rem !important;
-        color: white !important;
-        background-color: $jc-orange !important;
-        border: none !important;
-        font-size: .9rem !important;
-        font-weight: bold;
-        box-shadow: none !important;
-
-        &#cite {
-          padding: 0.1rem .3rem 0 .2rem !important;
-          line-height: 1.4;
-          background-color: $unb-25gray !important;
+        
+        // Annotations.
+        .anno-marker {
+          display: none;
         }
-      }
-      .btn:hover, .btn:active, .btn:target {
-        padding: .3rem .4rem .1rem .3rem !important;
-        color: white !important;
-        background-color: $unb-darkgray !important;
-        border: none !important;
-        font-size: .9rem !important;
-        font-weight: bold;
 
-        &#cite {
-          padding: 0.1rem .3rem 0 .2rem !important;
-          line-height: 1.4;
-          background-color: $unb-darkgray !important;
-        }
-      }
-      .row-metadata {
-        margin: 5px 0 10px;
-        padding-top: 0;
-        padding-bottom: 8px;
-      }
-      .field--name-field-abstract {
-        display:inline-block;
-        border: solid .2em $aaslp-blue;
-        margin-top: 0;
-        margin-right: 2rem;
-        margin-left: 2rem;
-        margin-bottom: 1.5rem;
-        padding:.9em;
-        position:relative;
-        &:before {
-          background-color: white;
-          bottom: -1em;
-          content: "";
-          left: 1em;
-          position: absolute;
-          right: 1em;
-          top: -1em;
-        }
-        > * {
-          position: relative;
-          z-index: 1;
-        }            
-        & p:last-of-type {
+        .anno-group-header {
           margin-bottom: 0;
+          padding: .4rem 0;
+          border-top: 1px solid $unb-25gray;
+          font-size: 1rem;
+        }
+
+        .anno-list {
+          padding-left: 0;
+          list-style: none;
+        }
+
+        .anno-group-header, .anno-list {
+          margin-left: 1.4rem;
+          padding: .2rem;
+          background-color: $lgray;
+        }
+
+        // Document image.
+        .pdfpreview-file {
+          margin: 1rem;
+          border: 1px solid $lgray;
+        }
+
+        // Metadata layout.
+        .con-metadata, .row-metadata, .col-metadata {
+          padding: inherit;
+        }
+
+        .btn, .btn:visited, .btn:focus, .btn:focus-within {
+          padding: .3rem .4rem .1rem .3rem !important;
+          color: white !important;
+          background-color: $jc-orange !important;
+          border: none !important;
+          font-size: .9rem !important;
+          font-weight: bold;
+          box-shadow: none !important;
+
+          &#cite {
+            padding: 0.1rem .3rem 0 .2rem !important;
+            line-height: 1.4;
+            background-color: $unb-25gray !important;
+          }
+        }
+        .btn:hover, .btn:active, .btn:target {
+          padding: .3rem .4rem .1rem .3rem !important;
+          color: white !important;
+          background-color: $unb-darkgray !important;
+          border: none !important;
+          font-size: .9rem !important;
+          font-weight: bold;
+
+          &#cite {
+            padding: 0.1rem .3rem 0 .2rem !important;
+            line-height: 1.4;
+            background-color: $unb-darkgray !important;
+          }
+        }
+        .row-metadata {
+          margin: 5px 0 10px;
+          padding-top: 0;
+          padding-bottom: 8px;
+        }
+        .field--name-field-abstract {
+          display:inline-block;
+          border: solid .2em $aaslp-blue;
+          margin-top: 0;
+          margin-right: 2rem;
+          margin-left: 2rem;
+          margin-bottom: 1.5rem;
+          padding:.9em;
+          position:relative;
+          &:before {
+            background-color: white;
+            bottom: -1em;
+            content: "";
+            left: 1em;
+            position: absolute;
+            right: 1em;
+            top: -1em;
+          }
+          > * {
+            position: relative;
+            z-index: 1;
+          }            
+          & p:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+        .field--name-field-source {
+          display: inline-block;
         }
       }
-      .field--name-field-source {
-        display: inline-block;
+      // Search page title.
+      #block-aaslp-lib-unb-ca-page-title .page-title {
+        text-align: left !important;
       }
-    }
-    // Search page title.
-    #block-aaslp-lib-unb-ca-page-title .page-title {
-      text-align: left !important;
     }
   }
 }
@@ -885,11 +879,19 @@ main.timeline-full {
 // Footer.
 footer {
   padding-top: 0 !important;
-
+  padding-bottom: 0 !important;
+  
   & > .container {
+    max-width: 100%;
+    width: 100%;
     padding: .8rem 1.2rem !important;
-    background-color: $aaslp-blue;
-    color: white !important;
+    background-color: $offwhite;
+    color: black !important;
+
+    .row {
+      margin: auto;
+      max-width: 1140px;
+    }
 
     // Footer logo.
     #footer-logo-img {
@@ -906,7 +908,7 @@ footer {
       }
 
       a {
-        color: white !important;
+        color: black !important;
       }
     }
   }

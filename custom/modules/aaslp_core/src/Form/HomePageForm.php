@@ -165,11 +165,6 @@ class HomePageForm extends FormBase {
       '#type' => 'submit',
       '#value' => $this->t('Search/Browse Titles'),
       '#field_prefix' => '<span class="input-group-btn">',
-      '#attributes' => [
-        'class' => [
-          'sr-only',
-        ]
-      ],
     ];
     $form['tab-content']['fulltext'] = [
       '#type' => 'container',
@@ -205,11 +200,6 @@ class HomePageForm extends FormBase {
       '#value' => $this->t('Search FullText'),
       '#field_prefix' => '<span class="input-group-btn">',
       '#field_suffix' => '</span>',
-      '#attributes' => [
-        'class' => [
-          'sr-only',
-        ],
-      ],
     ];
     $form['tab-content']['fulltext']['notes'] = [
       '#type' => 'markup',
@@ -223,40 +213,19 @@ class HomePageForm extends FormBase {
     ];
 
     $browse = '
-      <div class="row">
-        <div class="col-sm-6 browse-panel browse-timeline">
-          <a href="/timeline" class="panel-img-link">
-            <i class="sr-only">Browse Timeline</i>
-            <img class="panel-img" src="/themes/custom/aaslp_lib_unb_ca/images/timeline-img.jpg" alt="Browse Timeline">
-            <i class="fa fa-external-link-alt"></i>
-          </a>
-          <h2 class="browse-header">Browse Timeline</h2>
-          <p class="browse-blurb">
-            Browse legal articles in an interactive timeline. Explore the history
-            of slave laws by comparing the year of their institution with
-            notable historical events.
-          </p>
-        </div>
-        <div class="col-sm-6 browse-panel browse-map">
-          <a href="/locations-map" class="panel-img-link">
-            <i class="sr-only">Browse Timeline</i>
-            <img class="panel-img" src="/themes/custom/aaslp_lib_unb_ca/images/map-img.jpg" alt="Browse Locations">
-            <i class="fa fa-external-link-alt"></i>
-          </a>
-          <h2 class="browse-header">Browse Locations</h2>
-          <p class="browse-blurb">
-            Browse legal articles in an interactive map. Visualize how slave laws
-            in the database were distributed geographically.
-        </div>
+      <div class="browse-map">
+        <img src="/themes/custom/aaslp_lib_unb_ca/images/map-img.jpg" alt="Browse Locations">
+        <p class="sr-only browse-blurb">
+          Browse legal articles in an interactive map. Visualize how slave laws
+          in the database were distributed geographically.
+        </p>
       </div>
       ';
 
-    /*
-      $form['browse'] = [
+    $form['browse'] = [
       '#type' => 'markup',
-      '#markup' => "<div class='container browse-panels'>$browse</div>",
+      '#markup' => $browse,
     ];
-    */
 
     $sshrc = '
       <div class="row">
