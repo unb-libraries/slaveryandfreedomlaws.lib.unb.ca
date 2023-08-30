@@ -1,5 +1,4 @@
 // Theme variables.
-
 $navbar-brand-image-height: 36px !default;
 $navbar-brand-image-height-lg: 60px !default;
 $navbar-brand-image-width: auto !default;
@@ -21,4 +20,7 @@ $local-tasks-primary-margin: 1rem 0 !default;
 $local-tasks-secondary-margin: 0 0 1rem 0 !default;
 
 $table-striped-bg: #f9f9f9 !default;
-$leaf-blue: #124d64;
+
+// Custom theme variables.
+$leaf-blue: #124d64; // Primary.
+$leaf-offwhite: #f5f4ec; // Secondary/Base.

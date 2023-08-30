@@ -9,3 +9,90 @@
 @import '../../../../../vendor/drupal/bootstrap5/scss/style';
 
 /* Subtheme styles */
+
+// Global (careful here).
+// Global font.
+/* Headings: Jubilat SemiBold */
+h1, .site-title-container, h2, h3, h4 {
+  font-family: jubilat,'Georgia', serif !important;
+  font-weight: 600;
+}
+/* Headings: Jubilat Medium*/
+h3, h4 {
+  font-weight: 500;
+}
+/* Headings: Utile Bold*/
+h5, h6 {
+  font-family: utile, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* Headings: Utile SemiBold*/
+h6 {
+  font-weight: 600;
+}
+/* Body copy: Utile Medium */
+body, .font-regular {
+  font-family: utile, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+}
+b, strong {
+  font-weight: 700;
+}
+/* Site naivagation & buttons: Utile SemiBold */
+.navbar-nav {
+  font-family: utile, 'Trebuchet MS', sans-serif;
+  font-weight: 600;   
+}
+body,
+.font-regular {
+  font-size: 1rem;
+  color: $primary;
+  // Global header sizing.
+  h1,
+  h1.display-4,
+  h1 > span,
+  .navbar-brand .site-title {
+    font-size: 1.8rem;
+  }
+  .site-slogan {
+    font-size: 1.4rem !important;
+  }
+  h2,
+  h2 > a {
+    font-size: 1.4rem;
+  }
+  h3,
+  h3 > a {
+    font-size: 1.3rem;
+  }
+  h4,
+  h4 > a {
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-size: 1.1rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  // Global header weight.
+  h1, h2, h3, h4, h5,
+  h1.display-4, h1 > span, .navbar-brand .site-title {
+    font-weight: bold;
+  }
+  // Justify paragraph text.
+  p {
+    text-align: justify;
+  }
+  // Global superscript size.
+  sup {
+    font-size: .85rem;
+  }
+}
+
+// Broad (also careful).
+// Input.
+input {
+  box-shadow: none !important;
+}

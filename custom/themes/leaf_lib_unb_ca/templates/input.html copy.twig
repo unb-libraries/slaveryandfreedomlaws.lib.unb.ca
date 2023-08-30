@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - label: A label passed by template_preprocess_input().
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+
+{% set input_id = attributes.toArray.id %}
+
+<label for="{{ input_id }}" class="sr-only">
+  {{ label }}
+</label>
+
+{% if attributes.hasClass('button') and not attributes.hasClass('field-add-more-submit') %}
+  <input{{ attributes.addClass('btn btn-primary') }} />
+{% else %}
+  <input{{ attributes.addClass('form-control') }} />
+{% endif %}
+
+{{ children }}
