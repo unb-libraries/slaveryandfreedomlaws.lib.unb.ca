@@ -126,10 +126,8 @@ header {
       }
       
       #navbarSupportedContent {
-        max-width: 1140px;
-        margin: auto;
-        
         a {
+          padding: 1rem;
           color: $light !important;
 
           &:hover {
