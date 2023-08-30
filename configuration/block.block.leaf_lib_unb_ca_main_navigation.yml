@@ -1,0 +1,27 @@
+uuid: 41dd2189-4b06-475d-b24e-3d9410c1e74e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - leaf_lib_unb_ca
+_core:
+  default_config_hash: yUwD98XqRzyYxvQ48aWmPVkTw3yRZ-wOL4Y2fCHk_I8
+id: leaf_lib_unb_ca_main_navigation
+theme: leaf_lib_unb_ca
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

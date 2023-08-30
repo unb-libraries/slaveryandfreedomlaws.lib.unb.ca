@@ -1,0 +1,20 @@
+uuid: acd2309e-0a31-4004-91a5-4b9e5bf65862
+langcode: en
+status: true
+dependencies:
+  theme:
+    - leaf_lib_unb_ca
+_core:
+  default_config_hash: gb7CFF6xbONi5T772d8HAhal69dUQ3MAfX8GNpH-Wlw
+id: leaf_lib_unb_ca_local_actions
+theme: leaf_lib_unb_ca
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

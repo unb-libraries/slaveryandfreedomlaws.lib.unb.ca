@@ -1,0 +1,25 @@
+uuid: 24a3f6af-a681-4600-951c-52a881254b29
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - leaf_lib_unb_ca
+_core:
+  default_config_hash: BNUMtA3u9sFrS0CaNJCy7m8VgvoG4Ppx4vk2MDkmHSo
+id: leaf_lib_unb_ca_branding
+theme: leaf_lib_unb_ca
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

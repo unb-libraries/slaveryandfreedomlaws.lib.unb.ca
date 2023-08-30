@@ -1,0 +1,27 @@
+uuid: 76f28dc2-b2f4-4f14-9f66-fab0097a7ef2
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - leaf_lib_unb_ca
+_core:
+  default_config_hash: ZOm0O-uVmh4W4x6-WvuCMyzkL8KZreyAuJpn6DDpbc8
+id: leaf_lib_unb_ca_account_menu
+theme: leaf_lib_unb_ca
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

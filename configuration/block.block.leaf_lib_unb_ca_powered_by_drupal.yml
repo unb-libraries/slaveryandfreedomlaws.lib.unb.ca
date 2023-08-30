@@ -1,0 +1,22 @@
+uuid: d4991b0f-8c75-4017-8a31-e2685f5e20c7
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - leaf_lib_unb_ca
+_core:
+  default_config_hash: cVl8F2cLcWiTzAcF8kFLe0oYRSfx-9C17hofikLoV6c
+id: leaf_lib_unb_ca_powered_by_drupal
+theme: leaf_lib_unb_ca
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

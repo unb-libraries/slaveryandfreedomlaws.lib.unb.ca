@@ -1,0 +1,22 @@
+uuid: 57bc5c62-c222-4a9c-9c45-95db453afd3a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - leaf_lib_unb_ca
+_core:
+  default_config_hash: ZeK6JH2au_sQPDPrCS-t5CGI-JWC85GrKZ2d02g274o
+id: leaf_lib_unb_ca_local_tasks
+theme: leaf_lib_unb_ca
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

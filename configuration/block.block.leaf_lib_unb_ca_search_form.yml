@@ -1,0 +1,23 @@
+uuid: 09fd88b7-d70a-44bc-af50-954645649e22
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - leaf_lib_unb_ca
+_core:
+  default_config_hash: 7PoFw6KAAUM1zLRfJ71lrTkL8cW4vj0racK52nbe854
+id: leaf_lib_unb_ca_search_form
+theme: leaf_lib_unb_ca
+region: nav_additional
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

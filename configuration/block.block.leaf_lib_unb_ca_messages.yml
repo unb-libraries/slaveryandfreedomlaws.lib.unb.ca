@@ -1,0 +1,22 @@
+uuid: e1d9330b-038a-499e-ae12-fe5a9acba947
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - leaf_lib_unb_ca
+_core:
+  default_config_hash: 0AvHoLKKREpuV0Rjd5Ujz8bUeimW4DiC-VP1cByaqWM
+id: leaf_lib_unb_ca_messages
+theme: leaf_lib_unb_ca
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }
