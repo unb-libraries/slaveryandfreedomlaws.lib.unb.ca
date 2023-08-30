@@ -14,7 +14,7 @@
 // Global font.
 /* Headings: Jubilat SemiBold */
 h1, .site-title-container, h2, h3, h4 {
-  font-family: jubilat,'Georgia', serif !important;
+  font-family: jubilat, 'Georgia', serif !important;
   font-weight: 600;
 }
 /* Headings: Jubilat Medium*/
@@ -95,4 +95,48 @@ body,
 // Input.
 input {
   box-shadow: none !important;
+}
+
+// Header.
+header {
+  .navbar {
+    
+    .container {
+      padding: 2rem 4rem;
+
+      .region-nav-branding {
+
+        #block-leaf-lib-unb-ca-contextualbranding {
+
+          .navbar-brand {
+            // Title container.
+            .site-title-container {
+              // Site title.
+              .site-title {
+                margin-bottom: 0;
+                line-height: 2rem;
+                font-size: 2.4rem !important;
+                letter-spacing: normal;
+                text-transform: initial !important;
+                color: $light !important;
+              }
+            }
+          }
+        }
+      }
+      
+      #navbarSupportedContent {
+        max-width: 1140px;
+        margin: auto;
+        
+        a {
+          color: $light !important;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }
