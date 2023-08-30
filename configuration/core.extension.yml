@@ -97,9 +97,7 @@ module:
   externalauth: 10
   minimal: 1000
 theme:
-  stark: 0
   stable9: 0
-  olivero: 0
   bootstrap4: 0
   bootstrap5: 0
   claro: 0
