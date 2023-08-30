@@ -154,6 +154,7 @@
     "drupal/address": "^1",
     "drupal/admin_toolbar": "^3",
     "drupal/bootstrap4": "^3",
+    "drupal/bootstrap5": "^3",
     "drupal/chosen": "^3",
     "drupal/colorbox": "^2",
     "drupal/core-composer-scaffold": "^10",
