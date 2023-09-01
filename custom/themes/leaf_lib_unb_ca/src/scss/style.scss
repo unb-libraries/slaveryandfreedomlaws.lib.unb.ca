@@ -81,13 +81,22 @@ body,
   h1.display-4, h1 > span, .navbar-brand .site-title {
     font-weight: bold;
   }
-  // Non-button links.
-  a:not(.btn) {
+  // Link and button underlining.
+  a, input.button {
     text-decoration: none !important; 
 
     &:hover {
+      text-underline-offset: .2rem;
       text-decoration: underline !important;
     }
+  }
+  // Buttons in sustained uppercase.
+  input.button {
+    padding-top: .6rem;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
   }
   // Justify paragraph text.
   p {
@@ -207,9 +216,7 @@ main {
             img {
               border-bottom-left-radius: 1rem;
               border-bottom-right-radius: 1rem;
-              width: 100%;
-              filter: blur(1px);
-            }
+              width: 100%;            }
           }
         }
       }

@@ -9,5 +9,5 @@
  * Implements hook_page_attachments().
  */
 function aaslp_core_page_attachments(array &$attachments) {
-    $attachments['#attached']['library'][] = 'aaslp_core/homepage-active-tabs';
+  $attachments['#attached']['library'][] = 'aaslp_core/homepage-active-tabs';
 }

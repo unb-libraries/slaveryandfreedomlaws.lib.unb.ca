@@ -60,6 +60,12 @@ class HomePageForm extends FormBase {
         'data-target' => [
           '#title',
         ],
+        'data-bs-toggle' => [
+          'tab',
+        ],
+        'data-bs-target' => [
+          '#title',
+        ],
         'aria-selected' => [
           'true',
         ],
@@ -84,6 +90,12 @@ class HomePageForm extends FormBase {
           'tab',
         ],
         'data-target' => [
+          '#fulltext',
+        ],
+        'data-bs-toggle' => [
+          'tab',
+        ],
+        'data-bs-target' => [
           '#fulltext',
         ],
         'aria-selected' => [
