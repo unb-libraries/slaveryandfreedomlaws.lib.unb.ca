@@ -91,16 +91,13 @@ body,
     }
   }
   // Buttons in sustained uppercase.
-  input.button {
+  input.button,
+  .btn {
     padding-top: .6rem;
     font-size: .9rem;
     font-weight: 600;
     letter-spacing: .1rem;
     text-transform: uppercase;
-  }
-  // Justify paragraph text.
-  p {
-    text-align: justify;
   }
   // Global superscript size.
   sup {
@@ -150,9 +147,10 @@ header {
 }
 
 main {
-  background-image: url(/themes/custom/aaslp_lib_unb_ca/images/bg-map.jpg);
+  background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
   .container {
     .region-content {
+      margin: 4rem auto;
       padding: 0;
       border-radius: 1rem;
       background-color: $light;
@@ -164,7 +162,7 @@ main {
             font-weight: 600;
           }
           // Space all divs except map.
-          > div:not(.browse-map) {
+          > div:not(.front-map) {
             padding: 4rem;
           }
           #site-blurb {
@@ -180,7 +178,7 @@ main {
               text-align: center !important;
               font-size: 1.1rem;
               font-family: jubilat,'Georgia', serif;
-            }  
+            }
           }
           .nav-tabs {
             padding-top: 2rem;
@@ -188,7 +186,6 @@ main {
             padding-left: 4rem;
             padding-right: 4rem;
             border: none;
-            text-underline-offset: .4rem;
             letter-spacing: .1rem !important;
             // Margin after first tab link.
             a:first-of-type {
@@ -196,6 +193,7 @@ main {
             }
             // Tab links.
             a {
+              text-underline-offset: .5rem !important;
               &:not(.active) {
                 opacity: .6;
               }
@@ -212,13 +210,54 @@ main {
             }
           }
           // Homepage map.
-          .browse-map {
-            img {
-              border-bottom-left-radius: 1rem;
-              border-bottom-right-radius: 1rem;
-              width: 100%;            }
+          .front-map {
+            width: 100%;
+            height: 518px;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/map-img.jpg);
+            
+            .map-window {
+              width: 15.6rem;
+              height: 15.6rem;
+              border: 2rem $light solid;
+              border-radius: 1rem;
+              background-color: $light;
+              margin: auto 4rem;
+
+              .btn {
+                margin: 0;
+                padding-top: 1rem;
+                height: 3rem;
+                width: 100%;
+                width: -moz-available;          /* WebKit-based browsers will ignore this. */
+                width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+              }
+            }
           }
         }
+      }
+    }
+  }
+}
+
+footer {
+  
+  .d-flex {
+    margin: 0 4rem;
+    #footer-logo {
+      a {
+        text-decoration: none !important;
+        img {
+          width: 200px;
+        }
+      }
+      p {
+        display: inline;
+        margin: .2rem 1rem;
+        vertical-align: bottom;
+        line-height: 1.6rem;
+        font-size: .8rem;
       }
     }
   }

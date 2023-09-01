@@ -212,19 +212,23 @@ class HomePageForm extends FormBase {
       'max-age' => Cache::PERMANENT,
     ];
 
-    $browse = '
-      <div class="browse-map">
-        <img src="/themes/custom/aaslp_lib_unb_ca/images/map-img.jpg" alt="Browse Locations">
-        <p class="sr-only browse-blurb">
-          Browse legal articles in an interactive map. Visualize how slave laws
-          in the database were distributed geographically.
-        </p>
+    $map = '
+      <div class="front-map d-flex align-items-center">
+        <div class="map-window">
+          <p class="map-blurb">
+            Browse legal articles in an interactive map. Visualize how slave laws
+            in the database were distributed geographically.
+          </p>
+          <a href="/locations-map" class="btn btn-secondary">
+            BROWSE MAP
+          </a>
+       </div>
       </div>
       ';
 
-    $form['browse'] = [
+    $form['map'] = [
       '#type' => 'markup',
-      '#markup' => $browse,
+      '#markup' => $map,
     ];
 
     $sshrc = '
