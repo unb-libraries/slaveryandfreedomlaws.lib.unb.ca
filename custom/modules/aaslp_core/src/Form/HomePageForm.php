@@ -54,12 +54,6 @@ class HomePageForm extends FormBase {
         'role' => [
           'tab',
         ],
-        'data-toggle' => [
-          'tab',
-        ],
-        'data-target' => [
-          '#title',
-        ],
         'data-bs-toggle' => [
           'tab',
         ],
@@ -85,12 +79,6 @@ class HomePageForm extends FormBase {
         ],
         'role' => [
           'tab',
-        ],
-        'data-toggle' => [
-          'tab',
-        ],
-        'data-target' => [
-          '#fulltext',
         ],
         'data-bs-toggle' => [
           'tab',
