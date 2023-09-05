@@ -112,11 +112,16 @@ input {
   box-shadow: none !important;
 }
 
-// Homepage background.
+// Homepage specific.
 body {
   background-color: $light;
   &.path-frontpage {
     background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
+    main {
+      .region-content {
+        margin-top: 4rem !important;
+      }
+    }
   }
 }
 
@@ -157,8 +162,23 @@ header {
 
 main {
   .container {
+    // Breadcrumbs.
+    #block-leaf-lib-unb-ca-breadcrumbs {
+      ol {
+        margin: 1rem 0;
+        li:before {
+          padding: 0 .4rem;
+        }
+      }
+    }
+    // Page title.
+    #block-leaf-lib-unb-ca-page-title {
+      padding-bottom: 1rem;
+      border-bottom: 2px solid $primary;
+    }
+    // Content.
     .region-content {
-      margin: 4rem auto;
+      margin: 0 0 0 4rem auto;
       padding: 0;
       border-radius: 1rem;
       background-color: $light;
