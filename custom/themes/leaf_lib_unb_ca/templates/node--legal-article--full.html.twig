@@ -96,56 +96,55 @@
   <div class="node__content node__legal_article">
     <div class="container con-metadata">
       <div class="row row-metadata">
-        <div class="col-sm-8 col-metadata">
+        <div class="col-sm-8 col-content">
           {{ content.field_abstract }}
-          {{ content.field_date }}
-          {{ content.field_location }}
-          {{ content.field_law_tags }}
+          {{ content.body }}
           <div class="field field--name-download-buttons">
             {% if content.field_images_pdf|field_value or content.body|field_value %}
-              <h2 class="field__label">Downloads</h2>
               <div class="field__item mt-1">
                 {% if content.field_images_pdf|field_value %}
                   <a class="btn btn-secondary" href="{{ content.field_images_pdf|field_value[0]['#url'].getOptions()['path'] }}" download>
-                    Original<i class="fa fa-scroll ml-1"></i>
+                    Download Original<i class="fa fa-scroll"></i>
                   </a>
                 {% endif %}
                 {% if content.body|field_value %}
-                  <a class="btn btn-secondary" href="/node/{{ node.id() }}/legal_article/pdf">Transcription<i class="fa fa-file-alt ml-1"></i></a>
+                  <a class="btn btn-secondary" href="/node/{{ node.id() }}/legal_article/pdf">Download Transcript<i class="fa fa-file"></i></a>
                 {% endif %}
               </div>
             {% endif %}
           </div>
+          <div class="field field--name-dynamic-source">
+            {%- if content.field_source|field_value %}
+              <h2 class="field__label">Source</h2>
+              <div class="field__item">
+                {{- content.field_source|field_value -}}
+                {%- if content.field_pages|field_value -%}
+                  <span>{{ ' (Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            {{ content.field_notes }}
+          </div>
         </div>
-        <div class="col-sm-4 col-metadata">
+        <div class="col-sm-3 offset-sm-1 col-metadata">
+          {{ content.field_date }}
+          {{ content.field_location }}
+          <div class="field field--name-dynamic-citation">
+            <h2 class="field__label">Citation</h2>
+            <div class="field__item">
+              <span id="citation">
+                {{- '"' ~ label|field_value[0]['#context']['value'] ~ '" ' -}}
+                {{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
+                {{- 'now'|date('M j, Y, ') -}}
+                {{- global_variables.base_url ~ '/laws/' ~ node.id() -}}
+              </span>
+              <a id="cite" class="btn btn-secondary">Copy<i class="fa fa-copy"></i></a>
+            </div>
+          </div>
           {{ content.field_images_pdf }}
+          {{ content.field_law_tags }}
         </div>
       </div>
-    </div>
-    {{ content.body }}
-    <div class="field field--name-dynamic-citation">
-      <h2 class="field__label">Citation</h2>
-      <div class="field__item">
-        <span id="citation">
-          {{- '"' ~ label|field_value[0]['#context']['value'] ~ '" ' -}}
-          {{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
-          {{- 'now'|date('M j, Y, ') -}}
-          {{- global_variables.base_url ~ '/laws/' ~ node.id() -}}
-        </span>
-        <a id="cite" class="btn btn-secondary">Copy</a>
-      </div>
-    </div>
-    <div class="field field--name-dynamic-source">
-      {%- if content.field_source|field_value %}
-        <h2 class="field__label">Source</h2>
-        <div class="field__item">
-          {{- content.field_source|field_value -}}
-          {%- if content.field_pages|field_value -%}
-            <span>{{ ' (Pages: ' }}{{- content.field_pages|field_value|raw -}}{{ ')' }}</span>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
-      {{ content.field_notes }}
     </div>
   </div>
 

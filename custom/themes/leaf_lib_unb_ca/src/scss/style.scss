@@ -99,6 +99,11 @@ body,
     font-weight: 600;
     letter-spacing: .1rem;
     text-transform: uppercase;
+    color: $warning !important;
+
+    svg {
+      margin: 0 .4rem;
+    }
   }
   // Global superscript size.
   sup {
@@ -165,7 +170,7 @@ main {
     // Breadcrumbs.
     #block-leaf-lib-unb-ca-breadcrumbs {
       ol {
-        margin: 1rem 0;
+        margin: .4rem 0 1rem 0;
         li:before {
           padding: 0 .4rem;
         }
@@ -174,7 +179,7 @@ main {
     // Page title.
     #block-leaf-lib-unb-ca-page-title {
       padding-bottom: 1rem;
-      border-bottom: 2px solid $primary;
+      border-bottom: 1px solid $primary;
     }
     // Content.
     .region-content {
@@ -262,6 +267,68 @@ main {
                 width: 100%;
                 width: -moz-available;          /* WebKit-based browsers will ignore this. */
                 width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+              }
+            }
+          }
+        }
+        // Legal article.
+        .node__legal_article {
+          .row-metadata {
+            > div {
+              padding: 0;
+            }
+            .field__label {
+              margin-top: 2rem;
+              padding-bottom: .4rem;
+              font-family: utile, 'Trebuchet MS', sans-serif !important;
+              font-size: .8rem;
+              font-weight: bold;
+              text-transform: uppercase;
+              border-bottom: 1px solid $primary;
+            }
+            .field--name-field-abstract {
+              p {
+                font-family: jubilat,'Georgia', serif;
+                font-weight: bold;
+                font-style: italic;
+              }
+            }
+            // Full text.
+            .field--name-body {
+            }
+            .field--name-download-buttons {
+              text-align: end;
+            }
+            // Metadata column (right).
+            .col-metadata {
+              // All fields but citation.
+              .field:not(.field--name-dynamic-citation) {
+                margin-left: 4rem;
+              }
+              .field--name-field-date {
+                .field__label {
+                  margin-top: 0 !important;
+                }
+              }
+              .field--name-dynamic-citation {
+                margin: 2rem 0 3rem 0;
+                padding: 2rem;
+                background-color: $warning;
+                .field__label {
+                  margin: 0;
+                  border: none;
+                }
+                #citation {
+                  font-size: .8rem;
+                  font-family: jubilat,'Georgia', serif;
+                  font-weight: bold;
+                  font-style: italic;
+                }
+                // Button.
+                #cite {
+                  margin: 1rem 0;
+                  float: right;
+                }
               }
             }
           }

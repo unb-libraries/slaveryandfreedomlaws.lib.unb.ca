@@ -11,7 +11,7 @@ id: node.legal_article.body
 field_name: body
 entity_type: node
 bundle: legal_article
-label: 'Full Text'
+label: 'Full Transcript'
 description: 'Full text of legal article.'
 required: false
 translatable: true
