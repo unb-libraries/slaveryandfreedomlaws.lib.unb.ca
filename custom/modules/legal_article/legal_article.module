@@ -108,7 +108,7 @@ function legal_article_node_presave($entity) {
       $old_alias = $entity->path->getValue()[0]['alias'] ?? NULL;
 
       // If alias components have not been updated...
-      if (str_starts_with($old_alias, $alias)) {
+      if ($old_alias and str_starts_with($old_alias, $alias)) {
         // Existing path and therefore filename are still valid.
         $parts= explode('/', $old_alias);
         $name = array_pop($parts);
