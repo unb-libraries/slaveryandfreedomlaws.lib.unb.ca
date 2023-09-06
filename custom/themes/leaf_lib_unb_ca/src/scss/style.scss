@@ -186,10 +186,12 @@ main {
     // First sidebar.
     .region-sidebar-first {
       margin-right: 2rem;
+      ul {
+        list-style: none;
+      }
       // Slider.
       .facets-widget-range_slider {
         ul {
-          list-style: none;
           padding-left: 1rem;
           // First value.
           .ui-slider-pip-first {

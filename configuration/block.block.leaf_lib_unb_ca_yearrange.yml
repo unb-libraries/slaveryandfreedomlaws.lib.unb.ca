@@ -12,7 +12,7 @@ dependencies:
 id: leaf_lib_unb_ca_yearrange
 theme: leaf_lib_unb_ca
 region: sidebar_first
-weight: 0
+weight: -9
 provider: null
 plugin: 'facet_block:facet_year'
 settings:

@@ -1,27 +1,27 @@
-uuid: b41562e4-389e-425b-8bf2-7ff414b72882
+uuid: e9a825b0-5a05-4c4e-95b1-140ee5e415a1
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.metadata_year
+    - facets.facet.metadata_location
   module:
     - facets
     - system
   theme:
     - leaf_lib_unb_ca
-id: leaf_lib_unb_ca_yearrange_2
+id: leaf_lib_unb_ca_location
 theme: leaf_lib_unb_ca
 region: sidebar_first
-weight: -8
+weight: -6
 provider: null
-plugin: 'facet_block:metadata_year'
+plugin: 'facet_block:metadata_location'
 settings:
-  id: 'facet_block:metadata_year'
-  label: 'Year Range (metadata)'
+  id: 'facet_block:metadata_location'
+  label: 'Location (metadata)'
   label_display: '0'
   provider: facets
   context_mapping: {  }
-  block_id: leaf_lib_unb_ca_yearrange_2
+  block_id: leaf_lib_unb_ca_location
 visibility:
   request_path:
     id: request_path

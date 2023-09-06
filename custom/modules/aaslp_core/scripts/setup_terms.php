@@ -19,7 +19,7 @@ $parent_locs = [
 
 // Caribbean.
 // Create parent.
-/* $parent = add_terms('locations', [$parent_locs[0]])[0]; */
+$parent = add_terms('locations', [$parent_locs[0]])[0];
 // Create children.
 $children = [
   'Anguilla',
@@ -43,22 +43,22 @@ $children = [
   'Trinidad',
 ];
 
-/* add_terms('locations', $children, $parent); */
+add_terms('locations', $children, $parent);
 
 // Greater Atlantic World.
 // Create parent.
-/* $parent = add_terms('locations', [$parent_locs[2]])[0]; */
+$parent = add_terms('locations', [$parent_locs[2]])[0];
 // Create children.
 $children = [
   'Cape of Good Hope',
   'Mauritius',
 ];
 
-/* add_terms('locations', $children, $parent); */
+add_terms('locations', $children, $parent);
 
 // North America.
 // Create parent.
-/* $parent = add_terms('locations', [$parent_locs[1]])[0]; */
+$parent = add_terms('locations', [$parent_locs[1]])[0];
 // Create children.
 $children = [
   'Connecticut',
@@ -77,7 +77,7 @@ $children = [
   'Virginia',
 ];
 
-/* add_terms('locations', $children, $parent); */
+add_terms('locations', $children, $parent);
 
 // Set up tags.
 $tags = [
@@ -155,7 +155,7 @@ $tags = [
   'Workhouse',
 ];
 
-add_terms('law_tags', $tags);
+// add_terms('law_tags', $tags);
 
 /**
  * Add multiple terms to a given vocabulary.

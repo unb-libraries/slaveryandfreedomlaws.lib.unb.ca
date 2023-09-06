@@ -1,29 +1,29 @@
-uuid: b41562e4-389e-425b-8bf2-7ff414b72882
+uuid: 70e894d6-68db-420f-b31a-a9b7b2d741fb
 langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.metadata_year
+    - facets.facet.facet_full_location
   module:
     - facets
     - system
   theme:
     - leaf_lib_unb_ca
-id: leaf_lib_unb_ca_yearrange_2
+id: leaf_lib_unb_ca_location_2
 theme: leaf_lib_unb_ca
 region: sidebar_first
-weight: -8
+weight: 0
 provider: null
-plugin: 'facet_block:metadata_year'
+plugin: 'facet_block:facet_full_location'
 settings:
-  id: 'facet_block:metadata_year'
-  label: 'Year Range (metadata)'
+  id: 'facet_block:facet_full_location'
+  label: 'Location (fulltext)'
   label_display: '0'
   provider: facets
   context_mapping: {  }
-  block_id: leaf_lib_unb_ca_yearrange_2
+  block_id: leaf_lib_unb_ca_location_2
 visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/laws\r\n/laws?*"
+    pages: "/laws-fulltext*\r\n"
