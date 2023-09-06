@@ -42,7 +42,7 @@
 
         // Transcription copy button.
         $('#cite').click(function() {
-          navigator.clipboard.writeText($('#citation').html()).then(
+          navigator.clipboard.writeText($('#citation').text()).then(
             function() {
               // Clipboard successfully set.
               window.alert('Citation copied to clipboard') 
