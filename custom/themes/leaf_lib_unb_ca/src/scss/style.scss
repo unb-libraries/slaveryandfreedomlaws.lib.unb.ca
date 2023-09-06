@@ -125,6 +125,7 @@ body {
     main {
       .region-content {
         margin-top: 4rem !important;
+        margin-bottom: 4rem !important;
       }
     }
   }
@@ -308,7 +309,7 @@ main {
               }
               .field--name-field-date {
                 .field__label {
-                  margin-top: 0 !important;
+                  margin-top: 1rem;
                 }
               }
               .field--name-dynamic-citation {
@@ -324,6 +325,16 @@ main {
                   font-family: jubilat,'Georgia', serif;
                   font-weight: bold;
                   font-style: italic;
+
+                  #citation-url {
+                    display: block;
+                    overflow-wrap: break-word;
+                    margin-top: 1rem;
+                    font-size: .8rem !important;
+                    font-family: utile, 'Trebuchet MS', sans-serif !important;
+                    font-weight: normal;
+                    font-style: normal;
+                  }
                 }
                 // Button.
                 #cite {
@@ -341,7 +352,7 @@ main {
 
 footer {
   .d-flex {
-    margin: 0 4rem;
+    margin: 2rem 4rem;
     #footer-logo {
       a {
         text-decoration: none !important;

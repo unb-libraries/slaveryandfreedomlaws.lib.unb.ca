@@ -96,7 +96,7 @@
   <div class="node__content node__legal_article">
     <div class="container con-metadata">
       <div class="row row-metadata">
-        <div class="col-sm-8 col-content">
+        <div class="col-sm-7 col-content">
           {{ content.field_abstract }}
           {{ content.body }}
           <div class="field field--name-download-buttons">
@@ -126,7 +126,7 @@
             {{ content.field_notes }}
           </div>
         </div>
-        <div class="col-sm-3 offset-sm-1 col-metadata">
+        <div class="col-sm-4 offset-sm-1 col-metadata">
           {{ content.field_date }}
           {{ content.field_location }}
           <div class="field field--name-dynamic-citation">
@@ -135,8 +135,10 @@
               <span id="citation">
                 {{- '"' ~ label|field_value[0]['#context']['value'] ~ '" ' -}}
                 {{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
-                {{- 'now'|date('M j, Y, ') -}}
-                {{- global_variables.base_url ~ '/laws/' ~ node.id() -}}
+                {{- 'now'|date('M j, Y') -}}
+                <span id="citation-url">
+                  {{- global_variables.base_url ~ '/laws/' ~ node.id() -}}
+                </span>
               </span>
               <a id="cite" class="btn btn-secondary">Copy<i class="fa fa-copy"></i></a>
             </div>
