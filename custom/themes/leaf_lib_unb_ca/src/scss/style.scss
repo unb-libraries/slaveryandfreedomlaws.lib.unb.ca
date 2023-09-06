@@ -183,29 +183,47 @@ main {
       padding-bottom: 1rem;
       border-bottom: 1px solid $primary;
     }
-    // First sidebar.
+    // First sidebar (facets).
     .region-sidebar-first {
       margin-right: 2rem;
-      ul {
-        list-style: none;
-      }
-      // Slider.
-      .facets-widget-range_slider {
+
+      .block-facets {
+        margin-bottom: 1rem;
+        &:first-of-type {
+          margin-bottom: 3rem;
+        }
+        h3 {
+          font-family: utile, 'Trebuchet MS', sans-serif !important;
+          font-size: .8rem;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
         ul {
-          padding-left: 1rem;
-          // First value.
-          .ui-slider-pip-first {
-            color: $primary;
+          padding-left: 0;
+          list-style: none;
+          // Indent child locations.
+          li.child-location {
+            margin-left: 1rem;
           }
-          // Last value.
-          .ui-slider-pip-last {
-            color: $secondary;
+        }
+        // Slider.
+        .facets-widget-range_slider {
+          ul {
+            padding-left: 1rem;
+            // First value.
+            .ui-slider-pip-first {
+              color: $primary;
+            }
+            // Last value.
+            .ui-slider-pip-last {
+              color: $secondary;
+            }
+            // Handle.
+            .ui-slider-handle.ui-state-active {
+              background-color: $primary;
+              border-color: $primary;
+            }          
           }
-          // Handle.
-          .ui-slider-handle.ui-state-active {
-            background-color: $primary;
-            border-color: $primary;
-          }          
         }
       }
     }
