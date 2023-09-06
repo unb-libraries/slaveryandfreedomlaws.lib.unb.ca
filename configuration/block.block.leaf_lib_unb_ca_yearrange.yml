@@ -1,0 +1,29 @@
+uuid: 516d01a9-cd56-4746-bfb8-d60a5dd93a1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.facet_year
+  module:
+    - facets
+    - system
+  theme:
+    - leaf_lib_unb_ca
+id: leaf_lib_unb_ca_yearrange
+theme: leaf_lib_unb_ca
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:facet_year'
+settings:
+  id: 'facet_block:facet_year'
+  label: 'Year Range (fulltext)'
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: leaf_lib_unb_ca_yearrange
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/laws-fulltext*\r\n"

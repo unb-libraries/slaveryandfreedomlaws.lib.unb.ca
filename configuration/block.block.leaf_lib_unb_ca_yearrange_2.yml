@@ -1,0 +1,29 @@
+uuid: b41562e4-389e-425b-8bf2-7ff414b72882
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.metadata_year
+  module:
+    - facets
+    - system
+  theme:
+    - leaf_lib_unb_ca
+id: leaf_lib_unb_ca_yearrange_2
+theme: leaf_lib_unb_ca
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:metadata_year'
+settings:
+  id: 'facet_block:metadata_year'
+  label: 'Year Range (metadata)'
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: leaf_lib_unb_ca_yearrange_2
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/laws\r\n/laws?*"

@@ -183,6 +183,30 @@ main {
       padding-bottom: 1rem;
       border-bottom: 1px solid $primary;
     }
+    // First sidebar.
+    .region-sidebar-first {
+      margin-right: 2rem;
+      // Slider.
+      .facets-widget-range_slider {
+        ul {
+          list-style: none;
+          padding-left: 1rem;
+          // First value.
+          .ui-slider-pip-first {
+            color: $primary;
+          }
+          // Last value.
+          .ui-slider-pip-last {
+            color: $secondary;
+          }
+          // Handle.
+          .ui-slider-handle.ui-state-active {
+            background-color: $primary;
+            border-color: $primary;
+          }          
+        }
+      }
+    }
     // Content.
     .region-content {
       margin: 0 0 0 4rem auto;
@@ -359,6 +383,7 @@ main {
         }
         // Views.
         .view-content {
+          margin-top: 1rem;
           // Tables.
           table {
             // Header.
@@ -387,6 +412,9 @@ main {
                       border-bottom-right-radius: 1rem;
                     }
                   }
+                }
+                td {
+                  min-width: 10rem;
                 }
               }
             }

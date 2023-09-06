@@ -1,0 +1,28 @@
+uuid: 58db6012-b4cb-4ec3-bdb8-6ed9629314ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.aaslp_search
+  module:
+    - system
+    - views
+  theme:
+    - leaf_lib_unb_ca
+id: leaf_lib_unb_ca_exposedformaaslp_searchpage_1
+theme: leaf_lib_unb_ca
+region: content
+weight: -5
+provider: null
+plugin: 'views_exposed_filter_block:aaslp_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:aaslp_search-page_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/laws-fulltext?*\r\n/laws-fulltext"
