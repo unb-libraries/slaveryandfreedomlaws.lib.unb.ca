@@ -144,7 +144,19 @@
             </div>
           </div>
           {{ content.field_images_pdf }}
-          {{ content.field_law_tags }}
+          {%- if content.field_law_tags|field_value %}
+            <div class="field field--name-law-tags">
+              <h2 class="field__label">Tags</h2>
+              <div class="field__item">
+                {%- for tag in content.field_law_tags|field_value -%}
+                  {{- tag -}}
+                  {%- if not loop.last -%}
+                    {{- ', ' -}}
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            </div>
+          {%- endif -%}
         </div>
       </div>
     </div>

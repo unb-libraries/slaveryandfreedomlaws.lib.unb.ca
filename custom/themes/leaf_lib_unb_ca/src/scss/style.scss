@@ -84,6 +84,7 @@ body,
   }
   // Link and button underlining.
   a, input.button {
+    margin: 0;
     text-decoration: none !important; 
 
     &:hover {
@@ -340,6 +341,52 @@ main {
                 #cite {
                   margin: 1rem 0;
                   float: right;
+                }
+              }
+              // PDF preview.
+              .pdfpreview {
+                margin-top: 1rem;
+                text-align: center;
+              }
+              // Tags.
+              .field--name-law-tags {
+                a {
+                  text-transform: capitalize;
+                }
+              }
+            }
+          }
+        }
+        // Views.
+        .view-content {
+          // Tables.
+          table {
+            // Header.
+            thead {
+              tr {
+                th {
+                  &:first-of-type {
+                    border-top-left-radius: 1rem;
+                  }
+                  &:last-of-type {
+                    border-top-right-radius: 1rem;
+                  }
+                }
+              }
+            }
+            // Body.
+            tbody {
+              tr {
+                &:last-of-type {
+                  td {
+                    border: none;
+                    &:first-of-type {
+                      border-bottom-left-radius: 1rem;
+                    }
+                    &:last-of-type {
+                      border-bottom-right-radius: 1rem;
+                    }
+                  }
                 }
               }
             }
