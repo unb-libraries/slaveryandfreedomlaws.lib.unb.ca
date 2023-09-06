@@ -135,7 +135,7 @@
               <span id="citation">
                 {{- '"' ~ label|field_value[0]['#context']['value'] ~ '" ' -}}
                 {{- global_variables.site_name ~ ' ' ~ global_variables.site_slogan ~ ', accessed ' -}}
-                {{- 'now'|date('M j, Y') -}}
+                {{- 'now'|date('M j, Y. ') -}}
                 <span id="citation-url">
                   {{- global_variables.base_url ~ '/laws/' ~ node.id() -}}
                 </span>
