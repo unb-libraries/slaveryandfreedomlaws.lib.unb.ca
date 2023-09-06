@@ -399,4 +399,11 @@ footer {
       margin-bottom: 2rem;
     }
   }
+  // Legal article download buttons.
+  .field--name-download-buttons {
+    .btn {
+      margin: 1rem 0 0 0;
+      width: 100%;
+    }
+  }
 }
