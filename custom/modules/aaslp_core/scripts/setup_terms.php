@@ -155,7 +155,7 @@ $tags = [
   'Workhouse',
 ];
 
-// add_terms('law_tags', $tags);
+add_terms('law_tags', $tags);
 
 /**
  * Add multiple terms to a given vocabulary.

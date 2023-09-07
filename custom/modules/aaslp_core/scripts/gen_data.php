@@ -42,24 +42,17 @@ function gen_article($number = NULL, $multimax = 1) {
   $article->field_citation = gen_title('Citation', $number, TRUE);
   $article->field_date = gen_date("1500-01-01", "1900-01-01");
   $article->field_location->target_id = rnd_tid('locations');
-  // Crimes.
+  // Tags.
   $items = rand(1, $multimax);
 
   for ($i = 1; $i <= $items; $i++) {
-    $article->field_crimes[] = rnd_tid('crimes');
+    $article->field_law_tags[] = rnd_tid('law_tags');
   }
-  // Punishments.
-  $items = rand(1, $multimax);
-
-  for ($i = 1; $i <= $items; $i++) {
-    $article->field_punishments[] = rnd_tid('punishments');
-  }
-
-  $article->field_category = rnd_tid('law_categories');
 
   $article->body->value = $full_text;
   $article->body->format = 'unb_libraries';
   // Transcription annotations.
+  /* DEPRECATED
   $words = rnd_words(strip_tags($full_text), rand(1, $multimax));
 
   foreach ($words as $word) {
@@ -103,7 +96,7 @@ function gen_article($number = NULL, $multimax = 1) {
       'target_revision_id' => (string) ($tid + 1),
     ];
   }
-
+  */
   $article->field_notes->value = gen_lipsum(1, 'medium', FALSE, TRUE);
 
   $article->save();
@@ -189,6 +182,7 @@ function gen_date($from = "1001-01-01", $to = "2100-01-01") {
 function rnd_tid($vid) {
   $tids = !empty($vid) ? \Drupal::entityQuery('taxonomy_term')
     ->condition('vid', $vid)
+    ->accessCheck(TRUE)
     ->execute() : NULL;
 
   // Return random value from $tids.
@@ -206,6 +200,7 @@ function rnd_tid($vid) {
 function rnd_nid($bundle) {
   $nids = !empty($bundle) ? \Drupal::entityQuery('node')
     ->condition('type', $bundle)
+    ->accessCheck(TRUE)
     ->execute() : NULL;
 
   // Return random value from $nids.

@@ -22,6 +22,7 @@ function clr_nodes(string $bundle) {
 
   $nids = \Drupal::entityQuery('node')
     ->condition('type', $bundle)
+    ->accessCheck(TRUE)
     ->execute();
 
   if (!empty($nids)) {

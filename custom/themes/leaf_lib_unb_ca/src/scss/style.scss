@@ -17,7 +17,7 @@ h1, .site-title-container, h2, h3, h4 {
   font-family: jubilat, 'Georgia', serif !important;
   font-weight: 600;
 }
-/* Headings: Jubilat Medium*/
+/* Headings: Jubilat Medium */
 h3, h4 {
   font-weight: 500;
 }
@@ -118,123 +118,15 @@ input {
   box-shadow: none !important;
 }
 
-// Homepage specific.
 body {
   background-color: $light;
+  // Homepage specific.
   &.path-frontpage {
     background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
     main {
       .region-content {
         margin-top: 4rem !important;
         margin-bottom: 4rem !important;
-      }
-    }
-  }
-}
-
-header {
-  .navbar {
-    .container {
-      padding: 2rem 4rem;
-      .region-nav-branding {
-        #block-leaf-lib-unb-ca-contextualbranding {
-          .navbar-brand {
-            .site-title-container {
-              .site-title {
-                margin-bottom: 0;
-                line-height: 2rem;
-                font-size: 2.4rem !important;
-                letter-spacing: normal;
-                text-transform: initial !important;
-                color: $light !important;
-              }
-            }
-          }
-        }
-      }
-      
-      // Menu links.
-      #navbarSupportedContent {
-        a {
-          padding: 1rem;
-          color: $light !important;
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
-}
-
-main {
-  .container {
-    // Breadcrumbs.
-    #block-leaf-lib-unb-ca-breadcrumbs {
-      ol {
-        margin: .4rem 0 1rem 0;
-        li:before {
-          padding: 0 .4rem;
-        }
-      }
-    }
-    // Page title.
-    #block-leaf-lib-unb-ca-page-title {
-      padding-bottom: 1rem;
-      border-bottom: 1px solid $primary;
-    }
-    // First sidebar (facets).
-    .region-sidebar-first {
-      margin-right: 2rem;
-
-      .block-facets {
-        margin-bottom: 1rem;
-        &:first-of-type {
-          margin-bottom: 3rem;
-        }
-        h3 {
-          font-family: utile, 'Trebuchet MS', sans-serif !important;
-          font-size: .8rem;
-          font-weight: bold;
-          text-transform: uppercase;
-        }
-        ul {
-          padding-left: 0;
-          list-style: none;
-          // Indent child locations.
-          li.child-location {
-            margin-left: 1rem;
-          }
-        }
-        // Slider.
-        .facets-widget-range_slider {
-          ul {
-            padding-left: 1rem;
-            // First value.
-            .ui-slider-pip-first {
-              color: $primary;
-            }
-            // Last value.
-            .ui-slider-pip-last {
-              color: $secondary;
-            }
-            // Handle.
-            .ui-slider-handle.ui-state-active {
-              background-color: $primary;
-              border-color: $primary;
-            }          
-          }
-        }
-      }
-    }
-    // Content.
-    .region-content {
-      margin: 0 0 0 4rem auto;
-      padding: 0;
-      border-radius: 1rem;
-      background-color: $light;
-      // Content block.
-      #block-leaf-lib-unb-ca-content {
         form {
           // Non-button links.
           a:not(.btn) {
@@ -317,6 +209,142 @@ main {
             }
           }
         }
+      }
+    }
+  }
+  // Not-homepage specific.
+  &:not(.path-frontpage) {
+    main {
+      .container {
+        // Content.
+        .region-content {
+          a:not(.btn):not(.page-link) {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  .navbar {
+    .container {
+      padding: 2rem 4rem;
+      .region-nav-branding {
+        #block-leaf-lib-unb-ca-contextualbranding {
+          .navbar-brand {
+            .site-title-container {
+              .site-title {
+                margin-bottom: 0;
+                line-height: 2rem;
+                font-size: 2.4rem !important;
+                letter-spacing: normal;
+                text-transform: initial !important;
+                color: $light !important;
+              }
+            }
+          }
+        }
+      }
+      
+      // Menu links.
+      #navbarSupportedContent {
+        a {
+          padding: 1rem;
+          color: $light !important;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  .container {
+    // Breadcrumbs.
+    #block-leaf-lib-unb-ca-breadcrumbs {
+      ol {
+        margin: .4rem 0 1rem 0;
+        li:before {
+          padding: 0 .4rem;
+        }
+      }
+    }
+    // Page title.
+    #block-leaf-lib-unb-ca-page-title {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $primary;
+    }
+    // First sidebar (facets).
+    .region-sidebar-first {
+      margin-right: 2rem;
+
+      .block-facets {
+        margin-bottom: 1rem;
+        &:first-of-type {
+          margin-bottom: 3rem;
+        }
+        h3 {
+          font-family: utile, 'Trebuchet MS', sans-serif !important;
+          font-size: .8rem;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        ul {
+          padding-left: 0;
+          list-style: none;
+          // Indent child locations.
+          li.child-location {
+            margin-left: 1rem;
+          }
+          .facets-checkbox {
+            margin-right: .4rem;
+          }
+        }
+        // Slider.
+        .facets-widget-range_slider {
+          ul {
+            padding-left: 1rem;
+            // First value.
+            .ui-slider-pip-first {
+              color: $primary;
+            }
+            // Last value.
+            .ui-slider-pip-last {
+              color: $secondary;
+            }
+            // Handle.
+            .ui-slider-handle.ui-state-active {
+              background-color: $primary;
+              border-color: $primary;
+            }          
+          }
+        }
+        // Facets soft-limit link.
+        .facets-soft-limit-link {
+          font-size: .8rem;
+          margin-left: 1rem;
+          svg {
+            display: none;
+            &:first-child {
+              display: initial;
+              margin-right: .2rem;
+            }
+          }
+        }
+      }
+    }
+    // Content.
+    .region-content {
+      margin: 0 0 0 4rem auto;
+      padding: 0;
+      border-radius: 1rem;
+      background-color: $light;
+      // Content block.
+      #block-leaf-lib-unb-ca-content {
         // Legal article.
         .node__legal_article {
           .row-metadata {
