@@ -176,6 +176,11 @@ body {
           #edit-tab-content {
             padding-top: 0;
           }
+          #edit-input-title--description {
+            a {
+              color: $secondary;
+            }
+          }
           // Tab contents.
           .tab-pane {
             .button {
@@ -296,6 +301,11 @@ main {
         ul {
           padding-left: 0;
           list-style: none;
+          li {
+            label {
+              font-size: .8rem;
+            }
+          }
           // Indent child locations.
           li.child-location {
             margin-left: 1rem;
@@ -430,8 +440,15 @@ main {
           }
         }
         // Views.
+        .view-header {
+          margin: 1rem 0;
+        } 
         .view-content {
           margin-top: 1rem;
+          // Rows.
+          .views-row {
+            margin-top: 1rem;
+          }
           // Tables.
           table {
             // Header.
@@ -466,6 +483,11 @@ main {
                 }
               }
             }
+          }
+          // Tags view.
+          .tags-list {
+            list-style: none;
+            columns: 3;
           }
         }
       }
