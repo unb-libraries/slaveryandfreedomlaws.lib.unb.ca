@@ -303,7 +303,7 @@ main {
           list-style: none;
           li {
             label {
-              font-size: .8rem;
+              font-size: .9rem;
             }
           }
           // Indent child locations.
@@ -335,13 +335,14 @@ main {
         }
         // Facets soft-limit link.
         .facets-soft-limit-link {
-          font-size: .8rem;
+          font-size: .9rem;
           margin-left: 1rem;
           svg {
             display: none;
             &:first-child {
               display: initial;
               margin-right: .2rem;
+              scale: .7;
             }
           }
         }
