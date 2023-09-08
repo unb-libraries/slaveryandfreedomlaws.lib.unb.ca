@@ -355,6 +355,12 @@ main {
       background-color: $light;
       // Content block.
       #block-leaf-lib-unb-ca-content {
+        // Info pages.
+        .node--type-page {
+          .node__content {
+            margin-top: 1rem;
+          }
+        }
         // Legal article.
         .node__legal_article {
           .row-metadata {
