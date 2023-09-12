@@ -103,12 +103,28 @@ body,
     color: $warning !important;
 
     svg {
-      margin: 0 .4rem;
+      margin: 0 .2rem;
     }
+  }
+  // Information, outline buttons.
+  .btn-outline-info {
+    padding: .5rem 2rem;
+    border-radius: 1.2rem;
+    background: none !important;
+    color: $info !important;
+    border-color: $info !important;
   }
   // Global superscript size.
   sup {
     font-size: .85rem;
+  }
+  .btn-primary {
+    background-color: $info;
+    border-color: $info;
+  }
+  // Fontawesome icons.
+  svg.svg-inline--fa {
+    scale: .8;
   }
 }
 
@@ -128,10 +144,6 @@ body {
         margin-top: 4rem !important;
         margin-bottom: 4rem !important;
         form {
-          // Non-button links.
-          a:not(.btn) {
-            font-weight: 600;
-          }
           // Space all divs except map.
           > div:not(.front-map) {
             padding: 4rem;
@@ -140,25 +152,27 @@ body {
           #site-blurb {
             margin-left: 4rem;
             margin-right: 4rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px dotted;
+            padding: 2rem 0 6rem 0;
+            border-bottom: 2px solid $primary;
             text-align: center !important;
             letter-spacing: .1rem !important;
             p {
-              padding-left: 2rem;
-              padding-right: 2rem;
               text-align: center !important;
               font-size: 1.1rem;
               font-family: jubilat,'Georgia', serif;
             }
+            a {
+              width: 250px !important;
+              float: right;
+            }
           }
           // Homepage tabs.
           .nav-tabs {
-            padding-top: 2rem;
+            padding-top: .6rem;
             padding-bottom: 0;
             padding-left: 4rem;
             padding-right: 4rem;
-            border: none;
+            border-bottom: none;
             letter-spacing: .1rem !important;
             // Margin after first tab link.
             a:first-of-type {
@@ -166,20 +180,35 @@ body {
             }
             // Tab links.
             a {
-              text-underline-offset: .5rem !important;
-              &:not(.active) {
-                opacity: .6;
+              padding-top: .6rem;
+              border-top: 4px solid transparent;
+              font-weight: normal !important;
+              text-decoration: none !important;
+              &.active, &:hover {
+                border-top: 4px solid $info;
+                color: $info;
+                font-weight: bold !important;
               }
             }
           }
           // Homepage search box.
-          #edit-tab-content {
-            padding-top: 0;
-          }
-          #edit-input-title--description {
-            a {
-              color: $secondary;
+          .js-form-type-textfield {
+            display: inline-block;
+            width: 78%;
+            #edit-tab-content {
+              padding-top: 0;
             }
+            #edit-input-title--description {
+              a {
+                color: $info;
+              }
+            }
+          }
+          input.button {
+            margin-top: 39px !important;
+            float: right;
+            vertical-align: top;
+            width: 250px;
           }
           // Tab contents.
           .tab-pane {
@@ -224,7 +253,7 @@ body {
         // Content.
         .region-content {
           a:not(.btn):not(.page-link) {
-            color: $leaf-links;
+            color: $info;
           }
         }
       }
@@ -342,7 +371,6 @@ main {
             &:first-child {
               display: initial;
               margin-right: .2rem;
-              scale: .7;
             }
           }
         }

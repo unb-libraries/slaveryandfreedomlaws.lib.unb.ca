@@ -101,7 +101,9 @@ class HomePageForm extends FormBase {
       of the seventeenth century to the laws that governed emancipation in the 
       nineteenth century.</p>
       
-      <a href='/about'>MORE ABOUT THE PROJECT AND ITS CONTRIBUTORS</a>"
+      <a href='/about' class='btn btn-outline-info'>
+        ABOUT THE PROJECT <i class='fa fa-arrow-right'></i>
+      </a>"
     ;
 
     $form['blurb'] = [
@@ -241,13 +243,6 @@ class HomePageForm extends FormBase {
         </div>
       </div>
       ';
-
-    /*
-    $form['sshrc'] = [
-      '#type' => 'markup',
-      '#markup' => "<div class='container sshrc-panel-container'>$sshrc</div>",
-    ];
-    */
 
     // Attach JS.
     $form['#attached']['library'][] = 'aaslp_core/homepage-active-tabs';
