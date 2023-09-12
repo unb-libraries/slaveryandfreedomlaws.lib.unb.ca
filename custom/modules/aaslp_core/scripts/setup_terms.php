@@ -47,7 +47,7 @@ add_terms('locations', $children, $parent);
 
 // Greater Atlantic World.
 // Create parent.
-$parent = add_terms('locations', [$parent_locs[2]])[0];
+$parent = add_terms('locations', [$parent_locs[1]])[0];
 // Create children.
 $children = [
   'Cape of Good Hope',
@@ -58,7 +58,7 @@ add_terms('locations', $children, $parent);
 
 // North America.
 // Create parent.
-$parent = add_terms('locations', [$parent_locs[1]])[0];
+$parent = add_terms('locations', [$parent_locs[2]])[0];
 // Create children.
 $children = [
   'Connecticut',
