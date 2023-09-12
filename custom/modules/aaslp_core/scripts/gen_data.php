@@ -51,58 +51,10 @@ function gen_article($number = NULL, $multimax = 1) {
 
   $article->body->value = $full_text;
   $article->body->format = 'unb_libraries';
-  // Transcription annotations.
-  /* DEPRECATED
-  $words = rnd_words(strip_tags($full_text), rand(1, $multimax));
-
-  foreach ($words as $word) {
-    // Description.
-    $desc = gen_lipsum(1, 'small', FALSE, TRUE);
-    // Create and save annotation term.
-    $anno = Term::create([
-      'name' => $word,
-      'description' => $desc,
-      'vid' => 'annotations',
-    ]);
-
-    $anno->save();
-    $tid = $anno->id();
-
-    // Add ID to multi field.
-    $article->field_annotations[] = [
-      'target_id' => $tid,
-      'target_revision_id' => (string) ($tid + 1),
-    ];
-  }
-  // Editorial annotations.
-  $words = rnd_words(strip_tags($full_text), rand(1, $multimax));
-
-  foreach ($words as $word) {
-    // Description.
-    $desc = gen_lipsum(1, 'small', FALSE, TRUE);
-    // Create and save annotation term.
-    $anno = Term::create([
-      'name' => $word,
-      'description' => $desc,
-      'vid' => 'annotations',
-    ]);
-
-    $anno->save();
-    $tid = $anno->id();
-
-    // Add ID to multi field.
-    $article->field_editorial_annotations[] = [
-      'target_id' => $tid,
-      'target_revision_id' => (string) ($tid + 1),
-    ];
-  }
-  */
   $article->field_notes->value = gen_lipsum(1, 'medium', FALSE, TRUE);
-
   $article->save();
   $aid = $article->id();
   echo "Generated Legal Article: $title ($aid)\n";
-
 }
 
 /**

@@ -1,8 +1,0 @@
-uuid: 0c4ea967-e3a9-4b19-867d-6a5b8fc0d36f
-langcode: en
-status: true
-dependencies: {  }
-name: 'Law Categories'
-vid: law_categories
-description: 'Categorize slavery laws.'
-weight: 0

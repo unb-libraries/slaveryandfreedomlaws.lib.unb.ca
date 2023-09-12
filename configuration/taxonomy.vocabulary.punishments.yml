@@ -1,8 +1,0 @@
-uuid: a07042f4-641e-4fcb-97bd-8d19fc8ce8ab
-langcode: en
-status: true
-dependencies: {  }
-name: Punishments
-vid: punishments
-description: 'Punishments for crimes addressed by slavery laws.'
-weight: 0

@@ -3,13 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_category
-    - field.storage.node.field_crimes
     - field.storage.node.field_date
     - field.storage.node.body
     - field.storage.node.field_full_title
     - field.storage.node.field_location
-    - field.storage.node.field_punishments
     - field.storage.node.field_law_tags
     - field.storage.node.field_timeline_event
     - search_api.server.drupal_solr_lib_unb_ca
@@ -104,26 +101,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
-  search_category:
-    label: 'Category » Taxonomy term » Name'
-    datasource_id: 'entity:node'
-    property_path: 'field_category:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_category
-      module:
-        - taxonomy
-  search_crimes:
-    label: 'Crimes » Taxonomy term » Name'
-    datasource_id: 'entity:node'
-    property_path: 'field_crimes:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_crimes
-      module:
-        - taxonomy
   search_full_location:
     label: 'Full Location'
     property_path: aggregated_field
@@ -162,16 +139,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_law_tags
-      module:
-        - taxonomy
-  search_punishments:
-    label: 'Punishments » Taxonomy term » Name'
-    datasource_id: 'entity:node'
-    property_path: 'field_punishments:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_punishments
       module:
         - taxonomy
   search_year:

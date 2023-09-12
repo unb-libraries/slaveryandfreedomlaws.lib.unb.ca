@@ -1,8 +1,0 @@
-uuid: 4efcd4b1-dcab-4668-b39c-852a93f5973f
-langcode: en
-status: true
-dependencies: {  }
-name: Crimes
-vid: crimes
-description: 'Crimes addressed by slavery laws.'
-weight: 0
