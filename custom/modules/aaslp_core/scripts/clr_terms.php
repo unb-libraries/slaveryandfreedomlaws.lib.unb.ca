@@ -24,6 +24,7 @@ function clr_terms(string $vid) {
 
   $tids = \Drupal::entityQuery('taxonomy_term')
     ->condition('vid', $vid)
+    ->accessCheck(FALSE)
     ->execute();
 
   if (!empty($tids)) {
