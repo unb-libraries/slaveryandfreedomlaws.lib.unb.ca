@@ -414,9 +414,6 @@ main {
                 font-style: italic;
               }
             }
-            // Full text.
-            .field--name-body {
-            }
             .field--name-download-buttons {
               text-align: end;
             }
@@ -553,7 +550,37 @@ footer {
 }
 
 // Responsive.
-@media (max-width: 992px) {
+@media (max-width: 1399px) {
+  // Homepage specific.
+  body.path-frontpage {
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
+    main {
+      .region-content {
+        form {
+          // Tabs.
+          #tab-fulltext {
+            margin-right: 0;
+          }
+          // Homepage search box.
+          .js-form-type-textfield {
+            display: block;
+            width: 100%;
+          }
+          input.button {
+            float: initial;
+            width: 100%;
+          }
+          // Map window.
+          .map-window {
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
   // Homepage background.
   body.path-frontpage {
     background-image: none;
@@ -579,6 +606,10 @@ footer {
     p {
       margin-bottom: 2rem;
     }
+    a {
+      margin-bottom: 3rem;
+      float: initial !important;
+    }
   }
   // Legal article download buttons.
   .field--name-download-buttons {
@@ -586,5 +617,9 @@ footer {
       margin: 1rem 0 0 0;
       width: 100%;
     }
+  }
+  // Footer.
+  footer {
+    padding-top: 0;
   }
 }
