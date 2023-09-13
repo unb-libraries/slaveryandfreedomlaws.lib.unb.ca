@@ -136,15 +136,18 @@ input {
 }
 
 body {
-  background-color: $light;
+  // All.
+  background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
   // Homepage specific.
   &.path-frontpage {
-    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
+
     main {
       .region-content {
         margin-top: 4rem !important;
         margin-bottom: 4rem !important;
         form {
+          border-radius: 1rem;
+          box-shadow: 2px 4px 8px lightgrey;
           // Space all divs except map.
           > div:not(.front-map) {
             padding: 4rem;
