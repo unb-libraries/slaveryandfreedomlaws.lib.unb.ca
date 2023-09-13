@@ -96,6 +96,7 @@ body,
   input.button,
   .btn {
     padding-top: .6rem;
+    height: 38px;
     font-size: .9rem;
     font-weight: 600;
     letter-spacing: .1rem;
@@ -205,7 +206,7 @@ body {
             }
           }
           input.button {
-            margin-top: 39px !important;
+            margin-top: 40px !important;
             float: right;
             vertical-align: top;
             width: 250px;
