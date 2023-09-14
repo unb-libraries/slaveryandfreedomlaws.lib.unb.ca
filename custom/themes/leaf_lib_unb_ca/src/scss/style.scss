@@ -136,8 +136,36 @@ input {
 }
 
 body {
-  // All.
-  background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
+  // Background.
+  background-color: $light;
+  &.bg-path {
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
+    // Not-homepage specific.
+    &:not(.path-frontpage) {
+      main {
+        .container {
+          padding: 0;
+          max-width: 100%;
+          .region {
+            background-color: $light;
+            &.region-breadcrumb {
+              margin-bottom: 2rem;
+              .breadcrumb {
+                margin: 0 auto !important;
+                padding: 1rem 0;
+                max-width: 1300px;
+                text-transform: uppercase;
+              }
+              & + .row {
+                max-width: 1300px;
+                margin: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   // Homepage specific.
   &.path-frontpage {
 
@@ -268,7 +296,8 @@ body {
 header {
   .navbar {
     .container {
-      padding: 2rem 4rem;
+      padding: 2rem 0;
+      max-width: 1300px;
       .region-nav-branding {
         #block-leaf-lib-unb-ca-contextualbranding {
           .navbar-brand {

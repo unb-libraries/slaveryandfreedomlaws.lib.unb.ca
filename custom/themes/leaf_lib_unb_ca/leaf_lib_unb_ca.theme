@@ -4,3 +4,25 @@
  * @file
  * Laws of Enslavement and Freedom in the Anglo-Atlantic World theme file.
  */
+
+/**
+ * Implements theme_preprocess_html().
+ */
+ function leaf_lib_unb_ca_preprocess_html(&$variables) {
+  // Determine if current page has a background.
+  $bg_paths = [
+    '/home',
+    '/laws',
+  ];
+  $path = $variables['global_variables']['current_path'];
+  
+  foreach ($bg_paths as $bg_path) {
+    if (str_contains($path, $bg_path)) {
+      $variables['bg_path'] = TRUE;
+      break;
+    }
+    else {
+      $variables['bg_path'] = FALSE;  
+    }
+  }
+}
