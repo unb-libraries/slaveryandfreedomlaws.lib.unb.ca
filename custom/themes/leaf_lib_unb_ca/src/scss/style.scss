@@ -159,6 +159,63 @@ body {
               & + .row {
                 max-width: 1300px;
                 margin: auto;
+                .region {
+                  margin-bottom: 2rem;
+                  &.region-sidebar-first {
+                    padding: 2rem 2rem .2rem 2rem;
+                    border-radius: 1rem;
+                  }
+                  #metadata_year {
+                    max-width: 200px;
+                  }
+                }
+              }
+            }
+            &.region-content {
+              background: transparent !important;
+              > div {
+                background-color: $light;
+              }
+              .block-page-title-block {
+                padding: 2rem 2rem 0 2rem !important;
+                border: none !important;
+                border-radius: 1rem 1rem 0 0;
+                h1 {
+                  margin: 0;
+                }
+              }
+              .views-exposed-form {
+                padding: 0 2rem;
+                border-radius: 0 0 1rem 1rem;
+                .form-type-textfield {
+                  width: 815px;
+                }
+                .form-actions {
+                  display: inline-block;
+                }
+              }
+              .block-system-main-block {
+                margin-top: 2rem;
+                padding: 1rem 2rem;
+                background-color: white;
+                border-radius: 1rem;
+                box-shadow: 2px 4px 8px lightgrey;
+                thead {
+                  border-bottom: 1px solid $primary;
+                  text-transform: uppercase;
+                  th {
+                    padding: .1rem;
+                    a {
+                      color: $primary !important;
+                    }
+                  }
+                }
+                td {
+                  a {
+                    font-family: jubilat, 'Georgia', serif !important;
+                    font-weight: bold;
+                  }
+                }
               }
             }
           }
@@ -386,7 +443,7 @@ main {
             }
             // Last value.
             .ui-slider-pip-last {
-              color: $secondary;
+              color: $info;
             }
             // Handle.
             .ui-slider-handle.ui-state-active {
