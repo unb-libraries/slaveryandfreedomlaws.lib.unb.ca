@@ -11,7 +11,7 @@ _core:
 id: leaf_lib_unb_ca_breadcrumbs
 theme: leaf_lib_unb_ca
 region: breadcrumb
-weight: 0
+weight: -10
 provider: null
 plugin: system_breadcrumb_block
 settings:

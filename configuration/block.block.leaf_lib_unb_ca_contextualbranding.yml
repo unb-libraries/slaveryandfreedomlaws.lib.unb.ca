@@ -9,7 +9,7 @@ dependencies:
 id: leaf_lib_unb_ca_contextualbranding
 theme: leaf_lib_unb_ca
 region: nav_branding
-weight: 0
+weight: -11
 provider: null
 plugin: context_branding_block
 settings:

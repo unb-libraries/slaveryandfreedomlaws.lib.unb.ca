@@ -1,22 +1,22 @@
-uuid: e77ff052-3300-4774-9f11-1fc294eb28ad
+uuid: 7a4c6667-a7bc-4cf7-aa08-f85b5e780fd2
 langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
-id: category_path
-label: 'Category Path'
+id: tags_pattern
+label: 'Tags Path'
 type: 'canonical_entities:taxonomy_term'
-pattern: 'categories/[term:name]'
+pattern: 'tags/[term:name]'
 selection_criteria:
-  3913c19c-82f2-4365-8a12-40cfc3bed754:
+  3e231f94-26c6-4849-91bb-f1aaa60240ed:
     id: 'entity_bundle:taxonomy_term'
     negate: false
-    uuid: 3913c19c-82f2-4365-8a12-40cfc3bed754
+    uuid: 3e231f94-26c6-4849-91bb-f1aaa60240ed
     context_mapping:
       taxonomy_term: taxonomy_term
     bundles:
-      law_categories: law_categories
+      law_tags: law_tags
 selection_logic: and
 weight: -5
 relationships: {  }

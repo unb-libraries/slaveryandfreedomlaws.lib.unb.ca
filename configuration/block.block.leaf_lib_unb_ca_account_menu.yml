@@ -13,7 +13,7 @@ _core:
 id: leaf_lib_unb_ca_account_menu
 theme: leaf_lib_unb_ca
 region: nav_additional
-weight: -7
+weight: -10
 provider: null
 plugin: 'system_menu_block:account'
 settings:
