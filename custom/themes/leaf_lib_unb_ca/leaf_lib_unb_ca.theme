@@ -13,6 +13,7 @@
   $bg_paths = [
     '/home',
     '/laws',
+    '/tags',
   ];
   $path = $variables['global_variables']['current_path'];
   
