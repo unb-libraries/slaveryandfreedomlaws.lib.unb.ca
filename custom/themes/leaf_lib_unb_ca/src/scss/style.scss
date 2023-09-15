@@ -138,6 +138,7 @@ input {
 body {
   // Background.
   background-color: $light;
+  // Non-taxonomy pages with image background.
   &.bg-path {
     background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
     // Not-homepage specific.
@@ -199,7 +200,7 @@ body {
                 padding: 1rem 2rem;
                 background-color: white;
                 border-radius: 1rem;
-                box-shadow: 2px 4px 8px lightgrey;
+                box-shadow: 8px 8px 6px -6px lightgrey;
                 thead {
                   border-bottom: 1px solid $primary;
                   text-transform: uppercase;
@@ -214,6 +215,114 @@ body {
                   a {
                     font-family: jubilat, 'Georgia', serif !important;
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // Taxonomy pages.
+  &.path-taxonomy {
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
+    // Not-homepage specific.
+    &:not(.path-frontpage) {
+      main {
+        .container {
+          padding: 0;
+          max-width: 100%;
+          .region {
+            background-color: $light;
+            &.region-breadcrumb {
+              margin-bottom: 2rem;
+              .breadcrumb {
+                margin: 0 auto !important;
+                padding: 1rem 0;
+                max-width: 1300px;
+                text-transform: uppercase;
+              }
+              & + .row {
+                max-width: 1300px;
+                margin: auto;
+                .region {
+                  margin-bottom: 2rem;
+                  &.region-sidebar-first {
+                    padding: 2rem 2rem .2rem 2rem;
+                    border-radius: 1rem;
+                  }
+                  #metadata_year {
+                    max-width: 200px;
+                  }
+                }
+              }
+            }
+            &.region-content {
+              background: transparent !important;
+              .block-page-title-block,
+              .view-filters {
+                background: $light;
+              }
+              .views-element-container {
+                > div > div:not(.view-filters) {
+                  background: white;
+                }
+              }
+              .block-page-title-block {
+                padding: 2rem 2rem 0 2rem !important;
+                border: none !important;
+                border-radius: 1rem 1rem 0 0;
+                h1 {
+                  margin: 0;
+                }
+              }
+              .views-exposed-form {
+                padding: 0 2rem;
+                border-radius: 0 0 1rem 1rem;
+                .form-type-textfield {
+                  width: 815px;
+                }
+                .form-actions {
+                  display: inline-block;
+                }
+              }
+              .block-system-main-block {
+                .view-filters {
+                  border-bottom-left-radius: 1rem;
+                  border-bottom-right-radius: 1rem;
+                }
+                .view-header {
+                  margin: 2rem 0 0 0 !important;
+                  padding: 1rem 2rem;
+                  border-top-right-radius: 1rem;
+                  border-top-left-radius: 1rem;
+                  box-shadow: 8px 0 6px -6px lightgrey;
+                }
+                .view-content {
+                  margin-top: 0 !important;
+                  padding: 1rem 2rem;
+                  box-shadow: 8px 0 6px -6px lightgrey;
+                  thead {
+                    border-bottom: 1px solid $primary;
+                    text-transform: uppercase;
+                    th {
+                      padding: .1rem;
+                      a {
+                        color: $primary !important;
+                      }
+                    }
+                  }
+                  td {
+                    a {
+                      font-family: jubilat, 'Georgia', serif !important;
+                    }
+                  }
+                }
+                .view-footer {
+                  padding: 1rem 2rem;
+                  border-bottom-right-radius: 1rem;
+                  border-bottom-left-radius: 1rem;
+                  box-shadow: 8px 8px 6px -6px lightgrey;
                 }
               }
             }
