@@ -7,8 +7,6 @@ dependencies:
     - field.field.node.legal_article.body
     - field.field.node.legal_article.field_abstract
     - field.field.node.legal_article.field_date
-    - field.field.node.legal_article.field_document_image
-    - field.field.node.legal_article.field_document_images
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_images_pdf
     - field.field.node.legal_article.field_law_tags
@@ -47,8 +45,6 @@ content:
 hidden:
   field_abstract: true
   field_date: true
-  field_document_image: true
-  field_document_images: true
   field_full_title: true
   field_images_pdf: true
   field_law_tags: true
