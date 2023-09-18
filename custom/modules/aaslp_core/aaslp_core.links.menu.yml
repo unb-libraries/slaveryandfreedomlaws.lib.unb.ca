@@ -5,6 +5,28 @@ aaslp.about:
   menu_name: main
   url: internal:/about
   weight: 10
+  expanded: TRUE
+aaslp.about.project:
+  title: 'ABOUT THE PROJECT'
+  description: 'About the project'
+  parent: aaslp.about
+  menu_name: aaslp.about
+  url: internal:/about-project
+  weight: 10
+aaslp.about.ack:
+  title: 'ACKNOWLEDGEMENTS'
+  description: 'Acknowledgements'
+  parent: aaslp.about
+  menu_name: main
+  url: internal:/acknowledgements
+  weight: 20
+aaslp.about.intro:
+  title: 'INTRODUCTION TO SLAVERY LEGISLATION'
+  description: 'Introduction to slavery legislation'
+  parent: aaslp.about
+  menu_name: main
+  url: internal:/introduction-slavery-legislation
+  weight: 30
 aaslp.search:
   title: 'SEARCH'
   description: 'Search'
@@ -26,3 +48,10 @@ aaslp.map:
   menu_name: main
   url: internal:/locations-map
   weight: 40
+aaslp.contact:
+  title: 'CONTACT / CONTRIBUTE'
+  description: 'Contact/Contribute'
+  parent: main
+  menu_name: main
+  url: internal:/contact-contribute
+  weight: 50
