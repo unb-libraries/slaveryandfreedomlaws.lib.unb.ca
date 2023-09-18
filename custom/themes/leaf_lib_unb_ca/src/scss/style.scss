@@ -162,6 +162,7 @@ header {
         .dropdown-menu {
           border: none;
           background-color: $primary;
+          box-shadow: 8px 8px 6px -6px smoke;
         }
         a {
           padding: 1rem;
@@ -384,12 +385,15 @@ body {
           // Space all divs except map.
           > div:not(.front-map) {
             padding: 4rem;
+            &.tab-content {
+              padding: 1rem 4rem;
+            }
           }
           // Homepage blurb.
           #site-blurb {
             margin-left: 4rem;
             margin-right: 4rem;
-            padding: 2rem 0 4rem 0;
+            padding: 2rem 0 2rem 0;
             border-bottom: 2px solid $primary;
             text-align: center !important;
             letter-spacing: .1rem !important;
