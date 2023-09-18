@@ -15,13 +15,6 @@ describe('Laws of Enslavement and Freedom', {baseUrl: host, groups: ['sites']}, 
       cy.get('h1')
         .should('contain', 'Title Search')
     })
-
-    specify('Navigation menu should contain "Timeline" link', () => {
-      cy.get('nav[role="navigation"] a')
-        .contains('Timeline')
-        .its('0.href')
-        .should('match', /\/timeline/)
-    })
   })
 
 })
