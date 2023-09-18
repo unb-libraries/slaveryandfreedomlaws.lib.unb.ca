@@ -348,7 +348,7 @@ body {
           #site-blurb {
             margin-left: 4rem;
             margin-right: 4rem;
-            padding: 2rem 0 6rem 0;
+            padding: 2rem 0 4rem 0;
             border-bottom: 2px solid $primary;
             text-align: center !important;
             letter-spacing: .1rem !important;
@@ -358,8 +358,7 @@ body {
               font-family: jubilat,'Georgia', serif;
             }
             a {
-              width: 250px !important;
-              float: right;
+              color: $info;
             }
           }
           // Homepage tabs.

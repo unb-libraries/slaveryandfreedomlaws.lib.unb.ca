@@ -99,11 +99,8 @@ class HomePageForm extends FormBase {
       ongoing project that seeks to provide digital access to the laws governing 
       slavery and freedom in the Anglo-Atlantic World, from the founding laws 
       of the seventeenth century to the laws that governed emancipation in the 
-      nineteenth century.</p>
-      
-      <a href='/about' class='btn btn-outline-info'>
-        ABOUT THE PROJECT <i class='fa fa-arrow-right'></i>
-      </a>"
+      nineteenth century. <a href='/about'>
+      About the project ></a></p>"
     ;
 
     $form['blurb'] = [
