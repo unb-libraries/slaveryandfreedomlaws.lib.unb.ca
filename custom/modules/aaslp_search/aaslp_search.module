@@ -14,12 +14,18 @@ function aaslp_search_form_views_exposed_form_alter(&$form, &$form_state, $form_
   $view_id = $form['#id'];
 
   if (strpos($view_id, 'views-exposed-form-aaslp-metadata') === 0) {
-    $tip = "Search by title, location, year, tags, abstract, or " .
-      "combination, i.e. Jamaica 1744. <a href='/tags'>View all tags.</a>";
+    $tip = "Search by title, location, year, tags, abstract, or
+      combination, i.e. Jamaica 1744. <a href='/tags'>View all tags.</a>
+      <br>
+      You can also <a href='/laws-fulltext'>run a fulltext search</a>.
+      ";
   }
   elseif (strpos($view_id, 'views-exposed-form-aaslp-search') === 0) {
-    $tip = "Search for keywords within the full text content of legal " .
-      "articles.";
+    $tip = "Search for keywords within the full text content of legal 
+      articles.
+      <br>
+      You can also <a href='/laws'>run a title/metadata search</a>.
+    ";
   }
 
   if (isset($form['search_api_fulltext']) and $tip) {

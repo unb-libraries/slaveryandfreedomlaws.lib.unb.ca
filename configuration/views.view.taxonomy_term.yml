@@ -646,7 +646,7 @@ display:
           expose:
             operator_id: combine_op
             label: ''
-            description: 'Refine by title, year or combination, i.e. Jamaica 1800.'
+            description: "Refine by title, year or combination, i.e. Jamaica 1800. <a href='/tags'>View all tags.</a>"
             use_operator: false
             operator: combine_op
             operator_limit_selection: false
