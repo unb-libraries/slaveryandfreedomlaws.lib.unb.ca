@@ -714,6 +714,12 @@ main {
               .pdfpreview {
                 margin-top: 1rem;
                 text-align: center;
+                a {
+                  opacity: .7;
+                  &:hover {
+                    opacity: 1;
+                  }
+                }
               }
               // Tags.
               .field--name-law-tags {
