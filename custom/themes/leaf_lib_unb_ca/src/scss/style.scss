@@ -11,6 +11,10 @@
 /* Subtheme styles */
 
 // Global (careful here).
+// Global background.
+html {
+  background-color: $light;
+}
 // Global font.
 /* Headings: Jubilat SemiBold */
 h1, .site-title-container, h2, h3, h4 {
