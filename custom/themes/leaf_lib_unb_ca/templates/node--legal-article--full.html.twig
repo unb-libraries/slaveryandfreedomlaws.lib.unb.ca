@@ -98,12 +98,15 @@
       <div class="row row-metadata">
         <div class="col-sm-7 col-content">
           {{ content.field_abstract }}
+          <div class="collapse" id="bodyCollapse">
           {{ content.body }}
+          </div>
+          <a class="btn btn-primary collapsed" data-bs-toggle="collapse" href="#bodyCollapse" aria-expanded="false" aria-controls="bodyCollapse">Expand<i class="fa fa-caret-down"></i></a>
           <div class="field field--name-download-buttons">
             {% if content.field_images_pdf|field_value or content.body|field_value %}
               <div class="field__item mt-1">
                 {% if content.body|field_value %}
-                  <a class="btn btn-secondary" href="/node/{{ node.id() }}/legal_article/pdf">Download Transcript<i class="fa fa-file"></i></a>
+                  <a class="btn btn-primary" data-bs-toggle="collapse" href="#bodyCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">Download Transcript<i class="fa fa-file"></i></a>
                 {% endif %}
               </div>
             {% endif %}
