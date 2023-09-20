@@ -677,7 +677,8 @@ main {
             // Metadata column (right).
             .col-metadata {
               // All fields but citation.
-              .field:not(.field--name-dynamic-citation) {
+              .field:not(.field--name-dynamic-citation),
+              > h2.field__label {
                 margin-left: 4rem;
               }
               .field--name-field-date {
