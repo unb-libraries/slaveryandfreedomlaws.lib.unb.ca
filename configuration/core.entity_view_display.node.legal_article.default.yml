@@ -64,7 +64,7 @@ content:
     region: content
   field_images_pdf:
     type: pdfpreview
-    label: above
+    label: hidden
     settings:
       image_style: pdf_preview
       image_link: file
