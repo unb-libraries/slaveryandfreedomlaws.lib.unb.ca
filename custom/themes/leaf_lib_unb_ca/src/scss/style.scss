@@ -494,6 +494,7 @@ body {
   &:not(.path-frontpage) {
     main {
       .container {
+        padding: 0;
         // Content.
         .region-content {
           a:not(.btn):not(.page-link) {
@@ -508,7 +509,8 @@ body {
     background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
     main {
       .container {
-        padding: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
         max-width: 100%;
         .region {
           background-color: $light;
@@ -651,6 +653,8 @@ main {
         // Legal article.
         .node__legal_article {
           .row-metadata {
+            max-width: 100%;
+            margin: 0 !important;
             > div {
               padding: 0;
             }
@@ -792,25 +796,30 @@ main {
 }
 
 footer {
-  p {
-    font-size: .9rem;
-    opacity: .7;
-  }
-  .d-flex {
-    margin: 2rem 4rem;
-    #footer-logo {
-      a {
-        text-decoration: none !important;
-        img {
-          width: 200px;
+  .container {
+    margin-top: 1rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid $primary;
+    p {
+      font-size: .9rem;
+      opacity: .7;
+    }
+    .d-flex {
+      margin: 2rem 4rem;
+      #footer-logo {
+        a {
+          text-decoration: none !important;
+          img {
+            width: 200px;
+          }
         }
-      }
-      p {
-        display: inline;
-        margin: .2rem 1rem;
-        vertical-align: bottom;
-        line-height: 1.6rem;
-        font-size: .8rem;
+        p {
+          display: inline;
+          margin: .2rem 1rem;
+          vertical-align: bottom;
+          line-height: 1.6rem;
+          font-size: .8rem;
+        }
       }
     }
   }
