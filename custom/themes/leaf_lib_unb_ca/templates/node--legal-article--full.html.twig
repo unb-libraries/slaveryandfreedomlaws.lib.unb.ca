@@ -136,8 +136,10 @@
               <a id="cite" class="btn btn-secondary">Copy<i class="fa fa-copy"></i></a>
             </div>
           </div>
-          <h2 class="field__label">Download Original</h2>
-          {{ content.field_images_pdf }}
+           {%- if content.field_images_pdf|field_value %}
+            <h2 class="field__label">Download Original</h2>
+            {{ content.field_images_pdf }}
+          {%- endif -%}
           {%- if content.field_law_tags|field_value %}
             <div class="field field--name-law-tags">
               <h2 class="field__label">Tags</h2>
