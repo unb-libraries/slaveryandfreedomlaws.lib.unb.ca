@@ -106,6 +106,10 @@ body,
     letter-spacing: .1rem;
     text-transform: uppercase;
     color: $warning !important;
+    // Primary buttons.
+    &.btn-primary {
+      color: $light !important;
+    }
     // Outline buttons.
     &.btn-outline-primary {
       color: $primary !important;
@@ -687,6 +691,7 @@ main {
               .collapse:not(.show) {
                 display: block;
                 position: relative;
+                margin-bottom: 1rem;
                 height: 30rem !important;
                 overflow: hidden;
                 .gradientback {
