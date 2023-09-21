@@ -106,7 +106,11 @@ body,
     letter-spacing: .1rem;
     text-transform: uppercase;
     color: $warning !important;
-
+    // Outline buttons.
+    &.btn-outline-primary {
+      color: $primary !important;
+      background: transparent !important; 
+    }
     svg {
       margin: 0 .2rem;
     }
@@ -677,6 +681,45 @@ main {
             }
             .field--name-download-buttons {
               text-align: end;
+            }
+            // Content column (left).
+            .col-content {
+              .collapse:not(.show) {
+                display: block;
+                position: relative;
+                height: 30rem !important;
+                overflow: hidden;
+                .gradientback {
+                  position: absolute;
+                  top: 25rem;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  width: 100%;
+                  height: 5rem;
+                  pointer-events: none;
+                  background: -moz-linear-gradient(top, rgba(245, 244, 236, 0) 0%, rgba(245, 244, 236, 1) 100%); /* FF3.6+ */
+                  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(245, 244, 236, 0)), color-stop(100%, rgba(245, 244, 236, 1))); /* Chrome, Safari4+ */
+                  background: -webkit-linear-gradient(top, rgba(245, 244, 236, 0) 0%, rgba(245, 244, 236, 1) 100%); /* Chrome10+, Safari5.1+ */
+                  background: -o-linear-gradient(top, rgba(245, 244, 236, 0) 0%, rgba(245, 244, 236, 1) 100%); /* Opera 11.10+ */
+                  background: -ms-linear-gradient(top, rgba(245, 244, 236, 0) 0%, rgba(245, 244, 236, 1) 100%); /* IE10+ */
+                  background: linear-gradient(to bottom, rgba(245, 244, 236, 0) 0%, rgba(245, 244, 236, 1) 100%); /* W3C */
+                  filter: progid:DXImageTransform.microsoft.gradient(startColorstr='#f5f4ec', endColorstr='#000000', GradientType=0); /* IE6-9 */
+                }
+              }
+              .collapsing[aria-expanded="false"] {
+                height: 30rem !important;
+              }
+              .btn-outline-primary {
+                margin-left: 0;
+                float: left;
+                &#btnBodyExpand:not(.collapsed) {
+                  display: none;
+                }
+                &#btnBodyCollapse.collapsed {
+                  display: none;
+                }
+              }
             }
             // Metadata column (right).
             .col-metadata {
