@@ -708,7 +708,7 @@ main {
                 }
               }
               .collapsing[aria-expanded="false"] {
-                height: 30rem !important;
+                min-height: 30rem !important;
               }
               .btn-outline-primary {
                 margin-left: 0;
