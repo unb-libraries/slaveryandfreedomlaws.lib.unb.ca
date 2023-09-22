@@ -499,6 +499,16 @@ body {
   }
   // Not-homepage specific.
   &:not(.path-frontpage) {
+    // Breadcrumbs.
+    .region-breadcrumb {
+      margin-bottom: 2rem;
+      .breadcrumb {
+        margin: 0 auto !important;
+        padding: 1rem 0;
+        max-width: 1300px;
+        text-transform: uppercase;
+      }
+    }
     main {
       .container {
         padding: 0;
