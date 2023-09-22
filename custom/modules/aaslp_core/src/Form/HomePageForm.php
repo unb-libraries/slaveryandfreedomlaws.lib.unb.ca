@@ -218,7 +218,7 @@ class HomePageForm extends FormBase {
             Browse legal articles in an interactive map. Visualize how slave laws
             in the database were distributed geographically.
           </p>
-          <a href="/locations-map" class="btn btn-secondary">
+          <a href="/map" class="btn btn-secondary">
             BROWSE MAP
           </a>
        </div>
