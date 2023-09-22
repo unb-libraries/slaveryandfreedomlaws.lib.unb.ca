@@ -914,9 +914,9 @@ footer {
   .region-breadcrumb + .row {
     padding: 0 1rem;
   }
-  // Homepage background.
+  // Background.
   body {
-    background-image: none;
+    background-image: none !important;
   }
   // Nav branding.
   .region-nav-branding {
