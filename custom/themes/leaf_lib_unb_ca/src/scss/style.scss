@@ -91,7 +91,8 @@ body,
     margin: 0;
     text-decoration: none !important; 
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-underline-offset: .2rem;
       text-decoration: underline !important;
     }
@@ -664,6 +665,10 @@ main {
         .node--type-page {
           .node__content {
             margin-top: 1rem;
+            iframe { 
+              border-radius: 1rem; 
+              box-shadow: 8px 8px 6px -6px lightgrey;
+            }
           }
         }
         // Legal article.
