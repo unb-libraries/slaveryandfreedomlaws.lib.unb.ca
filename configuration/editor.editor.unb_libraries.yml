@@ -38,7 +38,8 @@ settings:
       reversed: true
       startIndex: true
     ckeditor5_sourceEditing:
-      allowed_tags: {  }
+      allowed_tags:
+        - '<iframe class width height frameborder allowfullscreen>'
 image_upload:
   status: true
   scheme: public
