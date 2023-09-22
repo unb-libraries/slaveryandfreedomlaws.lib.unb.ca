@@ -910,8 +910,12 @@ footer {
   }
 }
 @media (max-width: 991px) {
+  // Content.
+  .region-breadcrumb + .row {
+    padding: 0 1rem;
+  }
   // Homepage background.
-  body.path-frontpage {
+  body {
     background-image: none;
   }
   // Nav branding.
@@ -946,6 +950,22 @@ footer {
       margin: 1rem 0 0 0;
       width: 100%;
     }
+  }
+  // Exposed form container width.
+  body.bg-path:not(.path-frontpage) {
+    main {
+    .container {
+        .region.region-content {
+          .views-exposed-form .form-type-textfield {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  // Sidebar./
+  .region-sidebar-first {
+    margin: 0 !important;
   }
   // Footer.
   footer {
