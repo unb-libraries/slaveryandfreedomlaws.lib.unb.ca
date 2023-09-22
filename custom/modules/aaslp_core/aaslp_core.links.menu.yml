@@ -46,7 +46,7 @@ aaslp.map:
   description: 'Map'
   parent: main
   menu_name: main
-  url: internal:/locations-map
+  url: internal:/map
   weight: 40
 aaslp.contact:
   title: 'CONTACT / CONTRIBUTE'
