@@ -963,9 +963,13 @@ footer {
   }
   // Navbar content.
   #navbarSupportedContent {
-    // Menu links.
-    .nav-link {
-      padding: 1rem 0 0 !important;
+    // Menu.
+    .navbar-nav {
+      margin-top: .4rem;
+      // Menu links.
+      .nav-link {
+        padding: 1rem 0 0 !important;
+      }
     }
   }
   // Hompegae blurb.
