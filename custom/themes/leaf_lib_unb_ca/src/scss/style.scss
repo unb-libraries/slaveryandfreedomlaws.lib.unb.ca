@@ -991,13 +991,17 @@ footer {
       width: 100%;
     }
   }
-  // Exposed form container width.
   body.bg-path:not(.path-frontpage) {
     main {
-    .container {
+      .container {
         .region.region-content {
+          // Exposed form container width.
           .views-exposed-form .form-type-textfield {
             width: 100%;
+          }
+          // Table layout.
+          table {
+            table-layout: fixed;
           }
         }
       }
