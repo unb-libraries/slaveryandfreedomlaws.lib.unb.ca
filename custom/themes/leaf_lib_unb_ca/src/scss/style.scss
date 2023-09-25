@@ -1005,7 +1005,7 @@ footer {
           }
           // Tags list columns.
           .tags-list {
-            columns: 1;
+            columns: 1 !important;
           }          
         }
       }
