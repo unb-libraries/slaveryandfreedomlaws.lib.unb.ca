@@ -1008,6 +1008,16 @@ footer {
   }
   // Footer.
   footer {
-    padding-top: 0;
+    padding: 1rem;
+    border-top: 1px solid rgba(18, 77, 100, .3);
+    text-align: center;
+    img {
+      max-width: 400px;
+    }
+    #footer-logo {
+      p {
+        display: block !important;
+      }
+    }
   }
 }
