@@ -7,7 +7,7 @@
 
 use Drupal\taxonomy\Entity\Term;
 
-function aaslp_search_form_views_exposed_form_alter(&$form, &$form_state, $form_id){
+function aaslp_search_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
   // Attach facet decoration JS.
   $form['#attached']['library'][] = 'aaslp_search/facet-limit-decor';
 
