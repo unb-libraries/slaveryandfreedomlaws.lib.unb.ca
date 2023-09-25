@@ -194,7 +194,7 @@ body {
   background-color: $light;
   // Non-taxonomy pages with image background.
   &.bg-path {
-    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.png);
     // Not-homepage specific.
     &:not(.path-frontpage) {
       main {
@@ -285,7 +285,7 @@ body {
   }
   // Taxonomy pages.
   &.path-taxonomy {
-    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.png);
     // Not-homepage specific.
     &:not(.path-frontpage) {
       main {
@@ -545,7 +545,7 @@ body {
   }
   // Locations-map specific.
   &.path-locations-map {
-    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.png);
     main {
       .container {
         padding-left: 1rem;
@@ -918,7 +918,7 @@ footer {
   }
   // Homepage specific.
   body.path-frontpage {
-    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.jpg);
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.png);
     main {
       .region-content {
         form {
@@ -973,7 +973,7 @@ footer {
       }
     }
   }
-  // Hompegae blurb.
+  // Homepage blurb.
   #site-blurb {
     padding: 0 0 1rem 0 !important;
     p {
@@ -991,17 +991,14 @@ footer {
       width: 100%;
     }
   }
-  body.bg-path:not(.path-frontpage) {
+  body.bg-path:not(.path-frontpage),
+  body.path-taxonomy:not(.path-frontpage) {
     main {
       .container {
         .region.region-content {
           // Exposed form container width.
-          .views-exposed-form .form-type-textfield {
-            width: 100%;
-          }
-          // Table layout.
-          table {
-            table-layout: fixed;
+          .form-type-textfield {
+            width: 100% !important;
           }
           // Tags list columns.
           .tags-list {
@@ -1009,6 +1006,12 @@ footer {
           }          
         }
       }
+    }
+  }
+  .view-content {
+    // Table layout.
+    table {
+      table-layout: fixed !important;
     }
   }
   // Sidebar./
