@@ -14,22 +14,28 @@ aaslp_admin.admin.content:
   url: internal:/admin/content
   parent: aaslp_admin.admin
   weight: 10
-aaslp_admin.law.add:
-  title: 'Add Legal Article'
+aaslp_admin.admin.laws.audit:
+  title: 'Audit Laws'
+  description: 'Manage site content.'
+  url: internal:/audit-laws
+  parent: aaslp_admin.admin
+  weight: 20
+aaslp_admin.laws.add:
+  title: 'Add Law'
   description: 'Create a new legal article.'
   url: internal:/node/add/legal_article
   parent: aaslp_admin.admin
-  weight: 20
-aaslp_admin.page.add:
+  weight: 30
+aaslp_admin.pages.add:
   title: 'Add Page'
   description: 'Create a new information page.'
   url: internal:/node/add/page
   parent: aaslp_admin.admin
-  weight: 30
-aaslp_admin.source.add:
+  weight: 40
+aaslp_admin.sources.add:
   title: 'Add Source'
   description: 'Create a new source for legal articles.'
   url: internal:/node/add/source
   parent: aaslp_admin.admin
-  weight: 40
+  weight: 50
 
