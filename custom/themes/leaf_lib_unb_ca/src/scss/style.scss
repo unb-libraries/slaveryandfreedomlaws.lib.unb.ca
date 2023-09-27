@@ -599,6 +599,12 @@ body {
       }
     }
   }
+  // ArcGIS export view.
+  &.path-arcgis-export-preview {
+    main .container .region-content #block-leaf-lib-unb-ca-content .view-content table {
+      table-layout: initial !important;
+    }
+  }
 }
 
 main {
@@ -842,6 +848,7 @@ main {
           }
           // Tables.
           table {
+            table-layout: fixed !important;
             // Header.
             thead {
               tr {
@@ -952,6 +959,13 @@ footer {
       }
     }
   }
+  // Auxiliary views.
+  body.path-audit-laws,
+  body.path-arcgis-export-preview {
+    main .container .region-content #block-leaf-lib-unb-ca-content .view-content table {
+      table-layout: initial !important;
+    }
+  }
 }
 @media (max-width: 991px) {
   // Content.
@@ -1016,12 +1030,6 @@ footer {
       }
     }
   }
-  .view-content {
-    // Table layout.
-    table {
-      table-layout: fixed !important;
-    }
-  }
   // Sidebar./
   .region-sidebar-first {
     margin: 0 !important;
@@ -1039,5 +1047,17 @@ footer {
         display: block !important;
       }
     }
+  }
+}
+
+@media (min-width: 992px) {
+  #view-title-table-column {
+    width: 16rem;
+  }
+  #view-field-law-tags-table-column {
+    width: 3rem;
+  }
+  #view-field-images-pdf-table-column {
+    width: 14rem;
   }
 }

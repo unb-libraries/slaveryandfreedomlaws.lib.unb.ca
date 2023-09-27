@@ -12,7 +12,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <iframe src class width height frameborder allowfullscreen> <strong> <em> <s> <blockquote> <a href> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption>'
+      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <iframe src class width height frameborder allowfullscreen> <div class> <a class href> <strong> <em> <s> <blockquote> <ul> <ol reversed start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_align:

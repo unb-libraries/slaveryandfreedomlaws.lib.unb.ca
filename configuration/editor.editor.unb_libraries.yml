@@ -40,6 +40,8 @@ settings:
     ckeditor5_sourceEditing:
       allowed_tags:
         - '<iframe src class width height frameborder allowfullscreen>'
+        - '<div class>'
+        - '<a class>'
 image_upload:
   status: true
   scheme: public
