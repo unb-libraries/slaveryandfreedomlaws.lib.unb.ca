@@ -591,7 +591,7 @@ display:
             field_date_1: field_date_1
             field_location: field_location
             field_law_tags: field_law_tags
-          default: nid
+          default: field_date
           info:
             nid:
               sortable: true
@@ -679,6 +679,21 @@ display:
     position: 2
     display_options:
       title: 'ArcGIS Export'
+      sorts:
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: day
       style:
         type: data_export
         options:
@@ -695,6 +710,7 @@ display:
             use_serializer_encode_only: false
       defaults:
         title: false
+        sorts: false
       display_extenders: {  }
       path: data-export
       displays:
