@@ -763,9 +763,19 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<a href="http://local-slaveryandfreedomlaws.lib.unb.ca:3111/data-export?page&amp;_format=csv" class="btn btn-secondary">Download CSV</a>'
+            value: '<a href="http://local-slaveryandfreedomlaws.lib.unb.ca:3111/data-export?page&amp;_format=csv" class="btn btn-secondary">Download CSV</a><br><br>'
             format: unb_libraries
           tokenize: false
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: result
+          empty: false
+          content: 'Displaying @start - @end of @total'
       display_extenders: {  }
       path: arcgis-export-preview
     cache_metadata:

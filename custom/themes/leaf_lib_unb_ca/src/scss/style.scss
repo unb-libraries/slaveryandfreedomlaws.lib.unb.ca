@@ -603,6 +603,24 @@ body {
   &.path-arcgis-export-preview {
     main .container .region-content #block-leaf-lib-unb-ca-content .view-content table {
       table-layout: initial !important;
+      #view-nid-table-column {
+        width: 8rem;
+      }
+      #view-title-table-column {
+        width: 16rem;
+      }
+      #view-view-node-table-column {
+        width: 20rem;
+      }
+      #view-field-date-table-column {
+        width: 10rem;
+      }
+      #view-field-date-1-table-column {
+        width: 4rem;
+      }
+      #view-field-law-tags-table-column {
+        width: 10rem;
+      }
     }
   }
 }
