@@ -176,7 +176,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ 'https://slaveryandfreedomlaws.lib.unb.ca/' ~ nid }}"
+            text: "{{ 'https://slaveryandfreedomlaws.lib.unb.ca/laws/' ~ nid }}"
             make_link: false
             path: ''
             absolute: false
