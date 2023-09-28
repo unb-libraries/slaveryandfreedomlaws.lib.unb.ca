@@ -779,7 +779,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<a href="http://local-slaveryandfreedomlaws.lib.unb.ca:3111/data-export?page&amp;_format=csv" class="btn btn-secondary">Download CSV</a><br><br>'
+            value: '<a href="[site:base-url]/data-export?page&amp;_format=csv" class="btn btn-secondary">Download CSV</a><br><br>'
             format: unb_libraries
           tokenize: false
         result:
