@@ -1,23 +1,17 @@
-uuid: 002fd281-393a-4073-b600-c44d75369aea
+uuid: a4cb3343-7c15-4159-876d-3697f0fe179a
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_date
-    - field.storage.node.field_law_tags
     - field.storage.node.field_location
     - node.type.legal_article
-    - user.role.aaslp_editor
   module:
-    - csv_serialization
     - datetime
     - node
-    - rest
-    - serialization
     - user
-    - views_data_export
-id: arcgis_export
-label: 'ArcGIS Export'
+id: recently_updated
+label: 'Recently Updated'
 module: views
 description: ''
 tag: ''
@@ -30,74 +24,8 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'ArcGIS Export - Preview'
+      title: 'Recently Updated'
       fields:
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
-          label: 'Node ID'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         title:
           id: title
           table: node_field_data
@@ -112,6 +40,53 @@ display:
           exclude: false
           alter:
             alter_text: false
+            make_link: false
+            absolute: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            trim: false
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
+          label: Added
+          exclude: false
+          alter:
+            alter_text: false
             text: ''
             make_link: false
             path: ''
@@ -150,9 +125,21 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: timestamp
           settings:
-            link_to_entity: false
+            date_format: short
+            custom_date_format: ''
+            timezone: ''
+            tooltip:
+              date_format: long
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
+              description: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -163,20 +150,21 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
+        changed:
+          id: changed
+          table: node_field_data
+          field: changed
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
-          plugin_id: entity_link
-          label: 'Record URL'
+          entity_field: changed
+          plugin_id: field
+          label: Changed
           exclude: false
           alter:
-            alter_text: true
-            text: "{{ 'https://slaveryandfreedomlaws.lib.unb.ca/laws/' ~ nid }}"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -213,9 +201,32 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: view
-          output_url_as_text: true
-          absolute: false
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: short
+            custom_date_format: ''
+            timezone: ''
+            tooltip:
+              date_format: long
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
+              description: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_date:
           id: field_date
           table: node__field_date
@@ -280,70 +291,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_date_1:
-          id: field_date_1
-          table: node__field_date
-          field: field_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Year
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_custom
-          settings:
-            timezone_override: ''
-            date_format: 'Y'
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_location:
           id: field_location
           table: node__field_location
@@ -396,70 +343,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_law_tags:
-          id: field_law_tags
-          table: node__field_law_tags
-          field: field_law_tags
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Tags
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
+            link: true
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -471,10 +355,26 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: none
+        type: full
         options:
           offset: 0
-          items_per_page: null
+          items_per_page: 25
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
       exposed_form:
         type: basic
         options:
@@ -486,30 +386,30 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: role
+        type: perm
         options:
-          role:
-            aaslp_editor: aaslp_editor
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
       empty: {  }
       sorts:
-        nid:
-          id: nid
+        created:
+          id: created
           table: node_field_data
-          field: nid
+          field: created
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
-          entity_field: nid
-          plugin_id: standard
-          order: ASC
+          entity_field: created
+          plugin_id: date
+          order: DESC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
+          granularity: second
       arguments: {  }
       filters:
         status:
@@ -523,8 +423,6 @@ display:
           group: 1
           expose:
             operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
         type:
           id: type
           table: node_field_data
@@ -534,49 +432,6 @@ display:
           plugin_id: bundle
           value:
             legal_article: legal_article
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        field_timeline_event_value:
-          id: field_timeline_event_value
-          table: node__field_timeline_event
-          field: field_timeline_event_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: boolean
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: 'Timeline events only?'
-            description: ''
-            use_operator: false
-            operator: field_timeline_event_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_timeline_event_value
-            required: false
-            remember: true
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              aaslp_editor: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       style:
         type: table
         options:
@@ -584,44 +439,35 @@ display:
           row_class: ''
           default_row_class: true
           columns:
-            nid: nid
             title: title
-            view_node: view_node
+            created: created
+            changed: changed
             field_date: field_date
-            field_date_1: field_date_1
             field_location: field_location
-            field_law_tags: field_law_tags
-          default: field_date
+          default: created
           info:
-            nid:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
             title:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            view_node:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_date:
+            created:
               sortable: true
-              default_sort_order: asc
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_date_1:
+            changed:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_date:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -629,13 +475,8 @@ display:
               empty_column: false
               responsive: ''
             field_location:
-              sortable: true
+              sortable: false
               default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_law_tags:
               align: ''
               separator: ''
               empty_column: false
@@ -657,132 +498,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header: {  }
-      footer: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.roles
-      tags:
-        - 'config:field.storage.node.field_date'
-        - 'config:field.storage.node.field_law_tags'
-        - 'config:field.storage.node.field_location'
-  data_export_1:
-    id: data_export_1
-    display_title: 'Data export'
-    display_plugin: data_export
-    position: 2
-    display_options:
-      title: 'ArcGIS Export'
-      sorts:
-        field_date_value:
-          id: field_date_value
-          table: node__field_date
-          field: field_date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: datetime
-          order: ASC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-          granularity: day
-      style:
-        type: data_export
-        options:
-          formats:
-            csv: csv
-          csv_settings:
-            delimiter: ','
-            enclosure: '"'
-            escape_char: \
-            strip_tags: true
-            trim: true
-            encoding: utf8
-            utf8_bom: '0'
-            use_serializer_encode_only: false
-      defaults:
-        title: false
-        sorts: false
-      display_extenders: {  }
-      path: data-export
-      displays:
-        default: '0'
-        page_1: '0'
-      filename: leaf_arcgis.csv
-      automatic_download: true
-      store_in_public_file_directory: null
-      custom_redirect_path: false
-      redirect_to_display: page_1
-      include_query_params: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - request_format
-        - 'user.node_grants:view'
-        - user.roles
-      tags:
-        - 'config:field.storage.node.field_date'
-        - 'config:field.storage.node.field_law_tags'
-        - 'config:field.storage.node.field_location'
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
-    position: 1
-    display_options:
-      pager:
-        type: full
-        options:
-          offset: 0
-          items_per_page: 25
-          total_pages: null
-          id: 0
-          tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
-      defaults:
-        pager: false
-        style: true
-        row: true
-        filters: true
-        filter_groups: true
-        header: false
-        footer: false
       header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: '<a href="[site:base-url]/data-export?page&amp;_format=csv" class="btn btn-secondary">Download CSV</a><br><br>'
-            format: unb_libraries
-          tokenize: false
         result:
           id: result
           table: views
@@ -795,7 +511,6 @@ display:
           content: 'Displaying @start - @end of @total'
       footer: {  }
       display_extenders: {  }
-      path: arcgis-export-preview
     cache_metadata:
       max-age: -1
       contexts:
@@ -803,8 +518,26 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
-        - user.roles
+        - user.permissions
       tags:
         - 'config:field.storage.node.field_date'
-        - 'config:field.storage.node.field_law_tags'
+        - 'config:field.storage.node.field_location'
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: recently-updated
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_date'
         - 'config:field.storage.node.field_location'

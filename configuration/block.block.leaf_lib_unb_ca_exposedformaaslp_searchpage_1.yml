@@ -12,7 +12,7 @@ dependencies:
 id: leaf_lib_unb_ca_exposedformaaslp_searchpage_1
 theme: leaf_lib_unb_ca
 region: content
-weight: -5
+weight: -7
 provider: null
 plugin: 'views_exposed_filter_block:aaslp_search-page_1'
 settings:

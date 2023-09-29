@@ -1,0 +1,30 @@
+uuid: 985b299b-8278-4696-8ea1-636e189e87ea
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:general:1734df68-345f-469a-bbf2-ae1e8346ed4a'
+  module:
+    - block_content
+    - system
+  theme:
+    - leaf_lib_unb_ca
+id: leaf_lib_unb_ca_announcements
+theme: leaf_lib_unb_ca
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:1734df68-345f-469a-bbf2-ae1e8346ed4a'
+settings:
+  id: 'block_content:1734df68-345f-469a-bbf2-ae1e8346ed4a'
+  label: Announcements
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /recently-updated
