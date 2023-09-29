@@ -1079,9 +1079,11 @@ footer {
     width: 14rem;
   }
   // Search views.
-  body.path-laws {
+  body.path-laws,
+  body.path-recently-updated {
     main .container .region-content #block-leaf-lib-unb-ca-content .view-content table {
-      #view-field-full-title-table-column {
+      #view-field-full-title-table-column,
+      #view-title-table-column {
         width: 50%;
       }
     }
