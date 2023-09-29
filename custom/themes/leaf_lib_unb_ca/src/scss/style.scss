@@ -1078,4 +1078,12 @@ footer {
   #view-field-images-pdf-table-column {
     width: 14rem;
   }
+  // Search views.
+  body.path-laws {
+    main .container .region-content #block-leaf-lib-unb-ca-content .view-content table {
+      #view-field-full-title-table-column {
+        width: 50%;
+      }
+    }
+  }
 }
