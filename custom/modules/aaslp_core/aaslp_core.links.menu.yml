@@ -27,6 +27,13 @@ aaslp.about.intro:
   menu_name: main
   url: internal:/introduction-slavery-legislation
   weight: 30
+aaslp.about.recent:
+  title: 'RECENTLY UPDATED'
+  description: 'Recently Updated'
+  parent: aaslp.about
+  menu_name: main
+  url: internal:/recently-updated
+  weight: 40
 aaslp.search:
   title: 'SEARCH'
   description: 'Search'
