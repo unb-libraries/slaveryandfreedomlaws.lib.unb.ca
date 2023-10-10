@@ -1,0 +1,7 @@
+sfl_recently_updated.settings:
+  path: '/admin/config/sfl_recently_updated/settings'
+  defaults:
+    _form: '\Drupal\sfl_recently_updated\Form\RUTextForm'
+    _title: 'Settings for sfl_recently_updated module'
+  requirements:
+    _role: 'aaslp_editor'

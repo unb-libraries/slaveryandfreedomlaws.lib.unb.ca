@@ -1,0 +1,6 @@
+name: Recently Updated
+type: module
+description: Provides a mechanism to edit the Recently Updated text, and store it as configuration, for slaveryandfreedomlaws.lib.unb.ca
+core: 10.x
+core_version_requirement: ^9 || ^10
+package: Custom

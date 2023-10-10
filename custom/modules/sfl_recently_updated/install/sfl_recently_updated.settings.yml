@@ -1,0 +1,9 @@
+langcode: en
+status: true
+id: sfl_recently_updated
+Label: 'Settings for module sfl_recently_updated in slaveryandfreedomlaws.lib.unb.ca'
+module: sfl_recently_updated
+description: 'Settings for Recently Updated page are stored here'
+core: 10.x
+general:
+  text: '<p>Below are the recently added and updated laws.</p>'
