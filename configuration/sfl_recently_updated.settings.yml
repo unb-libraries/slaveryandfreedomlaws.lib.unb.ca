@@ -1,0 +1,4 @@
+general:
+  text:
+    value: '<p>Below are the recently added and updated laws.</p>'
+    format: unb_libraries

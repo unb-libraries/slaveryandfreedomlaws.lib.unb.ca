@@ -3,15 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.general
     - filter.format.unb_libraries
     - node.type.legal_article
     - node.type.page
     - node.type.saved_coordinates
     - node.type.source
   module:
-    - block_content
-    - contextual
     - filter
     - node
     - system
@@ -22,9 +19,7 @@ label: 'AASLP Editor'
 weight: 2
 is_admin: null
 permissions:
-  - 'access block library'
   - 'access content overview'
-  - 'access contextual links'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'create legal_article content'
@@ -35,7 +30,6 @@ permissions:
   - 'delete any page content'
   - 'delete any source content'
   - 'delete legal_article revisions'
-  - 'edit any general block content'
   - 'edit any legal_article content'
   - 'edit any page content'
   - 'edit any saved_coordinates content'

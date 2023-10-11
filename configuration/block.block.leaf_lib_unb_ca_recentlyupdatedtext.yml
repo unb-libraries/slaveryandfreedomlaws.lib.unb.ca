@@ -1,0 +1,25 @@
+uuid: d0f8a46d-5ea4-4f27-8168-6a6b1bc5155c
+langcode: en
+status: true
+dependencies:
+  module:
+    - sfl_recently_updated
+    - system
+  theme:
+    - leaf_lib_unb_ca
+id: leaf_lib_unb_ca_recentlyupdatedtext
+theme: leaf_lib_unb_ca
+region: content
+weight: -8
+provider: null
+plugin: recently_upddated_block
+settings:
+  id: recently_upddated_block
+  label: 'Recently Updated Text'
+  label_display: '0'
+  provider: sfl_recently_updated
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /recently-updated

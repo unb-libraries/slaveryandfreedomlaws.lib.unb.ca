@@ -80,6 +80,7 @@ module:
   search_api: 0
   search_api_solr: 0
   serialization: 0
+  sfl_recently_updated: 0
   sophron: 0
   system: 0
   taxonomy: 0

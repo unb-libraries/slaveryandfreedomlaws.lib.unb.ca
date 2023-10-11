@@ -1,8 +1,0 @@
-uuid: 12497405-2223-4bb5-a68d-7bd500c55918
-langcode: en
-status: true
-dependencies: {  }
-id: general
-label: General
-revision: 0
-description: 'For general content blocks.'

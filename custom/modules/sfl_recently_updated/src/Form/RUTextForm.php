@@ -39,11 +39,13 @@ class RUTextForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config(static::SETTINGS);
 
+    $form['#title'] = 'Settings for Recently Updated page';
+ 
     $form['text'] = [
       '#type' => 'text_format',
       '#format'=> 'unb_libraries',
-      '#title' => $this->t('Enter Recently Updated text:'),
-      '#default_value' => $config->get('general.text'),
+      '#title' => $this->t('Enter Recently Updated header text:'),
+      '#default_value' => $config->get('general.text')['value'],
     ];
 
     return parent::buildForm($form, $form_state);
