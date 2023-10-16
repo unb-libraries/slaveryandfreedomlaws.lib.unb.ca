@@ -4,3 +4,7 @@
 * @file
 * Contains sfl_recently_updated.module.
 */
+
+function sfl_recently_updated_form_sfl_recently_updated_admin_settings_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#value'] = 'Save';
+}
