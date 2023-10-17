@@ -42,6 +42,9 @@ function gen_article($number = NULL, $multimax = 1) {
   $article->field_citation = gen_title('Citation', $number, TRUE);
   $article->field_date = gen_date("1500-01-01", "1900-01-01");
   $article->field_location->target_id = rnd_tid('locations');
+  $first_page = rand(1, 500);
+  $last_page = $first_page + rand(1, 10);
+  $article->field_pages = "$first_page-$last_page";
   // Tags.
   $items = rand(1, $multimax);
 
