@@ -17,6 +17,8 @@ module:
   chosen_lib: 0
   ckeditor5: 0
   config: 0
+  config_filter: 0
+  config_ignore: 0
   contact: 0
   context_branding: 0
   contextual: 0
