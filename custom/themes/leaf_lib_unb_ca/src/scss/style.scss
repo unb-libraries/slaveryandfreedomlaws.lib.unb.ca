@@ -860,6 +860,18 @@ main {
         } 
         .view-content {
           margin-top: 1rem;
+          // Groupings.
+          .view-grouping {
+            margin-top: 2em;
+            table {
+              margin-left: 1.4rem;
+              caption {
+                padding-top: .5rem;
+                padding-bottom: 1.5rem;
+                text-align: left;
+              } 
+            }
+          }            
           // Rows.
           .views-row {
             margin-top: 1rem;
@@ -1080,8 +1092,7 @@ footer {
   }
   // Search views.
   body.path-laws,
-  body.path-recently-updated, 
-  body.path-sources {
+  body.path-recently-updated {
     main .container .region-content #block-leaf-lib-unb-ca-content .view-content table {
       #view-field-full-title-table-column,
       #view-title-table-column {
