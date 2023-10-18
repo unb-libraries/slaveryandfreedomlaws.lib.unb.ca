@@ -6,4 +6,4 @@ module: sfl_recently_updated
 description: 'Settings for Recently Updated page are stored here'
 core: 10.x
 general:
-  text: '<p>Below are the recently added and updated laws.</p>'
+  text:
