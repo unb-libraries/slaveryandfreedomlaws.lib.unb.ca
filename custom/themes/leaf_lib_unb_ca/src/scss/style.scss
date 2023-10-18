@@ -871,7 +871,7 @@ main {
                 text-align: left;
               } 
             }
-          }            
+          }
           // Rows.
           .views-row {
             margin-top: 1rem;
@@ -918,6 +918,12 @@ main {
             columns: 3;
           }
         }
+        // Footer buttons.
+        .view-footer {
+          .btn.btn-secondary {
+            margin-top: 1rem;
+          }
+        }                    
       }
     }
   }
