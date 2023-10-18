@@ -4,3 +4,7 @@ description: Provides a mechanism to edit the Recently Updated text, and store i
 core: 10.x
 core_version_requirement: ^9 || ^10
 package: Custom
+
+dependencies:
+  - drupal.config_filter
+  - drupal.config_ignore
