@@ -6,5 +6,5 @@ core_version_requirement: ^9 || ^10
 package: Custom
 
 dependencies:
-  - drupal.config_filter
-  - drupal.config_ignore
+  - config_filter
+  - config_ignore
