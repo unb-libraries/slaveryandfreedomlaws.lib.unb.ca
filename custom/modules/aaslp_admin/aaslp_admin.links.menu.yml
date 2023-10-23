@@ -32,21 +32,27 @@ aaslp_admin.sources.add:
   url: internal:/node/add/source
   parent: aaslp_admin.admin
   weight: 40
+aaslp_admin.sources.view:
+  title: 'View All Sources'
+  description: 'View all sources.'
+  url: internal:/sources
+  parent: aaslp_admin.admin
+  weight: 50
 aaslp_admin.admin.laws.audit:
   title: 'Audit Laws'
   description: 'Audit content.'
   url: internal:/audit-laws
   parent: aaslp_admin.admin
-  weight: 50
+  weight: 60
 aaslp_admin.admin.arc_gis.export:
   title: 'ArcGIS Export'
   description: 'Export law data for ArcGIS.'
   url: internal:/arcgis-export-preview
   parent: aaslp_admin.admin
-  weight: 60
+  weight: 70
 aaslp_admin.admin.recently_updated_text:
   title: 'Edit Recently Updated'
   description: 'Edit header text for Recnetly Updated page.'
   url: internal:/admin/config/sfl_recently_updated/settings
   parent: aaslp_admin.admin
-  weight: 70
+  weight: 80
