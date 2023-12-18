@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.legal_article.field_notes
     - field.field.node.legal_article.field_pages
     - field.field.node.legal_article.field_parent_location
+    - field.field.node.legal_article.field_pdf_published
     - field.field.node.legal_article.field_revision_switch
     - field.field.node.legal_article.field_saved_coordinates
     - field.field.node.legal_article.field_source
@@ -106,6 +107,16 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_pdf_published:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 13
     region: content
   field_saved_coordinates:
     type: entity_reference_label

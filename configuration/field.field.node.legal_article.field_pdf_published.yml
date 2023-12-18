@@ -1,0 +1,23 @@
+uuid: 13ef1d3e-9d10-4f68-b2e8-aab715d94cf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdf_published
+    - node.type.legal_article
+id: node.legal_article.field_pdf_published
+field_name: field_pdf_published
+entity_type: node
+bundle: legal_article
+label: 'Show PDF image(s) on public display'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

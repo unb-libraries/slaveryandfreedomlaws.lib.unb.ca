@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.legal_article.field_notes
     - field.field.node.legal_article.field_pages
     - field.field.node.legal_article.field_parent_location
+    - field.field.node.legal_article.field_pdf_published
     - field.field.node.legal_article.field_revision_switch
     - field.field.node.legal_article.field_saved_coordinates
     - field.field.node.legal_article.field_source
@@ -54,6 +55,7 @@ hidden:
   field_notes: true
   field_pages: true
   field_parent_location: true
+  field_pdf_published: true
   field_revision_switch: true
   field_saved_coordinates: true
   field_source: true

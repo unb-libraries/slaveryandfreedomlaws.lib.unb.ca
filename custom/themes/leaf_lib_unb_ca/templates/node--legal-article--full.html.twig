@@ -156,7 +156,7 @@
               <a id="cite" class="btn btn-secondary">Copy<i class="fa fa-copy"></i></a>
             </div>
           </div>
-           {%- if content.field_images_pdf|field_value %}
+           {%- if content.field_images_pdf|field_value and content.field_pdf_published|field_value[0]['#markup']|lower != 'no' %}
             <h2 class="field__label">Download Original</h2>
             {{ content.field_images_pdf }}
           {%- endif -%}
