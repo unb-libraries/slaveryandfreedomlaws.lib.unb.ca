@@ -29,6 +29,7 @@ function refresh_nodes(string $bundle) {
 
       if ($node) {
         $title = $node->getTitle();
+        $node->set('field_pdf_published', $node->field_pdf_published->getValue()[0]['value']);
         $node->save();
         echo "[-] [$title]->[Updated]\n";
       }
