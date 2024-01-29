@@ -138,7 +138,7 @@ function rnd_tid($vid) {
   $tids = !empty($vid) ? \Drupal::entityQuery('taxonomy_term')
     ->condition('vid', $vid)
     ->accessCheck(TRUE)
-    ->execute() : NULL;
+    ->accesscheck(false)->execute() : NULL;
 
   // Return random value from $tids.
   if (!empty($tids)) {
@@ -156,7 +156,7 @@ function rnd_nid($bundle) {
   $nids = !empty($bundle) ? \Drupal::entityQuery('node')
     ->condition('type', $bundle)
     ->accessCheck(TRUE)
-    ->execute() : NULL;
+    ->accesscheck(false)->execute() : NULL;
 
   // Return random value from $nids.
   if (!empty($nids)) {

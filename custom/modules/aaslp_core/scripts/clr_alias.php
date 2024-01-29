@@ -9,7 +9,7 @@
 
 $nids = \Drupal::entityQuery('node')
   ->condition('type', 'legal_article')
-  ->execute();
+  ->accesscheck(false)->execute();
 
 $path_alias_manager = \Drupal::entityTypeManager()->getStorage('path_alias');
 

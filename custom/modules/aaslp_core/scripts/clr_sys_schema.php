@@ -17,5 +17,5 @@ clr_sys_schema('devel');
  *   A string indicating the entry name.
  */
 function clr_sys_schema(string $name) {
-  \Drupal::service('database')->delete('key_value')->condition('name', $name)->execute();
+  \Drupal::service('database')->delete('key_value')->condition('name', $name)->accesscheck(false)->execute();
 }

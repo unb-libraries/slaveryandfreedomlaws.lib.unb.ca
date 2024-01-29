@@ -21,7 +21,7 @@ function refresh_terms(string $vocabulary) {
 
   $tids = \Drupal::entityQuery('taxonomy_term')
     ->condition('vid', $vocabulary)
-    ->execute();
+    ->accesscheck(false)->execute();
 
   if (!empty($tids)) {
     foreach ($tids as $tid) {

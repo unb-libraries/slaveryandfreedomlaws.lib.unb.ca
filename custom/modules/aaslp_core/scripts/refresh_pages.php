@@ -21,7 +21,7 @@ function refresh_nodes(string $bundle) {
 
   $nids = \Drupal::entityQuery('node')
     ->condition('type', $bundle)
-    ->execute();
+    ->accesscheck(false)->execute();
 
   if (!empty($nids)) {
     foreach ($nids as $nid) {
