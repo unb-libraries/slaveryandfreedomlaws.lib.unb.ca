@@ -378,7 +378,7 @@ display:
           role:
             aaslp_editor: aaslp_editor
       cache:
-        type: tag
+        type: none
         options: {  }
       empty:
         area_text_custom:
