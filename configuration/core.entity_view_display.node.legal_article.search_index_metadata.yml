@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.search_index_metadata
     - field.field.node.legal_article.body
     - field.field.node.legal_article.field_abstract
+    - field.field.node.legal_article.field_attribution
     - field.field.node.legal_article.field_date
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_images_pdf
@@ -86,6 +87,7 @@ content:
     region: content
 hidden:
   body: true
+  field_attribution: true
   field_images_pdf: true
   field_location_address: true
   field_location_coordinates: true

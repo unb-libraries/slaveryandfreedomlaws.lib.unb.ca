@@ -1,0 +1,20 @@
+uuid: c0fbaa5e-d0da-4221-a606-d5b1673f3aa3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_attribution
+field_name: field_attribution
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

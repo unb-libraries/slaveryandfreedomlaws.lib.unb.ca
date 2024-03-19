@@ -1,0 +1,24 @@
+uuid: 5b7ad7d2-d105-4354-a721-2651cccf7ef8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_description_html
+    - filter.format.unb_libraries
+    - taxonomy.vocabulary.attributions
+  module:
+    - text
+id: taxonomy_term.attributions.field_description_html
+field_name: field_description_html
+entity_type: taxonomy_term
+bundle: attributions
+label: 'Description (HTML)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - unb_libraries
+field_type: text_long

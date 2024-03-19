@@ -1,0 +1,8 @@
+uuid: f0116ea7-a5bc-4806-a9c0-2f6d0eb426b7
+langcode: en
+status: true
+dependencies: {  }
+name: Attributions
+vid: attributions
+description: 'Attribution sources for law PDFs.'
+weight: 0

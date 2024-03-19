@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.legal_article.body
     - field.field.node.legal_article.field_abstract
+    - field.field.node.legal_article.field_attribution
     - field.field.node.legal_article.field_date
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_images_pdf
@@ -45,6 +46,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_attribution:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_date:
     type: datetime_default

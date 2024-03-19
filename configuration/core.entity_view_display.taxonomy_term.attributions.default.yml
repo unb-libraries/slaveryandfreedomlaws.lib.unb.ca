@@ -1,0 +1,25 @@
+uuid: 94e9cfb8-837c-4879-866e-e143cad8851b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.attributions.field_description_html
+    - taxonomy.vocabulary.attributions
+  module:
+    - text
+id: taxonomy_term.attributions.default
+targetEntityType: taxonomy_term
+bundle: attributions
+mode: default
+content:
+  field_description_html:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  langcode: true
+  search_api_excerpt: true

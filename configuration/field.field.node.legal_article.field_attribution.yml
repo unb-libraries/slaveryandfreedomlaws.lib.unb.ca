@@ -1,0 +1,29 @@
+uuid: 3a1a64e2-64a3-4066-a6f0-316a1b5b380d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attribution
+    - node.type.legal_article
+    - taxonomy.vocabulary.attributions
+id: node.legal_article.field_attribution
+field_name: field_attribution
+entity_type: node
+bundle: legal_article
+label: Attribution
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      attributions: attributions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: c1abb10c-179b-430f-8f1c-58f99e0a1766
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.attributions
+id: taxonomy_term.attributions
+target_entity_type_id: taxonomy_term
+target_bundle: attributions
+default_langcode: site_default
+language_alterable: false

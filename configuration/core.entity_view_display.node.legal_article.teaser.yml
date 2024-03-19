@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.legal_article.body
     - field.field.node.legal_article.field_abstract
+    - field.field.node.legal_article.field_attribution
     - field.field.node.legal_article.field_date
     - field.field.node.legal_article.field_full_title
     - field.field.node.legal_article.field_images_pdf
@@ -45,6 +46,7 @@ content:
     region: content
 hidden:
   field_abstract: true
+  field_attribution: true
   field_date: true
   field_full_title: true
   field_images_pdf: true

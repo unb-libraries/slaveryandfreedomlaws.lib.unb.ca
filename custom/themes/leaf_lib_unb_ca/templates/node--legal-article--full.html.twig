@@ -159,6 +159,9 @@
            {%- if content.field_images_pdf|field_value and content.field_pdf_published|field_value[0]['#markup']|lower == 'yes' %}
             <h2 class="field__label">Download Original</h2>
             {{ content.field_images_pdf }}
+            <div class="field field--name-field-attribution-html field--label-hidden field__item mt-3">
+              {{ content.field_attribution.0['#entity'].field_description_html.getValue().0.value|raw }}
+            </div>
           {%- endif -%}
           {%- if content.field_law_tags|field_value %}
             <div class="field field--name-law-tags">
@@ -177,5 +180,4 @@
       </div>
     </div>
   </div>
-
 </article>
