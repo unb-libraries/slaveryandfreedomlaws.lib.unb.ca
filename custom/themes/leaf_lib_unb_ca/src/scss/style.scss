@@ -845,6 +845,13 @@ main {
                   }
                 }
               }
+              // Attribution.
+              .field--name-field-attribution-html {
+                p {
+                  font-size: .9rem;
+                  opacity: .7;            
+                }
+              }
               // Tags.
               .field--name-law-tags {
                 a {

@@ -14,11 +14,11 @@ aaslp.about.project:
   url: internal:/about-project
   weight: 10
 aaslp.about.ack:
-  title: 'ACKNOWLEDGEMENTS'
-  description: 'Acknowledgements'
+  title: 'TERMS OF USE'
+  description: 'Terms of use'
   parent: aaslp.about
   menu_name: main
-  url: internal:/acknowledgements
+  url: internal:/terms-use
   weight: 20
 aaslp.about.intro:
   title: 'INTRODUCTION TO SLAVERY LEGISLATION'

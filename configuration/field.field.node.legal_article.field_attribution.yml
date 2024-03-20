@@ -10,7 +10,7 @@ id: node.legal_article.field_attribution
 field_name: field_attribution
 entity_type: node
 bundle: legal_article
-label: Attribution
+label: 'Image Source Attribution'
 description: ''
 required: false
 translatable: false
