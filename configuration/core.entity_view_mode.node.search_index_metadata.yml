@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.search_index_metadata
 label: 'Search index metadata'
+description: ''
 targetEntityType: node
 cache: true
