@@ -558,71 +558,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_pdf_published:
-          id: field_pdf_published
-          table: node__field_pdf_published
-          field: field_pdf_published
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'PDF / Published'
-          exclude: false
-          alter:
-            alter_text: true
-            text: "{{- field_images_pdf -}}\r\n{%- if field_images_pdf != 'No' -%}\r\n<i class=\"fa fa-check\"></i>\r\n{%- endif -%}\r\n"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: boolean
-            format_custom_false: ''
-            format_custom_true: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_attribution:
           id: field_attribution
           table: node__field_attribution
@@ -685,6 +620,71 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_pdf_published:
+          id: field_pdf_published
+          table: node__field_pdf_published
+          field: field_pdf_published
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'PDF / Published / Attribution'
+          exclude: false
+          alter:
+            alter_text: true
+            text: "{%- if field_images_pdf != \"No\" -%} \r\n{{- field_images_pdf -}}\r\n{%- if field_pdf_published__value -%}\r\n<i class=\"fa fa-check\"></i>\r\n{%- else -%}\r\n<i class=\"fa fa-xmark\"></i>\r\n{%- endif -%}\r\n{{- \" | \" -}}\r\n{%- if field_attribution -%}\r\n<i class=\"fa fa-check\"></i>\r\n{%- else -%}\r\n<i class=\"fa fa-xmark\"></i>\r\n{%- endif -%}\r\n{%- else -%}\r\n{{- \"No\" -}} \r\n{%- endif -%}"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: boolean
+            format_custom_false: ''
+            format_custom_true: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_source:
           id: field_source
           table: node__field_source
@@ -693,11 +693,11 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Source / Attribution'
+          label: Source
           exclude: false
           alter:
             alter_text: true
-            text: "{%- if field_source__target_id > 0 -%}\r\n<i class=\"fa fa-check\"></i>\r\n{%- else -%}\r\n<i class=\"fa fa-xmark\"></i>\r\n{%- endif -%}\r\n{{- \" / \" -}}\r\n{%- if field_attribution -%}\r\n<i class=\"fa fa-check\"></i>\r\n{%- else -%}\r\n<i class=\"fa fa-xmark\"></i>\r\n{%- endif -%}"
+            text: "{%- if field_source__target_id > 0 -%}\r\n{{- \"Yes\" -}}\r\n{%- endif -%}"
             make_link: false
             path: ''
             absolute: false
@@ -730,7 +730,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: "{%- if field_source__target_id > 0 -%}\r\n<i class=\"fa fa-check\"></i>\r\n{%- else -%}\r\n<i class=\"fa fa-xmark\"></i>\r\n{%- endif -%}\r\n{{- \" / \" -}}\r\n{%- if field_attribution -%}\r\n<i class=\"fa fa-check\"></i>\r\n{%- else -%}\r\n<i class=\"fa fa-xmark\"></i>\r\n{%- endif -%}"
+          empty: '{{- "No" -}}'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
