@@ -3767,17 +3767,17 @@
         },
         {
             "name": "drupal/leaflet",
-            "version": "10.2.12",
+            "version": "10.2.13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/leaflet.git",
-                "reference": "10.2.12"
+                "reference": "10.2.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/leaflet-10.2.12.zip",
-                "reference": "10.2.12",
-                "shasum": "0c78c96e5438e9b3047f1541083e324e03b67040"
+                "url": "https://ftp.drupal.org/files/projects/leaflet-10.2.13.zip",
+                "reference": "10.2.13",
+                "shasum": "ab9386ddf4716124110141f88af11c992f5327de"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
@@ -3786,8 +3786,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "10.2.12",
-                    "datestamp": "1709558282",
+                    "version": "10.2.13",
+                    "datestamp": "1714774113",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4302,7 +4302,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.34",
-                    "datestamp": "1712400445",
+                    "datestamp": "1714899074",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4922,16 +4922,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "12.5.1",
+            "version": "12.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "71fcea30a22e7336e17be18bb5945400b2c63fad"
+                "reference": "4aebed85dc818ff762f2e24a85b023d2a52050df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/71fcea30a22e7336e17be18bb5945400b2c63fad",
-                "reference": "71fcea30a22e7336e17be18bb5945400b2c63fad",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/4aebed85dc818ff762f2e24a85b023d2a52050df",
+                "reference": "4aebed85dc818ff762f2e24a85b023d2a52050df",
                 "shasum": ""
             },
             "require": {
@@ -5054,7 +5054,7 @@
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "security": "https://github.com/drush-ops/drush/security/advisories",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/12.5.1"
+                "source": "https://github.com/drush-ops/drush/tree/12.5.2"
             },
             "funding": [
                 {
@@ -5062,7 +5062,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-20T15:03:27+00:00"
+            "time": "2024-05-02T17:20:48+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -11781,16 +11781,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.7.4",
+            "version": "2.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "a625e50598e12171d3f60b1149eb530690c43474"
+                "reference": "fabd995783b633829fd4280e272284b39b6ae702"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/a625e50598e12171d3f60b1149eb530690c43474",
-                "reference": "a625e50598e12171d3f60b1149eb530690c43474",
+                "url": "https://api.github.com/repos/composer/composer/zipball/fabd995783b633829fd4280e272284b39b6ae702",
+                "reference": "fabd995783b633829fd4280e272284b39b6ae702",
                 "shasum": ""
             },
             "require": {
@@ -11875,7 +11875,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.7.4"
+                "source": "https://github.com/composer/composer/tree/2.7.6"
             },
             "funding": [
                 {
@@ -11891,7 +11891,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-22T19:17:03+00:00"
+            "time": "2024-05-04T21:03:15+00:00"
         },
         {
             "name": "composer/metadata-minifier",
