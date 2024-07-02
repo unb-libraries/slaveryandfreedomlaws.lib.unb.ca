@@ -194,9 +194,7 @@ body {
   background-color: $light;
   // Non-taxonomy pages with image background.
   &.bg-path {
-    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.png);
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map-v2.webp);
     // Not-homepage specific.
     &:not(.path-frontpage) {
       main {
@@ -287,9 +285,7 @@ body {
   }
   // Taxonomy pages.
   &.path-taxonomy {
-    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.png);
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map-v2.webp);
     // Not-homepage specific.
     &:not(.path-frontpage) {
       main {
@@ -502,7 +498,8 @@ body {
             height: 518px;
             border-bottom-left-radius: 1rem;
             border-bottom-right-radius: 1rem;
-            background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/map-img.jpg);
+            background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/map-img-v2.webp);
+            background-size: cover;
             
             .map-window {
               width: 24rem;
@@ -549,9 +546,7 @@ body {
   }
   // Locations-map specific.
   &.path-locations-map {
-    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.png);
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map-v2.webp);
     main {
       .container {
         padding-left: 1rem;
@@ -974,9 +969,7 @@ footer {
   }
   // Homepage specific.
   body.path-frontpage {
-    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map.png);
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map-v2.webp);
     main {
       .region-content {
         form {
