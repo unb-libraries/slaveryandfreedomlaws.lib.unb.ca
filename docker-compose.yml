@@ -67,6 +67,8 @@ services:
       - "4111:8025"
     networks:
       - slaveryandfreedomlaws.lib.unb.ca
+    profiles:
+      - mailhog
   cypress:
     image: ghcr.io/unb-libraries/einbaum/drupal:12.x-1.x
     depends_on:
