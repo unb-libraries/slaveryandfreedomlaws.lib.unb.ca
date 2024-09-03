@@ -191,7 +191,7 @@
     "drupal/simple_sitemap": "^4",
     "drupal/title_length": "^2",
     "drupal/token": "^1",
-    "drupal/twig_field_value": "^2",
+    "drupal/twig_field_value": "2.0.2",
     "drupal/twig_tweak": "^3",
     "drupal/views_timelinejs": "^4",
     "furf/jquery-ui-touch-punch": "dev-master",
