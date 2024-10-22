@@ -6,3 +6,4 @@ name: Locations
 vid: locations
 description: 'Locations where slavery laws were in effect.'
 weight: 0
+new_revision: false

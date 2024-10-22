@@ -6,3 +6,4 @@ name: Attributions
 vid: attributions
 description: 'Attribution sources for law PDFs.'
 weight: 0
+new_revision: false

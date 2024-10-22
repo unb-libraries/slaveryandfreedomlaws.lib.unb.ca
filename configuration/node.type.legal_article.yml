@@ -11,7 +11,7 @@ third_party_settings:
 name: 'Legal Article'
 type: legal_article
 description: 'A document that describes a specific slavery law.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

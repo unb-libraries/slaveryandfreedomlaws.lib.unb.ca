@@ -6,3 +6,4 @@ name: 'Law Tags'
 vid: law_tags
 description: 'Search tags associated with slavery laws.'
 weight: 0
+new_revision: false
