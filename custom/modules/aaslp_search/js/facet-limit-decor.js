@@ -1,25 +1,28 @@
-(function($) {
+(function () {
   'use strict';
 
   Drupal.behaviors.facetLimitDecor = {
     attach: function (context, settings) {
-      // On documeny ready.
-      $(document).ready( function() {
-        // Prepend fontawesome icon to facet soft-limit link and mark as decorated to prevent repeats.
-        $(".facets-soft-limit-link").prepend('<i class="fa fa-plus"></i>');
-      });
-      // On clicking the facet soft-limit link.
-      $(".facets-soft-limit-link").click( function() {
-        // If facet open...
-        if ($(this).hasClass("open")) {
-          // Prepend fontawesome minus icon to facet soft-limit link.
-          $(this).prepend('<i class="fa fa-minus"></i>');
-        }
-        else {
-          // Prepend fontawesome plus icon to facet soft-limit link.
-          $(this).prepend('<i class="fa fa-plus"></i>');
-        }
+      // Find all elements with the class "facets-soft-limit-link" and process them using the "once" utility.
+      const links = once('facetLimitDecor', '.facets-soft-limit-link', context);
+
+      // Prepend the fontawesome "plus" icon to each link.
+      links.forEach(function (link) {
+        link.insertAdjacentHTML('afterbegin', '<i class="fa fa-plus"></i>');
+
+        // Add a click event listener to toggle the icons.
+        link.addEventListener('click', function () {
+          // Remove any existing icons inside the link to prevent duplicates.
+          this.querySelectorAll('i').forEach(icon => icon.remove());
+
+          // If the link has the "open" class, prepend the "minus" icon, otherwise prepend the "plus" icon.
+          if (this.classList.contains('open')) {
+            this.insertAdjacentHTML('afterbegin', '<i class="fa fa-minus"></i>');
+          } else {
+            this.insertAdjacentHTML('afterbegin', '<i class="fa fa-plus"></i>');
+          }
+        });
       });
     },
   };
-})(jQuery);
+})();
