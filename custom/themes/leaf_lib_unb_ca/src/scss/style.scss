@@ -690,11 +690,7 @@ main {
           font-size: .9rem;
           margin-left: 1rem;
           svg {
-            display: none;
-            &:first-child {
-              display: initial;
-              margin-right: .2rem;
-            }
+            margin-right: .2rem;
           }
         }
       }
