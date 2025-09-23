@@ -104,10 +104,8 @@ module:
   minimal: 1000
 theme:
   stable9: 0
-  bootstrap4: 0
   bootstrap5: 0
   claro: 0
-  aaslp_lib_unb_ca: 0
   aaslp_admin_theme: 0
   leaf_lib_unb_ca: 0
 profile: minimal
