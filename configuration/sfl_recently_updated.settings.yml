@@ -1,4 +1,4 @@
 general:
   text:
-    value: null
+    value: '<p>Below are the recently added and updated laws. More transcriptions are forthcoming.</p>'
     format: unb_libraries
