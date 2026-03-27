@@ -678,10 +678,10 @@ display:
         page_1: '0'
       filename: leaf_arcgis.csv
       automatic_download: true
-      store_in_public_file_directory: null
       custom_redirect_path: false
       redirect_to_display: page_1
       include_query_params: false
+      store_in_public_file_directory: null
     cache_metadata:
       max-age: -1
       contexts:
