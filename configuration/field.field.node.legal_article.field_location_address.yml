@@ -24,9 +24,6 @@ third_party_settings:
       handling: preserve
       status_message: true
       log: true
-    geocode:
-      field: body
-      delta_handling: default
 id: node.legal_article.field_location_address
 field_name: field_location_address
 entity_type: node
