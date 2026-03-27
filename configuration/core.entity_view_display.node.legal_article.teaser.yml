@@ -21,7 +21,6 @@ dependencies:
     - field.field.node.legal_article.field_revision_switch
     - field.field.node.legal_article.field_saved_coordinates
     - field.field.node.legal_article.field_source
-    - field.field.node.legal_article.field_timeline_event
     - node.type.legal_article
   module:
     - text
@@ -61,6 +60,5 @@ hidden:
   field_revision_switch: true
   field_saved_coordinates: true
   field_source: true
-  field_timeline_event: true
   langcode: true
   search_api_excerpt: true

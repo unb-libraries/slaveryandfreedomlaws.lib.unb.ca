@@ -537,46 +537,6 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_timeline_event_value:
-          id: field_timeline_event_value
-          table: node__field_timeline_event
-          field: field_timeline_event_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: boolean
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: 'Timeline events only?'
-            description: ''
-            use_operator: false
-            operator: field_timeline_event_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_timeline_event_value
-            required: false
-            remember: true
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              aaslp_editor: '0'
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       style:
         type: table
         options:

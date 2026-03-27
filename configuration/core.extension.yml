@@ -97,7 +97,6 @@ module:
   user: 0
   views: 0
   views_data_export: 0
-  views_timelinejs: 0
   views_ui: 0
   pathauto: 1
   externalauth: 10

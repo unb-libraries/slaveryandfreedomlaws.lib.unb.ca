@@ -81,19 +81,6 @@ function legal_article_node_presave($entity) {
         'lat' => $latitude,
       ];
     }
-    
-    // Purge all extra fields if timeline event.
-    if (!empty($entity->field_timeline_event->getValue()[0]['value']) and
-    $entity->field_timeline_event->getValue()[0]['value'] == 1) {
-      $entity->field_citation =
-      $entity->field_location =
-      $entity->field_location_address =
-      $entity->field_location_coordinates =
-      $entity->field_notes =
-      $entity->field_source =
-      $entity->field_images_pdf =
-      NULL;
-    }
 
     // Update field_images_pdf filename.
     $pdf_id = $entity->field_images_pdf->getValue()[0]['target_id'] ?? NULL;

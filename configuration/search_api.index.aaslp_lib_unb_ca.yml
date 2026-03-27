@@ -3,20 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_date
-    - field.storage.node.body
-    - field.storage.node.field_full_title
-    - field.storage.node.field_location
-    - field.storage.node.field_law_tags
-    - field.storage.node.field_timeline_event
-    - search_api.server.drupal_solr_lib_unb_ca
     - core.entity_view_mode.node.search_index_metadata
+    - field.storage.node.body
+    - field.storage.node.field_date
+    - field.storage.node.field_full_title
+    - field.storage.node.field_law_tags
+    - field.storage.node.field_location
+    - search_api.server.drupal_solr_lib_unb_ca
   module:
+    - legal_article
+    - node
     - search_api_solr
     - taxonomy
-    - node
-    - search_api
-    - legal_article
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -85,14 +83,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_full_title
-  field_timeline_event:
-    label: 'Timeline Event'
-    datasource_id: 'entity:node'
-    property_path: field_timeline_event
-    type: boolean
-    dependencies:
-      config:
-        - field.storage.node.field_timeline_event
   search_body:
     label: 'Full Text'
     datasource_id: 'entity:node'
@@ -167,6 +157,7 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
   entity_type: {  }
   highlight:
     weights:
@@ -194,11 +185,11 @@ processor_settings:
     title: false
     alt: false
     tags:
-      b: 2
-      h1: 5
-      h2: 3
-      h3: 2
-      strong: 2
+      b: 2.0
+      h1: 5.0
+      h2: 3.0
+      h3: 2.0
+      strong: 2.0
   index_article_year: {  }
   language_with_fallback: {  }
   rendered_item: {  }
@@ -210,6 +201,7 @@ tracker_settings:
     indexing_order: lifo
 options:
   cron_limit: 50
+  delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
 server: drupal_solr_lib_unb_ca
