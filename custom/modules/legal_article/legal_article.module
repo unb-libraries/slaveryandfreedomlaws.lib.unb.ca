@@ -20,8 +20,7 @@ use Drupal\taxonomy\Entity\Term;
  */
 function legal_article_node_delete($entity) {
   // Delete field_images_pdf file.
-  $pdf_id = $entity->field_images_pdf ? $entity->field_images_pdf->getValue()[0]['target_id'] :
-    NULL;
+  $pdf_id = $entity->field_images_pdf->getValue()[0]['target_id'] ?? NULL;
   
   if ($pdf_id) {
     $file = File::load($pdf_id);
