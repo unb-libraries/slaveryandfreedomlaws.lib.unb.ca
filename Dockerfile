@@ -2,7 +2,7 @@ FROM ghcr.io/unb-libraries/drupal:11.x-1.x-unblib
 MAINTAINER UNB Libraries <libsupport@unb.ca>
 
 # Install additional OS packages.
-ENV ADDITIONAL_OS_PACKAGES postfix php-ldap php-xmlreader php-zip imagemagick php83-pecl-redis
+ENV ADDITIONAL_OS_PACKAGES postfix php-ldap php-xmlreader php-zip imagemagick php83-pecl-redis ghostscript
 ENV DRUPAL_SITE_ID aaslp
 ENV DRUPAL_SITE_URI slaveryandfreedomlaws.lib.unb.ca
 ENV DRUPAL_SITE_UUID 842a4c70-3da8-41a9-8948-9dbec80be2bd
