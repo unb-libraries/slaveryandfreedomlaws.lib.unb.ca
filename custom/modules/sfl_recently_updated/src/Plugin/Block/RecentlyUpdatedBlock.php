@@ -77,8 +77,10 @@ class RecentlyUpdatedBlock extends BlockBase implements ContainerFactoryPluginIn
    * {@inheritdoc}
    */
   public function build() {
+    $markup = $this->configFactory->get('sfl_recently_updated.settings')->get('general.text') ??
+      '';
     return [
-      '#markup' => $this->t($this->configFactory->get('sfl_recently_updated.settings')->get('general.text')['value']),
+      '#markup' => $markup,
     ];
   }
 

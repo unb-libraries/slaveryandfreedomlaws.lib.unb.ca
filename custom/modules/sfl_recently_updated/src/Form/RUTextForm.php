@@ -38,6 +38,7 @@ class RUTextForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config(static::SETTINGS);
+    $text = $config->get('general.text') ?? '';
 
     $form['#title'] = 'Recently Updated';
  
@@ -45,7 +46,7 @@ class RUTextForm extends ConfigFormBase {
       '#type' => 'text_format',
       '#format'=> 'unb_libraries',
       '#title' => $this->t('Edit introduction text:'),
-      '#default_value' => $config->get('general.text')['value'],
+      '#default_value' => $text,
     ];
 
     return parent::buildForm($form, $form_state);
@@ -58,7 +59,7 @@ class RUTextForm extends ConfigFormBase {
     // Retrieve the configuration.
     $this->configFactory->getEditable(static::SETTINGS)
       // Set the submitted configuration setting.
-      ->set('general.text', $form_state->getValue('text'))
+      ->set('general.text', $form_state->getValue('text')['value'])
       ->save();
 
     parent::submitForm($form, $form_state);
