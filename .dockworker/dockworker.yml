@@ -1,5 +1,9 @@
 dockworker:
   version: '6'
+  drupal:
+    schemas:
+      ignore_enforcement:
+        - core.entity_view_display.*
   application:
     name: Laws of Enslavement and Freedomin The Anglo-Atlantic World
     uri: https://slaveryandfreedomlaws.lib.unb.ca
