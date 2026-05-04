@@ -1,41 +1,32 @@
 sfl_recently_updated.settings:
-  type: config
+  type: config_object
   label: 'sfl_recently_updated settings'
   mapping:
     langcode:
       type: string
       label: 'Language code'
-      description: 'Language code for the configuration object (for example "en").'
     status:
       type: boolean
       label: 'Status'
-      description: 'Whether the feature is enabled.'
     id:
       type: string
       label: 'Config ID'
-      description: 'Unique identifier for this configuration object.'
     Label:
       type: string
       label: 'Human-readable label'
-      description: 'Human-readable label stored with a capitalized key.'
     module:
       type: string
       label: 'Module'
-      description: 'Providing module machine name.'
     description:
       type: string
       label: 'Description'
-      description: 'Textual description of the config purpose.'
     core:
       type: string
       label: 'Drupal core compatibility'
-      description: 'Drupal core compatibility string (for example "10.x").'
     general:
       type: mapping
       label: 'General settings'
-      description: 'General grouped settings for the module.'
       mapping:
         text:
           type: string
           label: 'Text'
-          description: 'Arbitrary text stored in the general settings group.'
