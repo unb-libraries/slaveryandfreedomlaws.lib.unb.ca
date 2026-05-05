@@ -38,9 +38,23 @@ class RUTextForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config(static::SETTINGS);
-    dump($config->get('general.text'));
-    $text = '';
+    $text_cfg = $config->get('general.text');
 
+    if ($text_cfg) {
+      if (is_array($text_cfg)) {
+        $text = $text_cfg['value'];
+      }
+      else {
+        $text = is_string($text_cfg) ?
+          $text_cfg :
+          ''
+        ;
+      }
+    }
+    else {
+      $text = '';
+    }
+    
     $form['#title'] = 'Recently Updated';
  
     $form['text'] = [
