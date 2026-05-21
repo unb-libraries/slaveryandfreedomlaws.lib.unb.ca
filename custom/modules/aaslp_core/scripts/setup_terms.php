@@ -167,7 +167,7 @@ add_terms('law_tags', $tags);
  * @param int $parent_id
  *   The ID of the parent term, if any.
  */
-function add_terms(string $vid, array $terms, int $parent_id = NULL) {
+function add_terms(string $vid, array $terms, ?int $parent_id = NULL) {
 
   foreach ($terms as $term) {
     $new_term = Term::create([
