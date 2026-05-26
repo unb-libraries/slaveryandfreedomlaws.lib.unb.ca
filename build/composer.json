@@ -149,7 +149,7 @@
   ],
   "require": {
     "ckeditor-plugin/widget": "^4",
-    "dompdf/dompdf": "^2",
+    "dompdf/dompdf": "^3",
     "drupal/address": "^2",
     "drupal/admin_toolbar": "^3",
     "drupal/bootstrap4": "^3",
