@@ -2,17 +2,18 @@ uuid: 82328ef1-03df-4410-a6f7-55f834aae661
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.legal_article
   module:
     - node
 id: legal_article_path
 label: 'Legal Article Path'
 type: 'canonical_entities:node'
-pattern: 'laws/[node:field_location]-[node:field_date:date:html_year]'
+pattern: '/laws/[node:field_location]-[node:field_date:date:html_year]'
 selection_criteria:
   43cb5088-dcae-4d83-8813-bb020487c715:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 43cb5088-dcae-4d83-8813-bb020487c715
     context_mapping:
       node: node
     bundles:

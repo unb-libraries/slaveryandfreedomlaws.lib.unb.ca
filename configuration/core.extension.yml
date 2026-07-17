@@ -23,6 +23,7 @@ module:
   context_branding: 0
   contextual: 0
   csv_serialization: 0
+  ctools: 0
   datetime: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0

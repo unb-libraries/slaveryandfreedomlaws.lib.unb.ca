@@ -2,17 +2,18 @@ uuid: 7a4c6667-a7bc-4cf7-aa08-f85b5e780fd2
 langcode: en
 status: true
 dependencies:
+  config:
+    - taxonomy.vocabulary.law_tags
   module:
     - taxonomy
 id: tags_pattern
 label: 'Tags Path'
 type: 'canonical_entities:taxonomy_term'
-pattern: 'tags/[term:name]'
+pattern: '/tags/[term:name]'
 selection_criteria:
   3e231f94-26c6-4849-91bb-f1aaa60240ed:
     id: 'entity_bundle:taxonomy_term'
     negate: false
-    uuid: 3e231f94-26c6-4849-91bb-f1aaa60240ed
     context_mapping:
       taxonomy_term: taxonomy_term
     bundles:
