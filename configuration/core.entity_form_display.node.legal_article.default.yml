@@ -11,14 +11,11 @@ dependencies:
     - field.field.node.legal_article.field_images_pdf
     - field.field.node.legal_article.field_law_tags
     - field.field.node.legal_article.field_location
-    - field.field.node.legal_article.field_location_address
-    - field.field.node.legal_article.field_location_coordinates
     - field.field.node.legal_article.field_notes
     - field.field.node.legal_article.field_pages
     - field.field.node.legal_article.field_parent_location
     - field.field.node.legal_article.field_pdf_published
     - field.field.node.legal_article.field_revision_switch
-    - field.field.node.legal_article.field_saved_coordinates
     - field.field.node.legal_article.field_source
     - node.type.legal_article
   module:
@@ -138,10 +135,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_location_address: true
-  field_location_coordinates: true
   field_parent_location: true
-  field_saved_coordinates: true
   langcode: true
   path: true
   promote: true

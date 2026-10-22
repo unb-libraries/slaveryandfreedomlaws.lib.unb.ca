@@ -76,17 +76,6 @@ services:
       - slaveryandfreedomlaws.lib.unb.ca
     profiles:
       - mailhog
-  cypress:
-    image: ghcr.io/unb-libraries/einbaum/drupal:12.x-1.x
-    depends_on:
-      - slaveryandfreedomlaws-lib-unb-ca
-    environment:
-      - BASE_URL=http://slaveryandfreedomlaws.lib.unb.ca
-    volumes:
-      - ./tests/einbaum/e2e:/einbaum/e2e
-      - ./tests/einbaum/fixtures:/einbaum/fixtures
-    networks:
-      - slaveryandfreedomlaws.lib.unb.ca
 networks:
   slaveryandfreedomlaws.lib.unb.ca:
     name: slaveryandfreedomlaws.lib.unb.ca

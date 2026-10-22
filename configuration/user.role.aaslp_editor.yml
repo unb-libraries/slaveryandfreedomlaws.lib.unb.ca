@@ -6,7 +6,6 @@ dependencies:
     - filter.format.unb_libraries
     - node.type.legal_article
     - node.type.page
-    - node.type.saved_coordinates
     - node.type.source
   module:
     - filter
@@ -24,7 +23,6 @@ permissions:
   - 'access toolbar'
   - 'create legal_article content'
   - 'create page content'
-  - 'create saved_coordinates content'
   - 'create source content'
   - 'delete any legal_article content'
   - 'delete any page content'
@@ -34,7 +32,6 @@ permissions:
   - 'delete source revisions'
   - 'edit any legal_article content'
   - 'edit any page content'
-  - 'edit any saved_coordinates content'
   - 'edit any source content'
   - 'revert legal_article revisions'
   - 'revert page revisions'

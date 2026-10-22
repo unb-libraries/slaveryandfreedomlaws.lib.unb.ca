@@ -544,40 +544,6 @@ body {
       }
     }
   }
-  // Locations-map specific.
-  &.path-locations-map {
-    background-image: url(/themes/custom/leaf_lib_unb_ca/dist/img/bg-map-v2.webp);
-    main {
-      .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        max-width: 100%;
-        .region {
-          background-color: $light;
-          #leaflet-map-view-aaslp-locations-page-1 {
-            border-radius: 1rem;
-            box-shadow: 8px 8px 6px -6px lightgrey;
-          }
-          &.region-breadcrumb {
-            margin-bottom: 2rem;
-            .breadcrumb {
-              margin: 0 auto !important;
-              padding: 1rem 0;
-              max-width: 1300px;
-              text-transform: uppercase;
-            }
-            & + .row {
-              max-width: 1300px;
-              margin: auto;
-              .region {
-                margin-bottom: 2rem;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   // Tags-view specific.
   &.path-tags {
     .region-content {

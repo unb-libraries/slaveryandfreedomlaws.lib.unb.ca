@@ -65,21 +65,6 @@ function legal_article_node_presave($entity) {
         }
       }
     }
-    
-    // Override coordinates with saved if present.
-    $latitude = !empty($entity->field_saved_coordinates->entity) ? 
-    $entity->field_saved_coordinates->entity->field_latitude->getValue()[0]['value'] : NULL;
-    $longitude = !empty($entity->field_saved_coordinates->entity) ?   
-    $entity->field_saved_coordinates->entity->field_longitude->getValue()[0]['value'] : NULL;
-    
-    if ($latitude and $longitude) {
-      $entity->field_location_coordinates = [
-        'value' => "POINT ($longitude $latitude)",
-        'geo_type' => 'Point',
-        'lon' => $longitude,
-        'lat' => $latitude,
-      ];
-    }
 
     // Update field_images_pdf filename.
     $pdf_id = $entity->field_images_pdf->getValue()[0]['target_id'] ?? NULL;
