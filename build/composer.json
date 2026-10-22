@@ -131,29 +131,12 @@
         "version": "2.0.0"
       },
       "type": "package"
-    },
-    {
-      "package": {
-        "dist": {
-          "type": "zip",
-          "url": "https://download.ckeditor.com/widget/releases/widget_4.16.1.zip"
-        },
-        "name": "ckeditor-plugin/widget",
-        "require": {
-          "composer/installers": "^2"
-        },
-        "type": "drupal-library",
-        "version": "4.16.1"
-      },
-      "type": "package"
     }
   ],
   "require": {
-    "ckeditor-plugin/widget": "^4",
     "dompdf/dompdf": "^3",
     "drupal/address": "^2",
     "drupal/admin_toolbar": "^3",
-    "drupal/bootstrap4": "^3",
     "drupal/bootstrap5": "^4",
     "drupal/chosen": "^3",
     "drupal/config_filter": "^2",
@@ -188,18 +171,14 @@
     "drupal/search_api": "^1",
     "drupal/search_api_solr": "^4",
     "drupal/simple_sitemap": "^4",
-    "drupal/title_length": "^2",
     "drupal/token": "^1",
     "drupal/twig_field_value": "^2",
     "drupal/twig_tweak": "^3",
-    "drupal/views_timelinejs": "^4",
     "furf/jquery-ui-touch-punch": "dev-master",
     "geocoder-php/nominatim-provider": "^5",
     "harvesthq/chosen": "^1",
-    "mikehaertl/phpwkhtmltopdf": "^2",
     "oomphinc/composer-installers-extender": "^2",
     "simeydotme/jquery-ui-slider-pips": "^2",
-    "tecnickcom/tcpdf": "^6",
     "unb-libraries/saml_features": "dev-10.x-1.x",
     "unb-libraries/composer-drupal-scaffold": "^11"
   },

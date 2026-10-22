@@ -28,7 +28,6 @@ module:
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
-  entity_reference_revisions: 0
   facets: 0
   facets_range_widget: 0
   field: 0
@@ -38,23 +37,18 @@ module:
   fontawesome: 0
   geocoder: 0
   geocoder_address: 0
-  geocoder_ajax_prepopulate: 0
   geocoder_field: 0
   geocoder_geofield: 0
   geofield: 0
-  geofield_map: 0
-  geofield_map_extras: 0
   google_analytics: 0
   health_check: 0
   image: 0
   imagemagick: 0
-  inline_entity_form: 0
   inline_form_errors: 0
   jquery_ui: 0
   jquery_ui_slider: 0
   jquery_ui_touch_punch: 0
   language: 0
-  layout_builder: 0
   layout_discovery: 0
   leaflet: 0
   leaflet_markercluster: 0

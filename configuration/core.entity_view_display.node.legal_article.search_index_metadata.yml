@@ -24,13 +24,8 @@ dependencies:
     - node.type.legal_article
   module:
     - datetime
-    - layout_builder
     - text
     - user
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: node.legal_article.search_index_metadata
 targetEntityType: node
 bundle: legal_article

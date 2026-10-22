@@ -38,7 +38,6 @@ function aaslp_search_preprocess_facets_item_list(&$variables) {
   $location_facets = [
     'facet_full_location',
     'metadata_location',
-    'timeline_location',
   ];
 
   $parents = [];
