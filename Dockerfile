@@ -23,6 +23,12 @@ COPY ./custom/themes ${DRUPAL_ROOT}/themes/custom
 COPY ./custom/modules ${DRUPAL_ROOT}/modules/custom
 
 # Container metadata.
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+# Drupal's deployment_identifier (service container, APCu and Twig cache keys) changes with
+# every build. Set here, in the last layers, so it does not invalidate the cached layers above.
+ENV DRUPAL_DEPLOYMENT_IDENTIFIER=$VERSION
 LABEL ca.unb.lib.generator="drupal11" \
   org.opencontainers.image.title="slaveryandfreedomlaws.lib.unb.ca" \
   org.opencontainers.image.description="slaveryandfreedomlaws.lib.unb.ca is the slaveryandfreedomlaws application at UNB Libraries." \
