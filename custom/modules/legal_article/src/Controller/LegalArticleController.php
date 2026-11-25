@@ -10,6 +10,7 @@ use Drupal\Core\Render\Renderer;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Controller definition.
@@ -114,12 +115,10 @@ class LegalArticleController extends ControllerBase {
   public function checkLegalArticle($nid) {
     $node = $this->entityTypeManager->getStorage('node')->load($nid);
 
-    if ($node) {
-      return AccessResult::allowedIf($node->bundle() === 'legal_article');
+    if (!$node) {
+      throw new NotFoundHttpException();
     }
-    else {
-      return FALSE;
-    }
+    return AccessResult::allowedIf($node->bundle() === 'legal_article');
   }
 
 }

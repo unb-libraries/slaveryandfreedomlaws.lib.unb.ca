@@ -6,6 +6,7 @@ legal_article.pdf:
   requirements:
     _permission: 'access content'
     _custom_access: '\Drupal\legal_article\Controller\LegalArticleController::checkLegalArticle'
+    nid: '\d+'
 legal_article.citation_link:
   path: '/laws/{nid}'
   defaults:
@@ -14,3 +15,4 @@ legal_article.citation_link:
   requirements:
     _permission: 'access content'
     _custom_access: '\Drupal\legal_article\Controller\LegalArticleController::checkLegalArticle'
+    nid: '\d+'
